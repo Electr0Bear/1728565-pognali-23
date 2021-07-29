@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page__body">
+<body class="page-body">
   <header class="page-header">
     <h2 class="visually-hidden">Навигация по странице</h2>
     <div class="page-header__wrapper container">
@@ -30,7 +30,7 @@
         <li class="page-header__nav-item"><a class="link" href="catalog.html">Попутчики</a></li>
       </ul>
       <button class="page-header__menu-button" type="button">
-        <div class="page-header__menu-button-show" aria-label="Показать меню">
+        <!-- <div class="page-header__menu-button-show" aria-label="Показать меню">
           <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="25" height="3" rx="1.5" fill="white" />
             <rect y="8" width="25" height="3" rx="1.5" fill="white" />
@@ -43,7 +43,7 @@
             <path d="M1.75 2.25L19.75 20.25" stroke="#CCCCCC" stroke-width="1.7" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
-        </div>
+        </div> -->
       </button>
       <!-- Раздел авторизации -->
       <ul class="page-header__auth list">
@@ -173,7 +173,7 @@
                     srcset="img/photo-thailand-mobile@2x.jpg 2x" width="270" height="110" alt="Таиланд">
                 </picture>
                 <div class="destinations__item-info">
-                  <img class="destinations__flag" width="35px" height="24px" src="img/flag-thailand.svg"
+                  <img class="destinations__flag" width="35" height="24" src="img/flag-thailand.svg"
                     alt="Флаг Таиланда">
                   <h3 class="destinations__country">Таиланд</h3>
                   <span class="destinations__slogan">Джунгли зовут</span>
@@ -188,7 +188,7 @@
                     srcset="img/photo-france-mobile@2x.jpg 2x" width="270" height="110" alt="Франция">
                 </picture>
                 <div class="destinations__item-info">
-                  <img class="destinations__flag" width="35px" height="24px" src="img/flag-france.svg"
+                  <img class="destinations__flag" width="35" height="24" src="img/flag-france.svg"
                     alt="Флаг Франции">
                   <h3 class="destinations__country">Франция</h3>
                   <span class="destinations__slogan">Трэ бьен, манифик!</span>
@@ -203,7 +203,7 @@
                     srcset="img/photo-czech-mobile@2x.jpg 2x" width="270" height="110" alt="Чешская Республика">
                 </picture>
                 <div class="destinations__item-info">
-                  <img class="destinations__flag" width="35px" height="24px" src="img/flag-czech.svg"
+                  <img class="destinations__flag" width="35" height="24" src="img/flag-czech.svg"
                     alt="Флаг Чешкой Республики">
                   <h3 class="destinations__country">Чехия</h3>
                   <span class="destinations__slogan">Закоулки старой Европы</span>
@@ -255,31 +255,28 @@
                 </a>
                 <div class="companions__person-info">
                   <ul class="companions__flags-list list">
-                    <li class="companions__flag-item tooltip" aria-label="Шри-Ланка" data-tooltip="Шри-Ланка">
-                      <img src="img/flag-sri-lanka.svg" width="35px" height="24px" alt="Флаг Шри-Ланки">
+                    <li class="companions__flag-item tooltip" data-tooltip="Шри-Ланка">
+                      <img src="img/flag-sri-lanka.svg" width="35" height="24" alt="Флаг Шри-Ланки">
                     </li>
-                    <li class="companions__flag-item tooltip" aria-label="Таиланд" data-tooltip="Таиланд">
-                      <img src="img/flag-thailand.svg" width="35px" height="24px" alt="Флаг Таиланда">
+                    <li class="companions__flag-item tooltip" data-tooltip="Таиланд">
+                      <img src="img/flag-thailand.svg" width="35" height="24" alt="Флаг Таиланда">
                     </li>
-                    <li class="companions__flag-item tooltip" aria-label="Сейшелы" data-tooltip="Сейшелы">
-                      <img src="img/flag-seychelles.svg" width="35px" height="24px" alt="Флаг Сейшел">
+                    <li class="companions__flag-item tooltip" data-tooltip="Сейшелы">
+                      <img src="img/flag-seychelles.svg" width="35" height="24" alt="Флаг Сейшел">
                     </li>
                   </ul>
                   <a class="companions__profile-link companions__profile-link--offline link"
                     href="profiles/1/firsova.html">Таня Фирсова</a>
                   <p class="companions__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                   <ul class="companions__travel-by travel-by list">
-                    <li class="travel-by__item travel-by__plane tooltip" aria-label="Авиатранспорт"
+                    <li class="travel-by__item travel-by__plane tooltip"
                       data-tooltip="Авиатранспорт">
                     </li>
-                    <li class="travel-by__item travel-by__item--faded travel-by__public-transport tooltip"
-                      aria-label="Автотранспорт" data-tooltip="Автотранспорт">
+                    <li class="travel-by__item travel-by__item--faded travel-by__public-transport tooltip" data-tooltip="Автотранспорт">
                     </li>
-                    <li class="travel-by__item travel-by__bike travel-by__item--faded tooltip" aria-label="Велосипед"
-                      data-tooltip="Велосипед">
+                    <li class="travel-by__item travel-by__bike travel-by__item--faded tooltip" data-tooltip="Велосипед">
                     </li>
-                    <li class="travel-by__item travel-by__item--faded  travel-by__on-foot tooltip" aria-label="Пешком"
-                      data-tooltip="Пешком">
+                    <li class="travel-by__item travel-by__item--faded  travel-by__on-foot tooltip" data-tooltip="Пешком">
                     </li>
                   </ul>
                 </div>
@@ -309,27 +306,24 @@
                 </a>
                 <div class="companions__person-info">
                   <ul class="companions__flags-list list">
-                    <li class="companions__flag-item tooltip" aria-label="Бельгия" data-tooltip="Бельгия">
-                      <img src="img/flag-belgium.svg" width="35px" height="24px" alt="Флаг Бельгии">
+                    <li class="companions__flag-item tooltip" data-tooltip="Бельгия">
+                      <img src="img/flag-belgium.svg" width="35" height="24" alt="Флаг Бельгии">
                     </li>
-                    <li class="companions__flag-item tooltip" aria-label="Чехия" data-tooltip="Чехия">
-                      <img src="img/flag-czech.svg" width="35px" height="24px" alt="Флаг Чешкой Республики">
+                    <li class="companions__flag-item tooltip" data-tooltip="Чехия">
+                      <img src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чешкой Республики">
                     </li>
                   </ul>
                   <a class="companions__profile-link companions__profile-link--online link"
                     href="profiles/2/demin.html">Петя Демин</a>
                   <p class="companions__hashtags">#бургер #бар #футбол #концерт #крафт</p>
                   <ul class="companions__travel-by travel-by list">
-                    <li class="travel-by__item travel-by__plane tooltip" aria-label="Авиатранспорт"
-                      data-tooltip="Авиатранспорт">
+                    <li class="travel-by__item travel-by__plane tooltip" data-tooltip="Авиатранспорт">
                     </li>
-                    <li class="travel-by__item travel-by__public-transport tooltip" aria-label="Автотранспорт"
-                      data-tooltip="Автотранспорт">
+                    <li class="travel-by__item travel-by__public-transport tooltip"  data-tooltip="Автотранспорт">
                     </li>
-                    <li class="travel-by__item travel-by__item--faded travel-by__bike tooltip" aria-label="Велосипед"
-                      data-tooltip="Велосипед">
+                    <li class="travel-by__item travel-by__item--faded travel-by__bike tooltip" data-tooltip="Велосипед">
                     </li>
-                    <li class="travel-by__item travel-by__on-foot tooltip" aria-label="Пешком" data-tooltip="Пешком">
+                    <li class="travel-by__item travel-by__on-foot tooltip" data-tooltip="Пешком">
                     </li>
                   </ul>
                 </div>
@@ -405,10 +399,8 @@
       </div>
     </section>
     <section class="map">
+      <h2 class="visually-hidden">Интерактивная карта</h2>
       <div class="map__wrapper">
-        <iframe class="map__iframe"
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A8d81e4b9440232bc19f5ef375a3f0a371463c5626e2240009e83b568a299194b&amp;source=constructor"
-          width="100%" height="424" frameborder="0"></iframe>
       </div>
     </section>
   </main>
@@ -439,8 +431,8 @@
         </li>
       </ul>
       <div class="page-footer__credentials">
-        <p class="page-footer__developed-by page-footer__credentials--transparent">Разработано</p>
-        <a class="page-footer__credentials-logo page-footer__credentials--transparent"
+        <p class="page-footer__developed-by page-footer__developed-by--transparent">Разработано</p>
+        <a class="page-footer__credentials-logo page-footer__credentials-logo--transparent"
           href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="page-footer__academy-logo" width="27" height="34" viewBox="0 0 27 34" fill="none"
             xmlns="http://www.w3.org/2000/svg">
