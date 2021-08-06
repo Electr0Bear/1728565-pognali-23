@@ -1,0 +1,114 @@
+.country-filter {
+  background-color: $blueLight5;
+}
+
+.country-filter__heading {
+  margin: 0;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $blueDark2;
+
+  &::before {
+    padding-right: 12px;
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 10px;
+    background-image: url("../img/icon-filter.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.country-filter__button-top {
+  padding: 0;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: none;
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  &--meatballs {
+    background-image: url("../img/icon-filter-meatballs.svg");
+  }
+
+  &--cross {
+    background-image: url("../img/icon-cross.svg");
+  }
+}
+
+.country-filter__button-bottom-close {
+  padding: 9px 0;
+  background-color: $blueLight6;
+  border: none;
+  border-radius: 20px;
+  width: 270px;
+  font-family: $bloggerSans;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $blueDark2;
+}
+
+.country-filter__button-bottom-close span {
+  &::before {
+    position: relative;
+    top: 4px;
+    padding-right: 11px;
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/icon-cross-darkblue.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.country-filter__filter {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.country-filter__continent-item {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $blueDark2;
+
+  &:not(:first-child) {
+    opacity: 0.3;
+  }
+}
+
+.country-filter__alphabet-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 40px);
+  background-color: $specialGrey4;
+  gap: 1px;
+  border: 1px solid $specialGrey4;
+}
+
+.country-filter__alphabet-letter {
+  padding-top: 10px;
+  text-align: center;
+  background-color: $white;
+
+  &--active {
+    color: $white;
+    background-color: $blueLight;
+    outline: 1px solid $blueLight;
+  }
+}
+
+.country-filter__countries-item {
+  font-weight: 400;
+  line-height: 22px;
+  color: $specialGrey;
+}

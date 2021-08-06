@@ -1,0 +1,60 @@
+.step-one__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.step-one__input-label {
+  display: inline-block;
+  padding: 0;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.step-one__input-label-extra {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+
+.step-one__input-area {
+  padding: 14px;
+  border: 1px solid $specialGrey4;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.step-one__input-field {
+  padding: 0;
+  width: 145px;
+  border: none;
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.step-one__input-button {
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.step-one__button-substract {
+  background-image: url("../img/icon-minus.svg");
+}
+
+.step-one__button-add {
+  background-image: url("../img/icon-plus.svg");
+}

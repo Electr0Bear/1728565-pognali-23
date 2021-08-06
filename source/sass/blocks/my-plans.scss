@@ -1,0 +1,69 @@
+.my-plans {
+  background-color: $blueLight3;
+}
+
+.my-plans__heading {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: $blueLight;
+}
+
+.my-plans__list {
+  padding: 0;
+  margin: 0;
+  counter-reset: myCounter;
+}
+
+.my-plans__item {
+  padding: 25px;
+  list-style: none;
+  background-color: $white;
+  border-radius: 10px;
+
+  &:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+.my-plans__destination {
+  margin: 0;
+  padding-bottom: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+
+  &::before {
+    padding-right: 10px;
+    display: inline-block;
+    counter-increment: myCounter;
+    content: counter(myCounter) ".";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.my-plans__trip-info p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.my-plans__trip-dates {
+  padding-bottom: 15px;
+}
+
+.my-plans__change-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $black;
+  opacity: 0.3;
+}

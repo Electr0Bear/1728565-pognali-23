@@ -1,0 +1,82 @@
+.add-plan {
+  background-color: $blueLight4;
+  position: relative;
+}
+
+.add-plan__heading {
+  margin: 0;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.add-plan__slider-buttons-list {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.add-plan__slider-buttons-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.add-plan__slider-button {
+  padding: 0;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: $blueLight;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+}
+
+.add-plan__wrapper {
+  padding: 25px;
+  background-color: $white;
+  border-radius: 10px;
+}
+
+.add-plan__step-heading {
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.add-plan__step-heading span {
+  display: block;
+}
+
+.add-plan__step-description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $specialGrey;
+}
+
+.add-plan__button {
+  display: block;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $blueLight;
+  text-align: center;
+}
+
+.add-plan__button-next-step,
+.add-plan__button-submit {
+  margin: 0;
+  padding: 5px 0;
+  border: none;
+  box-sizing: content-box;
+  border-radius: 20px;
+  background-color: $yellow;
+  width: 220px;
+}
