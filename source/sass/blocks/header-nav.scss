@@ -1,0 +1,255 @@
+.header-nav {
+  display: none;
+  background-color: $white;
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.header-nav__wrapper {
+  padding-top: 45px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet) {
+    padding-top: 63px;
+    padding-bottom: 91px;
+    padding-left: 57px;
+  }
+}
+
+.header-nav__list {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-bottom: 51px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 169px;
+  }
+}
+
+.header-nav__item {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 71px;
+    text-align: left;
+  }
+}
+
+.header-nav__item a {
+  color: $blueDark2;
+}
+
+.header-nav__login {
+  display: block;
+  padding: 10px 0;
+  color: $basicBlue;
+  background-color: $yellow;
+  width: 270px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.header-nav__contact-list {
+  margin-top: 51px;
+
+  @media (min-width: $tablet) {
+    margin-top: 0;
+  }
+}
+
+.header-nav__contact-list li:not(:last-child) {
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 38px;
+  }
+}
+
+.header-nav__contact-list li:last-child {
+  margin-bottom: 53px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 146px;
+  }
+}
+
+.header-nav__contact-item {
+  font-weight: 700;
+  line-height: 18px;
+  color: $blueDark2;
+  position: relative;
+  margin-left: 60px;
+
+  @media (min-width: $tablet) {
+    font-size: 28px;
+    line-height: 28px;
+    margin-left: 91px;
+  }
+}
+
+.header-nav__phone,
+.header-nav__email {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -60px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $blueDark;
+
+    @media (min-width: $tablet) {
+      top: -18px;
+      left: -91px;
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -60px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet) {
+      top: -18px;
+      left: -91px;
+      width: 68px;
+      height: 68px;
+    }
+  }
+}
+
+.header-nav__phone {
+  &::after {
+    background-image: url("../../img/icon-call-yellow.svg");
+    background-size: 18px;
+
+    @media (min-width: $tablet) {
+      background-size: 27px;
+    }
+  }
+
+  &:hover::after {
+    background-image: url("../../img/icon-call-orange.svg");
+  }
+
+  &:focus::after {
+    opacity: 0.3;
+  }
+}
+
+.header-nav__email {
+  &::after {
+    background-image: url("../../img/icon-mail-yellow.svg");
+    background-size: 25px;
+
+    @media (min-width: $tablet) {
+      background-size: 37px;
+    }
+  }
+
+  &:hover::after {
+    background-image: url("../../img/icon-mail-orange.svg");
+  }
+
+  &:focus::after {
+    opacity: 0.3;
+  }
+}
+
+.header-nav__socials-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  @media (min-width: $tablet) {
+    justify-content: left;
+  }
+}
+
+.header-nav__socials-list li {
+  &:not(:last-child) {
+    margin-right: 20px;
+
+    @media (min-width: $tablet) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.header-nav__socials-item {
+  display: block;
+  width: 23px;
+  height: 23px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet) {
+    width: 31px;
+    height: 31px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.header-nav__socials-facebook {
+  background-image: url("../img/icon-facebook.svg");
+  background-size: 11px 21px;
+
+  @media (min-width: $tablet) {
+    background-size: 14px 28px;
+  }
+}
+
+.header-nav__socials-vkontakte {
+  background-image: url("../img/icon-vkontakte.svg");
+  background-size: 23px 12px;
+
+  @media (min-width: $tablet) {
+    background-size: 31px 16px;
+  }
+}
+
+.header-nav__socials-instagram {
+  background-image: url("../img/icon-instagram.svg");
+  background-size: 18px;
+  opacity: 0.5;
+
+  @media (min-width: $tablet) {
+    background-size: 24px 24px;
+    opacity: 1;
+  }
+}

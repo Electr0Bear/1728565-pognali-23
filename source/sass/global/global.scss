@@ -1,0 +1,93 @@
+body {
+  font-family: $bloggerSans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  background-color: $basicGrey;
+  min-width: 320px;
+  margin: 0;
+  color: $blueLight;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 25px;
+  width: 320px;
+
+  @media (min-width: $tablet) {
+    width: 768px;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1440px;
+    padding: 0 60px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  overflow: hidden;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.tooltip {
+  position: relative;
+  display: block;
+
+  &:hover {
+    &::before {
+      display: block;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-bottom: 10px solid $blueDark3;
+      top: 15px;
+      opacity: initial;
+      z-index: 5;
+    }
+
+    &::after {
+      display: block;
+      content: attr(data-tooltip);
+      position: absolute;
+      color: $white;
+      background-color: $blueDark3;
+      padding: 10px;
+      top: 30px;
+      left: -35px;
+      white-space: nowrap;
+      border-radius: 4px;
+      font-size: 20px;
+      opacity: initial;
+      z-index: 5;
+    }
+  }
+}

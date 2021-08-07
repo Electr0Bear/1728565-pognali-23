@@ -1,0 +1,165 @@
+.signup {
+  background-color: $yellow;
+}
+
+.signup__section {
+  padding-top: 72px;
+  padding-bottom: 20px;
+  background-color: $blueDark2;
+  border-radius: 0 0 30px 30px;
+}
+
+.signup__heading {
+  margin-top: 0;
+  margin-bottom: 19px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $orange;
+  text-align: center;
+}
+
+.signup__paragraph-one,
+.signup__paragraph-two,
+.signup__paragraph-three {
+  margin: 0;
+  padding-left: 17px;
+  padding-right: 17px;
+  color: $white;
+  line-height: 22px;
+  text-align: center;
+}
+
+.signup__paragraph-three span {
+  display: block;
+}
+
+.signup__login {
+  color: $yellow;
+}
+
+.signup__form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.signup__email {
+  padding: 20px 25px;
+  width: 230px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.signup__button {
+  position: absolute;
+  right: 1px;
+  padding: 0;
+  border: none;
+  width: 60px;
+  height: 61px;
+  background-color: $yellow;
+  border-radius: 10px;
+  background-image: url("../img/icon-triangle-blue.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.signup__contacts-list {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.signup__contacts-item {
+  margin-bottom: 23px;
+}
+
+.signup__contacts-item a {
+  color: $yellow;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.signup__contacts-phone,
+.signup__contacts-email {
+  margin-left: 60px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -60px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $blueDark;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -60px;
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.signup__contacts-phone {
+  &::after {
+    background-image: url("../../img/icon-call-yellow.svg");
+    background-size: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $yellowDark;
+
+    &::after {
+      background-image: url("../../img/icon-call-orange.svg");
+    }
+  }
+
+  &:active {
+    color: $yellowTransparent03;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+
+.signup__contacts-email {
+  &::after {
+    background-image: url("../../img/icon-mail-yellow.svg");
+    background-size: 25px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $yellowDark;
+
+    &::after {
+      background-image: url("../../img/icon-mail-orange.svg");
+    }
+  }
+
+  &:active {
+    color: $yellowTransparent03;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}

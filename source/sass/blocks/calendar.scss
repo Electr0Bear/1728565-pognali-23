@@ -1,0 +1,48 @@
+.calendar {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.calendar__short {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid $specialGrey5;
+  border-bottom: 1px solid $specialGrey5;
+}
+
+.calendar__month,
+.calendar__year {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  width: 82px;
+  font-family: $bloggerSans;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: $blueLight;
+}
+
+.calendar__month {
+  text-align: right;
+}
+
+.calendar__button-back,
+.calendar__button-next {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  height: 27px;
+  background-position-y: 0;
+  background-repeat: no-repeat;
+}
+
+.calendar__button-back {
+  background-image: url("../img/icon-arrow-back.svg");
+}
+
+.calendar__button-next {
+  background-image: url("../img/icon-arrow-next.svg");
+}

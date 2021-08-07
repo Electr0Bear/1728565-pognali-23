@@ -1,1 +1,29 @@
-// Начните писать стили здесь
+@import "global/variables.scss";
+@import "global/global.scss";
+@import "global/fonts.scss";
+
+//Блоки
+
+@import "blocks/page-header.scss";
+@import "blocks/header-nav.scss";
+@import "blocks/about-us.scss";
+@import "blocks/destinations.scss";
+@import "blocks/companions.scss";
+@import "blocks/travel-by.scss";
+@import "blocks/profile-rates.scss";
+@import "blocks/signup.scss";
+@import "blocks/address-info.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/form-profile.scss";
+@import "blocks/my-plans.scss";
+@import "blocks/add-plan.scss";
+@import "blocks/step-one.scss";
+@import "blocks/children.scss";
+@import "blocks/calendar.scss";
+@import "blocks/step-two.scss";
+@import "blocks/step-three.scss";
+@import "blocks/extra-info.scss";
+@import "blocks/country-filter.scss";
+@import "blocks/companion-filter.scss";
+@import "blocks/companions-selection.scss";
+@import "blocks/map.scss";

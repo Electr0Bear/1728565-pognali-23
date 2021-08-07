@@ -1,0 +1,56 @@
+.step-two__countries {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.step-two__countries-select {
+  padding: 11px;
+  border: 1px solid $specialGrey4;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 168px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: $blueLight;
+}
+
+.step-two__countries-select--current {
+  width: 220px;
+}
+
+.step-two__button-close {
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  width: 21px;
+  height: 21px;
+  background-color: $specialGrey6;
+  background-image: url("../img/icon-cross.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.step-two__button-add-country {
+  padding: 12px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 220px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  text-transform: uppercase;
+  color: $blueLight;
+  background-color: $specialGrey6;
+  background-image: url("../img/icon-plus.svg");
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+}
