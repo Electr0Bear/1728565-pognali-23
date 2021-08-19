@@ -10,6 +10,11 @@
   }
 }
 
+.page-header-inner-pages {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
 .page-header__wrapper {
   padding-top: 19px;
   padding-bottom: 19px;
@@ -183,15 +188,9 @@
   }
 }
 
-.page-header__form-title {
-  color: $white;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 36px;
-}
-
-.page-header__form-title,
-.page-header__catalog-title {
+.page-header__page-title {
+  padding-bottom: 12px;
+  margin: 0;
   color: $white;
   font-weight: 700;
   font-size: 36px;
@@ -215,4 +214,12 @@
     background-image: url("../img/icon-arrow-bend.svg");
     background-repeat: no-repeat;
   }
+}
+
+.page-header__orange-line {
+  position: absolute;
+  width: 214px;
+  height: 5px;
+  background-color: $orange;
+  border-radius: 4px;
 }
