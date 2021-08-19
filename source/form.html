@@ -10,17 +10,42 @@
 
 <body class="page-body">
   <header class="page-header">
-    <div class="container">
-      <h2 class="visually-hidden">Навигация по странице</h2>
+    <div class="page-header__wrapper container">
       <a class="page-header__logo">
-        <picture>
-          <source srcset="img/header-logo-desktop.svg" media="(min-width: 1320px)">
-          <source srcset="img/header-logo-tablet.svg" media="(min-width: 688px)">
+        <picture class="page-header__logo-regular">
+          <source srcset="img/header-logo-desktop.svg" media="(min-width: 1440px)">
+          <source srcset="img/header-logo-tablet.svg" media="(min-width: 768px)">
           <img src="img/header-logo-mobile.svg" alt="Погнали?">
         </picture>
+        <picture class="page-header__logo-menu" hidden>
+          <source srcset="img/header-logo-desktop-blue.svg" media="(min-width: 1440px)">
+          <source srcset="img/header-logo-tablet-blue.svg" media="(min-width: 768px)">
+          <img src="img/header-logo-mobile-blue.svg" alt="Погнали?">
+        </picture>
       </a>
+      <ul class="page-header__nav-list list">
+        <li class="page-header__nav-item"><a class="link">О сервисе</a></li>
+        <li class="page-header__nav-item"><a class="link" href="form.html">Направления</a></li>
+        <li class="page-header__nav-item"><a class="link" href="catalog.html">Попутчики</a></li>
+      </ul>
+      <button class="page-header__menu-button" type="button">
+        <!-- <div class="page-header__menu-button-show" aria-label="Показать меню">
+          <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="25" height="3" rx="1.5" fill="white" />
+            <rect y="8" width="25" height="3" rx="1.5" fill="white" />
+          </svg>
+        </div>
+        <div class="page-header__menu-button-close" aria-label="Закрыть меню" hidden>
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.75 2.25L1.75 20.25" stroke="#CCCCCC" stroke-width="1.7" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M1.75 2.25L19.75 20.25" stroke="#CCCCCC" stroke-width="1.7" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div> -->
+      </button>
       <!-- Раздел авторизации -->
-      <ul class="page-header__auth list">
+      <ul class="page-header__auth page-header__auth--hide list">
         <li>
           <a class="page-header__phone phone link" href="tel:+78005558628">
             <span class="visually-hidden">8 800 555-86-28</span>

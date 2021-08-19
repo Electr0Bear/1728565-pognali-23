@@ -83,6 +83,12 @@
   @media (min-width: $tablet) {
     position: initial;
   }
+
+  &--hide {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
 }
 
 .page-header__phone,
