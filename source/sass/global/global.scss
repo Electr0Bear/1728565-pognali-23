@@ -25,6 +25,13 @@ body {
   }
 }
 
+.form-wrapper {
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

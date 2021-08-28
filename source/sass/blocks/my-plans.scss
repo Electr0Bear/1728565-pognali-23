@@ -7,10 +7,17 @@
 
 .my-plans__heading {
   margin: 0;
+  padding-bottom: 29px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   color: $blueLight;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 48px;
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .my-plans__list {
@@ -31,20 +38,36 @@
 }
 
 .my-plans__destination {
+  position: relative;
   margin: 0;
+  padding-left: 20px;
   padding-bottom: 15px;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 16px;
   line-height: 16px;
 
   &::before {
-    padding-right: 10px;
+    position: absolute;
+    left: 0;
     display: inline-block;
     counter-increment: myCounter;
     content: counter(myCounter) ".";
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
+  }
+
+  @media (min-width: $tablet) {
+    padding-left: 0;
+    font-size: 24px;
+    line-height: 24px;
+
+    &::before {
+      left: auto;
+      right: 0;
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }
 

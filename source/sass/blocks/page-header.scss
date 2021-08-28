@@ -196,10 +196,14 @@
   line-height: 36px;
 
   @media (min-width: $tablet) {
-    padding-top: 134px;
+    padding-top: 92px;
     padding-bottom: 64px;
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 134px;
   }
 }
 
