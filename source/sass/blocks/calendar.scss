@@ -57,7 +57,6 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(7, 7fr);
-  list-style: none;
 }
 
 .calendar__week li {
@@ -99,7 +98,6 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  list-style: none;
   border-top: 1px solid $specialGrey5;
   border-left: 1px solid $specialGrey5;
 }
@@ -130,7 +128,6 @@
 
   &:hover::after {
     content: "";
-    box-sizing: border-box;
     position: absolute;
     top: -1px;
     left: -1px;

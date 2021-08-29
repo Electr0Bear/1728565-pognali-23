@@ -247,7 +247,7 @@
                   </button>
                 </div>
                 <div class="calendar__full">
-                  <ul class="calendar__week">
+                  <ul class="calendar__week list">
                     <li>
                       <span class="calendar__weekday">П</span>
                       <span class="calendar__weekday calendar__weekday--hide">н</span>
@@ -277,7 +277,7 @@
                       <span class="calendar__weekend calendar__weekend--hide">т</span>
                     </li>
                   </ul>
-                  <ul class="calendar__full-month">
+                  <ul class="calendar__full-month list">
                     <li class="calendar__full-month-date">
                       <input class="visually-hidden" id="23feb" type="checkbox" disabled>
                       <label class="calendar__full-date" for="23feb">23</label>
@@ -458,21 +458,27 @@
               <fieldset class="step-two__countries">
                 <ul class="step-two__countries-list list">
                   <li class="step-two__countries-item">
-                    <select class="step-two__countries-select" name="first-country">
-                      <option disabled>Выберите страну</option>
-                      <option value="Босния и Герцеговина" selected>Босния и Герцеговина</option>
-                    </select>
-                    <img src="img/flag-bosnia-and-herzegovina.svg" alt="Флаг Боснии и Герцеговины">
+                    <div class="step-two__countries-select">
+                      <input class="visually-hidden" id="first-country" type="text" name="first-country" value="Босния и Герцеговина" disabled>
+                      <label class="visually-hidden" for="first-country">Первое место назначения</label>
+                      <span class="step-two__countries-select-one">Босния и Герцеговина</span>
+                    </div>
+                    <div class="step-two__countries-flag">
+                      <img src="img/flag-bosnia-and-herzegovina.svg" width="35" height="24" alt="Флаг Боснии и Герцеговины">
+                    </div>
                     <button class="step-two__button-close" type="button">
                       <span class="visually-hidden">Закрыть</span>
                     </button>
                   </li>
                   <li class="step-two__countries-item">
-                    <select class="step-two__countries-select" name="second-country">
-                      <option disabled>Выберите страну</option>
-                      <option value="Чехия" selected>Чехия</option>
-                    </select>
-                    <img src="img/flag-czech.svg" alt="Флаг Чехии">
+                    <div class="step-two__countries-select">
+                      <input class="visually-hidden" id="second-country" type="text" name="second-country" value="Чехия" disabled>
+                      <label class="visually-hidden" for="second-country">Второе место назначения</label>
+                      <span class="step-two__countries-select-two">Чехия</span>
+                    </div>
+                    <div class="step-two__countries-flag">
+                      <img src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
+                    </div>
                     <button class="step-two__button-close" type="button">
                       <span class="visually-hidden">Закрыть</span>
                     </button>
