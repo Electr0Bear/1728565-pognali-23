@@ -5,8 +5,12 @@
 }
 
 .calendar__short {
+  position: relative;
   padding-top: 10px;
   padding-bottom: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   border-top: 1px solid $specialGrey5;
   border-bottom: 1px solid $specialGrey5;
 }
@@ -33,10 +37,11 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  width: 20px;
+  width: 16px;
   height: 27px;
-  background-position-y: 0;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .calendar__button-back {
@@ -45,4 +50,45 @@
 
 .calendar__button-next {
   background-image: url("../img/icon-arrow-next.svg");
+}
+
+.calendar__week {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(7, 7fr);
+  list-style: none;
+}
+
+.calendar__week li {
+  text-align: center;
+}
+
+.calendar__weekday,
+.calendar__weekend {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.calendar__week li span:last-child {
+  @media (min-width: $tablet) {
+    margin-left: -5px;
+  }
+}
+
+.calendar__weekday {
+  color: $specialGrey;
+}
+
+.calendar__weekend {
+  color: $specialRed;
+}
+
+.calendar__weekday--hide,
+.calendar__weekend--hide {
+  @media (max-width: $tablet) {
+    display: none;
+  }
 }

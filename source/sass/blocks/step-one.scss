@@ -26,7 +26,9 @@
 }
 
 .step-one__input-area {
-  padding: 14px 14px 10px 14px;
+  padding: 14px;
+  display: flex;
+  flex-wrap: nowrap;
   border: 1px solid $specialGrey4;
   box-sizing: border-box;
   border-radius: 4px;
@@ -34,7 +36,6 @@
 
 .step-one__input-field {
   padding: 0;
-  width: 150px;
   border: none;
   text-align: center;
   font-weight: 500;
@@ -46,7 +47,7 @@
 .step-one__input-button {
   padding: 0;
   position: relative;
-  top: -6px;
+  top: 2px;
   width: 14px;
   height: 14px;
   border: none;
