@@ -213,7 +213,7 @@
                 <span class="step-one__input-label-extra">Чел.</span>
                 <div class="step-one__input-area step-one__companions-num-input">
                   <button class="step-one__input-button step-one__button-substract" type="button"><span class="visually-hidden">Уменишить количество</span></button>
-                  <input class="step-one__input-field" type="text" value="2">
+                  <input class="step-one__input-field" type="text" name="num-of-companions" value="2">
                   <button class="step-one__input-button step-one__button-add" type="button"><span class="visually-hidden">Увеличить количество</span></button>
                 </div>
               </fieldset>
@@ -223,14 +223,14 @@
                 <span class="step-one__input-label-extra">Дн.</span>
                 <div class="step-one__input-area step-one__trip-length-input">
                   <button class="step-one__input-button step-one__button-substract" type="button"><span class="visually-hidden">Уменишить количество</span></button>
-                  <input class="step-one__input-field" type="text" value="3">
+                  <input class="step-one__input-field" type="text" name="trip-length-days" value="3">
                   <button class="step-one__input-button step-one__button-add" type="button"><span class="visually-hidden">Увеличить количество</span></button>
                 </div>
               </fieldset>
               <!-- Наличие детей -->
               <fieldset class="step-one__children children">
                 <legend class="visually-hidden">Наличие детей</legend>
-                <input class="children__checkbox-input visually-hidden" type="checkbox" name="filter-children" id="add-plan-children" checked>
+                <input class="children__checkbox-input visually-hidden" type="checkbox" name="with-children" id="add-plan-children" checked>
                 <label class="children__checkbox" for="add-plan-children">Можно с детьми</label>
               </fieldset>
               <!-- Календарь -->
@@ -240,8 +240,8 @@
                   <button class="calendar__button-back" type="button">
                     <span class="visually-hidden">Назад</span>
                   </button>
-                  <input class="calendar__short-month" type="text" name="calendar-month" value="Март" disabled>
-                  <input class="calendar__short-year" type="text" name="calendar-year" value="2019" disabled>
+                  <input class="calendar__short-input visually-hidden" type="text" name="year-month" value="2019-03">
+                  <span class="calendar__short-month-year">Март 2019</span>
                   <button class="calendar__button-next" type="button">
                     <span class="visually-hidden">Вперёд</span>
                   </button>
@@ -278,173 +278,173 @@
                     </li>
                   </ul>
                   <ul class="calendar__full-month list">
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="23feb" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="23feb">23</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="23-02" type="checkbox" name="date-month" value="23-02" disabled>
+                      <label class="calendar__full-date" for="23-02">23</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="24feb" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="24feb">24</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="24-02" type="checkbox" name="date-month" value="24-02" disabled>
+                      <label class="calendar__full-date" for="24-02">24</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="25feb" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="25feb">25</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="25-02" type="checkbox" name="date-month" value="25-02" disabled>
+                      <label class="calendar__full-date" for="25-02">25</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="26feb" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="26feb">26</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="26-02" type="checkbox" name="date-month" value="26-02" disabled>
+                      <label class="calendar__full-date" for="26-02">26</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="27feb" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="27feb">27</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="27-02" type="checkbox" name="date-month" value="27-02" disabled>
+                      <label class="calendar__full-date" for="27-02">27</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="28feb" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="28feb">28</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="28-02" type="checkbox" name="date-month" value="28-02" disabled>
+                      <label class="calendar__full-date" for="28-02">28</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="1mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="1mar">1</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="01-03" type="checkbox" name="date-month" value="01-03" disabled>
+                      <label class="calendar__full-date" for="01-03">1</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="2mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="2mar">2</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="02-03" type="checkbox" name="date-month" value="02-03" disabled>
+                      <label class="calendar__full-date" for="02-03">2</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="3mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="3mar">3</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="03-03" type="checkbox" name="date-month" value="03-03" disabled>
+                      <label class="calendar__full-date" for="03-03">3</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="4mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="4mar">4</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="04-03" type="checkbox" name="date-month" value="04-03" disabled>
+                      <label class="calendar__full-date" for="04-03">4</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="5mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="5mar">5</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="05-03" type="checkbox" name="date-month" value="05-03" disabled>
+                      <label class="calendar__full-date" for="05-03">5</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="6mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="6mar">6</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="06-03" type="checkbox" name="date-month" value="06-03" disabled>
+                      <label class="calendar__full-date" for="06-03">6</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="7mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="7mar">7</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="07-03" type="checkbox" name="date-month" value="07-03" disabled>
+                      <label class="calendar__full-date" for="07-03">7</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="8mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="8mar">8</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="08-03" type="checkbox" name="date-month" value="08-03" disabled>
+                      <label class="calendar__full-date" for="08-03">8</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="9mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="9mar">9</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="09-03" type="checkbox" name="date-month" value="09-03" disabled>
+                      <label class="calendar__full-date" for="09-03">9</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="10mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="10mar">10</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="10-03" type="checkbox" name="date-month" value="10-03" disabled>
+                      <label class="calendar__full-date" for="10-03">10</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="11mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="11mar">11</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="11-03" type="checkbox" name="date-month" value="11-03" disabled>
+                      <label class="calendar__full-date" for="11-03">11</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="12mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="12mar">12</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="12-03" type="checkbox" name="date-month" value="12-03" disabled>
+                      <label class="calendar__full-date" for="12-03">12</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="13mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="13mar">13</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="13-03" type="checkbox" name="date-month" value="13-03" disabled>
+                      <label class="calendar__full-date" for="13-03">13</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="14mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="14mar">14</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="14-03" type="checkbox" name="date-month" value="14-03" disabled>
+                      <label class="calendar__full-date" for="14-03">14</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="15mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="15mar">15</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="15-03" type="checkbox" name="date-month" value="15-03" disabled>
+                      <label class="calendar__full-date" for="15-03">15</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="16mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="16mar">16</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="16-03" type="checkbox" name="date-month" value="16-03" disabled>
+                      <label class="calendar__full-date" for="16-03">16</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="17mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="17mar">17</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="17-03" type="checkbox" name="date-month" value="17-03" disabled>
+                      <label class="calendar__full-date" for="17-03">17</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="18mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="18mar">18</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="18-03" type="checkbox" name="date-month" value="19-03" disabled>
+                      <label class="calendar__full-date" for="18-03">18</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="19mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="19mar">19</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="19-03" type="checkbox" name="date-month" value="19-03" disabled>
+                      <label class="calendar__full-date" for="19-03">19</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="20mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="20mar">20</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="20-03" type="checkbox" name="date-month" value="20-03" disabled>
+                      <label class="calendar__full-date" for="20-03">20</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="21mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="21mar">21</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="21-03" type="checkbox" name="date-month" value="21-03" disabled>
+                      <label class="calendar__full-date" for="21-03">21</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="22mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="22mar">22</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="22-03" type="checkbox" name="date-month" value="22-03" disabled>
+                      <label class="calendar__full-date" for="22-03">22</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="23mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="23mar">23</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="23-03" type="checkbox" name="date-month" value="23-03" disabled>
+                      <label class="calendar__full-date" for="23-03">23</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="24mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="24mar">24</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="24-03" type="checkbox" name="date-month" value="24-03" disabled>
+                      <label class="calendar__full-date" for="24-03">24</label>
                     </li>
-                    <li class="calendar__full-month-date">
-                      <input class="visually-hidden" id="25mar" type="checkbox" disabled>
-                      <label class="calendar__full-date" for="25mar">25</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--unavailable">
+                      <input class="calendar__full-date-input visually-hidden" id="25-03" type="checkbox" name="date-month" value="25-03" disabled>
+                      <label class="calendar__full-date" for="25-03">25</label>
                     </li>
-                    <li class="calendar__full-month-date calendar__full-month-date--available">
-                      <input class="calendar__full-date-input visually-hidden" id="26mar" type="checkbox" checked>
-                      <label class="calendar__full-date" for="26mar">26</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--available">
+                      <input class="calendar__full-date-input visually-hidden" id="26-03" type="checkbox" name="date-month" value="26-03" checked>
+                      <label class="calendar__full-date" for="26-03">26</label>
                     </li>
-                    <li class="calendar__full-month-date calendar__full-month-date--available">
-                      <input class="visually-hidden" id="27mar" type="checkbox" checked>
-                      <label class="calendar__full-date" for="27mar">27</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--available">
+                      <input class="calendar__full-date-input visually-hidden" id="27-03" type="checkbox" name="date-month" value="27-03" checked>
+                      <label class="calendar__full-date" for="27-03">27</label>
                     </li>
-                    <li class="calendar__full-month-date calendar__full-month-date--available">
-                      <input class="visually-hidden" id="28mar" type="checkbox" checked>
-                      <label class="calendar__full-date" for="28mar">28</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--available">
+                      <input class="calendar__full-date-input visually-hidden" id="28-03" type="checkbox" name="date-month" value="28-03" checked>
+                      <label class="calendar__full-date" for="28-03">28</label>
                     </li>
-                    <li class="calendar__full-month-date calendar__full-month-date--available">
-                      <input class="visually-hidden" id="29mar" type="checkbox">
-                      <label class="calendar__full-date" for="29mar">29</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--available">
+                      <input class="calendar__full-date-input visually-hidden" id="29-03" type="checkbox" name="date-month" value="29-03">
+                      <label class="calendar__full-date" for="29-03">29</label>
                     </li>
-                    <li class="calendar__full-month-date calendar__full-month-date--available">
-                      <input class="visually-hidden" id="30mar" type="checkbox">
-                      <label class="calendar__full-date" for="30mar">30</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--available">
+                      <input class="calendar__full-date-input visually-hidden" id="30-03" type="checkbox" name="date-month" value="30-03">
+                      <label class="calendar__full-date" for="30-03">30</label>
                     </li>
-                    <li class="calendar__full-month-date calendar__full-month-date--available">
-                      <input class="visually-hidden" id="31mar" type="checkbox">
-                      <label class="calendar__full-date" for="31mar">31</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--available">
+                      <input class="calendar__full-date-input visually-hidden" id="31-03" type="checkbox" name="date-month" value="31-03">
+                      <label class="calendar__full-date" for="31-03">31</label>
                     </li>
-                    <li class="calendar__full-month-date calendar__full-month-date--available">
-                      <input class="visually-hidden" id="1apr" type="checkbox">
-                      <label class="calendar__full-date" for="1apr">1</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--available">
+                      <input class="calendar__full-date-input visually-hidden" id="01-04" type="checkbox" name="date-month" value="01-04">
+                      <label class="calendar__full-date" for="01-04">1</label>
                     </li>
-                    <li class="calendar__full-month-date calendar__full-month-date--available">
-                      <input class="visually-hidden" id="2apr" type="checkbox">
-                      <label class="calendar__full-date" for="2apr">2</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--available">
+                      <input class="calendar__full-date-input visually-hidden" id="02-04" type="checkbox" name="date-month" value="02-04">
+                      <label class="calendar__full-date" for="02-04">2</label>
                     </li>
-                    <li class="calendar__full-month-date calendar__full-month-date--available">
-                      <input class="visually-hidden" id="3apr" type="checkbox">
-                      <label class="calendar__full-date" for="3apr">3</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--available">
+                      <input class="calendar__full-date-input visually-hidden" id="03-04" type="checkbox" name="date-month" value="03-04">
+                      <label class="calendar__full-date" for="03-04">3</label>
                     </li>
-                    <li class="calendar__full-month-date calendar__full-month-date--available">
-                      <input class="visually-hidden" id="4apr" type="checkbox">
-                      <label class="calendar__full-date" for="4apr">4</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--available">
+                      <input class="calendar__full-date-input visually-hidden" id="04-04" type="checkbox" name="date-month" value="04-04">
+                      <label class="calendar__full-date" for="04-04">4</label>
                     </li>
-                    <li class="calendar__full-month-date calendar__full-month-date--available">
-                      <input class="visually-hidden" id="5apr" type="checkbox">
-                      <label class="calendar__full-date" for="5apr">5</label>
+                    <li class="calendar__full-date-item calendar__full-date-item--available">
+                      <input class="calendar__full-date-input visually-hidden" id="05-04" type="checkbox" name="date-month" value="05-04">
+                      <label class="calendar__full-date" for="05-04">5</label>
                   </ul>
                 </div>
               </fieldset>
@@ -459,7 +459,7 @@
                 <ul class="step-two__countries-list list">
                   <li class="step-two__countries-item">
                     <div class="step-two__countries-select">
-                      <input class="visually-hidden" id="first-country" type="text" name="first-country" value="Босния и Герцеговина" disabled>
+                      <input class="visually-hidden" id="first-country" type="text" name="first-country" value="Босния и Герцеговина">
                       <label class="visually-hidden" for="first-country">Первое место назначения</label>
                       <span class="step-two__countries-select-one">Босния и Герцеговина</span>
                     </div>
@@ -472,7 +472,7 @@
                   </li>
                   <li class="step-two__countries-item">
                     <div class="step-two__countries-select">
-                      <input class="visually-hidden" id="second-country" type="text" name="second-country" value="Чехия" disabled>
+                      <input class="visually-hidden" id="second-country" type="text" name="second-country" value="Чехия">
                       <label class="visually-hidden" for="second-country">Второе место назначения</label>
                       <span class="step-two__countries-select-two">Чехия</span>
                     </div>
@@ -484,7 +484,12 @@
                     </button>
                   </li>
                   <li class="step-two__countries-item">
-                    <select class="step-two__countries-select step-two__countries-select--current" name="third-country">
+                    <div class="step-two__countries-select">
+                      <input class="visually-hidden" id="second-country" type="text" name="third-country" value="">
+                      <label class="visually-hidden" for="third-country">Третье место назначения</label>
+                      <span class="step-two__countries-select-three">Выберите страну</span>
+                    </div>
+                    <!-- <select class="step-two__countries-select step-two__countries-select--current" name="third-country">
                       <option disabled selected>Выберите страну</option>
                       <option value="Австралия">Австралия</option>
                       <option value="Австрия">Австрия</option>
@@ -496,7 +501,7 @@
                       <option value="Аргентина">Аргентина</option>
                       <option value="Армения">Армения</option>
                       <option value="Афганистан">Афганистан</option>
-                    </select>
+                    </select> -->
                     <button class="step-two__button-close" type="button">
                       <span class="visually-hidden">Закрыть</span>
                     </button>

@@ -15,21 +15,16 @@
   border-bottom: 1px solid $specialGrey5;
 }
 
-.calendar__short-month,
-.calendar__short-year {
-  padding: 0 3px;
-  border: none;
-  background-color: transparent;
+.calendar__short-month-year {
+  padding: 4px 3px 0 3px;
+  display: block;
+  text-align: center;
   width: 100%;
   font-family: $bloggerSans;
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
   color: $blueLight;
-}
-
-.calendar__short-month {
-  text-align: right;
 }
 
 .calendar__button-back,
@@ -49,7 +44,8 @@
 }
 
 .calendar__button-next {
-  background-image: url("../img/icon-arrow-next.svg");
+  background-image: url("../img/icon-arrow-back.svg");
+  transform: rotate(180deg);
 }
 
 .calendar__week {
@@ -102,7 +98,7 @@
   border-left: 1px solid $specialGrey5;
 }
 
-.calendar__full-month-date {
+.calendar__full-date-item {
   text-align: center;
   border-bottom: 1px solid $specialGrey5;
   border-right: 1px solid $specialGrey5;
@@ -138,7 +134,7 @@
   }
 }
 
-.calendar__full-month-date input:checked + .calendar__full-date {
+.calendar__full-date-item input:checked + .calendar__full-date {
   color: $white;
   background-color: $blueLight;
 }
