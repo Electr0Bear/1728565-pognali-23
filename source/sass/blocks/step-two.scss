@@ -91,6 +91,17 @@
   }
 }
 
+.step-two__countries-flag--current {
+  width: 0;
+  border: none;
+
+  &::before {
+    left: -56px;
+    background-color: transparent;
+    border: 1px solid $specialGrey4;
+  }
+}
+
 .step-two__countries-select--current {
   width: 220px;
 }
@@ -110,8 +121,56 @@
   background-repeat: no-repeat;
 }
 
+.step-two__countries-droplist {
+  display: none;
+  position: absolute;
+  width: 220px;
+  bottom: -530px;
+  z-index: 1;
+  background-color: $white;
+  box-shadow: inset 1px 1px $specialGrey5, inset -1px -1px $specialGrey5;
+}
+
+.step-two__countries-alphabet-list {
+  display: grid;
+  grid-template-columns: repeat(5, 5fr);
+  grid-template-rows: repeat(5, 5fr);
+  border-top: 1px solid $specialGrey5;
+  border-left: 1px solid $specialGrey5;
+}
+
+.step-two__countries-alphabet-letter {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid $specialGrey5;
+  border-right: 1px solid $specialGrey5;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+
+  &--active {
+    background-color: $basicGrey;
+  }
+}
+
+.step-two__countries-selector-list {
+  padding: 20px;
+  color: $specialGrey;
+}
+
+.step-two__countries-selector-item {
+  line-height: 22px;
+
+  &:not(:last-child) {
+    padding-bottom: 4px;
+  }
+}
+
 .step-two__button-add-country {
   padding: 12px;
+  margin-bottom: 25px;
+  position: relative;
   border: none;
   box-sizing: border-box;
   border-radius: 4px;
@@ -128,4 +187,16 @@
   background-image: url("../img/icon-plus.svg");
   background-position: 90% 50%;
   background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 49px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid $specialGrey4;
+    border-radius: 50%;
+  }
 }
