@@ -26,6 +26,14 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
+
+  @media (min-width: $tablet) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 }
 
 .children__checkbox-input:checked + .children__checkbox::before {

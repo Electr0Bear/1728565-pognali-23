@@ -209,37 +209,38 @@
               <h3 class="add-plan__step-heading"><span>Шаг 1.</span><span>Даты пребывания</span></h3>
               <p class="add-plan__step-description">Укажите предпочтительное количество попутчиков, которых вы хотели бы
                 позвать в поездку, и ее предполагаемую длительность.</p>
-              <!-- Количество попутчиков -->
-              <fieldset class="step-one__fieldset step-one__companions-num">
-                <span class="step-one__input-label">Ищу попутчиков:</span>
-                <span class="step-one__input-label-extra">Чел.</span>
-                <div class="step-one__input-area step-one__companions-num-input">
-                  <button class="step-one__input-button step-one__button-substract" type="button"><span
-                      class="visually-hidden">Уменишить количество</span></button>
-                  <input class="step-one__input-field" type="text" name="num-of-companions" value="2">
-                  <button class="step-one__input-button step-one__button-add" type="button"><span
-                      class="visually-hidden">Увеличить количество</span></button>
-                </div>
-              </fieldset>
-              <!-- Длительность -->
-              <fieldset class="step-one__fieldset step-one__trip-length">
-                <span class="step-one__input-label">Длительность:</span>
-                <span class="step-one__input-label-extra">Дн.</span>
-                <div class="step-one__input-area step-one__trip-length-input">
-                  <button class="step-one__input-button step-one__button-substract" type="button"><span
-                      class="visually-hidden">Уменишить количество</span></button>
-                  <input class="step-one__input-field" type="text" name="trip-length-days" value="3">
-                  <button class="step-one__input-button step-one__button-add" type="button"><span
-                      class="visually-hidden">Увеличить количество</span></button>
-                </div>
-              </fieldset>
-              <!-- Наличие детей -->
-              <fieldset class="step-one__children children">
-                <legend class="visually-hidden">Наличие детей</legend>
-                <input class="children__checkbox-input visually-hidden" type="checkbox" name="with-children"
-                  id="add-plan-children" checked>
-                <label class="children__checkbox" for="add-plan-children">Можно с детьми</label>
-              </fieldset>
+              <ul class="step-one__general-info-list list">
+                <!-- Количество попутчиков -->
+                <li class="step-one__general-info-item">
+                  <span class="step-one__input-label">Ищу попутчиков:</span>
+                  <span class="step-one__input-label-extra">Чел.</span>
+                  <div class="step-one__input-area step-one__companions-num-input">
+                    <button class="step-one__input-button step-one__button-substract" type="button"><span
+                        class="visually-hidden">Уменишить количество</span></button>
+                    <input class="step-one__input-field" type="text" name="num-of-companions" value="2">
+                    <button class="step-one__input-button step-one__button-add" type="button"><span
+                        class="visually-hidden">Увеличить количество</span></button>
+                  </div>
+                </li>
+                <!-- Длительность -->
+                <li class="step-one__general-info-item">
+                  <span class="step-one__input-label">Длительность:</span>
+                  <span class="step-one__input-label-extra">Дн.</span>
+                  <div class="step-one__input-area step-one__trip-length-input">
+                    <button class="step-one__input-button step-one__button-substract" type="button"><span
+                        class="visually-hidden">Уменишить количество</span></button>
+                    <input class="step-one__input-field" type="text" name="trip-length-days" value="3">
+                    <button class="step-one__input-button step-one__button-add" type="button"><span
+                        class="visually-hidden">Увеличить количество</span></button>
+                  </div>
+                </li>
+                <!-- Наличие детей -->
+                <li class="step-one__general-info-item children">
+                  <input class="children__checkbox-input visually-hidden" type="checkbox" name="with-children"
+                    id="add-plan-children" checked>
+                  <label class="children__checkbox" for="add-plan-children">Можно с детьми</label>
+                </li>
+              </ul>
               <!-- Календарь -->
               <fieldset class="step-one__calendar calendar">
                 <legend class="visually-hidden">Выбор дат путешествия</legend>
@@ -548,7 +549,8 @@
                     </button>
                     <div class="step-two__countries-droplist">
                       <ul class="step-two__countries-alphabet-list list">
-                        <li class="step-two__countries-alphabet-letter step-two__countries-alphabet-letter--active">А</li>
+                        <li class="step-two__countries-alphabet-letter step-two__countries-alphabet-letter--active">А
+                        </li>
                         <li class="step-two__countries-alphabet-letter">Б</li>
                         <li class="step-two__countries-alphabet-letter">В</li>
                         <li class="step-two__countries-alphabet-letter">Г</li>
