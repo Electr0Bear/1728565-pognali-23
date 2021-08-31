@@ -4,6 +4,13 @@
   border: none;
 }
 
+.step-two__countries-list {
+  @media (min-width: $tablet) {
+    padding-top: 42px;
+    border-top: 1px solid $specialGrey4;
+  }
+}
+
 .step-two__countries-item {
   margin-bottom: 22px;
   position: relative;
@@ -21,6 +28,21 @@
     background-image: url("../img/icon-arrow-down.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
+  }
+
+  @media (min-width: $tablet) {
+    &:not(:first-child)::after {
+      display: none;
+    }
+
+    &:first-child::after {
+      bottom: -293px;
+      left: 397px;
+      width: 1px;
+      height: 407px;
+      z-index: 0;
+      background-image: linear-gradient($specialGrey4 80%, $white 95%);
+    }
   }
 }
 
@@ -63,6 +85,17 @@
     background-repeat: no-repeat;
     transform: rotate(-90deg);
   }
+
+  @media (min-width: $tablet) {
+    margin-right: 27px;
+    padding-top: 27px;
+    padding-bottom: 23px;
+    padding-left: 25px;
+    width: 369px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
 }
 
 .step-two__countries-select span {
@@ -72,7 +105,7 @@
 .step-two__countries-flag {
   position: relative;
   padding-top: 9px;
-  width: 53px;
+  width: 52px;
   height: auto;
   border: 1px solid $specialGrey4;
   border-radius: 4px;
@@ -86,8 +119,27 @@
     left: -5px;
     width: 8px;
     height: 8px;
+    z-index: 1;
     background-color: $blueLight;
     border-radius: 50%;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 11px;
+    padding-left: 25px;
+    width: auto;
+    border: none;
+
+    & img {
+      width: 70px;
+      height: 47px;
+    }
+
+    &::before {
+      top: calc(50% - 7px);
+      width: 14px;
+      height: 14px;
+    }
   }
 }
 
@@ -97,13 +149,23 @@
 
   &::before {
     left: -56px;
-    background-color: transparent;
+    background-color: $white;
     border: 1px solid $specialGrey4;
+  }
+
+  @media (min-width: $tablet) {
+    &::before {
+      left: -5px;
+    }
   }
 }
 
 .step-two__countries-select--current {
   width: 220px;
+
+  @media (min-width: $tablet) {
+    width: 369px;
+  }
 }
 
 .step-two__button-close {
@@ -119,6 +181,17 @@
   background-image: url("../img/icon-cross.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
+
+  @media (min-width: $tablet) {
+    top: 22px;
+    right: 8px;
+    border-radius: 0;
+    width: 22px;
+    height: 24px;
+    background-size: cover;
+    background-color: transparent;
+    opacity: 0.3;
+  }
 }
 
 .step-two__countries-droplist {
@@ -198,5 +271,23 @@
     height: 8px;
     border: 1px solid $specialGrey4;
     border-radius: 50%;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 27px;
+    padding-bottom: 23px;
+    padding-left: 25px;
+    width: 369px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.09em;
+
+    &::before {
+      top: calc(50% - 7px);
+      right: -36px;
+      width: 14px;
+      height: 14px;
+      background-color: $basicGrey;
+    }
   }
 }

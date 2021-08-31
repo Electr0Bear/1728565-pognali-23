@@ -49,15 +49,18 @@
 
 .step-one__input-label,
 .step-one__input-label-extra {
-  font-size: 20px;
-  line-height: 18px;
-  letter-spacing: 0.1em;
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+  }
 }
 
 .step-one__input-area {
   padding: 14px;
   display: flex;
   flex-wrap: nowrap;
+  flex-grow: 1;
   border: 1px solid $specialGrey4;
   box-sizing: border-box;
   border-radius: 4px;
@@ -96,6 +99,7 @@
   background-color: transparent;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .step-one__button-substract {
