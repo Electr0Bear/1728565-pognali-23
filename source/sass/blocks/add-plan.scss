@@ -13,6 +13,11 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .add-plan__slider-buttons-list {
@@ -54,6 +59,11 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 20px;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .add-plan__step-heading span {
@@ -67,6 +77,11 @@
   font-size: 16px;
   line-height: 22px;
   color: $specialGrey;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .add-plan__button {
