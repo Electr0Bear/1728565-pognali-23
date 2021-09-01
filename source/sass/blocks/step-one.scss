@@ -1,6 +1,19 @@
 .step-one__general-info-list {
   display: flex;
   flex-flow: column;
+
+  @media (min-width: $tablet) {
+    padding-top: 30px;
+    padding-bottom: 19px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $specialGrey2;
+  }
 }
 
 .step-one__general-info-item {
@@ -27,6 +40,14 @@
       order: 2;
     }
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 14px;
+    padding-top: 0;
+    justify-content: start;
+    align-items: center;
+    border-top: none;
+  }
 }
 
 .step-one__input-label {
@@ -36,6 +57,10 @@
   line-height: 16px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+
+  @media (min-width: $desktop) {
+    order: 1;
+  }
 }
 
 .step-one__input-label-extra {
@@ -45,6 +70,11 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   opacity: 0.3;
+
+  @media (min-width: $desktop) {
+    order: 3;
+    opacity: 1;
+  }
 }
 
 .step-one__input-label,
@@ -54,19 +84,30 @@
     line-height: 18px;
     letter-spacing: 0.1em;
   }
+
+  @media (min-width: $desktop) {
+    width: 186px;
+    letter-spacing: normal;
+  }
 }
 
 .step-one__input-area {
   padding: 14px;
+  width: 220px;
   display: flex;
   flex-wrap: nowrap;
-  flex-grow: 1;
   border: 1px solid $specialGrey4;
   box-sizing: border-box;
   border-radius: 4px;
 
   @media (min-width: $tablet) {
-    flex-basis: $tablet;
+    width: 538px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 35px;
+    width: 180px;
+    order: 2;
   }
 }
 
