@@ -44,6 +44,16 @@
       background-image: linear-gradient($specialGrey4 80%, $white 95%);
     }
   }
+
+  @media (min-width: $desktop) {
+    &:first-child::after {
+      bottom: -424px;
+      left: 776px;
+      height: 540px;
+      background-image: none;
+      background-color: $specialGrey4;
+    }
+  }
 }
 
 .step-two__countries-select {
@@ -96,6 +106,11 @@
     line-height: 20px;
     letter-spacing: 0.1em;
   }
+
+  @media (min-width: $desktop) {
+    margin-right: 45px;
+    width: 730px;
+  }
 }
 
 .step-two__countries-select span {
@@ -141,6 +156,10 @@
       height: 14px;
     }
   }
+
+  @media (min-width: $desktop) {
+    padding-left: 40px;
+  }
 }
 
 .step-two__countries-flag--current {
@@ -165,6 +184,10 @@
 
   @media (min-width: $tablet) {
     width: 369px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 730px;
   }
 }
 
@@ -285,6 +308,18 @@
     &::before {
       top: calc(50% - 7px);
       right: -36px;
+      width: 14px;
+      height: 14px;
+      background-color: $basicGrey;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 730px;
+
+    &::before {
+      top: calc(50% - 7px);
+      right: -53px;
       width: 14px;
       height: 14px;
       background-color: $basicGrey;
