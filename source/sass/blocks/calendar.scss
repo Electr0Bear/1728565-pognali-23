@@ -13,6 +13,16 @@
   justify-content: space-between;
   border-top: 1px solid $specialGrey5;
   border-bottom: 1px solid $specialGrey5;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 38px;
+    padding-top: 27px;
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 18px;
+  }
 }
 
 .calendar__short-month-year {
@@ -69,6 +79,11 @@
 
 .calendar__week li {
   text-align: center;
+
+  @media (min-width: $desktop) {
+    text-align: left;
+    padding-left: 15px;
+  }
 }
 
 .calendar__weekday,
@@ -132,6 +147,10 @@
   @media (min-width: $tablet) {
     font-size: 18px;
   }
+
+  @media (min-width: $desktop) {
+    text-align: left;
+  }
 }
 
 .calendar__full-date {
@@ -141,6 +160,10 @@
   display: block;
   cursor: pointer;
   box-sizing: border-box;
+
+  & span {
+    display: none;
+  }
 
   &:hover::after {
     content: "";
@@ -157,9 +180,39 @@
     padding-top: 25px;
     padding-bottom: 25px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 15px;
+    padding-bottom: 35px;
+    padding-left: 15px;
+
+    & span {
+      display: initial;
+    }
+  }
 }
 
 .calendar__full-date-item input:checked + .calendar__full-date {
   color: $white;
   background-color: $blueLight;
+}
+
+.calendar__full-date-item input:checked + .calendar__full-date--start::before {
+  @media (min-width: $desktop) {
+    content: "Заезд";
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    display: block;
+  }
+}
+
+.calendar__full-date-item input:checked + .calendar__full-date--end::before {
+  @media (min-width: $desktop) {
+    content: "Выезд";
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    display: block;
+  }
 }
