@@ -1,12 +1,33 @@
 .page-header {
   background-color: $basicBlue;
 
-  @media (min-width: $tablet) {
-    background-color: $basicBlue2;
+  &--inner-form {
+    background-color: $basicGrey;
   }
 
-  @media (min-width: $desktop) {
-    background-color: $basicBlue;
+  &--inner-catalog {
+    background-color: $blueLight5;
+  }
+
+  &--light {
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      background-color: $basicBlue2;
+    }
+  }
+}
+
+.page-header__background-layer {
+  background-color: $basicBlue;
+  border-radius: 0 0 30px 30px;
+
+  &--light {
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      background-color: $basicBlue2;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    border-radius: 0 0 60px 60px;
   }
 }
 

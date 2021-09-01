@@ -9,28 +9,29 @@
 </head>
 
 <body class="page-body">
-  <header class="page-header">
-    <h2 class="visually-hidden">Навигация по странице</h2>
-    <div class="page-header__wrapper container">
-      <a class="page-header__logo">
-        <picture class="page-header__logo-regular">
-          <source srcset="img/header-logo-desktop.svg" media="(min-width: 1440px)">
-          <source srcset="img/header-logo-tablet.svg" media="(min-width: 768px)">
-          <img src="img/header-logo-mobile.svg" alt="Погнали?">
-        </picture>
-        <picture class="page-header__logo-menu" hidden>
-          <source srcset="img/header-logo-desktop-blue.svg" media="(min-width: 1440px)">
-          <source srcset="img/header-logo-tablet-blue.svg" media="(min-width: 768px)">
-          <img src="img/header-logo-mobile-blue.svg" alt="Погнали?">
-        </picture>
-      </a>
-      <ul class="page-header__nav-list list">
-        <li class="page-header__nav-item"><a class="link">О сервисе</a></li>
-        <li class="page-header__nav-item"><a class="link" href="form.html">Направления</a></li>
-        <li class="page-header__nav-item"><a class="link" href="catalog.html">Попутчики</a></li>
-      </ul>
-      <button class="page-header__menu-button" type="button">
-        <!-- <div class="page-header__menu-button-show" aria-label="Показать меню">
+  <header class="page-header page-header--light">
+    <div class="page-header__background-layer page-header__background-layer--light">
+      <h2 class="visually-hidden">Навигация по странице</h2>
+      <div class="page-header__wrapper container">
+        <a class="page-header__logo">
+          <picture class="page-header__logo-regular">
+            <source srcset="img/header-logo-desktop.svg" media="(min-width: 1440px)">
+            <source srcset="img/header-logo-tablet.svg" media="(min-width: 768px)">
+            <img src="img/header-logo-mobile.svg" alt="Погнали?">
+          </picture>
+          <picture class="page-header__logo-menu" hidden>
+            <source srcset="img/header-logo-desktop-blue.svg" media="(min-width: 1440px)">
+            <source srcset="img/header-logo-tablet-blue.svg" media="(min-width: 768px)">
+            <img src="img/header-logo-mobile-blue.svg" alt="Погнали?">
+          </picture>
+        </a>
+        <ul class="page-header__nav-list list">
+          <li class="page-header__nav-item"><a class="link">О сервисе</a></li>
+          <li class="page-header__nav-item"><a class="link" href="form.html">Направления</a></li>
+          <li class="page-header__nav-item"><a class="link" href="catalog.html">Попутчики</a></li>
+        </ul>
+        <button class="page-header__menu-button" type="button">
+          <!-- <div class="page-header__menu-button-show" aria-label="Показать меню">
           <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="25" height="3" rx="1.5" fill="white" />
             <rect y="8" width="25" height="3" rx="1.5" fill="white" />
@@ -44,62 +45,63 @@
               stroke-linejoin="round" />
           </svg>
         </div> -->
-      </button>
-      <!-- Раздел авторизации -->
-      <ul class="page-header__auth list">
-        <li>
-          <a class="page-header__phone phone link" href="tel:+78005558628">
-            <span class="visually-hidden">8 800 555-86-28</span>
-          </a>
-        </li>
-        <li>
-          <a class="page-header__email email link" href="mailto:mail@htmlacademy.ru">
-            <span class="visually-hidden">mail@htmlacademy.ru</span>
-          </a>
-        </li>
-        <li>
-          <a class="page-header__login login link" href="login.html">Авторизация</a>
-        </li>
-      </ul>
-    </div>
-    <!-- Выпадающее меню -->
-    <nav class="page-header__nav header-nav">
-      <div class="header-nav__wrapper container">
-        <ul class="header-nav__list list">
-          <li class="header-nav__item"><a class="link">О сервисе</a></li>
-          <li class="header-nav__item"><a class="link" href="form.html">Направления</a></li>
-          <li class="header-nav__item"><a class="link" href="catalog.html">Попутчики</a></li>
-        </ul>
-        <a class="header-nav__login login link" href="login.html">Авторизация</a>
-        <ul class="header-nav__contact-list list">
+        </button>
+        <!-- Раздел авторизации -->
+        <ul class="page-header__auth list">
           <li>
-            <a class="header-nav__contact-item header-nav__phone link" href="tel:+78005558628">8 800 555-86-28</a>
-          </li>
-          <li>
-            <a class="header-nav__contact-item header-nav__email link"
-              href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-          </li>
-        </ul>
-        <h3 class="visually-hidden">Наши страницы в соцсетях</h3>
-        <ul class="header-nav__socials-list list">
-          <li>
-            <a class="header-nav__socials-item header-nav__socials-facebook">
-              <span class="visually-hidden">Facebook</span>
+            <a class="page-header__phone phone link" href="tel:+78005558628">
+              <span class="visually-hidden">8 800 555-86-28</span>
             </a>
           </li>
           <li>
-            <a class="header-nav__socials-item header-nav__socials-vkontakte">
-              <span class="visually-hidden">ВКонтакте</span>
+            <a class="page-header__email email link" href="mailto:mail@htmlacademy.ru">
+              <span class="visually-hidden">mail@htmlacademy.ru</span>
             </a>
           </li>
           <li>
-            <a class="header-nav__socials-item header-nav__socials-instagram">
-              <span class="visually-hidden">Instagram</span>
-            </a>
+            <a class="page-header__login login link" href="login.html">Авторизация</a>
           </li>
         </ul>
       </div>
-    </nav>
+      <!-- Выпадающее меню -->
+      <nav class="page-header__nav header-nav">
+        <div class="header-nav__wrapper container">
+          <ul class="header-nav__list list">
+            <li class="header-nav__item"><a class="link">О сервисе</a></li>
+            <li class="header-nav__item"><a class="link" href="form.html">Направления</a></li>
+            <li class="header-nav__item"><a class="link" href="catalog.html">Попутчики</a></li>
+          </ul>
+          <a class="header-nav__login login link" href="login.html">Авторизация</a>
+          <ul class="header-nav__contact-list list">
+            <li>
+              <a class="header-nav__contact-item header-nav__phone link" href="tel:+78005558628">8 800 555-86-28</a>
+            </li>
+            <li>
+              <a class="header-nav__contact-item header-nav__email link"
+                href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </li>
+          </ul>
+          <h3 class="visually-hidden">Наши страницы в соцсетях</h3>
+          <ul class="header-nav__socials-list list">
+            <li>
+              <a class="header-nav__socials-item header-nav__socials-facebook">
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a class="header-nav__socials-item header-nav__socials-vkontakte">
+                <span class="visually-hidden">ВКонтакте</span>
+              </a>
+            </li>
+            <li>
+              <a class="header-nav__socials-item header-nav__socials-instagram">
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Погнали! - сервис по поиску попутчиков в Ваше путешествие</h1>
@@ -135,9 +137,8 @@
             </ol>
           </div>
         </div>
-        <!-- Информация о сервисе -->
-
       </div>
+      <!-- Информация о сервисе -->
       <div class="about-us__service">
         <div class="about-us__service-wrapper container">
           <div class="about-us__service-info">
@@ -188,8 +189,7 @@
                     srcset="img/photo-france-mobile@2x.jpg 2x" width="270" height="110" alt="Франция">
                 </picture>
                 <div class="destinations__item-info">
-                  <img class="destinations__flag" width="35" height="24" src="img/flag-france.svg"
-                    alt="Флаг Франции">
+                  <img class="destinations__flag" width="35" height="24" src="img/flag-france.svg" alt="Флаг Франции">
                   <h3 class="destinations__country">Франция</h3>
                   <span class="destinations__slogan">Трэ бьен, манифик!</span>
                   <span class="destinations__popularity">12518</span>
@@ -269,14 +269,15 @@
                     href="profiles/1/firsova.html">Таня Фирсова</a>
                   <p class="companions__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                   <ul class="companions__travel-by travel-by list">
-                    <li class="travel-by__item travel-by__plane tooltip"
-                      data-tooltip="Авиатранспорт">
+                    <li class="travel-by__item travel-by__plane tooltip" data-tooltip="Авиатранспорт">
                     </li>
-                    <li class="travel-by__item travel-by__item--faded travel-by__public-transport tooltip" data-tooltip="Автотранспорт">
+                    <li class="travel-by__item travel-by__item--faded travel-by__public-transport tooltip"
+                      data-tooltip="Автотранспорт">
                     </li>
                     <li class="travel-by__item travel-by__bike travel-by__item--faded tooltip" data-tooltip="Велосипед">
                     </li>
-                    <li class="travel-by__item travel-by__item--faded  travel-by__on-foot tooltip" data-tooltip="Пешком">
+                    <li class="travel-by__item travel-by__item--faded  travel-by__on-foot tooltip"
+                      data-tooltip="Пешком">
                     </li>
                   </ul>
                 </div>
@@ -319,7 +320,7 @@
                   <ul class="companions__travel-by travel-by list">
                     <li class="travel-by__item travel-by__plane tooltip" data-tooltip="Авиатранспорт">
                     </li>
-                    <li class="travel-by__item travel-by__public-transport tooltip"  data-tooltip="Автотранспорт">
+                    <li class="travel-by__item travel-by__public-transport tooltip" data-tooltip="Автотранспорт">
                     </li>
                     <li class="travel-by__item travel-by__item--faded travel-by__bike tooltip" data-tooltip="Велосипед">
                     </li>
