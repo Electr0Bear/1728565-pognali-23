@@ -165,7 +165,7 @@
     <section class="my-plans">
       <div class="container form-wrapper">
         <h2 class="my-plans__heading">Мои планы:</h2>
-        <ol class="my-plans__list">
+        <ol class="my-plans__list list">
           <li class="my-plans__item">
             <h3 class="my-plans__destination">Франция, Италия</h3>
             <div class="my-plans__trip-info">
@@ -188,19 +188,26 @@
     <!-- Добавление плана - слайдер -->
     <section class="add-plan">
       <div class="container form-wrapper">
-        <h2 class="add-plan__heading">Добавить план:</h2>
-        <ul class="add-plan__slider-buttons-list list">
-          <li class="add-plan__slider-buttons-item">
-            <button class="add-plan__slider-button" type="button"><span class="visually-hidden">Даты</span></button>
-          </li>
-          <li class="add-plan__slider-buttons-item">
-            <button class="add-plan__slider-button" type="button"><span class="visually-hidden">Маршрут</span></button>
-          </li>
-          <li class="add-plan__slider-buttons-item">
-            <button class="add-plan__slider-button" type="button"><span
-                class="visually-hidden">Развлечения</span></button>
-          </li>
-        </ul>
+        <div class="add-plan__header">
+          <h2 class="add-plan__heading">Добавить план:</h2>
+          <ul class="add-plan__slider-buttons-list list">
+            <li class="add-plan__slider-buttons-item add-plan__slider-buttons-item--active">
+              <a class="add-plan__slider-button add-plan__slider-button--active">
+                <span class="add-plan__slider-button-text">Даты</span>
+              </a>
+            </li>
+            <li class="add-plan__slider-buttons-item">
+              <a class="add-plan__slider-button">
+                <span class="add-plan__slider-button-text">Маршрут</span>
+              </a>
+            </li>
+            <li class="add-plan__slider-buttons-item">
+              <a class="add-plan__slider-button">
+                <span class="add-plan__slider-button-text">Развлечения</span>
+              </a>
+            </li>
+          </ul>
+        </div>
         <!-- Раздел со слайдами -->
         <section class="add-plan__wrapper">
           <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="POST">
@@ -502,7 +509,8 @@
             <!-- ВТОРОЙ ШАГ -->
             <div class="add-plan__step-two step-two">
               <h3 class="add-plan__step-heading"><span>Шаг 2.</span><span>Маршрут</span></h3>
-              <p class="add-plan__step-description">Укажите страны, которые вы хотели бы посетить. <span>Это может быть одна или сразу несколько.</span></p>
+              <p class="add-plan__step-description">Укажите страны, которые вы хотели бы посетить. <span>Это может быть
+                  одна или сразу несколько.</span></p>
               <!-- Выбор стран -->
               <fieldset class="step-two__countries">
                 <ul class="step-two__countries-list list">
@@ -618,7 +626,8 @@
             <!-- ТРЕТИЙ ШАГ -->
             <div class="add-plan__step-three step-three">
               <h3 class="add-plan__step-heading"><span>Шаг 3.</span><span>Развлечения</span></h3>
-              <p class="add-plan__step-description">Наконец, расскажите о своих планах времяпровождения. <span>Можно писать в свободной форме и ставить тэги.</span></p>
+              <p class="add-plan__step-description">Наконец, расскажите о своих планах времяпровождения. <span>Можно
+                  писать в свободной форме и ставить тэги.</span></p>
               <!-- Дополнительная информация о планах -->
               <fieldset class="step-three__extra-info extra-info">
                 <legend class="visually-hidden">Добавьте описание к Вашим планам</legend>
