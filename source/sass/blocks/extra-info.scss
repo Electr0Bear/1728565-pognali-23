@@ -4,6 +4,11 @@
     padding-right: 28px;
     border-top: 1px solid $specialGrey2;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 75px;
+    padding-right: 116px;
+  }
 }
 
 .extra-info__country-item {
@@ -62,6 +67,19 @@
       border-left: 3px solid $blueLight;
     }
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 52px;
+
+    &::before {
+      right: 104px;
+    }
+
+    &:first-child::after {
+      right: 97px;
+      height: 274px;
+    }
+  }
 }
 
 .extra-info__input-field {
@@ -78,9 +96,17 @@
   color: $specialGrey;
 
   @media (min-width: $tablet) {
+    padding: 19px 18px;
     height: 150px;
     font-size: 20px;
     line-height: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 34px;
+    padding: 26px 25px;
+    width: 730px;
+    height: 142px;
   }
 }
 
@@ -111,7 +137,7 @@
   @media (min-width: $tablet) {
     padding-top: 7px;
     padding-left: 0;
-    width: auto;
+    width: 350px;
     font-weight: 700;
     font-size: 30px;
     line-height: 30px;
