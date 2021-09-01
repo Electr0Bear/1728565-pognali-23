@@ -68,10 +68,21 @@
     font-size: 36px;
     line-height: 36px;
   }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 
 .add-plan__step-heading span {
   display: block;
+
+  @media (min-width: $desktop) {
+    &:first-child {
+      margin-right: 10px;
+    }
+  }
 }
 
 .add-plan__step-description {
@@ -85,6 +96,14 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 585px;
+
+    & span {
+      display: block;
+    }
   }
 }
 
