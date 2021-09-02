@@ -170,10 +170,34 @@
   }
 }
 
-.companion-filter__level-input {
-  padding: 10px;
+.companion-filter__level-input-section {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: $white;
   border: 1px solid $specialGrey4;
-  width: 107px;
+  border-radius: 4px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 4px);
+    left: calc(50% - 8.5px);
+    display: block;
+    width: 16px;
+    height: 9px;
+    background-color: $specialGrey4;
+    border-top: 4px solid $white;
+    border-bottom: 4px solid $white;
+  }
+}
+
+.companion-filter__level-input {
+  position: relative;
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 109px;
   box-sizing: border-box;
   text-align: center;
   font-family: $bloggerSans;
@@ -186,6 +210,7 @@
 
 .companion-filter__level-input-min {
   border-radius: 4px 0 0 4px;
+  border-right: 1px solid $specialGrey4;
 }
 
 .companion-filter__level-input-max {
