@@ -111,67 +111,71 @@
   <main class="page-main">
     <h1 class="visually-hidden">Погнали! - сервис по поиску попутчиков в Ваше путешествие</h1>
     <!-- Фильтрация по странам -->
-    <section class="country-filter container--extra">
-      <div class="container">
+    <section class="country-filter">
+      <div class="container container--extra">
         <h2 class="country-filter__heading">Фильтрация по странам:</h2>
         <button class="country-filter__button-top country-filter__button-top--meatballs" type="button">
           <span class="country-filter__button-top-show visually-hidden">Показать</span>
           <span class="country-filter__button-top-close" hidden>Свернуть</span>
         </button>
-        <div class="country-filter__filter">
-          <ul class="country-filter__continents-list list">
-            <li class="country-filter__continent-item"><a>Европа</a></li>
-            <li class="country-filter__continent-item"><a>Азия</a></li>
-            <li class="country-filter__continent-item"><a>Америка</a></li>
-            <li class="country-filter__continent-item"><a>Острова</a></li>
-          </ul>
-          <div class="country-filter__countries">
-            <ul class="country-filter__alphabet-list list">
-              <li class="country-filter__alphabet-letter country-filter__alphabet-letter--active">А</li>
-              <li class="country-filter__alphabet-letter">Б</li>
-              <li class="country-filter__alphabet-letter">В</li>
-              <li class="country-filter__alphabet-letter">Г</li>
-              <li class="country-filter__alphabet-letter">Д</li>
-              <li class="country-filter__alphabet-letter">Е</li>
-              <li class="country-filter__alphabet-letter">З</li>
-              <li class="country-filter__alphabet-letter">И</li>
-              <li class="country-filter__alphabet-letter">К</li>
-              <li class="country-filter__alphabet-letter">Л</li>
-              <li class="country-filter__alphabet-letter">М</li>
-              <li class="country-filter__alphabet-letter">Н</li>
-              <li class="country-filter__alphabet-letter">О</li>
-              <li class="country-filter__alphabet-letter">П</li>
-              <li class="country-filter__alphabet-letter">Р</li>
-              <li class="country-filter__alphabet-letter">С</li>
-              <li class="country-filter__alphabet-letter">Т</li>
-              <li class="country-filter__alphabet-letter">У</li>
-              <li class="country-filter__alphabet-letter">Ф</li>
-              <li class="country-filter__alphabet-letter">Х</li>
-              <li class="country-filter__alphabet-letter">Ч</li>
-              <li class="country-filter__alphabet-letter">Ш</li>
-              <li class="country-filter__alphabet-letter">Э</li>
-              <li class="country-filter__alphabet-letter">Ю</li>
-              <li class="country-filter__alphabet-letter">Я</li>
-            </ul>
-            <ul class="country-filter__countries-list-a list">
-              <li class="country-filter__countries-item country-filter__countries-item-a"><a>Австралия</a></li>
-              <li class="country-filter__countries-item country-filter__countries-item-a"><a>Австрия</a></li>
-              <li class="country-filter__countries-item country-filter__countries-item-a"><a>Азербайджан</a></li>
-              <li class="country-filter__countries-item country-filter__countries-item-a"><a>Албания</a></li>
-              <li class="country-filter__countries-item country-filter__countries-item-a"><a>Алжир</a></li>
-              <li class="country-filter__countries-item country-filter__countries-item-a"><a>Ангола</a></li>
-              <li class="country-filter__countries-item country-filter__countries-item-a"><a>Андорра</a></li>
-              <li class="country-filter__countries-item country-filter__countries-item-a"><a>Антигуа и Барбуда</a></li>
-              <li class="country-filter__countries-item country-filter__countries-item-a"><a>Аргентина</a></li>
-              <li class="country-filter__countries-item country-filter__countries-item-a"><a>Армения</a></li>
-              <li class="country-filter__countries-item country-filter__countries-item-a"><a>Афганистан</a></li>
-            </ul>
-          </div>
-        </div>
-        <button class="country-filter__button-bottom-close" type="button">
-          <span>Свернуть</span>
-        </button>
       </div>
+      <div class="country-filter__droplist country-filter__droplist--hide">
+        <div class="container container--extra">
+          <div class="country-filter__droplist-wrapper">
+            <ul class="country-filter__continents-list list">
+              <li class="country-filter__continent-item"><a>Европа</a></li>
+              <li class="country-filter__continent-item"><a>Азия</a></li>
+              <li class="country-filter__continent-item"><a>Америка</a></li>
+              <li class="country-filter__continent-item"><a>Острова</a></li>
+            </ul>
+            <div class="country-filter__countries">
+              <ul class="country-filter__alphabet-list list">
+                <li class="country-filter__alphabet-letter country-filter__alphabet-letter--active">А</li>
+                <li class="country-filter__alphabet-letter">Б</li>
+                <li class="country-filter__alphabet-letter">В</li>
+                <li class="country-filter__alphabet-letter">Г</li>
+                <li class="country-filter__alphabet-letter">Д</li>
+                <li class="country-filter__alphabet-letter">Е</li>
+                <li class="country-filter__alphabet-letter">З</li>
+                <li class="country-filter__alphabet-letter">И</li>
+                <li class="country-filter__alphabet-letter">К</li>
+                <li class="country-filter__alphabet-letter">Л</li>
+                <li class="country-filter__alphabet-letter">М</li>
+                <li class="country-filter__alphabet-letter">Н</li>
+                <li class="country-filter__alphabet-letter">О</li>
+                <li class="country-filter__alphabet-letter">П</li>
+                <li class="country-filter__alphabet-letter">Р</li>
+                <li class="country-filter__alphabet-letter">С</li>
+                <li class="country-filter__alphabet-letter">Т</li>
+                <li class="country-filter__alphabet-letter">У</li>
+                <li class="country-filter__alphabet-letter">Ф</li>
+                <li class="country-filter__alphabet-letter">Х</li>
+                <li class="country-filter__alphabet-letter">Ч</li>
+                <li class="country-filter__alphabet-letter">Ш</li>
+                <li class="country-filter__alphabet-letter">Э</li>
+                <li class="country-filter__alphabet-letter">Ю</li>
+                <li class="country-filter__alphabet-letter">Я</li>
+              </ul>
+              <ul class="country-filter__countries-list-a list">
+                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Австралия</a></li>
+                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Австрия</a></li>
+                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Азербайджан</a></li>
+                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Албания</a></li>
+                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Алжир</a></li>
+                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Ангола</a></li>
+                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Андорра</a></li>
+                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Антигуа и Барбуда</a>
+                </li>
+                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Аргентина</a></li>
+                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Армения</a></li>
+                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Афганистан</a></li>
+              </ul>
+            </div>
+          </div>
+          <button class="country-filter__button-bottom-close" type="button">
+            <span>Свернуть</span>
+          </button>
+        </div>
     </section>
     <!-- Фильтр попутчиков -->
     <section class="companion-filter container">
@@ -199,7 +203,8 @@
                     <label class="companion-filter__checkbox" for="hobby-couch-potato">Диван</label>
                   </li>
                 </ul>
-                <button class="companion-filter__show-hide-button companion-filter__show-hide-button--show" type="button">
+                <button class="companion-filter__show-hide-button companion-filter__show-hide-button--show"
+                  type="button">
                   <span class="companion-filter__show-button visually-hidden">Показать</span>
                   <span class="companion-filter__hide-button" hidden>Скрыть</span>
                 </button>
@@ -225,7 +230,8 @@
                     <label class="companion-filter__checkbox" for="music-eurodance">Евроденс</label>
                   </li>
                 </ul>
-                <button class="companion-filter__show-hide-button companion-filter__show-hide-button--hide" type="button">
+                <button class="companion-filter__show-hide-button companion-filter__show-hide-button--hide"
+                  type="button">
                   <span class="companion-filter__show-button" hidden>Показать</span>
                   <span class="companion-filter__hide-button visually-hidden">Скрыть</span>
                 </button>
@@ -251,7 +257,8 @@
                     <label class="companion-filter__checkbox" for="food-vegan">Веган-сыроед</label>
                   </li>
                 </ul>
-                <button class="companion-filter__show-hide-button companion-filter__show-hide-button--show" type="button">
+                <button class="companion-filter__show-hide-button companion-filter__show-hide-button--show"
+                  type="button">
                   <span class="companion-filter__show-button visually-hidden">Показать</span>
                   <span class="companion-filter__hide-button" hidden>Скрыть</span>
                 </button>
@@ -294,7 +301,8 @@
                     </label>
                   </li>
                 </ul>
-                <button class="companion-filter__show-hide-button companion-filter__show-hide-button--hide" type="button">
+                <button class="companion-filter__show-hide-button companion-filter__show-hide-button--hide"
+                  type="button">
                   <span class="companion-filter__show-button" hidden>Показать</span>
                   <span class="companion-filter__hide-button visually-hidden">Скрыть</span>
                 </button>
@@ -317,7 +325,8 @@
                     </div>
                   </div>
                 </div>
-                <button class="companion-filter__show-hide-button companion-filter__show-hide-button--hide" type="button">
+                <button class="companion-filter__show-hide-button companion-filter__show-hide-button--hide"
+                  type="button">
                   <span class="companion-filter__show-button" hidden>Показать</span>
                   <span class="companion-filter__hide-button visually-hidden">Скрыть</span>
                 </button>
@@ -371,14 +380,16 @@
                   <span class="companions-selection__transport-plane"></span>
                 </li>
                 <li class="companions-selection__transport-item">
-                  <span class="companions-selection__transport-bus companions-selection__transport-icon companions-selection__transport-icon--transparent"></span>
+                  <span
+                    class="companions-selection__transport-bus companions-selection__transport-icon companions-selection__transport-icon--transparent"></span>
                 </li>
                 <li class="companions-selection__transport-item">
                   <span
                     class="companions-selection__transport-bike companions-selection__transport-icon companions-selection__transport-icon--transparent"></span>
                 </li>
                 <li class="companions-selection__transport-item">
-                  <span class="companions-selection__transport-on-foot companions-selection__transport-icon companions-selection__transport-icon--transparent"></span>
+                  <span
+                    class="companions-selection__transport-on-foot companions-selection__transport-icon companions-selection__transport-icon--transparent"></span>
                 </li>
               </ul>
             </div>
@@ -501,14 +512,15 @@
                   <span class="companions-selection__transport-plane"></span>
                 </li>
                 <li class="companions-selection__transport-item">
-                  <span class="companions-selection__transport-bus companions-selection__transport-icon companions-selection__transport-icon--transparent"></span>
+                  <span
+                    class="companions-selection__transport-bus companions-selection__transport-icon companions-selection__transport-icon--transparent"></span>
+                </li>
+                <li class="companions-selection__transport-item">
+                  <span class="companions-selection__transport-bike"></span>
                 </li>
                 <li class="companions-selection__transport-item">
                   <span
-                    class="companions-selection__transport-bike"></span>
-                </li>
-                <li class="companions-selection__transport-item">
-                  <span class="companions-selection__transport-on-foot companions-selection__transport-icon companions-selection__transport-icon--transparent"></span>
+                    class="companions-selection__transport-on-foot companions-selection__transport-icon companions-selection__transport-icon--transparent"></span>
                 </li>
               </ul>
             </div>
@@ -571,7 +583,8 @@
                     class="companions-selection__transport-bike companions-selection__transport-icon companions-selection__transport-icon--transparent"></span>
                 </li>
                 <li class="companions-selection__transport-item">
-                  <span class="companions-selection__transport-on-foot companions-selection__transport-icon companions-selection__transport-icon--transparent"></span>
+                  <span
+                    class="companions-selection__transport-on-foot companions-selection__transport-icon companions-selection__transport-icon--transparent"></span>
                 </li>
               </ul>
             </div>

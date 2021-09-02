@@ -1,6 +1,9 @@
 .country-filter {
   padding-top: 20px;
+  padding-bottom: 17px;
+  position: relative;
   background-color: $blueLight5;
+  border-radius: 0 0 20px 20px;
 }
 
 .country-filter__heading {
@@ -70,7 +73,21 @@
   }
 }
 
-.country-filter__filter {
+.country-filter__droplist {
+  padding-top: 25px;
+  padding-bottom: 28px;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  background-color: $blueLight5;
+  border-radius: 0 0 20px 20px;
+
+  &--hide {
+    display: none;
+  }
+}
+
+.country-filter__droplist-wrapper {
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -90,21 +107,35 @@
 .country-filter__alphabet-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 40px);
-  background-color: $specialGrey4;
-  gap: 1px;
-  border: 1px solid $specialGrey4;
+  grid-template-rows: repeat(5, 1fr);
+  border-top: 1px solid $specialGrey4;
+  border-left: 1px solid $specialGrey4;
 }
 
 .country-filter__alphabet-letter {
+  position: relative;
   padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
   background-color: $white;
+  border-bottom: 1px solid $specialGrey4;
+  border-right: 1px solid $specialGrey4;
 
   &--active {
     color: $white;
     background-color: $blueLight;
-    outline: 1px solid $blueLight;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      display: block;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      z-index: 1;
+      border: 2px solid $blueLight;
+    }
   }
 }
 
