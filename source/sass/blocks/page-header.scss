@@ -1,14 +1,6 @@
 .page-header {
   background-color: $basicBlue;
 
-  &--inner-form {
-    background-color: $basicGrey;
-  }
-
-  &--inner-catalog {
-    background-color: $blueLight5;
-  }
-
   &--light {
     @media (min-width: $tablet) and (max-width: $desktop) {
       background-color: $basicBlue2;
@@ -16,24 +8,36 @@
   }
 }
 
-.page-header__background-layer {
-  background-color: $basicBlue;
-  border-radius: 0 0 30px 30px;
+// background-color: $basicBlue;
 
-  &--light {
-    @media (min-width: $tablet) and (max-width: $desktop) {
-      background-color: $basicBlue2;
-    }
-  }
+// &--inner-form {
+//   background-color: $basicGrey;
+// }
 
-  @media (min-width: $tablet) {
-    border-radius: 0 0 60px 60px;
-  }
-}
+// &--inner-catalog {
+//   background-color: $blueLight5;
+// }
 
-.page-header-inner-pages {
-  border-radius: 0 0 30px 30px;
-}
+// &--light {
+//   @media (min-width: $tablet) and (max-width: $desktop) {
+//     background-color: $basicBlue2;
+//   }
+// }
+
+// .page-header__background-layer {
+//   background-color: $basicBlue;
+//   border-radius: 0 0 30px 30px;
+
+//   &--light {
+//     @media (min-width: $tablet) and (max-width: $desktop) {
+//       background-color: $basicBlue2;
+//     }
+//   }
+
+//   @media (min-width: $tablet) {
+//     border-radius: 0 0 60px 60px;
+//   }
+// }
 
 .page-header__wrapper {
   padding-top: 19px;
@@ -206,51 +210,4 @@
   &:active {
     color: $basicBlueTransparent03;
   }
-}
-
-.page-header__page-title {
-  padding-bottom: 12px;
-  margin: 0;
-  color: $white;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 36px;
-
-  @media (min-width: $tablet) {
-    padding-top: 92px;
-    padding-bottom: 64px;
-    font-size: 60px;
-    line-height: 60px;
-  }
-
-  @media (min-width: $desktop) {
-    padding-top: 134px;
-  }
-}
-
-.page-header__catalog-link {
-  display: none;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: $white;
-
-  &::after {
-    content: "";
-    position: relative;
-    display: block;
-    width: 32px;
-    height: 16px;
-    background-image: url("../img/icon-arrow-bend.svg");
-    background-repeat: no-repeat;
-  }
-}
-
-.page-header__orange-line {
-  position: absolute;
-  width: 214px;
-  height: 5px;
-  background-color: $orange;
-  border-radius: 4px;
 }

@@ -9,29 +9,28 @@
 </head>
 
 <body class="page-body">
-  <header class="page-header page-header--inner-catalog">
-    <div class="page-header__background-layer">
-      <h2 class="visually-hidden">Навигация по странице</h2>
-      <div class="page-header__wrapper container">
-        <a class="page-header__logo">
-          <picture class="page-header__logo-regular">
-            <source srcset="img/header-logo-desktop.svg" media="(min-width: 1440px)">
-            <source srcset="img/header-logo-tablet.svg" media="(min-width: 768px)">
-            <img src="img/header-logo-mobile.svg" alt="Погнали?">
-          </picture>
-          <picture class="page-header__logo-menu" hidden>
-            <source srcset="img/header-logo-desktop-blue.svg" media="(min-width: 1440px)">
-            <source srcset="img/header-logo-tablet-blue.svg" media="(min-width: 768px)">
-            <img src="img/header-logo-mobile-blue.svg" alt="Погнали?">
-          </picture>
-        </a>
-        <ul class="page-header__nav-list list">
-          <li class="page-header__nav-item"><a class="link">О сервисе</a></li>
-          <li class="page-header__nav-item"><a class="link" href="form.html">Направления</a></li>
-          <li class="page-header__nav-item"><a class="link" href="catalog.html">Попутчики</a></li>
-        </ul>
-        <button class="page-header__menu-button" type="button">
-          <!-- <div class="page-header__menu-button-show" aria-label="Показать меню">
+  <header class="page-header">
+    <h2 class="visually-hidden">Навигация по странице</h2>
+    <div class="page-header__wrapper container">
+      <a class="page-header__logo">
+        <picture class="page-header__logo-regular">
+          <source srcset="img/header-logo-desktop.svg" media="(min-width: 1440px)">
+          <source srcset="img/header-logo-tablet.svg" media="(min-width: 768px)">
+          <img src="img/header-logo-mobile.svg" alt="Погнали?">
+        </picture>
+        <picture class="page-header__logo-menu" hidden>
+          <source srcset="img/header-logo-desktop-blue.svg" media="(min-width: 1440px)">
+          <source srcset="img/header-logo-tablet-blue.svg" media="(min-width: 768px)">
+          <img src="img/header-logo-mobile-blue.svg" alt="Погнали?">
+        </picture>
+      </a>
+      <ul class="page-header__nav-list list">
+        <li class="page-header__nav-item"><a class="link">О сервисе</a></li>
+        <li class="page-header__nav-item"><a class="link" href="form.html">Направления</a></li>
+        <li class="page-header__nav-item"><a class="link" href="catalog.html">Попутчики</a></li>
+      </ul>
+      <button class="page-header__menu-button" type="button">
+        <!-- <div class="page-header__menu-button-show" aria-label="Показать меню">
           <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="25" height="3" rx="1.5" fill="white" />
             <rect y="8" width="25" height="3" rx="1.5" fill="white" />
@@ -45,71 +44,74 @@
               stroke-linejoin="round" />
           </svg>
         </div> -->
-        </button>
-        <!-- Раздел авторизации -->
-        <ul class="page-header__auth page-header__auth--hide list">
+      </button>
+      <!-- Раздел авторизации -->
+      <ul class="page-header__auth page-header__auth--hide list">
+        <li>
+          <a class="page-header__phone phone link" href="tel:+78005558628">
+            <span class="visually-hidden">8 800 555-86-28</span>
+          </a>
+        </li>
+        <li>
+          <a class="page-header__email email link" href="mailto:mail@htmlacademy.ru">
+            <span class="visually-hidden">mail@htmlacademy.ru</span>
+          </a>
+        </li>
+        <li>
+          <a class="page-header__login login link" href="login.html">Авторизация</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Выпадающее меню -->
+    <nav class="page-header__nav header-nav">
+      <div class="header-nav__wrapper container">
+        <ul class="header-nav__list list">
+          <li class="header-nav__item"><a class="link">О сервисе</a></li>
+          <li class="header-nav__item"><a class="link" href="form.html">Направления</a></li>
+          <li class="header-nav__item"><a class="link" href="catalog.html">Попутчики</a></li>
+        </ul>
+        <a class="header-nav__login login link" href="login.html">Авторизация</a>
+        <ul class="header-nav__contact-list list">
           <li>
-            <a class="page-header__phone phone link" href="tel:+78005558628">
-              <span class="visually-hidden">8 800 555-86-28</span>
+            <a class="header-nav__contact-item header-nav__phone link" href="tel:+78005558628">8 800 555-86-28</a>
+          </li>
+          <li>
+            <a class="header-nav__contact-item header-nav__email link"
+              href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+        </ul>
+        <h3 class="visually-hidden">Наши страницы в соцсетях</h3>
+        <ul class="header-nav__socials-list list">
+          <li>
+            <a class="header-nav__socials-item header-nav__socials-facebook">
+              <span class="visually-hidden">Facebook</span>
             </a>
           </li>
           <li>
-            <a class="page-header__email email link" href="mailto:mail@htmlacademy.ru">
-              <span class="visually-hidden">mail@htmlacademy.ru</span>
+            <a class="header-nav__socials-item header-nav__socials-vkontakte">
+              <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li>
-            <a class="page-header__login login link" href="login.html">Авторизация</a>
+            <a class="header-nav__socials-item header-nav__socials-instagram">
+              <span class="visually-hidden">Instagram</span>
+            </a>
           </li>
         </ul>
       </div>
-      <!-- Выпадающее меню -->
-      <nav class="page-header__nav header-nav">
-        <div class="header-nav__wrapper container">
-          <ul class="header-nav__list list">
-            <li class="header-nav__item"><a class="link">О сервисе</a></li>
-            <li class="header-nav__item"><a class="link" href="form.html">Направления</a></li>
-            <li class="header-nav__item"><a class="link" href="catalog.html">Попутчики</a></li>
-          </ul>
-          <a class="header-nav__login login link" href="login.html">Авторизация</a>
-          <ul class="header-nav__contact-list list">
-            <li>
-              <a class="header-nav__contact-item header-nav__phone link" href="tel:+78005558628">8 800 555-86-28</a>
-            </li>
-            <li>
-              <a class="header-nav__contact-item header-nav__email link"
-                href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-          <h3 class="visually-hidden">Наши страницы в соцсетях</h3>
-          <ul class="header-nav__socials-list list">
-            <li>
-              <a class="header-nav__socials-item header-nav__socials-facebook">
-                <span class="visually-hidden">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a class="header-nav__socials-item header-nav__socials-vkontakte">
-                <span class="visually-hidden">ВКонтакте</span>
-              </a>
-            </li>
-            <li>
-              <a class="header-nav__socials-item header-nav__socials-instagram">
-                <span class="visually-hidden">Instagram</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div class="container container--extra">
-        <h2 class="page-header__page-title">Попутчики</h2>
-        <a class="page-header__catalog-link link" href="index.html">На главную</a>
-        <div class="page-header__orange-line"></div>
-      </div>
-    </div>
+    </nav>
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Погнали! - сервис по поиску попутчиков в Ваше путешествие</h1>
+    <div class="page-main__header-wrapper page-main__header-wrapper--catalog">
+      <div class="page-main__header">
+        <div class="container container--extra">
+          <h2 class="page-main__page-title">Попутчики</h2>
+          <a class="page-main__catalog-link link" href="index.html">На главную</a>
+          <div class="page-main__orange-line"></div>
+        </div>
+      </div>
+    </div>
     <!-- Фильтрация по странам -->
     <section class="country-filter">
       <div class="container container--extra">
@@ -176,6 +178,7 @@
             <span>Свернуть</span>
           </button>
         </div>
+      </div>
     </section>
     <!-- Фильтр попутчиков -->
     <section class="companion-filter container">

@@ -1,4 +1,5 @@
 .form-profile {
+  position: relative;
   padding-top: 20px;
   padding-bottom: 34px;
 
@@ -7,6 +8,7 @@
   }
 
   @media (min-width: $desktop) {
+    z-index: 5;
     margin-top: -252px;
   }
 }
