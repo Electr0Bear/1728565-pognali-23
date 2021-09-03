@@ -8,7 +8,7 @@
   background-color: $yellow;
   border-radius: 20px;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: $desktop) {
     padding: 37px 35px;
   }
 }
@@ -58,7 +58,7 @@
   flex-wrap: nowrap;
   flex-direction: column;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: $desktop) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -107,7 +107,7 @@
     overflow: hidden;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: $desktop) {
     flex-direction: row;
   }
 }
@@ -115,7 +115,7 @@
 .companion-filter__filter-item {
   margin-bottom: 12px;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: $desktop) {
     margin-bottom: 0;
 
     &:not(:last-child) {
@@ -151,7 +151,7 @@
     background-position: 50% 50%;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: $desktop) {
     left: 36px;
     font-size: 20px;
     line-height: 20px;
@@ -170,7 +170,7 @@
 }
 
 .companion-filter__transport {
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: $desktop) {
     justify-content: flex-start;
   }
 }
@@ -180,7 +180,7 @@
   flex-wrap: nowrap;
   flex-direction: row;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: $desktop) {
     margin-left: 18px;
   }
 }
@@ -273,7 +273,7 @@
     border-bottom: 4px solid $white;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: $desktop) {
     margin-bottom: 0;
     order: 3;
   }
@@ -317,7 +317,7 @@
   height: 2px;
   background-color: $blueLightFaded02;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: $desktop) {
     order: 2;
   }
 }
@@ -357,7 +357,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $tablet) and (max-width: $desktop) {
     padding: 18px 0;
     font-size: 20px;
     line-height: 20px;

@@ -1,0 +1,21 @@
+.catalog-grid-overlay {
+  @media (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 951px 1fr 285px;
+    grid-template-rows: auto;
+  }
+}
+
+.catalog-grid-overlay__companion-filter {
+  @media (min-width: $desktop) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+}
+
+.catalog-grid-overlay__companions {
+  @media (min-width: $desktop) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+}
