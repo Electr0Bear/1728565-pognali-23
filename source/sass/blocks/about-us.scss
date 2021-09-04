@@ -19,11 +19,12 @@
     url("../img/globe-back-mobile@1x.png");
   background-position: 50% 150px, 50% -50px;
   background-repeat: no-repeat, no-repeat;
+  background-size: 192px 255px, 100% 569px;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/traveller-illustration-mobile@2x.png"),
       url("../img/globe-back-mobile@2x.png");
-    background-size: 192px 255px, 320px 569px;
+    background-size: 192px 255px, 100% 569px;
   }
 
   @media (min-width: $tablet) {
@@ -288,19 +289,9 @@
   background-color: $blueDark2;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-
-  @media (min-width: $tablet) {
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-  }
-}
-
-.about-us__service-wrapper {
-  padding-top: 29px;
-  padding-bottom: 62px;
   background-image: url("../img/about-mobile@1x.png"),
     url("../img/icon-rectangle-mobile.svg");
-  background-position: center 5px, 0 5px;
+  background-position: center 5px, -10px 5px;
   background-repeat: no-repeat, no-repeat;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -337,11 +328,21 @@
       url("../img/icon-rectangle-blue-desktop.svg");
     background-size: 376px 548px, 688px 212px;
   }
+
+  @media (min-width: $tablet) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+}
+
+.about-us__service-wrapper {
+  padding-top: 29px;
+  padding-bottom: 62px;
 }
 
 .about-us__service-info {
   margin-left: 29px;
-  width: 211px;
+  padding-right: 30px;
 
   @media (min-width: $tablet) {
     width: 300px;
@@ -377,6 +378,12 @@
   font-weight: 300;
   line-height: 22px;
   color: $white;
+
+  @media (min-width: 400px) {
+    & br {
+      display: none;
+    }
+  }
 
   @media (min-width: $tablet) {
     margin-bottom: 31px;

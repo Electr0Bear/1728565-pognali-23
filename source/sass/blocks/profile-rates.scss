@@ -34,12 +34,18 @@
 
 .profile-rates__list {
   margin-bottom: 46px;
-  padding-left: 30px;
+  padding-left: 25px;
+  padding-right: 45px;
   counter-reset: myCounter;
 }
 
 .profile-rates__item {
-  padding-top: 10px;
+  padding-top: 3px;
+  border-top: 1px solid $specialGrey2;
+
+  &:not(:last-child) {
+    margin-bottom: 18px;
+  }
 
   &:nth-child(1) .profile-rates__service::after {
     background-color: $orange;
@@ -66,29 +72,18 @@
   position: relative;
 
   &::after {
+    padding-top: 9px;
     position: absolute;
     top: 0;
-    right: 0;
-    padding-top: 7px;
-    padding-bottom: 8px;
-    padding-left: 12px;
-    padding-right: 12px;
+    right: -45px;
+    display: block;
+    width: 34px;
+    height: 34px;
     counter-increment: myCounter;
     content: counter(myCounter);
     color: $white;
-    display: inline-block;
     border-radius: 50%;
     text-align: center;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    display: block;
-    width: 200px;
-    height: 1px;
-    background-color: $specialGrey2;
   }
 }
 

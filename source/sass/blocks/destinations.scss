@@ -132,6 +132,8 @@
 .destinations__picture {
   display: block;
   border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: auto;
 
   @media (min-width: $tablet) {
     width: 186px;

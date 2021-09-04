@@ -45,8 +45,8 @@
 }
 
 .signup__email {
-  padding: 20px 25px;
-  width: 230px;
+  padding: 20px 85px 20px 25px;
+  width: 100%;
   outline: none;
   border: none;
   border-radius: 10px;
@@ -58,7 +58,7 @@
 
 .signup__button {
   position: absolute;
-  right: 1px;
+  right: 0;
   padding: 0;
   border: none;
   width: 60px;
