@@ -1,10 +1,84 @@
-.form-profile__photo {
+.form-profile {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 34px;
+
+  @media (min-width: $tablet) {
+    padding-top: 66px;
+  }
+
+  @media (min-width: $desktop) {
+    z-index: 5;
+    margin-top: -252px;
+  }
+}
+
+.form-profile__layout {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto auto auto;
+}
+
+.form-profile__level {
+  margin-left: 15px;
+  width: 100px;
+  height: 100px;
+
+  @media (min-width: $tablet) {
+    margin-left: 0;
+    width: 94px;
+    height: 94px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2 / 3;
+    margin-top: 42px;
+    margin-left: 170px;
+    width: 95px;
+    height: 95px;
+  }
+}
+
+.form-profile__level-number,
+.form-profile__level-number-sign {
+  @media (min-width: $desktop) {
+    fill: $white;
+  }
+}
+
+.form-profile__level-number-underline {
+  @media (min-width: $desktop) {
+    stroke: $white;
+  }
+}
+
+.form-profile__photo,
+.form-profile__picture {
+  grid-column: 3 / 4;
+  margin-right: 15px;
   width: 100px;
   height: 100px;
   border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    margin-right: 0;
+    width: 94px;
+    height: 94px;
+    border-radius: 7px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 95px;
+    width: 190px;
+    height: 190px;
+    border-radius: 15px 15px 0 0;
+  }
 }
 
 .form-profile__change-photo-button {
+  grid-column: 1 / 4;
+  margin-top: 18px;
+  margin-bottom: 18px;
   padding-top: 5px;
   padding-bottom: 5px;
   display: block;
@@ -16,10 +90,58 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 18px;
+
+  @media (min-width: $tablet) {
+    margin-top: 40px;
+    margin-bottom: 52px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 3 / 4;
+    margin-top: 0;
+    margin-bottom: 27px;
+    margin-right: 95px;
+    border-radius: 0 0 15px 15px;
+  }
+}
+
+.form-profile__change-photo-first {
+  @media (min-width: $desktop) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    overflow: hidden;
+  }
+}
+
+.form-profile__hashtags {
+  grid-column: 1 / 4;
+  padding-top: 20px;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 1 / 2;
+    width: 732px;
+  }
 }
 
 .form-profile__hashtags-input {
   padding: 25px;
+  width: 100%;
+  height: 89px;
   resize: none;
   background-color: transparent;
   outline: none;
@@ -27,12 +149,19 @@
   border-radius: 8px;
   line-height: 18px;
   opacity: 0.6;
+
+  @media (min-width: $tablet) {
+    padding: 35px 40px;
+    height: 95px;
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .form-profile__hashtags-heading {
   padding-left: 10px;
   padding-right: 10px;
-  position: relative;
+  position: absolute;
   background-color: $basicGrey;
   top: 10px;
   left: 100px;
@@ -42,6 +171,34 @@
   text-align: center;
   text-transform: uppercase;
   color: $blueLight;
+
+  @media (min-width: $tablet) {
+    top: 85px;
+    left: 310px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.form-profile__transport {
+  grid-column: 1 / 4;
+  padding-top: 20px;
+  position: relative;
+
+  @media (min-width: $tablet) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin: 0 60px;
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop) {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    margin-right: 0;
+    margin-left: 140px;
+  }
 }
 
 .form-profile__transport-heading {
@@ -49,7 +206,7 @@
   padding-left: 10px;
   padding-right: 10px;
   display: inline;
-  position: relative;
+  position: absolute;
   background-color: $basicGrey;
   top: 10px;
   left: 75px;
@@ -59,6 +216,14 @@
   text-align: center;
   text-transform: uppercase;
   color: $blueLight;
+
+  @media (min-width: $tablet) {
+    top: 85px;
+    left: 130px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+  }
 }
 
 .form-profile__transport-list {
@@ -68,6 +233,10 @@
   justify-content: center;
   border: 1px solid $specialGrey4;
   border-radius: 8px;
+
+  @media (min-width: $tablet) {
+    padding: 24px 15px;
+  }
 }
 
 .form-profile li {
@@ -79,6 +248,12 @@
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: 17px;
+
+  @media (min-width: $tablet) {
+    width: 44px;
+    height: 44px;
+    background-size: 23px;
+  }
 }
 
 .form-profile__transport-plane {

@@ -1,23 +1,48 @@
 .my-plans {
   background-color: $blueLight3;
+  padding-top: 25px;
+  padding-bottom: 65px;
+  border-radius: 30px 30px 0 0;
+
+  @media (min-width: $tablet) {
+    padding-top: 57px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 54px;
+    padding-bottom: 125px;
+    border-radius: 60px 60px 0 0;
+  }
 }
 
 .my-plans__heading {
   margin: 0;
+  padding-bottom: 29px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
   color: $blueLight;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 48px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 64px;
+  }
 }
 
 .my-plans__list {
-  padding: 0;
-  margin: 0;
   counter-reset: myCounter;
+
+  @media (min-width: $desktop) {
+    padding-left: 64px;
+  }
 }
 
 .my-plans__item {
-  padding: 25px;
   list-style: none;
   background-color: $white;
   border-radius: 10px;
@@ -25,17 +50,32 @@
   &:first-child {
     margin-bottom: 10px;
   }
+
+  @media (min-width: $desktop) {
+    padding: 36px 42px 36px 95px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    &:first-child {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .my-plans__destination {
+  position: relative;
   margin: 0;
-  padding-bottom: 15px;
-  font-weight: bold;
+  padding-top: 25px;
+  padding-left: 41px;
+  padding-bottom: 20px;
+  font-weight: 700;
   font-size: 16px;
   line-height: 16px;
 
   &::before {
-    padding-right: 10px;
+    position: absolute;
+    left: 23px;
     display: inline-block;
     counter-increment: myCounter;
     content: counter(myCounter) ".";
@@ -43,19 +83,85 @@
     font-size: 16px;
     line-height: 16px;
   }
+
+  @media (min-width: $tablet) {
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 34px;
+    font-size: 24px;
+    line-height: 24px;
+
+    &::before {
+      left: auto;
+      right: 32px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+
+    &::before {
+      top: 4px;
+      left: -50px;
+      right: auto;
+    }
+  }
 }
 
-.my-plans__trip-info p {
+.my-plans__trip-info {
+  padding-left: 25px;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet) {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    border-top: 1px solid $specialGrey4opacue03;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+    border: none;
+  }
+}
+
+.my-plans__trip-companions,
+.my-plans__trip-dates {
   margin: 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.my-plans__trip-companions {
+  @media (min-width: $desktop) {
+    margin-right: 27px;
+    width: 150px;
+  }
 }
 
 .my-plans__trip-dates {
   padding-bottom: 15px;
+
+  @media (min-width: $desktop) {
+    margin-right: 106px;
+    padding: 0;
+    width: 200px;
+  }
 }
 
 .my-plans__change-link {
@@ -66,4 +172,10 @@
   text-transform: uppercase;
   color: $black;
   opacity: 0.3;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+  }
 }

@@ -1,12 +1,10 @@
 .page-header {
   background-color: $basicBlue;
 
-  @media (min-width: $tablet) {
-    background-color: $basicBlue2;
-  }
-
-  @media (min-width: $desktop) {
-    background-color: $basicBlue;
+  &--light {
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      background-color: $basicBlue2;
+    }
   }
 }
 
@@ -82,6 +80,12 @@
 
   @media (min-width: $tablet) {
     position: initial;
+  }
+
+  &--hide {
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 }
 
@@ -174,39 +178,5 @@
 
   &:active {
     color: $basicBlueTransparent03;
-  }
-}
-
-.page-header__form-title {
-  color: $white;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 36px;
-}
-
-.page-header__form-title,
-.page-header__catalog-title {
-  color: $white;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 36px;
-}
-
-.page-header__catalog-link {
-  display: none;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: $white;
-
-  &::after {
-    content: "";
-    position: relative;
-    display: block;
-    width: 32px;
-    height: 16px;
-    background-image: url("../img/icon-arrow-bend.svg");
-    background-repeat: no-repeat;
   }
 }

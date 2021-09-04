@@ -23,6 +23,13 @@ body {
     width: 1440px;
     padding: 0 60px;
   }
+
+  &--extra {
+    @media (min-width: $tablet) and (max-width: $desktop) {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+  }
 }
 
 .visually-hidden {

@@ -3,7 +3,7 @@
 @import "global/fonts.scss";
 
 //Блоки
-
+@import "blocks/page-main.scss";
 @import "blocks/page-header.scss";
 @import "blocks/header-nav.scss";
 @import "blocks/about-us.scss";
@@ -27,3 +27,4 @@
 @import "blocks/companion-filter.scss";
 @import "blocks/companions-selection.scss";
 @import "blocks/map.scss";
+@import "blocks/catalog-grid-overlay";

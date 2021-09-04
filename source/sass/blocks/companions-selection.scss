@@ -13,30 +13,49 @@
   display: grid;
   grid-template-columns: 70px 80px auto;
   grid-template-rows: 40px 30px auto auto auto 40px;
-  min-height: 415px;
 
   &:not(:last-child) {
     margin-bottom: 10px;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 34px 0 0 0;
+    grid-template-columns: 250px 150px 110px 1fr auto;
+    grid-template-rows: 45px 92px 50px auto;
+
+    &:not(:last-child) {
+      margin-bottom: 39px;
+    }
   }
 }
 
 .companions-selection__photo-link {
   position: relative;
-  left: -2px;
   display: inline-block;
   border-radius: 50%;
   grid-column: 1 / 2;
   grid-row: 1 / 3;
+
+  @media (min-width: $tablet) {
+    margin-left: 35px;
+    border-radius: 20px;
+    grid-row: 1 / 4;
+  }
 }
 
 .companions-selection__photo {
   display: block;
   border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    width: 190px;
+    height: 190px;
+    border-radius: 20px;
+  }
 }
 
 .companions-selection__name {
   margin: 0 20px;
-
   display: block;
   font-weight: 700;
   font-size: 20px;
@@ -66,12 +85,22 @@
     border-radius: 50%;
     background-color: $specialGreen;
   }
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .companions-selection__name-link {
   display: inline-block;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+
+  @media (min-width: $tablet) {
+    grid-column: 2 / 4;
+  }
 }
 
 .companions-selection__like-button-block {
@@ -81,40 +110,54 @@
   z-index: 1;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+
+  @media (min-width: $tablet) {
+    margin-left: 2px;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
 }
 
 .companions-selection__like-button {
+  position: relative;
   padding: 0;
   width: 30px;
   height: 30px;
   border: none;
   border-radius: 50%;
+  background-color: $blueLight5;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 5px);
+    left: calc(50% - 5px);
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-image: url("../img/icon-heart.svg");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
 
   &--checked {
     background-color: $specialPink;
 
     &::before {
-      content: "";
-      display: block;
-      width: 30px;
-      height: 30px;
       background-image: url("../img/icon-heart-red.svg");
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
     }
   }
 
-  &--unchecked {
-    background-color: $blueLight5;
+  @media (min-width: $tablet) {
+    width: 50px;
+    height: 50px;
 
     &::before {
-      content: "";
-      display: block;
-      width: 30px;
-      height: 30px;
-      background-image: url("../img/icon-heart.svg");
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
+      top: calc(50% - 10px);
+      left: calc(50% - 10px);
+      width: 20px;
+      height: 20px;
     }
   }
 }
@@ -126,18 +169,48 @@
   line-height: 16px;
   text-transform: uppercase;
   color: $basicBlue;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .companions-selection__hashtags-list {
   margin: 0;
   padding-right: 50px;
+  font-size: 15px;
+  line-height: 18px;
   grid-column: 1 / 4;
   grid-row: 3 / 4;
+
+  @media (min-width: $tablet) {
+    padding-right: 20px;
+    font-size: 20px;
+    line-height: 23px;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
 }
 
 .companions-selection__countries {
   grid-column: 1 / 4;
   grid-row: 4 / 5;
+
+  @media (min-width: $tablet) {
+    grid-column: 1 / 6;
+  }
+}
+
+.companions-selection__countries-list {
+  border-top: 1px solid $basicGrey;
+
+  @media (min-width: $tablet) {
+    margin-top: -7px;
+    padding: 26px 37px;
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
 
 .companions-selection__countries-item {
@@ -148,6 +221,13 @@
   &:not(:last-child) {
     margin-bottom: 10px;
   }
+
+  @media (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 25px;
+    }
+  }
 }
 
 .companions-selection__countries-item p {
@@ -157,6 +237,11 @@
   font-size: 15px;
   line-height: 16px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .companions-selection__profile-extra {
@@ -164,11 +249,23 @@
   justify-content: space-between;
   grid-column: 1 / 4;
   grid-row: 5 / 6;
+
+  @media (min-width: $tablet) {
+    margin-right: 25px;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 5 / 6;
+    grid-row: 1 / 4;
+  }
 }
 
 .companions-selection__transport-list {
   display: flex;
   flex-wrap: nowrap;
+
+  @media (min-width: $tablet) {
+    flex-direction: column;
+  }
 }
 
 .companions-selection__transport-item {
@@ -208,6 +305,38 @@
   opacity: 0.3;
 }
 
+.companions-selection__level-small {
+  @media (min-width: $tablet) {
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+  }
+}
+
+.companions-selection__card-section-title {
+  margin: 0;
+  display: inline-block;
+  font-family: $bloggerSans;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  text-transform: lowercase;
+  color: $specialGrey;
+
+  @media (min-width: $tablet) {
+    margin-top: 22px;
+    margin-left: 84px;
+    padding: 0 12px;
+    background-color: $white;
+  }
+}
+
+.companions-selection__profile-extra .companions-selection__card-section-title {
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
 .companions-selection__button-invite {
   display: block;
   padding-top: 12px;
@@ -222,16 +351,15 @@
   border-radius: 25px;
   grid-column: 1 / 4;
   grid-row: 6 / 7;
-}
 
-.companions-selection__card-section-title {
-  margin: 0;
-  font-family: $bloggerSans;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 16px;
-  text-transform: lowercase;
-  color: $specialGrey;
+  @media (min-width: $tablet) {
+    padding-top: 16px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    line-height: 20px;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
 }
 
 .companions-selection__button-more-wrapper {

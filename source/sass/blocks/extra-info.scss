@@ -1,13 +1,149 @@
+.extra-info__country-list {
+  @media (min-width: $tablet) {
+    padding-top: 27px;
+    padding-right: 28px;
+    border-top: 1px solid $specialGrey2;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 75px;
+    padding-right: 116px;
+  }
+}
+
+.extra-info__country-item {
+  margin-bottom: 27px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -3px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: $blueLight;
+    border-radius: 50%;
+  }
+
+  &:first-child::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -13px;
+    display: block;
+    width: 15px;
+    height: 287px;
+    border-top: 2px solid $blueLight;
+    border-left: 2px solid $blueLight;
+    border-bottom: 2px solid $blueLight;
+  }
+
+  @media (min-width: $tablet) {
+    & img {
+      width: 70px;
+      height: 47px;
+    }
+
+    &::before {
+      top: 15px;
+      left: auto;
+      right: -30px;
+      width: 14px;
+      height: 14px;
+    }
+
+    &:first-child::after {
+      top: 16px;
+      left: auto;
+      right: -37px;
+      height: 250px;
+      border-top: none;
+      border-bottom: none;
+      border-left: 3px solid $blueLight;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 52px;
+
+    &::before {
+      right: 104px;
+    }
+
+    &:first-child::after {
+      right: 97px;
+      height: 274px;
+    }
+  }
+}
+
 .extra-info__input-field {
-  margin: 0;
+  margin: 14px 0 0 0;
   padding: 11px 14px;
   box-sizing: border-box;
   resize: none;
-  width: 220px;
+  width: 100%;
   height: 220px;
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: $specialGrey;
+
+  @media (min-width: $tablet) {
+    padding: 19px 18px;
+    height: 150px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 34px;
+    padding: 26px 25px;
+    width: 730px;
+    height: 142px;
+  }
+}
+
+.extra-info__label {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 8px;
+  display: block;
+  width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset -25px 0 10px $white;
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 7px;
+    padding-left: 0;
+    width: 350px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+
+    &::before {
+      display: none;
+    }
+  }
 }

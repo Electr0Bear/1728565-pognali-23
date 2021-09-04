@@ -1,25 +1,52 @@
+.companion-filter {
+  padding-top: 21px;
+  padding-bottom: 28px;
+}
+
 .companion-filter__wrapper {
   padding: 20px;
   background-color: $yellow;
   border-radius: 20px;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    padding: 37px 35px;
+  }
 }
 
 .companion-filter__heading {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 38px;
   padding-left: 5px;
   font-weight: 700;
   font-size: 22px;
   line-height: 22px;
   letter-spacing: 0.02em;
+
+  @media (min-width: $tablet) {
+    padding-left: 0;
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .companion-filter__form-wrapper {
   padding: 23px 5px 23px 5px;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin-bottom: 36px;
+    padding: 34px 0 37px 0;
+    border-top: 1px solid $yellowDark2;
+    border-bottom: 1px solid $yellowDark2;
+  }
 }
 
 .companion-filter__fieldset-wrapper {
   padding: 12px 0;
   border-top: 1px solid $yellowDark2;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    border: none;
+  }
 }
 
 .companion-filter__section {
@@ -27,25 +54,45 @@
   margin: 0;
   position: relative;
   border: none;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .companion-filter__section-label {
-  padding: 0 0 10px 0;
+  margin-bottom: 10px;
+  display: inline-block;
   font-weight: 700;
   line-height: 18px;
   text-transform: uppercase;
   color: $blueLight;
+
+  & span {
+    display: none;
+  }
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+
+    & span {
+      display: inline-block;
+    }
+  }
 }
 
-.companion-filter__checkbox-label {
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
-  color: $black;
-}
-
-.companion-filter__filter-section {
-  display: block;
+.companion-filter__filter-list {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
 
   &--hide {
     position: absolute;
@@ -59,15 +106,35 @@
     clip-path: inset(100%);
     overflow: hidden;
   }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    flex-direction: row;
+  }
 }
 
 .companion-filter__filter-item {
-  padding-bottom: 12px;
+  margin-bottom: 12px;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      width: 170px;
+    }
+
+    &:last-child {
+      width: 150px;
+    }
+  }
 }
 
 .companion-filter__checkbox {
   position: relative;
   left: 25px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -83,15 +150,43 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    left: 36px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      top: -1px;
+      left: -36px;
+      width: 24px;
+      height: 24px;
+    }
+  }
 }
 
 .companion-filter__checkbox-input:checked + .companion-filter__checkbox::before {
   background-image: url("../img/icon-check-mark.svg");
 }
 
-.companion-filter__filter-transport {
+.companion-filter__transport {
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    justify-content: flex-start;
+  }
+}
+
+.companion-filter__transport-list {
   display: flex;
   flex-wrap: nowrap;
+  flex-direction: row;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin-left: 18px;
+  }
+}
+
+.companion-filter__transport-item {
+  margin-right: 2px;
 }
 
 .companion-filter__transport-icon {
@@ -135,40 +230,61 @@
 
 .companion-filter__show-hide-button {
   display: block;
-
-  &--show {
-    padding: 0;
-    position: absolute;
-    right: 0;
-    top: -20px;
-    border: none;
-    width: 11px;
-    height: 7px;
-    background: transparent;
-    background-image: url("../../img/icon-triangle-down.svg");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-  }
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  border: none;
+  width: 11px;
+  height: 7px;
+  background: transparent;
+  background-image: url("../../img/icon-triangle-down.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 
   &--hide {
-    padding: 0;
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    display: none;
+  }
+}
+
+.companion-filter__level-input-section {
+  margin-bottom: 25px;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: $white;
+  border: 1px solid $specialGrey4;
+  border-radius: 4px;
+
+  &::after {
+    content: "";
     position: absolute;
-    right: 0;
-    top: -20px;
-    border: none;
-    width: 11px;
-    height: 7px;
-    background: transparent;
-    background-image: url("../../img/icon-triangle-up.svg");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+    top: calc(50% - 4px);
+    left: calc(50% - 8.5px);
+    display: block;
+    width: 16px;
+    height: 9px;
+    background-color: $specialGrey4;
+    border-top: 4px solid $white;
+    border-bottom: 4px solid $white;
+  }
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    margin-bottom: 0;
+    order: 3;
   }
 }
 
 .companion-filter__level-input {
   padding: 10px;
-  border: 1px solid $specialGrey4;
-  width: 107px;
+  position: relative;
+  border: none;
+  outline: none;
+  width: 109px;
   box-sizing: border-box;
   text-align: center;
   font-family: $bloggerSans;
@@ -177,10 +293,18 @@
   line-height: 13px;
   letter-spacing: 0.06em;
   color: $blueLight;
+
+  @media (min-width: $tablet) {
+    width: 74px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+  }
 }
 
 .companion-filter__level-input-min {
   border-radius: 4px 0 0 4px;
+  border-right: 1px solid $specialGrey4;
 }
 
 .companion-filter__level-input-max {
@@ -189,18 +313,21 @@
 
 .companion-filter__level-scale {
   position: relative;
-  margin-top: 25px;
   width: 220px;
   height: 2px;
   background-color: $blueLightFaded02;
 
-  &--chosen {
-    margin-top: 25px;
-    margin-left: 80px;
-    width: 138px;
-    height: 2px;
-    background-color: $blueLight;
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    order: 2;
   }
+}
+
+.companion-filter__level-scale-chosen {
+  position: relative;
+  left: 80px;
+  width: 138px;
+  height: 2px;
+  background-color: $blueLight;
 }
 
 .companion-filter__level-scale-min,
@@ -219,7 +346,7 @@
 
 .companion-filter__button-submit {
   padding: 13px 0;
-  width: 230px;
+  width: 100%;
   border: none;
   border-radius: 25px;
   background-color: $white;
@@ -229,4 +356,10 @@
   line-height: 17px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet) and (max-width: $desktop) {
+    padding: 18px 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

@@ -1,16 +1,66 @@
-.step-one__fieldset {
-  margin: 0;
+.step-one__general-info-list {
+  display: flex;
+  flex-flow: column;
+
+  @media (min-width: $tablet) {
+    padding-top: 30px;
+    padding-bottom: 19px;
+  }
+
+  @media (min-width: $desktop) {
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $specialGrey2;
+  }
+}
+
+.step-one__general-info-item {
+  margin: 0 0 20px 0;
   padding: 0;
   border: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: $tablet) {
+    padding-top: 26px;
+    border-top: 1px solid $specialGrey2;
+
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:nth-child(3) {
+      order: 2;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 14px;
+    padding-top: 0;
+    justify-content: start;
+    align-items: center;
+    border-top: none;
+  }
 }
 
 .step-one__input-label {
   display: inline-block;
-  padding: 0;
+  margin-bottom: 8px;
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+
+  @media (min-width: $desktop) {
+    order: 1;
+  }
 }
 
 .step-one__input-label-extra {
@@ -20,28 +70,69 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
   opacity: 0.3;
+
+  @media (min-width: $desktop) {
+    order: 3;
+    opacity: 1;
+  }
+}
+
+.step-one__input-label,
+.step-one__input-label-extra {
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop) {
+    width: 186px;
+    letter-spacing: normal;
+  }
 }
 
 .step-one__input-area {
   padding: 14px;
+  width: 220px;
+  display: flex;
+  flex-wrap: nowrap;
   border: 1px solid $specialGrey4;
   box-sizing: border-box;
   border-radius: 4px;
+
+  @media (min-width: $tablet) {
+    width: 538px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 35px;
+    width: 180px;
+    order: 2;
+  }
 }
 
 .step-one__input-field {
   padding: 0;
-  width: 145px;
   border: none;
+  width: 100%;
   text-align: center;
+  font-family: $bloggerSans;
   font-weight: 500;
   font-size: 15px;
   line-height: 14px;
   text-transform: uppercase;
+  color: $blueLight;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .step-one__input-button {
   padding: 0;
+  position: relative;
+  top: 2px;
   width: 14px;
   height: 14px;
   border: none;
@@ -49,6 +140,7 @@
   background-color: transparent;
   background-position: 50% 50%;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .step-one__button-substract {
