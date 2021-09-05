@@ -32,52 +32,65 @@
   }
 
   @media (min-width: $desktop) {
-    background-image: linear-gradient(to bottom, $basicBlue 20%, 30%, $blueDark2 45%);
-  }
-}
-
-.about-us__background {
-  // background-image: url("../img/traveller-illustration-mobile@1x.png"),
-  //   url("../img/globe-back-mobile@1x.png");
-  // background-position: 50% 150px, 50% -50px;
-  // background-repeat: no-repeat, no-repeat;
-  // background-size: 192px 255px, 100% 569px;
-
-  // @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  //   background-image: url("../img/traveller-illustration-mobile@2x.png"),
-  //     url("../img/globe-back-mobile@2x.png");
-  //   background-size: 192px 255px, 100% 569px;
-  // }
-
-  // @media (min-width: $tablet) {
-  //   background-image: url("../img/traveller-illustration-tablet@1x.png"),
-  //     url("../img/globe-back-tablet@1x.png");
-  //   background-position: calc(50% + 100px) 240px, 50% 218px;
-  // }
-
-  // @media (min-width: $tablet) and (min-resolution: 144dpi),
-  //   (min-width: $tablet) and (min-resolution: 1.5dppx) {
-  //   background-image: url("../img/traveller-illustration-tablet@2x.png"),
-  //     url("../img/globe-back-tablet@2x.png");
-  //   background-size: 372px 451px, 768px 612px;
-  // }
-
-  @media (min-width: $desktop) {
+    // background-image: linear-gradient(to bottom, $basicBlue 20%, 30%, $blueDark2 45%);
     padding-top: 110px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     background-image: url("../img/traveller-illustration-desktop@1x.png"),
       url("../img/globe-back-desktop@1x.png");
     background-position: calc(50% + 100px) 30px, 50% -80px;
+    background-size: 431px 640px, 1440px 750px;
   }
 
   @media (min-width: $desktop) and (min-resolution: 144dpi),
     (min-width: $desktop) and (min-resolution: 1.5dppx) {
     background-image: url("../img/traveller-illustration-desktop@2x.png"),
       url("../img/globe-back-desktop@2x.png");
-    background-size: 431px 640px, 1440px 750px;
   }
 }
+
+// .about-us__background {
+//   // background-image: url("../img/traveller-illustration-mobile@1x.png"),
+//   //   url("../img/globe-back-mobile@1x.png");
+//   // background-position: 50% 150px, 50% -50px;
+//   // background-repeat: no-repeat, no-repeat;
+//   // background-size: 192px 255px, 100% 569px;
+
+//   // @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+//   //   background-image: url("../img/traveller-illustration-mobile@2x.png"),
+//   //     url("../img/globe-back-mobile@2x.png");
+//   //   background-size: 192px 255px, 100% 569px;
+//   // }
+
+//   // @media (min-width: $tablet) {
+//   //   background-image: url("../img/traveller-illustration-tablet@1x.png"),
+//   //     url("../img/globe-back-tablet@1x.png");
+//   //   background-position: calc(50% + 100px) 240px, 50% 218px;
+//   // }
+
+//   // @media (min-width: $tablet) and (min-resolution: 144dpi),
+//   //   (min-width: $tablet) and (min-resolution: 1.5dppx) {
+//   //   background-image: url("../img/traveller-illustration-tablet@2x.png"),
+//   //     url("../img/globe-back-tablet@2x.png");
+//   //   background-size: 372px 451px, 768px 612px;
+//   // }
+
+//   // @media (min-width: $desktop) {
+//   //   padding-top: 110px;
+//   //   border-bottom-left-radius: 50px;
+//   //   border-bottom-right-radius: 50px;
+//   //   background-image: url("../img/traveller-illustration-desktop@1x.png"),
+//   //     url("../img/globe-back-desktop@1x.png");
+//   //   background-position: calc(50% + 100px) 30px, 50% -80px;
+//   // }
+
+//   // @media (min-width: $desktop) and (min-resolution: 144dpi),
+//   //   (min-width: $desktop) and (min-resolution: 1.5dppx) {
+//   //   background-image: url("../img/traveller-illustration-desktop@2x.png"),
+//   //     url("../img/globe-back-desktop@2x.png");
+//   //   background-size: 431px 640px, 1440px 750px;
+//   // }
+// }
 
 .about-us__flex-container {
   @media (min-width: $desktop) {
@@ -200,7 +213,8 @@
 }
 
 .about-us__promo-item {
-  padding: 30px 96px 30px 22px;
+  padding-top: 30px;
+  padding-left: 22px;
   position: relative;
   display: block;
   height: 96px;
@@ -244,7 +258,8 @@
   }
 
   @media (min-width: $tablet) {
-    padding: 31px 100px 61px 38px;
+    padding-top: 31px;
+    padding-left: 38px;
     height: 140px;
     font-size: 24px;
     line-height: 24px;
@@ -279,7 +294,8 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 30px 115px 30px 30px;
+    padding-top: 30px;
+    padding-left: 30px;
     height: 107px;
 
     &:nth-child(1) {
@@ -318,40 +334,40 @@
     url("../img/icon-rectangle-mobile.svg");
   background-position: center 5px, -10px 5px;
   background-repeat: no-repeat, no-repeat;
+  background-size: 292px 353px, 132px 132px;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/about-mobile@2x.png"),
       url("../img/icon-rectangle-mobile.svg");
-    background-size: 292px 353px, 132px 132px;
   }
 
   @media (min-width: $tablet) {
+    padding-bottom: 89px;
     background-image: url("../img/about-tablet@1x.png"),
       url("../../img/icon-rectangle-tablet.svg");
-    background-position: 384px 48px, 40px 0;
-    padding-bottom: 89px;
+    background-position: 98% 48px, 40px 0;
+    background-size: 376px 548px, 688px 212px;
   }
 
   @media (min-width: $tablet) and (min-resolution: 144dpi),
     (min-width: $tablet) and (min-resolution: 1.5dppx) {
     background-image: url("../img/about-tablet@2x.png"),
       url("../img/icon-rectangle-tablet.svg");
-    background-size: 376px 548px, 688px 212px;
   }
 
   @media (min-width: $desktop) {
+    padding-top: 132px;
+    padding-bottom: 163px;
     background-image: url("../img/about-desktop@1x.png"),
       url("../../img/icon-rectangle-blue-desktop.svg");
     background-position: 700px 73px, 60px 70px;
-    padding-top: 132px;
-    padding-bottom: 163px;
+    background-size: 376px 548px, 688px 212px;
   }
 
   @media (min-width: $desktop) and (min-resolution: 144dpi),
     (min-width: $desktop) and (min-resolution: 1.5dppx) {
     background-image: url("../img/about-desktop@2x.png"),
       url("../img/icon-rectangle-blue-desktop.svg");
-    background-size: 376px 548px, 688px 212px;
   }
 
   @media (min-width: $tablet) {
@@ -370,7 +386,8 @@
   padding-right: 30px;
 
   @media (min-width: $tablet) {
-    width: 300px;
+    padding: 0;
+    max-width: 44.93%;
   }
 
   @media (min-width: $desktop) {
