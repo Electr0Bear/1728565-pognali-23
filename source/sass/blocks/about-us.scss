@@ -11,7 +11,6 @@
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/traveller-illustration-mobile@2x.png"),
       url("../img/globe-back-mobile@2x.png");
-    // background-size: 192px 255px, 100% 569px;
   }
 
   @media (min-width: $tablet) {
@@ -21,25 +20,21 @@
     background-image: url("../img/traveller-illustration-tablet@1x.png"),
       url("../img/globe-back-tablet@1x.png");
     background-position: calc(50% + 100px) 240px, 50% 218px;
-    background-size: 372px 451px, 100% 542px;
+    background-size: 372px 451px, 100% 612px;
   }
 
   @media (min-width: $tablet) and (min-resolution: 144dpi),
     (min-width: $tablet) and (min-resolution: 1.5dppx) {
     background-image: url("../img/traveller-illustration-tablet@2x.png"),
       url("../img/globe-back-tablet@2x.png");
-    // background-size: 372px 451px, 100% 612px;
   }
 
   @media (min-width: $desktop) {
-    // background-image: linear-gradient(to bottom, $basicBlue 20%, 30%, $blueDark2 45%);
     padding-top: 110px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
     background-image: url("../img/traveller-illustration-desktop@1x.png"),
       url("../img/globe-back-desktop@1x.png");
     background-position: calc(50% + 100px) 30px, 50% -80px;
-    background-size: 431px 640px, 1440px 750px;
+    background-size: 431px 640px, 100% 750px;
   }
 
   @media (min-width: $desktop) and (min-resolution: 144dpi),
@@ -49,54 +44,10 @@
   }
 }
 
-// .about-us__background {
-//   // background-image: url("../img/traveller-illustration-mobile@1x.png"),
-//   //   url("../img/globe-back-mobile@1x.png");
-//   // background-position: 50% 150px, 50% -50px;
-//   // background-repeat: no-repeat, no-repeat;
-//   // background-size: 192px 255px, 100% 569px;
-
-//   // @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-//   //   background-image: url("../img/traveller-illustration-mobile@2x.png"),
-//   //     url("../img/globe-back-mobile@2x.png");
-//   //   background-size: 192px 255px, 100% 569px;
-//   // }
-
-//   // @media (min-width: $tablet) {
-//   //   background-image: url("../img/traveller-illustration-tablet@1x.png"),
-//   //     url("../img/globe-back-tablet@1x.png");
-//   //   background-position: calc(50% + 100px) 240px, 50% 218px;
-//   // }
-
-//   // @media (min-width: $tablet) and (min-resolution: 144dpi),
-//   //   (min-width: $tablet) and (min-resolution: 1.5dppx) {
-//   //   background-image: url("../img/traveller-illustration-tablet@2x.png"),
-//   //     url("../img/globe-back-tablet@2x.png");
-//   //   background-size: 372px 451px, 768px 612px;
-//   // }
-
-//   // @media (min-width: $desktop) {
-//   //   padding-top: 110px;
-//   //   border-bottom-left-radius: 50px;
-//   //   border-bottom-right-radius: 50px;
-//   //   background-image: url("../img/traveller-illustration-desktop@1x.png"),
-//   //     url("../img/globe-back-desktop@1x.png");
-//   //   background-position: calc(50% + 100px) 30px, 50% -80px;
-//   // }
-
-//   // @media (min-width: $desktop) and (min-resolution: 144dpi),
-//   //   (min-width: $desktop) and (min-resolution: 1.5dppx) {
-//   //   background-image: url("../img/traveller-illustration-desktop@2x.png"),
-//   //     url("../img/globe-back-desktop@2x.png");
-//   //   background-size: 431px 640px, 1440px 750px;
-//   // }
-// }
-
 .about-us__flex-container {
   @media (min-width: $desktop) {
     margin: 0 auto;
-    padding: 0 60px;
-    width: 1440px;
+    width: 1320px;
     display: flex;
     justify-content: space-between;
   }
@@ -120,8 +71,9 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 0;
-    margin-left: 70px;
+    margin-right: 0;
+    margin-left: 67px;
+    margin-bottom: 101px;
     width: 420px;
     text-align: left;
   }
@@ -132,14 +84,6 @@
 
   @media (min-width: $tablet) {
     background-color: transparent;
-  }
-}
-
-.about-us__review .container {
-  @media (min-width: $desktop) {
-    margin: 0;
-    padding: 0;
-    width: auto;
   }
 }
 
@@ -158,8 +102,8 @@
     line-height: 33px;
   }
 
-  @media (min-width: $tablet) {
-    padding: 0 23px 116px 32px;
+  @media (min-width: $desktop) {
+    padding: 0;
     line-height: 32px;
   }
 }
@@ -330,6 +274,18 @@
   background-color: $blueDark2;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  @media (min-width: $tablet) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+}
+
+.about-us__service-wrapper {
+  padding-top: 29px;
+  padding-bottom: 62px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   background-image: url("../img/about-mobile@1x.png"),
     url("../img/icon-rectangle-mobile.svg");
   background-position: center 5px, -10px 5px;
@@ -342,6 +298,7 @@
   }
 
   @media (min-width: $tablet) {
+    padding-top: 41px;
     padding-bottom: 89px;
     background-image: url("../img/about-tablet@1x.png"),
       url("../../img/icon-rectangle-tablet.svg");
@@ -360,8 +317,8 @@
     padding-bottom: 163px;
     background-image: url("../img/about-desktop@1x.png"),
       url("../../img/icon-rectangle-blue-desktop.svg");
-    background-position: 700px 73px, 60px 70px;
-    background-size: 376px 548px, 688px 212px;
+    background-position: 96% 100%, 60px 70px;
+    background-size: 630px 665px, 212px 212px;
   }
 
   @media (min-width: $desktop) and (min-resolution: 144dpi),
@@ -369,16 +326,6 @@
     background-image: url("../img/about-desktop@2x.png"),
       url("../img/icon-rectangle-blue-desktop.svg");
   }
-
-  @media (min-width: $tablet) {
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-  }
-}
-
-.about-us__service-wrapper {
-  padding-top: 29px;
-  padding-bottom: 62px;
 }
 
 .about-us__service-info {
@@ -386,12 +333,13 @@
   padding-right: 30px;
 
   @media (min-width: $tablet) {
-    padding: 0;
-    max-width: 44.93%;
+    margin-left: 34px;
+    padding-right: 336px;
   }
 
   @media (min-width: $desktop) {
-    width: 620px;
+    margin-left: 70px;
+    padding-right: 630px;
   }
 }
 
@@ -454,6 +402,7 @@
 
   @media (min-width: $desktop) {
     margin-bottom: 85px;
+    padding-right: 190px;
     line-height: 24px;
   }
 }
