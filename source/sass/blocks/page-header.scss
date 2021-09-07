@@ -7,6 +7,10 @@
       background-color: $basicBlue2;
     }
   }
+
+  @media (min-width: $tablet) {
+    height: 132px;
+  }
 }
 
 .page-header__navigation {
@@ -15,6 +19,10 @@
   position: fixed;
   z-index: 2;
   background-color: $white;
+
+  @media (min-width: $tablet) {
+    padding-top: 40px;
+  }
 }
 
 .page-header__navigation-wrapper {
@@ -35,11 +43,16 @@
     position: relative;
     top: 7px;
     display: block;
-    width: 25px;
+    width: 100%;
     height: 3px;
     border-radius: 1.5px;
     background-color: $specialGrey7;
     box-shadow: 0 8px 0 0 $specialGrey7;
+  }
+
+  @media (min-width: $tablet) {
+    top: 11px;
+    right: calc(50% - 12.5px);
   }
 
   @media (min-width: $desktop) {
@@ -72,9 +85,15 @@
 }
 
 .page-header__nav-list {
-  display: block;
   margin-top: 40px;
   margin-bottom: 60px;
+  display: block;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 144px;
+    padding-left: 97px;
+    width: 688px;
+  }
 
   @media (min-width: $desktop) {
     margin-right: 257px;
@@ -96,15 +115,23 @@
 
 .page-header__nav-item {
   text-align: center;
+
+  @media (min-width: $tablet) {
+    text-align: left;
+  }
 }
 
 .page-header__nav-item .link {
   font-weight: 500;
   font-size: 30px;
   line-height: 35px;
-  text-align: center;
   text-transform: uppercase;
   color: $blueDark2;
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    line-height: 71px;
+  }
 
   @media (min-width: $desktop) {
     color: $white;
@@ -117,6 +144,11 @@
   margin-left: auto;
   margin-right: auto;
   width: 270px;
+
+  @media (min-width: $tablet) {
+    padding-left: 97px;
+    width: 688px;
+  }
 }
 
 .page-header__login {
@@ -140,15 +172,32 @@
   &:active {
     color: $basicBlueTransparent03;
   }
+
+  @media (min-width: $tablet) {
+    width: 188px;
+  }
 }
 
 .page-header__login-item {
   margin-bottom: 51px;
+
+  @media (min-width: $tablet) {
+    margin: 0;
+    display: initial;
+    position: absolute;
+    top: 0;
+    right: 40px;
+  }
 }
 
 .page-header__contact-item {
   padding-top: 16px;
   padding-bottom: 13px;
+
+  @media (min-width: $tablet) {
+    padding-top: 20px;
+    padding-bottom: 24px;
+  }
 }
 
 .page-header__contact-link {
@@ -209,10 +258,6 @@
     }
   }
 
-  @media (min-width: $tablet) {
-    display: none;
-  }
-
   @media (min-width: $desktop) {
     display: block;
   }
@@ -220,7 +265,7 @@
 
 .page-header__phone {
   &::after {
-    background-image: url("../../img/icon-call-yellow.svg");
+    background-image: url("../img/icon-call-yellow.svg");
     background-size: 18px;
 
     @media (min-width: $tablet) {
@@ -229,7 +274,7 @@
   }
 
   &:hover::after {
-    background-image: url("../../img/icon-call-orange.svg");
+    background-image: url("../img/icon-call-orange.svg");
   }
 
   &:focus::after {
@@ -239,7 +284,7 @@
 
 .page-header__email {
   &::after {
-    background-image: url("../../img/icon-mail-yellow.svg");
+    background-image: url("../img/icon-mail-yellow.svg");
     background-size: 25px;
 
     @media (min-width: $tablet) {
@@ -248,7 +293,7 @@
   }
 
   &:hover::after {
-    background-image: url("../../img/icon-mail-orange.svg");
+    background-image: url("../img/icon-mail-orange.svg");
   }
 
   &:focus::after {
@@ -264,6 +309,12 @@
   justify-content: center;
 
   @media (min-width: $tablet) {
+    margin-top: 129px;
+    margin-bottom: 91px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 112px;
+    width: 688px;
     justify-content: left;
   }
 
@@ -335,10 +386,16 @@
 }
 
 .page-header__navigation--closed {
-  background-color: $basicBlue;
+  background-color: transparent;
   padding-bottom: 30px;
 }
 
 .page-header__menu-element--closed {
   display: none;
+}
+
+.page-header__menu-element.page-header__login-item {
+  @media (min-width: $tablet) {
+    display: initial;
+  }
 }
