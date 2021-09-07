@@ -90,6 +90,8 @@
   display: block;
 
   @media (min-width: $tablet) {
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 144px;
     padding-left: 97px;
     width: 688px;
