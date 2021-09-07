@@ -10,104 +10,86 @@
 
 <body class="page-body">
   <header class="page-header page-header--light">
-    <div class="page-header__background-layer page-header__background-layer--light">
-      <h2 class="visually-hidden">Навигация по странице</h2>
-      <div class="page-header__wrapper container">
+    <h2 class="visually-hidden">Навигация по странице</h2>
+    <nav class="page-header__navigation page-header__navigation--closed">
+      <div class="page-header__navigation-wrapper container">
         <a class="page-header__logo">
           <picture class="page-header__logo-regular">
             <source srcset="img/header-logo-desktop.svg" media="(min-width: 1440px)">
             <source srcset="img/header-logo-tablet.svg" media="(min-width: 768px)">
             <img src="img/header-logo-mobile.svg" alt="Погнали?">
           </picture>
-          <picture class="page-header__logo-menu" hidden>
+          <picture class="page-header__logo-blue" hidden>
             <source srcset="img/header-logo-desktop-blue.svg" media="(min-width: 1440px)">
             <source srcset="img/header-logo-tablet-blue.svg" media="(min-width: 768px)">
             <img src="img/header-logo-mobile-blue.svg" alt="Погнали?">
           </picture>
         </a>
-        <ul class="page-header__nav-list list">
+        <a class="page-header__menu-button link">
+          <span class="page-header__menu-button-open visually-hidden">Открыть меню навигации</span>
+          <span class="page-header__menu-button-close visually-hidden" hidden>Закрыть меню навигации</span>
+        </a>
+        <ul class="page-header__nav-list page-header__menu-element page-header__menu-element--closed list">
           <li class="page-header__nav-item"><a class="link">О сервисе</a></li>
           <li class="page-header__nav-item"><a class="link" href="form.html">Направления</a></li>
           <li class="page-header__nav-item"><a class="link" href="catalog.html">Попутчики</a></li>
         </ul>
-        <button class="page-header__menu-button" type="button">
-          <!-- <div class="page-header__menu-button-show" aria-label="Показать меню">
-          <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="25" height="3" rx="1.5" fill="white" />
-            <rect y="8" width="25" height="3" rx="1.5" fill="white" />
-          </svg>
-        </div>
-        <div class="page-header__menu-button-close" aria-label="Закрыть меню" hidden>
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19.75 2.25L1.75 20.25" stroke="#CCCCCC" stroke-width="1.7" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <path d="M1.75 2.25L19.75 20.25" stroke="#CCCCCC" stroke-width="1.7" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </div> -->
-        </button>
-        <!-- Раздел авторизации -->
-        <ul class="page-header__auth list">
-          <li>
-            <a class="page-header__phone phone link" href="tel:+78005558628">
-              <span class="visually-hidden">8 800 555-86-28</span>
+        <ul class="page-header__auth-list list">
+          <li class="page-header__auth-item page-header__menu-element page-header__menu-element--closed page-header__login-item">
+            <a class="page-header__login link" href="login.html">Авторизация</a>
+          </li>
+          <li class="page-header__auth-item page-header__menu-element page-header__menu-element--closed page-header__contact-item">
+            <a class="page-header__phone page-header__contact-link link" href="tel:+78005558628">
+              <span class="page-header__auth-text">8 800 555-86-28</span>
             </a>
           </li>
-          <li>
-            <a class="page-header__email email link" href="mailto:mail@htmlacademy.ru">
-              <span class="visually-hidden">mail@htmlacademy.ru</span>
+          <li class="page-header__auth-item page-header__menu-element page-header__menu-element--closed page-header__contact-item">
+            <a class="page-header__email page-header__contact-link link" href="mailto:mail@htmlacademy.ru">
+              <span class="page-header__auth-text">mail@htmlacademy.ru</span>
             </a>
           </li>
-          <li>
-            <a class="page-header__login login link" href="login.html">Авторизация</a>
+        </ul>
+        <ul class="page-header__socials-list page-header__menu-element page-header__menu-element--closed list">
+          <li class="page-header__socials-item">
+            <a class="page-header__socials-link page-header__socials-facebook">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="page-header__socials-item">
+            <a class="page-header__socials-link page-header__socials-vkontakte">
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
+          </li>
+          <li class="page-header__socials-item">
+            <a class="page-header__socials-link page-header__socials-instagram">
+              <span class="visually-hidden">Instagram</span>
+            </a>
           </li>
         </ul>
       </div>
-      <!-- Выпадающее меню -->
-      <nav class="page-header__nav header-nav">
-        <div class="header-nav__wrapper container">
-          <ul class="header-nav__list list">
-            <li class="header-nav__item"><a class="link">О сервисе</a></li>
-            <li class="header-nav__item"><a class="link" href="form.html">Направления</a></li>
-            <li class="header-nav__item"><a class="link" href="catalog.html">Попутчики</a></li>
-          </ul>
-          <a class="header-nav__login login link" href="login.html">Авторизация</a>
-          <ul class="header-nav__contact-list list">
-            <li>
-              <a class="header-nav__contact-item header-nav__phone link" href="tel:+78005558628">8 800 555-86-28</a>
-            </li>
-            <li>
-              <a class="header-nav__contact-item header-nav__email link"
-                href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-          <h3 class="visually-hidden">Наши страницы в соцсетях</h3>
-          <ul class="header-nav__socials-list list">
-            <li>
-              <a class="header-nav__socials-item header-nav__socials-facebook">
-                <span class="visually-hidden">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a class="header-nav__socials-item header-nav__socials-vkontakte">
-                <span class="visually-hidden">ВКонтакте</span>
-              </a>
-            </li>
-            <li>
-              <a class="header-nav__socials-item header-nav__socials-instagram">
-                <span class="visually-hidden">Instagram</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+    </nav>
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Погнали! - сервис по поиску попутчиков в Ваше путешествие</h1>
     <section class="about-us">
       <div class="about-us__flex-container">
         <h2 class="about-us__heading">В путешествие с крутыми попутчиками!</h2>
+        <!-- Раздел авторизации -->
+        <ul class="about-us__auth-list list">
+          <li>
+            <a class="about-us__phone phone link" href="tel:+78005558628">
+              <span class="visually-hidden">8 800 555-86-28</span>
+            </a>
+          </li>
+          <li>
+            <a class="about-us__email email link" href="mailto:mail@htmlacademy.ru">
+              <span class="visually-hidden">mail@htmlacademy.ru</span>
+            </a>
+          </li>
+          <li>
+            <a class="about-us__login login link" href="login.html">Авторизация</a>
+          </li>
+        </ul>
         <!-- Цитата -->
         <div class="about-us__review">
           <div class="container">
@@ -359,6 +341,25 @@
           <a class="profile-rates__business-rates-link link" href="rates.html">Показать тарифы для бизнеса</a>
         </div>
       </div>
+      <!-- Всплывающее окно - бизнес-тарифы -->
+      <!-- <section class="business-rates">
+        <h2>Бизнес-тарифы</h2>
+        <ul class="business-rates__list">
+          <li class="business-rates__item">
+            <span class="business-rates__service">Реклама у блоггера</span>
+            <span class="business-rates__rate">300 000 руб./пост</span>
+          </li>
+          <li class="business-rates__item">
+            <span class="business-rates__service">Накрутка подписчиков</span>
+            <span class="business-rates__rate">от 1 руб./шт.</span>
+          </li>
+          <li class="business-rates__item">
+            <span class="business-rates__service">Ваш продакт-плейсмент</span>
+            <span class="business-rates__rate">Индивидуально</span>
+          </li>
+        </ul>
+        <button class="business-rates__close-button" type="button">Закрыть окно</button>
+      </section> -->
     </section>
     <!-- Регистрация и обратная связь -->
     <section class="signup">
@@ -445,25 +446,7 @@
       </div>
     </div>
   </footer>
-  <!-- Всплывающее окно - бизнес-тарифы -->
-  <section class="business-rates">
-    <h2>Бизнес-тарифы</h2>
-    <ul class="business-rates__list">
-      <li class="business-rates__item">
-        <span class="business-rates__service">Реклама у блоггера</span>
-        <span class="business-rates__rate">300 000 руб./пост</span>
-      </li>
-      <li class="business-rates__item">
-        <span class="business-rates__service">Накрутка подписчиков</span>
-        <span class="business-rates__rate">от 1 руб./шт.</span>
-      </li>
-      <li class="business-rates__item">
-        <span class="business-rates__service">Ваш продакт-плейсмент</span>
-        <span class="business-rates__rate">Индивидуально</span>
-      </li>
-    </ul>
-    <button class="business-rates__close-button" type="button">Закрыть окно</button>
-  </section>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
