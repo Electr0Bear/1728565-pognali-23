@@ -1,3 +1,5 @@
+// Шапка
+
 const navButton = document.querySelector('.page-header__menu-button');
 const navButtonText = document.querySelectorAll('.page-header__menu-button-open, .page-header__menu-button-close');
 const navMenu = document.querySelector('.page-header__navigation');
@@ -79,4 +81,34 @@ navButton.addEventListener('click', evt => {
       }
     });
   }
-})
+});
+
+// Тарифы для бизнеса
+
+const businessRatesShowBtn = document.querySelector('.profile-rates__business-rates-link');
+const businessRatesCloseBtn = document.querySelector('.profile-rates__business-close-button');
+const businessRates = document.querySelector('.profile-rates__business-popup');
+
+
+businessRatesShowBtn.addEventListener('click', evt => {
+  evt.preventDefault();
+  if (!businessRates.classList.contains('profile-rates__business-popup--show')) {
+    businessRates.classList.toggle('profile-rates__business-popup--show');
+  }
+});
+
+businessRatesCloseBtn.addEventListener('click', evt => {
+  evt.preventDefault();
+  if (businessRates.classList.contains('profile-rates__business-popup--show')) {
+    businessRates.classList.remove('profile-rates__business-popup--show');
+  }
+});
+
+document.addEventListener('keyup', evt => {
+  if (evt.code === 'Escape') {
+    evt.preventDefault();
+    if (businessRates.classList.contains('profile-rates__business-popup--show')) {
+      businessRates.classList.remove('profile-rates__business-popup--show');
+    }
+  }
+});

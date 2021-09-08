@@ -1,4 +1,5 @@
 .profile-rates {
+  position: relative;
   background-color: $blueDark2;
 }
 
@@ -103,8 +104,76 @@
 }
 
 .profile-rates__business-rates-link {
-  padding-left: 30px;
+  margin-left: 24px;
   font-weight: 700;
   line-height: 16px;
   color: $blueLight2;
+}
+
+.profile-rates__business-popup {
+  margin: 0 auto;
+  display: none;
+  width: 84.37%;
+  background-color: $white;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px $blueLightFaded014;
+}
+
+.profile-rates__business-popup--show {
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - 180px);
+  left: 7.81%;
+  display: block;
+}
+
+.profile-rates__business-heading {
+  margin-top: 0;
+  margin-bottom: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 34px;
+  width: fit-content;
+  color: $orange;
+}
+
+.profile-rates__business-list {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 34px;
+}
+
+.profile-rates__business-item {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: $specialGrey;
+  border-top: 1px solid $specialGrey8;
+
+  &:last-child {
+    border-bottom: 1px solid $specialGrey8;
+  }
+}
+
+.profile-rates__business-item span {
+  display: block;
+
+  &:first-child {
+    margin-bottom: 5px;
+  }
+}
+
+.profile-rates__business-close-button {
+  width: 100%;
+  height: 59px;
+  border: none;
+  outline: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-family: $bloggerSans;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $blueLight;
+  background-color: $specialGrey8;
 }
