@@ -5,6 +5,8 @@
   border-radius: 0 0 30px 30px;
 
   @media (min-width: $tablet) {
+    padding-top: 70px;
+    padding-bottom: 84px;
     border-radius: 0 0 60px 60px;
   }
 }
