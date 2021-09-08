@@ -24,6 +24,11 @@
     padding-bottom: 87px;
     border-radius: 0 0 60px 60px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
 }
 
 .companions__wrapper {
@@ -45,10 +50,11 @@
   }
 
   @media (min-width: $desktop) {
+    padding: 60px 0 54px 70px;
     display: grid;
     grid-template-columns: 440px 1fr 630px;
     grid-template-rows: auto min-content;
-    background-position: 0 0, calc(100% - 34px) 10px, 0 350px;
+    background-position: 0 0, 130px 100%, 487px 64px;
   }
 }
 
