@@ -1,5 +1,9 @@
 .companions {
   background-color: $specialGrey6;
+
+  @media (min-width: $tablet) {
+    background-color: $basicGrey;
+  }
 }
 
 .companions__section {

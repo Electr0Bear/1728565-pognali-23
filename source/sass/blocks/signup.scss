@@ -69,6 +69,15 @@
 
 .signup__login {
   color: $yellow;
+
+  &:hover,
+  &:focus {
+    color: $orange;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .signup__form {
@@ -95,6 +104,24 @@
   font-weight: 700;
   line-height: 18px;
 
+  &::placeholder {
+    opacity: 0.3;
+  }
+
+  &:hover::placeholder {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    border: 3px solid $white;
+    background-color: $blueDark2;
+    color: $white;
+
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+
   @media (min-width: $tablet) {
     height: 80px;
     border-radius: 20px;
@@ -112,9 +139,19 @@
   height: 62px;
   background-color: $yellow;
   border-radius: 10px;
-  background-image: url("../img/icon-triangle-blue.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+
+  &::before {
+    content: url("../img/icon-triangle-blue.svg");
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $yellowDark;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet) {
     width: 80px;
@@ -210,6 +247,12 @@
       opacity: 0.3;
     }
   }
+
+  @media (min-width: $tablet) {
+    &::after {
+      background-size: 27px;
+    }
+  }
 }
 
 .signup__contacts-email {
@@ -232,6 +275,12 @@
 
     &::after {
       opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    &::after {
+      background-size: 32px;
     }
   }
 }
