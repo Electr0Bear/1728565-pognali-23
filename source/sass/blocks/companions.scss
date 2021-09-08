@@ -275,6 +275,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 22px;
+  height: 61px;
   display: block;
   max-width: 650px;
   background-color: $yellow;
@@ -290,8 +291,8 @@
     width: 13px;
     height: 13px;
     position: absolute;
+    top: calc(50% - 6px);
     right: 22px;
-    top: 25px;
     background-image: url("../img/icon-button-arrow-right-blue.svg");
     background-position: 50%;
     background-repeat: no-repeat;
@@ -314,7 +315,16 @@
     margin-top: 81px;
     margin-left: auto;
     margin-right: auto;
+    padding: 28px 32px;
     max-width: 688px;
+    height: 80px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+
+    &::after {
+      right: 34px;
+    }
   }
 
   @media (min-width: $desktop) {
