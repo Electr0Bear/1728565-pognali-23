@@ -181,6 +181,18 @@
   @media (min-width: $tablet) {
     background-color: transparent;
   }
+
+  @media (min-width: $desktop) {
+    width: 310px;
+  }
+}
+
+.about-us__review .container {
+  @media (min-width: $desktop) {
+    margin: 0;
+    padding: 0;
+    width: 310px;
+  }
 }
 
 .about-us__quote {
