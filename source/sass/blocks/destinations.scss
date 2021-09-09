@@ -260,16 +260,10 @@
   color: $blueLight;
 
   &::after {
-    content: "";
-    display: inline-block;
-    width: 13px;
-    height: 13px;
+    content: url("../img/icon-button-arrow-right-blue.svg");
     position: absolute;
-    top: calc(50% - 6px);
+    top: 21px;
     right: 22px;
-    background-image: url("../img/icon-button-arrow-right-blue.svg");
-    background-position: 50%;
-    background-repeat: no-repeat;
   }
 
   &:hover,
@@ -286,7 +280,7 @@
   }
 
   @media (min-width: $tablet) {
-    padding-top: 31px;
+    padding-top: 30px;
     padding-left: 32px;
     height: 82px;
     border-radius: 20px;
@@ -294,6 +288,7 @@
     line-height: 24px;
 
     &::after {
+      top: 29px;
       right: 32px;
     }
   }
