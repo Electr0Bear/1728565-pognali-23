@@ -15,6 +15,11 @@
     border-radius: 0 0 60px 60px;
     background-color: $basicGrey;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 107px;
+    padding-bottom: 187px;
+  }
 }
 
 .profile-rates__heading {
@@ -36,6 +41,10 @@
     font-size: 45px;
     line-height: 45px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 134px;
+  }
 }
 
 .profile-rates__list {
@@ -56,7 +65,7 @@
     background-image: url("../../img/icon-rates@1x.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100px 100px;
+    background-size: cover;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../../img/icon-rates@2x.png");
@@ -82,6 +91,27 @@
     &::after {
       top: 218px;
       right: 45px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 59px;
+    padding-left: 161px;
+    padding-right: 335px;
+
+    &::before {
+      top: -45px;
+      right: 170px;
+      width: 446px;
+      height: 300px;
+    }
+
+    &::after {
+      top: 5px;
+      right: 70px;
+      width: 198px;
+      height: 198px;
+      background-image: url("../../img/icon-rates@2x.png");
     }
   }
 }
@@ -204,6 +234,10 @@
       background-repeat: no-repeat;
     }
   }
+
+  @media (min-width: $desktop) {
+    margin-left: 161px;
+  }
 }
 
 .profile-rates__business-popup {
@@ -213,6 +247,10 @@
   background-color: $white;
   border-radius: 20px;
   box-shadow: 0 2px 8px $blueLightFaded014;
+
+  @media (min-width: $desktop) {
+    width: 750px;
+  }
 }
 
 .profile-rates__business-popup--show {
@@ -221,6 +259,11 @@
   top: calc(50% - 232px);
   left: 7.81%;
   display: block;
+
+  @media (min-width: $desktop) {
+    top: calc(50% - 300px);
+    left: calc(50% - 375px);
+  }
 }
 
 .profile-rates__business-heading {
@@ -235,6 +278,8 @@
   color: $orange;
 
   @media (min-width: $tablet) {
+    margin-bottom: 47px;
+    padding-top: 54px;
     font-size: 45px;
     line-height: 45px;
   }
@@ -249,6 +294,11 @@
     padding-left: 90px;
     padding-right: 90px;
     margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 58px;
+    padding-right: 60px;
   }
 }
 
