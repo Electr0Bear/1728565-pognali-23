@@ -13,6 +13,18 @@
     padding-bottom: 77px;
     border-radius: 0 0 60px 60px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 109px;
+    padding-bottom: 131px;
+  }
+}
+
+.signup__wrapper {
+  @media (min-width: $desktop) {
+    padding-left: 73px;
+    padding-right: 73px;
+  }
 }
 
 .signup__heading {
@@ -59,12 +71,23 @@
   @media (min-width: $tablet) {
     margin-bottom: 65px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 60px;
+  }
 }
 
 .signup__paragraph-three {
+  margin-bottom: 30px;
+
   @media (min-width: $tablet) {
+    margin-bottom: 64px;
     line-height: 30px;
     letter-spacing: 0.05em;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 77px;
   }
 }
 
@@ -87,6 +110,10 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 70px;
   }
 }
 
@@ -124,10 +151,17 @@
   }
 
   @media (min-width: $tablet) {
+    padding-top: 28px;
+    padding-left: 36px;
+    padding-bottom: 28px;
     height: 80px;
     border-radius: 20px;
     font-size: 24px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 361px;
   }
 }
 
@@ -143,6 +177,9 @@
 
   &::before {
     content: url("../img/icon-triangle-blue.svg");
+    position: absolute;
+    top: 24px;
+    right: 22px;
   }
 
   &:hover,
@@ -150,6 +187,7 @@
     background-color: $yellowDark;
   }
 
+  &:active span,
   &:active::before {
     opacity: 0.3;
   }
@@ -161,14 +199,42 @@
     border-bottom-right-radius: 20px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+
+    &::before {
+      top: 33px;
+      right: 33px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 325px;
+
+    &::before {
+      right: 34px;
+    }
+  }
+}
+
+.signup__button-text {
+  display: none;
+
+  @media (min-width: $desktop) {
+    padding-left: 37px;
+    display: block;
+    text-align: left;
+    font-family: $bloggerSans;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: $blueLight;
   }
 }
 
 .signup__contacts-list {
-  padding-top: 30px;
-
-  @media (min-width: $tablet) {
-    padding-top: 64px;
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
   }
 }
 
@@ -177,6 +243,11 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 39px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+    margin-right: 110px;
   }
 }
 
@@ -222,6 +293,18 @@
       height: 68px;
     }
   }
+
+  @media (min-width: $desktop) {
+    margin-left: 121px;
+
+    &::before,
+    &::after {
+      top: -30px;
+      left: -121px;
+      width: 90px;
+      height: 90px;
+    }
+  }
 }
 
 .signup__contacts-phone {
@@ -254,6 +337,14 @@
       background-size: 27px;
     }
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+
+    &::after {
+      background-size: 36px;
+    }
+  }
 }
 
 .signup__contacts-email {
@@ -282,6 +373,12 @@
   @media (min-width: $tablet) {
     &::after {
       background-size: 32px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::after {
+      background-size: 47px;
     }
   }
 }
