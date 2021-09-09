@@ -519,10 +519,12 @@
 .about-us__button {
   display: none;
   position: relative;
-  padding: 22px;
+  padding-top: 29px;
+  padding-left: 32px;
   width: 276px;
+  height: 80px;
   background-color: $yellow;
-  border-radius: 10px;
+  border-radius: 20px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
@@ -534,8 +536,8 @@
     width: 13px;
     height: 13px;
     position: absolute;
-    right: 22px;
-    top: 29px;
+    top: calc(50% - 6px);
+    right: 35px;
     background-image: url("../img/icon-button-arrow-right-blue.svg");
     background-position: 50%;
     background-repeat: no-repeat;
