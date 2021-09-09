@@ -247,6 +247,7 @@
   border-radius: 0 0 10px 10px;
 
   @media (min-width: $tablet) {
+    padding: 31px 31px 27px 31px;
     border-radius: 0 0 22px 22px;
   }
 }
@@ -267,6 +268,11 @@
 .companions__hashtags {
   text-align: center;
   color: $specialGrey;
+
+  @media (min-width: $tablet) {
+    margin-top: 23px;
+    margin-bottom: 24px;
+  }
 }
 
 .companions__button {
