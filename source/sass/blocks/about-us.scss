@@ -2,65 +2,52 @@
   background-color: $basicBlue;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  background-image: url("../img/traveller-illustration-mobile@1x.png"),
+    url("../img/globe-back-mobile@1x.png");
+  background-position: 50% 150px, 50% -50px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 192px 255px, 100% 569px;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/traveller-illustration-mobile@2x.png"),
+      url("../img/globe-back-mobile@2x.png");
+  }
 
   @media (min-width: $tablet) {
     background-color: $basicBlue2;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
-  }
-
-  @media (min-width: $desktop) {
-    background-image: linear-gradient(to bottom, $basicBlue 20%, 30%, $blueDark2 45%);
-  }
-}
-
-.about-us__wrapper {
-  background-image: url("../img/traveller-illustration-mobile@1x.png"),
-    url("../img/globe-back-mobile@1x.png");
-  background-position: 50% 150px, 50% -50px;
-  background-repeat: no-repeat, no-repeat;
-
-  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    background-image: url("../img/traveller-illustration-mobile@2x.png"),
-      url("../img/globe-back-mobile@2x.png");
-    background-size: 192px 255px, 320px 569px;
-  }
-
-  @media (min-width: $tablet) {
     background-image: url("../img/traveller-illustration-tablet@1x.png"),
       url("../img/globe-back-tablet@1x.png");
     background-position: calc(50% + 100px) 240px, 50% 218px;
+    background-size: 372px 451px, 100% 612px;
   }
 
   @media (min-width: $tablet) and (min-resolution: 144dpi),
     (min-width: $tablet) and (min-resolution: 1.5dppx) {
     background-image: url("../img/traveller-illustration-tablet@2x.png"),
       url("../img/globe-back-tablet@2x.png");
-    background-size: 372px 451px, 768px 612px;
   }
 
   @media (min-width: $desktop) {
     padding-top: 110px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
     background-image: url("../img/traveller-illustration-desktop@1x.png"),
       url("../img/globe-back-desktop@1x.png");
     background-position: calc(50% + 100px) 30px, 50% -80px;
+    background-size: 431px 640px, 100% 750px;
   }
 
   @media (min-width: $desktop) and (min-resolution: 144dpi),
     (min-width: $desktop) and (min-resolution: 1.5dppx) {
     background-image: url("../img/traveller-illustration-desktop@2x.png"),
       url("../img/globe-back-desktop@2x.png");
-    background-size: 431px 640px, 1440px 750px;
   }
 }
 
 .about-us__flex-container {
   @media (min-width: $desktop) {
     margin: 0 auto;
-    padding: 0 60px;
-    width: 1440px;
+    width: 1320px;
     display: flex;
     justify-content: space-between;
   }
@@ -84,10 +71,107 @@
   }
 
   @media (min-width: $desktop) {
-    margin: 0;
-    margin-left: 70px;
+    margin-right: 0;
+    margin-left: 67px;
+    margin-bottom: 101px;
     width: 420px;
     text-align: left;
+  }
+}
+
+.about-us__auth-list {
+  position: absolute;
+  top: 440px;
+  left: 25px;
+  display: flex;
+  flex-wrap: nowrap;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.about-us__phone,
+.about-us__email {
+  display: block;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.about-us__phone {
+  background-color: $orange;
+
+  &::before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icon-call-darkblue.svg");
+    background-position: 48% 48%;
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $orangeDark;
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}
+
+.about-us__email {
+  background-color: $yellowDark;
+
+  &::before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/icon-mail-darkblue.svg");
+    background-position: 51% 52%;
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $orange;
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}
+
+.about-us__login {
+  display: block;
+  padding: 10px 0;
+  color: $basicBlue;
+  background-color: $yellow;
+  width: 190px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: $yellowDark;
+  }
+
+  &:active {
+    color: $basicBlueTransparent03;
   }
 }
 
@@ -97,13 +181,18 @@
   @media (min-width: $tablet) {
     background-color: transparent;
   }
+
+  @media (min-width: $desktop) {
+    width: 310px;
+  }
 }
 
 .about-us__review .container {
   @media (min-width: $desktop) {
     margin: 0;
     padding: 0;
-    width: auto;
+    min-width: fit-content;
+    width: 310px;
   }
 }
 
@@ -122,8 +211,8 @@
     line-height: 33px;
   }
 
-  @media (min-width: $tablet) {
-    padding: 0 23px 116px 32px;
+  @media (min-width: $desktop) {
+    padding: 0;
     line-height: 32px;
   }
 }
@@ -177,9 +266,11 @@
 }
 
 .about-us__promo-item {
-  padding: 30px 96px 30px 22px;
+  padding-top: 30px;
+  padding-left: 22px;
   position: relative;
   display: block;
+  height: 96px;
   color: $basicBlue;
   font-size: 18px;
   font-weight: 700;
@@ -220,7 +311,9 @@
   }
 
   @media (min-width: $tablet) {
-    padding: 31px 100px 61px 38px;
+    padding-top: 31px;
+    padding-left: 38px;
+    height: 140px;
     font-size: 24px;
     line-height: 24px;
 
@@ -254,7 +347,9 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 30px 115px 30px 30px;
+    padding-top: 30px;
+    padding-left: 30px;
+    height: 107px;
 
     &:nth-child(1) {
       margin-right: -15px;
@@ -298,57 +393,62 @@
 .about-us__service-wrapper {
   padding-top: 29px;
   padding-bottom: 62px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   background-image: url("../img/about-mobile@1x.png"),
     url("../img/icon-rectangle-mobile.svg");
-  background-position: center 5px, 0 5px;
+  background-position: center 5px, -10px 5px;
   background-repeat: no-repeat, no-repeat;
+  background-size: 292px 353px, 132px 132px;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/about-mobile@2x.png"),
       url("../img/icon-rectangle-mobile.svg");
-    background-size: 292px 353px, 132px 132px;
   }
 
   @media (min-width: $tablet) {
+    padding-top: 41px;
+    padding-bottom: 89px;
     background-image: url("../img/about-tablet@1x.png"),
       url("../../img/icon-rectangle-tablet.svg");
-    background-position: 384px 48px, 40px 0;
-    padding-bottom: 89px;
+    background-position: 98% 48px, 40px 0;
+    background-size: 376px 548px, 688px 212px;
   }
 
   @media (min-width: $tablet) and (min-resolution: 144dpi),
     (min-width: $tablet) and (min-resolution: 1.5dppx) {
     background-image: url("../img/about-tablet@2x.png"),
       url("../img/icon-rectangle-tablet.svg");
-    background-size: 376px 548px, 688px 212px;
   }
 
   @media (min-width: $desktop) {
-    background-image: url("../img/about-desktop@1x.png"),
-      url("../../img/icon-rectangle-blue-desktop.svg");
-    background-position: 700px 73px, 60px 70px;
     padding-top: 132px;
     padding-bottom: 163px;
+    background-image: url("../img/about-desktop@1x.png"),
+      url("../../img/icon-rectangle-blue-desktop.svg");
+    background-position: 96% 100%, 60px 70px;
+    background-size: 630px 665px, 212px 212px;
   }
 
   @media (min-width: $desktop) and (min-resolution: 144dpi),
     (min-width: $desktop) and (min-resolution: 1.5dppx) {
     background-image: url("../img/about-desktop@2x.png"),
       url("../img/icon-rectangle-blue-desktop.svg");
-    background-size: 376px 548px, 688px 212px;
   }
 }
 
 .about-us__service-info {
   margin-left: 29px;
-  width: 211px;
+  padding-right: 30px;
 
   @media (min-width: $tablet) {
-    width: 300px;
+    margin-left: 34px;
+    padding-right: 336px;
   }
 
   @media (min-width: $desktop) {
-    width: 620px;
+    margin-left: 70px;
+    padding-right: 630px;
   }
 }
 
@@ -378,6 +478,12 @@
   line-height: 22px;
   color: $white;
 
+  @media (min-width: 400px) {
+    & br {
+      display: none;
+    }
+  }
+
   @media (min-width: $tablet) {
     margin-bottom: 31px;
     font-size: 28px;
@@ -405,6 +511,7 @@
 
   @media (min-width: $desktop) {
     margin-bottom: 85px;
+    padding-right: 190px;
     line-height: 24px;
   }
 }
@@ -412,10 +519,12 @@
 .about-us__button {
   display: none;
   position: relative;
-  padding: 22px;
+  padding-top: 29px;
+  padding-left: 32px;
   width: 276px;
+  height: 80px;
   background-color: $yellow;
-  border-radius: 10px;
+  border-radius: 20px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
@@ -427,8 +536,8 @@
     width: 13px;
     height: 13px;
     position: absolute;
-    right: 22px;
-    top: 29px;
+    top: calc(50% - 6px);
+    right: 35px;
     background-image: url("../img/icon-button-arrow-right-blue.svg");
     background-position: 50%;
     background-repeat: no-repeat;

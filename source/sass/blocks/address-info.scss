@@ -3,12 +3,32 @@
   padding-bottom: 35px;
   background-color: $yellow;
   border-radius: 0 0 30px 30px;
-  z-index: 1;
+
+  @media (min-width: $tablet) {
+    padding-top: 70px;
+    padding-bottom: 84px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.adress-info__wrapper {
+  @media (min-width: $desktop) {
+    padding-left: 223px;
+    padding-right: 75px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .address-info__address {
   padding-left: 61px;
-  margin-right: 65px;
   margin-bottom: 32px;
   display: block;
   position: relative;
@@ -28,12 +48,39 @@
     background-image: url("../../img/icon-map-mark.svg");
     background-position: 50%;
     background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: $tablet) {
+    padding-left: 94px;
+    margin-bottom: 62px;
+    font-size: 28px;
+    line-height: 28px;
+
+    &::before {
+      top: -20px;
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 0;
+    padding-left: 121px;
+
+    &::before {
+      top: -31px;
+      width: 90px;
+      height: 90px;
+    }
   }
 }
 
 .address-info__button {
-  padding: 20px;
+  padding-top: 18px;
+  padding-left: 22px;
   display: block;
+  height: 62px;
   position: relative;
   border: 3px solid $blueDark2;
   box-sizing: border-box;
@@ -44,15 +91,10 @@
   line-height: 18px;
 
   &::after {
-    content: "";
+    content: url("../../img/icon-button-arrow-right-blue.svg");
     position: absolute;
-    right: 15px;
-    top: 24px;
-    display: block;
-    width: 16px;
-    height: 16px;
-    background-image: url("../../img/icon-button-arrow-right-blue.svg");
-    background-repeat: no-repeat;
+    top: 20px;
+    right: 22px;
   }
 
   &:hover,
@@ -61,7 +103,7 @@
     color: $white;
 
     &::after {
-      background-image: url("../../img/icon-button-arrow-right-white.svg");
+      content: url("../../img/icon-button-arrow-right-white.svg");
     }
   }
 
@@ -70,6 +112,28 @@
 
     &::after {
       opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 25px;
+    padding-left: 37px;
+    height: 80px;
+    border-radius: 20px;
+    font-size: 24px;
+    line-height: 24px;
+
+    &::after {
+      top: 24px;
+      right: 35px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 324px;
+
+    &::after {
+      right: 34px;
     }
   }
 }

@@ -114,7 +114,9 @@
     position: relative;
     display: flex;
     flex-direction: row-reverse;
+  }
 
+  @media (min-width: $desktop) {
     &:last-child::after {
       content: "";
       position: absolute;
@@ -122,21 +124,8 @@
       display: block;
       width: 100%;
       height: 70px;
-      background-image: url("../../img/element-fade@1x.png");
-      background-repeat: no-repeat;
+      box-shadow: inset 0 -30px 25px $basicGrey;
     }
-  }
-}
-
-.destinations__photo,
-.destinations__picture {
-  display: block;
-  border-radius: 10px 10px 0 0;
-
-  @media (min-width: $tablet) {
-    width: 186px;
-    height: 100%;
-    border-radius: 0 20px 20px 0;
   }
 }
 
@@ -149,6 +138,20 @@
 
   @media (min-width: $desktop) {
     margin-bottom: 10px;
+  }
+}
+
+.destinations__photo,
+.destinations__picture {
+  display: block;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: auto;
+
+  @media (min-width: $tablet) {
+    width: 186px;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
   }
 }
 
@@ -245,8 +248,10 @@
 .destinations__button {
   position: relative;
   margin-top: 25px;
-  padding: 22px;
+  padding-top: 22px;
+  padding-left: 22px;
   display: block;
+  height: 62px;
   background-color: $yellow;
   border-radius: 10px;
   font-size: 18px;
@@ -255,16 +260,10 @@
   color: $blueLight;
 
   &::after {
-    content: "";
-    display: inline-block;
-    width: 13px;
-    height: 13px;
+    content: url("../img/icon-button-arrow-right-blue.svg");
     position: absolute;
+    top: 21px;
     right: 22px;
-    top: 25px;
-    background-image: url("../img/icon-button-arrow-right-blue.svg");
-    background-position: 50%;
-    background-repeat: no-repeat;
   }
 
   &:hover,
@@ -277,6 +276,20 @@
 
     &::after {
       opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding-top: 30px;
+    padding-left: 32px;
+    height: 82px;
+    border-radius: 20px;
+    font-size: 24px;
+    line-height: 24px;
+
+    &::after {
+      top: 29px;
+      right: 32px;
     }
   }
 

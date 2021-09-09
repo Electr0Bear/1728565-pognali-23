@@ -1,5 +1,9 @@
 .companions {
-  background-color: $basicGrey;
+  background-color: $specialGrey6;
+
+  @media (min-width: $tablet) {
+    background-color: $basicGrey;
+  }
 }
 
 .companions__section {
@@ -11,10 +15,11 @@
   background-image: url("../../img/companions-background@1x.png");
   background-position: calc(50% - 25px) 30px;
   background-repeat: no-repeat;
+  background-size: contain;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../../img/companions-background@2x.png");
-    background-size: 297px 344px;
+    background-size: contain;
   }
 
   @media (min-width: $tablet) {
@@ -22,6 +27,11 @@
     padding-top: 71px;
     padding-bottom: 87px;
     border-radius: 0 0 60px 60px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 70px;
+    padding-bottom: 80px;
   }
 }
 
@@ -44,20 +54,21 @@
   }
 
   @media (min-width: $desktop) {
+    padding: 60px 0 54px 70px;
     display: grid;
     grid-template-columns: 440px 1fr 630px;
     grid-template-rows: auto min-content;
-    background-position: 0 0, calc(100% - 34px) 10px, 0 350px;
+    background-position: 0 0, 130px 100%, 487px 64px;
   }
 }
 
 .companions__about {
   padding-left: 30px;
   padding-right: 30px;
+  max-width: 430px;
 
   @media (min-width: $tablet) {
     padding: 0;
-    width: 430px;
   }
 
   @media (min-width: $desktop) {
@@ -120,10 +131,14 @@
 }
 
 .companions__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   @media (min-width: $tablet) {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 688px;
   }
 
   @media (min-width: $desktop) {
@@ -133,12 +148,13 @@
 }
 
 .companions__card {
-  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 9px;
   position: relative;
-
-  &:not(:last-child) {
-    margin-bottom: 9px;
-  }
+  display: block;
+  width: 270px;
+  align-items: center;
 
   &:hover {
     transform: scale(1.01);
@@ -147,10 +163,8 @@
   }
 
   @media (min-width: $tablet) {
-    &:not(:last-child) {
-      margin-bottom: 0;
-      margin-right: 50px;
-    }
+    width: 285px;
+    margin: 0;
   }
 
   @media (min-width: $desktop) {
@@ -224,7 +238,7 @@
   top: 17px;
   left: 17px;
   position: absolute;
-  z-index: 3;
+  z-index: 2;
 }
 
 .companions__person-info {
@@ -233,6 +247,7 @@
   border-radius: 0 0 10px 10px;
 
   @media (min-width: $tablet) {
+    padding: 31px 31px 27px 31px;
     border-radius: 0 0 22px 22px;
   }
 }
@@ -253,13 +268,22 @@
 .companions__hashtags {
   text-align: center;
   color: $specialGrey;
+
+  @media (min-width: $tablet) {
+    margin-top: 23px;
+    margin-bottom: 24px;
+  }
 }
 
 .companions__button {
   position: relative;
   margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 22px;
+  height: 61px;
   display: block;
+  max-width: 650px;
   background-color: $yellow;
   border-radius: 10px;
   font-size: 18px;
@@ -273,8 +297,8 @@
     width: 13px;
     height: 13px;
     position: absolute;
+    top: calc(50% - 6px);
     right: 22px;
-    top: 25px;
     background-image: url("../img/icon-button-arrow-right-blue.svg");
     background-position: 50%;
     background-repeat: no-repeat;
@@ -295,10 +319,23 @@
 
   @media (min-width: $tablet) {
     margin-top: 81px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 28px 32px;
+    max-width: 688px;
+    height: 80px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+
+    &::after {
+      right: 34px;
+    }
   }
 
   @media (min-width: $desktop) {
     margin: 0;
+    width: 280px;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
