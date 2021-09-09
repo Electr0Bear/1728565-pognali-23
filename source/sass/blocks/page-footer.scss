@@ -11,6 +11,11 @@
     padding-bottom: 32px;
     border-radius: 60px 60px 0 0;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 47px;
+    padding-bottom: 43px;
+  }
 }
 
 .page-footer__wrapper {
