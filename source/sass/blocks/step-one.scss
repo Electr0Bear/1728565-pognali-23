@@ -138,15 +138,41 @@
   border: none;
   outline: none;
   background-color: transparent;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
   cursor: pointer;
-}
 
-.step-one__button-substract {
-  background-image: url("../img/icon-minus.svg");
+  &::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 2px;
+    background-color: $specialGrey7;
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: $specialGrey9;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: $specialGrey10;
+    }
+  }
 }
 
 .step-one__button-add {
-  background-image: url("../img/icon-plus.svg");
+  &::after {
+    content: "";
+    position: relative;
+    top: -2px;
+    display: block;
+    width: 14px;
+    height: 2px;
+    background-color: $specialGrey7;
+    transform: rotate(90deg);
+  }
 }
