@@ -27,6 +27,7 @@
 
   @media (min-width: $tablet) {
     padding-top: 26px;
+    margin-bottom: 34px;
     border-top: 1px solid $specialGrey2;
 
     &:nth-child(1) {
@@ -52,8 +53,7 @@
 }
 
 .step-one__input-label {
-  display: inline-block;
-  margin-bottom: 8px;
+  display: block;
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.09em;
@@ -117,6 +117,8 @@
   }
 
   @media (min-width: $tablet) {
+    margin-top: 24px;
+    height: 70px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -162,10 +164,24 @@
       background-color: $specialGrey10;
     }
   }
+
+  @media (min-width: $tablet) {
+    top: 92px;
+    width: 20px;
+    height: 20px;
+
+    &::before {
+      width: 20px;
+    }
+  }
 }
 
 .step-one__button-substract {
   left: 14px;
+
+  @media (min-width: $tablet) {
+    left: 23px;
+  }
 }
 
 .step-one__button-add {
@@ -179,5 +195,13 @@
     height: 2px;
     background-color: $specialGrey7;
     transform: rotate(90deg);
+  }
+
+  @media (min-width: $tablet) {
+    right: 23px;
+
+    &::after {
+      width: 20px;
+    }
   }
 }
