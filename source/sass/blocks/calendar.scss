@@ -50,10 +50,21 @@
   background-color: transparent;
   width: 25px;
   height: 27px;
+  background-image: url("../img/icon-arrow-back.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.3;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 
   @media (min-width: $tablet) {
     width: 29px;
@@ -61,12 +72,7 @@
   }
 }
 
-.calendar__button-back {
-  background-image: url("../img/icon-arrow-back.svg");
-}
-
 .calendar__button-next {
-  background-image: url("../img/icon-arrow-back.svg");
   transform: rotate(180deg);
 }
 
