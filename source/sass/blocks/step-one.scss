@@ -19,6 +19,7 @@
 .step-one__general-info-item {
   margin: 0 0 20px 0;
   padding: 0;
+  position: relative;
   border: none;
   display: flex;
   flex-wrap: wrap;
@@ -91,17 +92,33 @@
   }
 }
 
-.step-one__input-area {
-  padding: 14px;
+.step-one__input-field {
+  margin: 0;
+  padding: 0 30px 0 30px;
   width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
+  height: 43px;
+  text-align: center;
+  font-family: $bloggerSans;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $blueLight;
+  outline: none;
   border: 1px solid $specialGrey4;
-  box-sizing: border-box;
   border-radius: 4px;
 
+  &:hover {
+    border: 1px solid $specialGrey11;
+  }
+
+  &:focus {
+    border: 1px solid $blueLight;
+  }
+
   @media (min-width: $tablet) {
-    width: 538px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: $desktop) {
@@ -111,28 +128,10 @@
   }
 }
 
-.step-one__input-field {
-  padding: 0;
-  border: none;
-  width: 100%;
-  text-align: center;
-  font-family: $bloggerSans;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 14px;
-  text-transform: uppercase;
-  color: $blueLight;
-
-  @media (min-width: $tablet) {
-    font-size: 20px;
-    line-height: 20px;
-  }
-}
-
 .step-one__input-button {
   padding: 0;
-  position: relative;
-  top: 2px;
+  position: absolute;
+  top: 39px;
   width: 14px;
   height: 14px;
   border: none;
@@ -142,6 +141,7 @@
 
   &::before {
     content: "";
+    position: absolute;
     display: block;
     width: 14px;
     height: 2px;
@@ -164,11 +164,16 @@
   }
 }
 
+.step-one__button-substract {
+  left: 14px;
+}
+
 .step-one__button-add {
+  right: 14px;
+
   &::after {
     content: "";
-    position: relative;
-    top: -2px;
+    position: absolute;
     display: block;
     width: 14px;
     height: 2px;
