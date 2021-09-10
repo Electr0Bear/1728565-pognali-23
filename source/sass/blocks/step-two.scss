@@ -59,6 +59,7 @@
 .step-two__countries-select {
   position: relative;
   padding: 11px;
+  flex-grow: 1;
   border: 1px solid $specialGrey4;
   border-radius: 4px;
   overflow: hidden;
