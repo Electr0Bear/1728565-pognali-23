@@ -110,7 +110,7 @@
   white-space: nowrap;
 }
 
-.step-two__countries-select--current {
+.step-two__countries-select-current {
   width: 220px;
 
   @media (min-width: $tablet) {
@@ -120,6 +120,32 @@
   @media (min-width: $desktop) {
     width: 730px;
   }
+}
+
+.step-two__countries-select-current--active {
+  border-radius: 4px 4px 0 0;
+  border: 1px solid $blueLight;
+  background-color: $blueLight;
+  color: $white;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    background-image: url("../img/icon-cross-close-white.svg");
+    opacity: 1;
+  }
+}
+
+.step-two__countries-select-current--active + .step-two__countries-flag-current {
+  &::before {
+    display: none;
+  }
+}
+
+.step-two__countries-select-current--active ~ .step-two__button-close {
+  display: none;
 }
 
 .step-two__countries-flag {
@@ -192,7 +218,7 @@
   }
 }
 
-.step-two__countries-flag--current {
+.step-two__countries-flag-current {
   padding: 0;
   width: 0;
   border: none;
@@ -213,7 +239,7 @@
   }
 }
 
-.step-two__countries-flag--add {
+.step-two__countries-flag-add {
   padding: 0;
   width: 0;
   height: 40px;
@@ -265,11 +291,15 @@
 .step-two__countries-droplist {
   display: none;
   position: absolute;
-  width: 220px;
-  bottom: -530px;
-  z-index: 1;
+  width: 100%;
+  top: 40px;
+  z-index: 2;
   background-color: $white;
   box-shadow: inset 1px 1px $specialGrey5, inset -1px -1px $specialGrey5;
+}
+
+.step-two__countries-droplist--show {
+  display: block;
 }
 
 .step-two__countries-alphabet-list {
