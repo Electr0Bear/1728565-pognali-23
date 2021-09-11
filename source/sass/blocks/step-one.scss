@@ -205,3 +205,13 @@
     }
   }
 }
+
+.step-one__input-field:hover ~ .step-one__input-button::before,
+.step-one__input-field:hover ~ .step-one__button-add::after {
+  background-color: $specialGrey11;
+}
+
+.step-one__input-field:focus ~ .step-one__input-button::before,
+.step-one__input-field:focus ~ .step-one__button-add::after {
+  background-color: $blueLight;
+}
