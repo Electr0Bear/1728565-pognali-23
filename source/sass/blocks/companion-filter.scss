@@ -257,7 +257,7 @@
   display: flex;
   flex-wrap: nowrap;
   background-color: $white;
-  border: 1px solid $specialGrey4;
+  // border: 1px solid $specialGrey4;
   border-radius: 4px;
 
   &::after {
@@ -282,10 +282,9 @@
 .companion-filter__level-input {
   padding: 10px;
   position: relative;
-  border: none;
   outline: none;
-  width: 109px;
-  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid $specialGrey4;
   text-align: center;
   font-family: $bloggerSans;
   font-weight: 500;
@@ -304,11 +303,11 @@
 
 .companion-filter__level-input-min {
   border-radius: 4px 0 0 4px;
-  border-right: 1px solid $specialGrey4;
 }
 
 .companion-filter__level-input-max {
   border-radius: 0 4px 4px 0;
+  border-left: none;
 }
 
 .companion-filter__level-scale {
