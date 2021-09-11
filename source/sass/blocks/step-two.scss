@@ -31,7 +31,7 @@
   }
 
   @media (min-width: $tablet) {
-    &:not(:first-child)::after {
+    &::after {
       display: none;
     }
   }
@@ -78,10 +78,10 @@
     position: absolute;
     top: calc(50% - 6px);
     right: 15px;
-    width: 12px;
-    height: 16px;
+    width: 16px;
+    height: 12px;
     background-image: url("../img/icon-arrow-back.svg");
-    background-position: 50% 46%;
+    background-position: 50% 48%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     opacity: 0.3;
@@ -98,6 +98,12 @@
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
+
+    &::after {
+      right: 26px;
+      width: 20px;
+      height: 17px;
+    }
   }
 
   @media (min-width: $desktop) {
@@ -136,9 +142,16 @@
     background-image: url("../img/icon-cross-close-white.svg");
     opacity: 1;
   }
+
+  @media (min-width: $tablet) {
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }
 
-.step-two__countries-select-current--active + .step-two__countries-flag-current {
+.step-two__countries-select-current--active
+  + .step-two__countries-flag-current {
   &::before {
     display: none;
   }
@@ -146,6 +159,10 @@
 
 .step-two__countries-select-current--active ~ .step-two__button-close {
   display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
 }
 
 .step-two__countries-flag {
@@ -296,23 +313,47 @@
   z-index: 2;
   background-color: $white;
   box-shadow: inset 1px 1px $specialGrey5, inset -1px -1px $specialGrey5;
+
+  @media (min-width: $tablet) {
+    top: 70px;
+  }
 }
 
 .step-two__countries-droplist--show {
-  display: block;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    min-width: 575px;
+    flex-direction: row;
+  }
+}
+
+.step-two__countries-alphabet-wrapper {
+  @media (min-width: $tablet) {
+    padding: 35px 79px 33px 27px;
+    width: 368px;
+    flex-grow: 1;
+    border-right: 1px solid $specialGrey5;
+  }
 }
 
 .step-two__countries-alphabet-list {
   display: grid;
   grid-template-columns: repeat(5, 5fr);
-  grid-template-rows: repeat(5, 5fr);
+  grid-template-rows: repeat(5, 40px);
   border-top: 1px solid $specialGrey5;
   border-left: 1px solid $specialGrey5;
+
+  @media (min-width: $tablet) {
+    grid-template-rows: repeat(5, 70px);
+  }
 }
 
 .step-two__countries-alphabet-letter {
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 13px;
+  position: relative;
   border-bottom: 1px solid $specialGrey5;
   border-right: 1px solid $specialGrey5;
   font-weight: 500;
@@ -320,14 +361,44 @@
   line-height: 18px;
   text-align: center;
 
-  &--active {
-    background-color: $basicGrey;
+  @media (min-width: $tablet) {
+    padding-top: 26px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.step-two__countries-alphabet-letter--active {
+  background-color: $basicGrey;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    display: block;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border: 1px solid $basicGrey;
+  }
+
+  @media (min-width: $tablet) {
+    color: $white;
+    background-color: $blueLight;
+
+    &::before {
+      border: 1px solid $blueLight;
+    }
   }
 }
 
 .step-two__countries-selector-list {
   padding: 20px;
   color: $specialGrey;
+
+  @media (min-width: $tablet) {
+    padding: 37px 23px 0 25px;
+  }
 }
 
 .step-two__countries-selector-item {
@@ -335,6 +406,15 @@
 
   &:not(:last-child) {
     padding-bottom: 4px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+
+    &:not(:last-child) {
+      padding-bottom: 11px;
+    }
   }
 }
 
@@ -373,7 +453,6 @@
     transform: rotate(90deg);
   }
 
-
   @media (min-width: $tablet) {
     margin-right: 27px;
     padding-top: 27px;
@@ -384,6 +463,13 @@
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.09em;
+
+    &::before,
+    &::after {
+      top: 36px;
+      right: 24px;
+      width: 21px;
+    }
   }
 
   @media (min-width: $desktop) {
