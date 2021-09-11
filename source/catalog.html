@@ -84,69 +84,315 @@
     <!-- Фильтрация по странам -->
     <section class="country-filter">
       <div class="container container--extra">
-        <h2 class="country-filter__heading">Фильтрация по странам:</h2>
-        <button class="country-filter__button-top country-filter__button-top--meatballs" type="button">
-          <span class="country-filter__button-top-show visually-hidden">Показать</span>
-          <span class="country-filter__button-top-close" hidden>Свернуть</span>
-        </button>
-      </div>
-      <div class="country-filter__droplist country-filter__droplist--hide">
-        <div class="container container--extra">
-          <div class="country-filter__droplist-wrapper">
-            <ul class="country-filter__continents-list list">
-              <li class="country-filter__continent-item"><a>Европа</a></li>
-              <li class="country-filter__continent-item"><a>Азия</a></li>
-              <li class="country-filter__continent-item"><a>Америка</a></li>
-              <li class="country-filter__continent-item"><a>Острова</a></li>
-            </ul>
-            <div class="country-filter__countries">
-              <ul class="country-filter__alphabet-list list">
-                <li class="country-filter__alphabet-letter country-filter__alphabet-letter--active">А</li>
-                <li class="country-filter__alphabet-letter">Б</li>
-                <li class="country-filter__alphabet-letter">В</li>
-                <li class="country-filter__alphabet-letter">Г</li>
-                <li class="country-filter__alphabet-letter">Д</li>
-                <li class="country-filter__alphabet-letter">Е</li>
-                <li class="country-filter__alphabet-letter">З</li>
-                <li class="country-filter__alphabet-letter">И</li>
-                <li class="country-filter__alphabet-letter">К</li>
-                <li class="country-filter__alphabet-letter">Л</li>
-                <li class="country-filter__alphabet-letter">М</li>
-                <li class="country-filter__alphabet-letter">Н</li>
-                <li class="country-filter__alphabet-letter">О</li>
-                <li class="country-filter__alphabet-letter">П</li>
-                <li class="country-filter__alphabet-letter">Р</li>
-                <li class="country-filter__alphabet-letter">С</li>
-                <li class="country-filter__alphabet-letter">Т</li>
-                <li class="country-filter__alphabet-letter">У</li>
-                <li class="country-filter__alphabet-letter">Ф</li>
-                <li class="country-filter__alphabet-letter">Х</li>
-                <li class="country-filter__alphabet-letter">Ч</li>
-                <li class="country-filter__alphabet-letter">Ш</li>
-                <li class="country-filter__alphabet-letter">Э</li>
-                <li class="country-filter__alphabet-letter">Ю</li>
-                <li class="country-filter__alphabet-letter">Я</li>
-              </ul>
-              <ul class="country-filter__countries-list-a list">
-                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Австралия</a></li>
-                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Австрия</a></li>
-                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Азербайджан</a></li>
-                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Албания</a></li>
-                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Алжир</a></li>
-                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Ангола</a></li>
-                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Андорра</a></li>
-                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Антигуа и Барбуда</a>
-                </li>
-                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Аргентина</a></li>
-                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Армения</a></li>
-                <li class="country-filter__countries-item country-filter__countries-item-a"><a>Афганистан</a></li>
-              </ul>
-            </div>
-          </div>
-          <button class="country-filter__button-bottom-close" type="button">
-            <span>Свернуть</span>
+        <div class="country-filter__flex-container">
+          <h2 class="country-filter__heading">Фильтрация по странам:</h2>
+          <button class="country-filter__button-top country-filter__button-top--meatballs" type="button">
+            <span class="country-filter__button-top-show visually-hidden">Показать</span>
+            <span class="country-filter__button-top-close" hidden>Свернуть</span>
           </button>
+          <ul class="country-filter__continents-list country-filter__continents-list--show list">
+            <li class="country-filter__continent-item">Европа</li>
+            <li class="country-filter__continent-item">Азия</li>
+            <li class="country-filter__continent-item">Америка</li>
+            <li class="country-filter__continent-item">Острова</li>
+          </ul>
         </div>
+        <div class="country-filter__alphabet-list-wrapper country-filter__alphabet-list-wrapper--show">
+          <ul class="country-filter__alphabet-list list">
+            <li class="country-filter__alphabet-letter country-filter__alphabet-letter--active">А</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Австралия</li>
+                <li class="country-filter__countries-item">Австрия</li>
+                <li class="country-filter__countries-item">Азербайджан</li>
+                <li class="country-filter__countries-item">Албания</li>
+                <li class="country-filter__countries-item">Алжир</li>
+                <li class="country-filter__countries-item">Ангола</li>
+                <li class="country-filter__countries-item">Андорра</li>
+                <li class="country-filter__countries-item">Антигуа и Барбуда</li>
+                <li class="country-filter__countries-item">Аргентина</li>
+                <li class="country-filter__countries-item">Армения</li>
+                <li class="country-filter__countries-item">Афганистан</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Б</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Багамские Острова</li>
+                <li class="country-filter__countries-item">Бангладеш</li>
+                <li class="country-filter__countries-item">Барбадос</li>
+                <li class="country-filter__countries-item">Бахрейн</li>
+                <li class="country-filter__countries-item">Белоруссия</li>
+                <li class="country-filter__countries-item">Белиз</li>
+                <li class="country-filter__countries-item">Бельгия</li>
+                <li class="country-filter__countries-item">Бенин</li>
+                <li class="country-filter__countries-item">Болгария</li>
+                <li class="country-filter__countries-item">Боливия</li>
+                <li class="country-filter__countries-item">Босния и Герцеговина</li>
+                <li class="country-filter__countries-item">Ботсвана</li>
+                <li class="country-filter__countries-item">Бразилия</li>
+                <li class="country-filter__countries-item">Бруней</li>
+                <li class="country-filter__countries-item">Буркина-Фасо</li>
+                <li class="country-filter__countries-item">Бурунди</li>
+                <li class="country-filter__countries-item">Бутан</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">В</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Вануату</li>
+                <li class="country-filter__countries-item">Великобритания</li>
+                <li class="country-filter__countries-item">Венгрия</li>
+                <li class="country-filter__countries-item">Венесуэла</li>
+                <li class="country-filter__countries-item">Восточный Тимор</li>
+                <li class="country-filter__countries-item">Вьетнам</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Г</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Габон</li>
+                <li class="country-filter__countries-item">Гаити</li>
+                <li class="country-filter__countries-item">Гайана</li>
+                <li class="country-filter__countries-item">Гамбия</li>
+                <li class="country-filter__countries-item">Гана</li>
+                <li class="country-filter__countries-item">Гватемала</li>
+                <li class="country-filter__countries-item">Гвинея</li>
+                <li class="country-filter__countries-item">Гвинея-Бисау</li>
+                <li class="country-filter__countries-item">Германия</li>
+                <li class="country-filter__countries-item">Гондурас</li>
+                <li class="country-filter__countries-item">Гренада</li>
+                <li class="country-filter__countries-item">Греция</li>
+                <li class="country-filter__countries-item">Грузия</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Д</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Дания</li>
+                <li class="country-filter__countries-item">Джибути</li>
+                <li class="country-filter__countries-item">Доминика</li>
+                <li class="country-filter__countries-item">Доминикана</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Е</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Египет</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">З</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Замбия</li>
+                <li class="country-filter__countries-item">Зимбабве</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">И</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Израиль</li>
+                <li class="country-filter__countries-item">Индия</li>
+                <li class="country-filter__countries-item">Индонезия</li>
+                <li class="country-filter__countries-item">Иордания</li>
+                <li class="country-filter__countries-item">Ирак</li>
+                <li class="country-filter__countries-item">Иран</li>
+                <li class="country-filter__countries-item">Ирландия</li>
+                <li class="country-filter__countries-item">Исландия</li>
+                <li class="country-filter__countries-item">Испания</li>
+                <li class="country-filter__countries-item">Италия</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">К</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Кабо-Верде</li>
+                <li class="country-filter__countries-item">Казахстан</li>
+                <li class="country-filter__countries-item">Камбоджа</li>
+                <li class="country-filter__countries-item">Камерун</li>
+                <li class="country-filter__countries-item">Канада</li>
+                <li class="country-filter__countries-item">Катар</li>
+                <li class="country-filter__countries-item">Кения</li>
+                <li class="country-filter__countries-item">Кипр</li>
+                <li class="country-filter__countries-item">Киргизия</li>
+                <li class="country-filter__countries-item">Кирибати</li>
+                <li class="country-filter__countries-item">Китай</li>
+                <li class="country-filter__countries-item">Колумбия</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Л</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Лаос</li>
+                <li class="country-filter__countries-item">Латвия</li>
+                <li class="country-filter__countries-item">Лесото</li>
+                <li class="country-filter__countries-item">Либерия</li>
+                <li class="country-filter__countries-item">Ливан</li>
+                <li class="country-filter__countries-item">Ливия</li>
+                <li class="country-filter__countries-item">Литва</li>
+                <li class="country-filter__countries-item">Лихтенштейн</li>
+                <li class="country-filter__countries-item">Люксембург</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">М</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Маврикий</li>
+                <li class="country-filter__countries-item">Мавритания</li>
+                <li class="country-filter__countries-item">Мадагаскар</li>
+                <li class="country-filter__countries-item">Малави</li>
+                <li class="country-filter__countries-item">Малайзия</li>
+                <li class="country-filter__countries-item">Мали</li>
+                <li class="country-filter__countries-item">Мальдивы</li>
+                <li class="country-filter__countries-item">Мальта</li>
+                <li class="country-filter__countries-item">Марокко</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Н</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Намибия</li>
+                <li class="country-filter__countries-item">Науру</li>
+                <li class="country-filter__countries-item">Непал</li>
+                <li class="country-filter__countries-item">Нигер</li>
+                <li class="country-filter__countries-item">Нигерия</li>
+                <li class="country-filter__countries-item">Нидерланды</li>
+                <li class="country-filter__countries-item">Никарагуа</li>
+                <li class="country-filter__countries-item">Новая Зеландия</li>
+                <li class="country-filter__countries-item">Норвегия</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">О</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">ОАЭ</li>
+                <li class="country-filter__countries-item">Оман</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">П</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Пакистан</li>
+                <li class="country-filter__countries-item">Палау</li>
+                <li class="country-filter__countries-item">Панама</li>
+                <li class="country-filter__countries-item">Папуа - Новая Гвинея</li>
+                <li class="country-filter__countries-item">Парагвай</li>
+                <li class="country-filter__countries-item">Перу</li>
+                <li class="country-filter__countries-item">Польша</li>
+                <li class="country-filter__countries-item">Португалия</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Р</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Руанда</li>
+                <li class="country-filter__countries-item">Румыния</li>
+                <li class="country-filter__countries-item">Россия</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">С</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Сальвадор</li>
+                <li class="country-filter__countries-item">Самоа</li>
+                <li class="country-filter__countries-item">Сан-Марино</li>
+                <li class="country-filter__countries-item">Саудовская Аравия</li>
+                <li class="country-filter__countries-item">Сейшелы</li>
+                <li class="country-filter__countries-item">Сенегал</li>
+                <li class="country-filter__countries-item">Сербия</li>
+                <li class="country-filter__countries-item">Сингапур</li>
+                <li class="country-filter__countries-item">Сирия</li>
+                <li class="country-filter__countries-item">Словакия</li>
+                <li class="country-filter__countries-item">Словения</li>
+                <li class="country-filter__countries-item">США</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Т</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Таджикистан</li>
+                <li class="country-filter__countries-item">Таиланд</li>
+                <li class="country-filter__countries-item">Танзания</li>
+                <li class="country-filter__countries-item">Того</li>
+                <li class="country-filter__countries-item">Тонга</li>
+                <li class="country-filter__countries-item">Тринидад и Тобаго</li>
+                <li class="country-filter__countries-item">Тувалу</li>
+                <li class="country-filter__countries-item">Тунис</li>
+                <li class="country-filter__countries-item">Туркмения</li>
+                <li class="country-filter__countries-item">Турция</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">У</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Уганда</li>
+                <li class="country-filter__countries-item">Узбекистан</li>
+                <li class="country-filter__countries-item">Украина</li>
+                <li class="country-filter__countries-item">Уругвай</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Ф</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Фиджи</li>
+                <li class="country-filter__countries-item">Филиппины</li>
+                <li class="country-filter__countries-item">Финляндия</li>
+                <li class="country-filter__countries-item">Франция</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Х</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Хорватия</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Ч</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Чад</li>
+                <li class="country-filter__countries-item">Черногория</li>
+                <li class="country-filter__countries-item">Чехия</li>
+                <li class="country-filter__countries-item">Чили</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Ш</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Швейцария</li>
+                <li class="country-filter__countries-item">Швеция</li>
+                <li class="country-filter__countries-item">Шри-Ланка</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Э</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Эквадор</li>
+                <li class="country-filter__countries-item">Эритрея</li>
+                <li class="country-filter__countries-item">Эсватини</li>
+                <li class="country-filter__countries-item">Эстония</li>
+                <li class="country-filter__countries-item">Эфиопия</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Ю</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">ЮАР</li>
+                <li class="country-filter__countries-item">Южный Судан</li>
+              </ul>
+            </li>
+            <li class="country-filter__alphabet-letter">Я</li>
+            <li class="country-filter__alphabet-country-item">
+              <ul class="country-filter__countries-list list">
+                <li class="country-filter__countries-item">Ямайка</li>
+                <li class="country-filter__countries-item">Япония</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <button class="country-filter__close-btn-bottom" type="button">Свернуть</button>
+      </div>
+
+
       </div>
     </section>
     <div class="catalog-grid-overlay container">
