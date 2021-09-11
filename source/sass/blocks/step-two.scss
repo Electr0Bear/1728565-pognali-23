@@ -150,8 +150,7 @@
   }
 }
 
-.step-two__countries-select-current--active
-  + .step-two__countries-flag-current {
+.step-two__countries-select-current--active + .step-two__countries-flag-current {
   &::before {
     display: none;
   }
@@ -338,6 +337,10 @@
     min-width: 575px;
     flex-direction: row;
   }
+
+  @media (min-width: $desktop) {
+    width: 730px;
+  }
 }
 
 .step-two__countries-alphabet-wrapper {
@@ -346,6 +349,10 @@
     width: 368px;
     flex-grow: 1;
     border-right: 1px solid $specialGrey5;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 32px 102px 36px 26px;
   }
 }
 
@@ -358,6 +365,12 @@
 
   @media (min-width: $tablet) {
     grid-template-rows: repeat(5, 70px);
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(5, 60px);
+    gap: 16px;
+    border: none;
   }
 }
 
@@ -375,6 +388,11 @@
     padding-top: 26px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    border: 1px solid $specialGrey5;
+    border-radius: 4px;
   }
 }
 
@@ -400,6 +418,14 @@
       border: 1px solid $blueLight;
     }
   }
+
+  @media (min-width: $desktop) {
+    border: 1px solid $blueLight;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .step-two__countries-selector-list {
@@ -408,6 +434,10 @@
 
   @media (min-width: $tablet) {
     padding: 37px 23px 0 25px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 37px 57px 0 25px;
   }
 }
 
