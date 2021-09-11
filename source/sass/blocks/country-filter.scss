@@ -36,27 +36,25 @@
   width: 17px;
   height: 17px;
   border: none;
+  background-image: url("../img/icon-filter-meatballs.svg");
   background-color: transparent;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 
-  &--meatballs {
-    background-image: url("../img/icon-filter-meatballs.svg");
-  }
-
-  &--cross {
-    background-image: url("../img/icon-cross.svg");
+  &--opened {
+    background-image: url("../img/icon-cross-darkblue.svg");
   }
 }
 
 .country-filter__close-btn-bottom {
   padding-left: 40px;
   position: relative;
+  display: none;
+  width: 270px;
+  height: 40px;
   background-color: $blueLight6;
   border: none;
   border-radius: 20px;
-  width: 270px;
-  height: 40px;
   font-family: $bloggerSans;
   font-weight: 700;
   line-height: 20px;
@@ -72,9 +70,13 @@
   }
 }
 
+.country-filter__close-btn-bottom--show {
+  display: block;
+}
+
 .country-filter__continents-list {
   display: none;
-  width: 220px;
+  width: 100%;
   margin-top: 35px;
   margin-bottom: 25px;
   padding-left: 25px;
