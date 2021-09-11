@@ -175,14 +175,6 @@ if (window.location.href.indexOf('/form.html') !== -1) {
     }
   });
 
-
-
-
-
-
-
-
-
   // Выпадающий список стран на странице формы
 
   const countryCurrentInput = document.querySelector('.step-two__countries-select-current');
