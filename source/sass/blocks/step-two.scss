@@ -207,6 +207,7 @@
 
   @media (min-width: $desktop) {
     padding-left: 40px;
+    width: 220px;
   }
 }
 
@@ -226,8 +227,9 @@
 
   @media (min-width: $desktop) {
     &::after {
-      bottom: -424px;
-      left: 776px;
+      top: -42px;
+      left: 0;
+      width: 2px;
       height: 540px;
       background-image: none;
       background-color: $specialGrey4;
@@ -254,6 +256,10 @@
       left: -5px;
     }
   }
+
+  @media (min-width: $desktop) {
+    width: 220px;
+  }
 }
 
 .step-two__countries-flag-add {
@@ -276,6 +282,10 @@
       left: -5px;
       background-color: $specialGrey6;
     }
+  }
+
+  @media (min-width: $desktop) {
+    width: 220px;
   }
 }
 
@@ -473,6 +483,7 @@
   }
 
   @media (min-width: $desktop) {
+    margin-right: 45px;
     width: 730px;
   }
 }
