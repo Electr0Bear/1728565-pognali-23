@@ -54,11 +54,6 @@
 
 .add-plan__slider-buttons-item {
   margin-right: 16px;
-  opacity: 0.3;
-
-  &--active {
-    opacity: 1;
-  }
 
   @media (min-width: $tablet) {
     margin-right: 29px;
@@ -78,6 +73,7 @@
 }
 
 .add-plan__slider-button {
+  opacity: 0.3;
   position: relative;
   font-weight: 400;
   font-size: 20px;
@@ -87,6 +83,7 @@
   cursor: pointer;
 
   &--active {
+    opacity: 1;
     cursor: default;
   }
 
@@ -139,6 +136,14 @@
     padding: 101px 160px 106px 160px;
     border-radius: 60px;
   }
+}
+
+.add-plan__step {
+  display: none;
+}
+
+.add-plan__step--show {
+  display: block;
 }
 
 .add-plan__step-heading {
@@ -207,7 +212,7 @@
 
 .add-plan__button-next-step,
 .add-plan__button-submit {
-  margin: 0;
+  margin: 0 auto;
   padding: 5px 0;
   border: none;
   box-sizing: content-box;
@@ -215,3 +220,17 @@
   background-color: $yellow;
   width: 220px;
 }
+
+.add-plan__button-next-step,
+.add-plan__button-previous-step,
+.add-plan__button-submit {
+  display: none;
+}
+
+.add-plan__button--show {
+  display: block;
+}
+
+// add-plan__button-next-step
+// add-plan__button-submit
+// add-plan__button-previous-step

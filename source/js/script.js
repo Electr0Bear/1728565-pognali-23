@@ -118,6 +118,71 @@ if (window.location.href.indexOf('/index.html') !== -1) {
 
 if (window.location.href.indexOf('/form.html') !== -1) {
   console.log('Направления');
+
+  // Слайдер формы
+
+  const planStep = document.querySelectorAll('.add-plan__step')
+  const btnNext = document.querySelector('.add-plan__button-next-step');
+  const btnPrev = document.querySelector('.add-plan__button-previous-step');
+  const btnSubmit = document.querySelector('.add-plan__button-submit');
+  const sliderBtns = document.querySelectorAll('.add-plan__slider-button');
+
+  btnNext.addEventListener('click', evt => {
+    evt.preventDefault();
+    for (let i = 0; i < planStep.length; i++) {
+      console.log(planStep[i]);
+      if (planStep[i].classList.contains('add-plan__step--show')) {
+        const j = i + 1;
+        if (j < planStep.length) {
+          planStep[i].classList.remove('add-plan__step--show');
+          sliderBtns[i].classList.remove('add-plan__slider-button--active');
+          planStep[j].classList.toggle('add-plan__step--show');
+          sliderBtns[j].classList.toggle('add-plan__slider-button--active');
+          if (!btnPrev.classList.contains('add-plan__button--show') && j > 0) {
+            btnPrev.classList.toggle('add-plan__button--show');
+          }
+          if ((j + 1) === planStep.length) {
+            btnSubmit.classList.toggle('add-plan__button--show');
+            btnNext.classList.remove('add-plan__button--show');
+          }
+        }
+        break
+      }
+    }
+  });
+
+  btnPrev.addEventListener('click', evt => {
+    evt.preventDefault();
+    for (let i = (planStep.length - 1); i >= 0; i--) {
+      console.log(planStep[i]);
+      if (planStep[i].classList.contains('add-plan__step--show')) {
+        const j = i - 1;
+        if (j >= 0) {
+          planStep[i].classList.remove('add-plan__step--show');
+          sliderBtns[i].classList.remove('add-plan__slider-button--active');
+          planStep[j].classList.toggle('add-plan__step--show');
+          sliderBtns[j].classList.toggle('add-plan__slider-button--active');
+          if (btnSubmit.classList.contains('add-plan__button--show') && j < planStep.length) {
+            btnSubmit.classList.remove('add-plan__button--show');
+            btnNext.classList.toggle('add-plan__button--show');
+          }
+          if (j === 0) {
+            btnPrev.classList.remove('add-plan__button--show');
+          }
+        }
+        break
+      }
+    }
+  });
+
+
+
+
+
+
+
+
+
   // Выпадающий список стран на странице формы
 
   const countryCurrentInput = document.querySelector('.step-two__countries-select-current');
@@ -143,4 +208,6 @@ if (window.location.href.indexOf('/form.html') !== -1) {
       }
     }
   });
+
+
 }
