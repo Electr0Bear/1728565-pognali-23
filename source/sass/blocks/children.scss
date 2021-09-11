@@ -17,22 +17,45 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 15px;
+  cursor: pointer;
 
-  &::before {
+  &::before,
+  &::after {
+    content: "";
     position: absolute;
     left: -38px;
-    top: -4px;
-    display: inline-block;
+    top: -6px;
+    display: block;
     width: 26px;
     height: 26px;
-    content: "";
     cursor: pointer;
-    vertical-align: middle;
+  }
+
+  &::before {
     background-color: transparent;
     border: 1px solid $specialGrey4;
     border-radius: 4px;
+  }
+
+  &::after {
     background-repeat: no-repeat;
     background-position: 50% 50%;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border: 1px solid $specialGrey11;
+    }
+  }
+
+  &:active::before {
+    border: 1px solid $specialGrey12;
+    background-color: $specialGrey12;
+  }
+
+  &:active::after {
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet) {
@@ -44,6 +67,6 @@
   }
 }
 
-.children__checkbox-input:checked + .children__checkbox::before {
+.children__checkbox-input:checked + .children__checkbox::after {
   background-image: url("../img/icon-check-mark.svg");
 }
