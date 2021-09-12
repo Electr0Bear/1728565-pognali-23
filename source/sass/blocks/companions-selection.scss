@@ -1,5 +1,9 @@
 .companions-selection {
   margin-top: 20px;
+
+  @media (min-width: $desktop) {
+    margin-top: 0;
+  }
 }
 
 .companions-selection__item {

@@ -5,6 +5,10 @@
   @media (min-width: $tablet) {
     padding-top: 180px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 0;
+  }
 }
 
 .companion-filter__wrapper {
@@ -277,7 +281,7 @@
     border-bottom: 4px solid $white;
   }
 
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) and (max-width: 1439px) {
     margin-bottom: 0;
     order: 3;
   }
@@ -302,6 +306,10 @@
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.04em;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
   }
 }
 

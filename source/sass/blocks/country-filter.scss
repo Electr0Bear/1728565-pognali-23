@@ -393,8 +393,7 @@
   }
 }
 
-.country-filter__alphabet-letter--active
-  + .country-filter__alphabet-country-item {
+.country-filter__alphabet-letter--active + .country-filter__alphabet-country-item {
   @media (max-width: 767px) {
     display: block;
     grid-column: 1 / 6;
@@ -402,6 +401,7 @@
   }
 
   @media (min-width: $tablet) and (max-width: 1439px) {
+    display: block;
     grid-column: 6 / 7;
     grid-row: 1 / 6;
   }
