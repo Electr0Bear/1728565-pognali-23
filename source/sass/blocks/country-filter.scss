@@ -22,10 +22,20 @@
   }
 }
 
+.country-filter__wrapper--opened {
+  @media (min-width: $desktop) {
+    background-color: transparent;
+  }
+}
+
 .country-filter__flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (min-width: $desktop) {
+    justify-content: left;
+  }
 }
 
 .country-filter__heading {
@@ -96,6 +106,12 @@
 
   @media (min-width: $tablet) {
     background-size: 20px;
+  }
+}
+
+.country-filter__button-top--hide {
+  @media (min-width: $desktop) {
+    display: none;
   }
 }
 
@@ -179,6 +195,10 @@
     flex-direction: row;
     width: auto;
     order: 2;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 400px;
   }
 }
 

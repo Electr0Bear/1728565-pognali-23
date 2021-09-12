@@ -211,11 +211,20 @@ if (window.location.href.indexOf('/catalog.html') !== -1) {
   const btnTopText = document.querySelectorAll('.country-filter__button-top-text');
   const btnBottom = document.querySelector('.country-filter__close-btn-bottom')
   const countryFilterDroplist = document.querySelectorAll('.country-filter__continents-list, .country-filter__alphabet-list-wrapper');
+  const pageMainHeader = document.querySelector('.page-main__header-wrapper');
+  const countryFilterWrapper = document.querySelector('.country-filter__wrapper');
+
+  // country-filter__wrapper--opened
+  // page-main__header-wrapper--opened-menu
+  // country-filter__button-top--hide
 
   btnTop.addEventListener('click', evt => {
     evt.preventDefault();
     if (!btnTop.classList.contains('country-filter__button-top--opened')) {
       btnTop.classList.toggle('country-filter__button-top--opened');
+      btnTop.classList.toggle('country-filter__button-top--hide');
+      pageMainHeader.classList.toggle('page-main__header-wrapper--opened-menu');
+      countryFilterWrapper.classList.toggle('country-filter__wrapper--opened');
       btnTopText[0].classList.remove('country-filter__button-top-text--showed');
       btnTopText[1].classList.toggle('country-filter__button-top-text--showed');
       countryFilterDroplist[0].classList.toggle('country-filter__continents-list--show');
@@ -224,6 +233,9 @@ if (window.location.href.indexOf('/catalog.html') !== -1) {
 
     } else {
       btnTop.classList.remove('country-filter__button-top--opened');
+      btnTop.classList.remove('country-filter__button-top--hide');
+      pageMainHeader.classList.remove('page-main__header-wrapper--opened-menu');
+      countryFilterWrapper.classList.remove('country-filter__wrapper--opened');
       btnTopText[0].classList.toggle('country-filter__button-top-text--showed');
       btnTopText[1].classList.remove('country-filter__button-top-text--showed');
       countryFilterDroplist[0].classList.remove('country-filter__continents-list--show');
@@ -237,6 +249,9 @@ if (window.location.href.indexOf('/catalog.html') !== -1) {
 
     if (btnBottom.classList.contains('country-filter__close-btn-bottom--show')) {
       btnTop.classList.remove('country-filter__button-top--opened');
+      btnTop.classList.remove('country-filter__button-top--hide');
+      pageMainHeader.classList.remove('page-main__header-wrapper--opened-menu');
+      countryFilterWrapper.classList.remove('country-filter__wrapper--opened');
       btnTopText[0].classList.toggle('country-filter__button-top-text--showed');
       btnTopText[1].classList.remove('country-filter__button-top-text--showed');
       countryFilterDroplist[0].classList.remove('country-filter__continents-list--show');
@@ -250,6 +265,9 @@ if (window.location.href.indexOf('/catalog.html') !== -1) {
       evt.preventDefault();
       if (btnTop.classList.contains('country-filter__button-top--opened')) {
         btnTop.classList.remove('country-filter__button-top--opened');
+        btnTop.classList.remove('country-filter__button-top--hide');
+        pageMainHeader.classList.remove('page-main__header-wrapper--opened-menu');
+        countryFilterWrapper.classList.remove('country-filter__wrapper--opened');
         btnTopText[0].classList.toggle('country-filter__button-top-text--showed');
         btnTopText[1].classList.remove('country-filter__button-top-text--showed');
         countryFilterDroplist[0].classList.remove('country-filter__continents-list--show');
