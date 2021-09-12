@@ -2,14 +2,14 @@
   height: 73px;
   background-color: $basicBlue;
 
-  &--light {
-    @media (min-width: $tablet) and (max-width: $desktop) {
-      background-color: $basicBlue2;
-    }
-  }
-
   @media (min-width: $tablet) {
     height: 132px;
+  }
+}
+
+.page-header--light {
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    background-color: $basicBlue2;
   }
 }
 
