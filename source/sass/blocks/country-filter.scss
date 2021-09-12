@@ -16,16 +16,16 @@
     padding-bottom: 56px;
     border-radius: 0 0 60px 60px;
   }
+
+  @media (min-width: $desktop) {
+    position: initial;
+  }
 }
 
 .country-filter__flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  @media (min-width: $tablet) {
-    flex-direction: row-reverse;
-  }
 }
 
 .country-filter__heading {
@@ -40,13 +40,33 @@
   color: $blueDark2;
 
   &::before {
-    content: url("../img/icon-filter.svg");
+    content: "";
     position: absolute;
     left: 0;
+    display: block;
+    width: 15px;
+    height: 10px;
+    background-image: url("../img/icon-filter.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 
   @media (min-width: $tablet) {
     display: none;
+    order: 1;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
+    padding-left: 45px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      width: 23px;
+      height: 20px;
+    }
   }
 }
 
@@ -67,6 +87,7 @@
     text-align: left;
     background-position: 100% 50%;
     background-size: 30px;
+    order: 3;
   }
 }
 
@@ -157,6 +178,7 @@
     display: flex;
     flex-direction: row;
     width: auto;
+    order: 2;
   }
 }
 
@@ -286,7 +308,8 @@
   }
 }
 
-.country-filter__alphabet-letter--active + .country-filter__alphabet-country-item {
+.country-filter__alphabet-letter--active
+  + .country-filter__alphabet-country-item {
   display: block;
   grid-column: 1 / 6;
   grid-row: 6 / 7;
