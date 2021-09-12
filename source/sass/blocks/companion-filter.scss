@@ -1,6 +1,14 @@
 .companion-filter {
-  padding-top: 21px;
+  padding-top: 74px;
   padding-bottom: 28px;
+
+  @media (min-width: $tablet) {
+    padding-top: 180px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 0;
+  }
 }
 
 .companion-filter__wrapper {
@@ -257,7 +265,7 @@
   display: flex;
   flex-wrap: nowrap;
   background-color: $white;
-  border: 1px solid $specialGrey4;
+  // border: 1px solid $specialGrey4;
   border-radius: 4px;
 
   &::after {
@@ -273,7 +281,7 @@
     border-bottom: 4px solid $white;
   }
 
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) and (max-width: 1439px) {
     margin-bottom: 0;
     order: 3;
   }
@@ -282,10 +290,9 @@
 .companion-filter__level-input {
   padding: 10px;
   position: relative;
-  border: none;
   outline: none;
-  width: 109px;
-  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid $specialGrey4;
   text-align: center;
   font-family: $bloggerSans;
   font-weight: 500;
@@ -300,15 +307,19 @@
     line-height: 20px;
     letter-spacing: 0.04em;
   }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+  }
 }
 
 .companion-filter__level-input-min {
   border-radius: 4px 0 0 4px;
-  border-right: 1px solid $specialGrey4;
 }
 
 .companion-filter__level-input-max {
   border-radius: 0 4px 4px 0;
+  border-left: none;
 }
 
 .companion-filter__level-scale {

@@ -19,6 +19,7 @@
 .step-one__general-info-item {
   margin: 0 0 20px 0;
   padding: 0;
+  position: relative;
   border: none;
   display: flex;
   flex-wrap: wrap;
@@ -26,6 +27,7 @@
 
   @media (min-width: $tablet) {
     padding-top: 26px;
+    margin-bottom: 34px;
     border-top: 1px solid $specialGrey2;
 
     &:nth-child(1) {
@@ -51,8 +53,7 @@
 }
 
 .step-one__input-label {
-  display: inline-block;
-  margin-bottom: 8px;
+  display: block;
   font-weight: 500;
   line-height: 16px;
   letter-spacing: 0.09em;
@@ -91,17 +92,35 @@
   }
 }
 
-.step-one__input-area {
-  padding: 14px;
-  width: 220px;
-  display: flex;
-  flex-wrap: nowrap;
+.step-one__input-field {
+  margin-top: 8px;
+  padding: 0 30px 0 30px;
+  width: 100%;
+  height: 43px;
+  text-align: center;
+  font-family: $bloggerSans;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $blueLight;
+  outline: none;
   border: 1px solid $specialGrey4;
-  box-sizing: border-box;
   border-radius: 4px;
 
+  &:hover {
+    border: 1px solid $specialGrey11;
+  }
+
+  &:focus {
+    border: 1px solid $blueLight;
+  }
+
   @media (min-width: $tablet) {
-    width: 538px;
+    margin-top: 24px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: $desktop) {
@@ -111,42 +130,100 @@
   }
 }
 
-.step-one__input-field {
-  padding: 0;
-  border: none;
-  width: 100%;
-  text-align: center;
-  font-family: $bloggerSans;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 14px;
-  text-transform: uppercase;
-  color: $blueLight;
-
-  @media (min-width: $tablet) {
-    font-size: 20px;
-    line-height: 20px;
-  }
-}
-
 .step-one__input-button {
   padding: 0;
-  position: relative;
-  top: 2px;
+  position: absolute;
+  top: 39px;
   width: 14px;
   height: 14px;
   border: none;
   outline: none;
   background-color: transparent;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
   cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 14px;
+    height: 2px;
+    background-color: $specialGrey7;
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: $specialGrey9;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      background-color: $specialGrey10;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    top: 92px;
+    width: 20px;
+    height: 20px;
+
+    &::before {
+      width: 20px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    top: 25px;
+  }
 }
 
 .step-one__button-substract {
-  background-image: url("../img/icon-minus.svg");
+  left: 14px;
+
+  @media (min-width: $tablet) {
+    left: 23px;
+  }
+
+  @media (min-width: $desktop) {
+    left: 235px;
+  }
 }
 
 .step-one__button-add {
-  background-image: url("../img/icon-plus.svg");
+  right: 14px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 14px;
+    height: 2px;
+    background-color: $specialGrey7;
+    transform: rotate(90deg);
+  }
+
+  @media (min-width: $tablet) {
+    right: 23px;
+
+    &::after {
+      width: 20px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    right: 235px;
+  }
+}
+
+.step-one__input-field:hover ~ .step-one__input-button::before,
+.step-one__input-field:hover ~ .step-one__button-add::after {
+  background-color: $specialGrey11;
+}
+
+.step-one__input-field:focus ~ .step-one__input-button::before,
+.step-one__input-field:focus ~ .step-one__button-add::after {
+  background-color: $blueLight;
 }

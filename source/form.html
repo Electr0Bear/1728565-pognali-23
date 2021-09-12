@@ -5,95 +5,64 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Погнали</title>
+  <link rel="icon" href="./img/favicons/16.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page-body">
   <header class="page-header">
     <h2 class="visually-hidden">Навигация по странице</h2>
-    <div class="page-header__wrapper container">
-      <a class="page-header__logo">
-        <picture class="page-header__logo-regular">
-          <source srcset="img/header-logo-desktop.svg" media="(min-width: 1440px)">
-          <source srcset="img/header-logo-tablet.svg" media="(min-width: 768px)">
-          <img src="img/header-logo-mobile.svg" alt="Погнали?">
-        </picture>
-        <picture class="page-header__logo-menu" hidden>
-          <source srcset="img/header-logo-desktop-blue.svg" media="(min-width: 1440px)">
-          <source srcset="img/header-logo-tablet-blue.svg" media="(min-width: 768px)">
-          <img src="img/header-logo-mobile-blue.svg" alt="Погнали?">
-        </picture>
-      </a>
-      <ul class="page-header__nav-list list">
-        <li class="page-header__nav-item"><a class="link">О сервисе</a></li>
-        <li class="page-header__nav-item"><a class="link" href="form.html">Направления</a></li>
-        <li class="page-header__nav-item"><a class="link" href="catalog.html">Попутчики</a></li>
-      </ul>
-      <button class="page-header__menu-button" type="button">
-        <!-- <div class="page-header__menu-button-show" aria-label="Показать меню">
-          <svg width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="25" height="3" rx="1.5" fill="white" />
-            <rect y="8" width="25" height="3" rx="1.5" fill="white" />
-          </svg>
-        </div>
-        <div class="page-header__menu-button-close" aria-label="Закрыть меню" hidden>
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19.75 2.25L1.75 20.25" stroke="#CCCCCC" stroke-width="1.7" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <path d="M1.75 2.25L19.75 20.25" stroke="#CCCCCC" stroke-width="1.7" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </div> -->
-      </button>
-      <!-- Раздел авторизации -->
-      <ul class="page-header__auth page-header__auth--hide list">
-        <li>
-          <a class="page-header__phone phone link" href="tel:+78005558628">
-            <span class="visually-hidden">8 800 555-86-28</span>
-          </a>
-        </li>
-        <li>
-          <a class="page-header__email email link" href="mailto:mail@htmlacademy.ru">
-            <span class="visually-hidden">mail@htmlacademy.ru</span>
-          </a>
-        </li>
-        <li>
-          <a class="page-header__login login link" href="login.html">Авторизация</a>
-        </li>
-      </ul>
-    </div>
-    <!-- Выпадающее меню -->
-    <nav class="page-header__nav header-nav">
-      <div class="header-nav__wrapper container">
-        <ul class="header-nav__list list">
-          <li class="header-nav__item"><a class="link">О сервисе</a></li>
-          <li class="header-nav__item"><a class="link" href="form.html">Направления</a></li>
-          <li class="header-nav__item"><a class="link" href="catalog.html">Попутчики</a></li>
+    <nav class="page-header__navigation page-header__navigation--closed">
+      <div class="page-header__navigation-wrapper container">
+        <a class="page-header__logo">
+          <picture class="page-header__logo-regular">
+            <source srcset="img/header-logo-desktop.svg" media="(min-width: 1440px)">
+            <source srcset="img/header-logo-tablet.svg" media="(min-width: 768px)">
+            <img src="img/header-logo-mobile.svg" alt="Погнали?">
+          </picture>
+          <picture class="page-header__logo-blue" hidden>
+            <source srcset="img/header-logo-desktop-blue.svg" media="(min-width: 1440px)">
+            <source srcset="img/header-logo-tablet-blue.svg" media="(min-width: 768px)">
+            <img src="img/header-logo-mobile-blue.svg" alt="Погнали?">
+          </picture>
+        </a>
+        <a class="page-header__menu-button link">
+          <span class="page-header__menu-button-open visually-hidden">Открыть меню навигации</span>
+          <span class="page-header__menu-button-close visually-hidden" hidden>Закрыть меню навигации</span>
+        </a>
+        <ul class="page-header__nav-list page-header__nav-list--closed list">
+          <li class="page-header__nav-item"><a class="page-header__nav-link link">О сервисе</a></li>
+          <li class="page-header__nav-item"><a class="page-header__nav-link link" href="form.html">Направления</a></li>
+          <li class="page-header__nav-item"><a class="page-header__nav-link link" href="catalog.html">Попутчики</a></li>
         </ul>
-        <a class="header-nav__login login link" href="login.html">Авторизация</a>
-        <ul class="header-nav__contact-list list">
-          <li>
-            <a class="header-nav__contact-item header-nav__phone link" href="tel:+78005558628">8 800 555-86-28</a>
+        <ul class="page-header__auth-list list">
+          <li class="page-header__auth-item page-header__auth-item--closed page-header__login-item">
+            <a class="page-header__login link" href="login.html">Авторизация</a>
           </li>
-          <li>
-            <a class="header-nav__contact-item header-nav__email link"
-              href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <li class="page-header__auth-item page-header__auth-item--closed page-header__contact-item">
+            <a class="page-header__phone page-header__contact-link link" href="tel:+78005558628">
+              <span class="page-header__auth-text">8 800 555-86-28</span>
+            </a>
+          </li>
+          <li class="page-header__auth-item page-header__auth-item--closed page-header__contact-item">
+            <a class="page-header__email page-header__contact-link link" href="mailto:mail@htmlacademy.ru">
+              <span class="page-header__auth-text">mail@htmlacademy.ru</span>
+            </a>
           </li>
         </ul>
-        <h3 class="visually-hidden">Наши страницы в соцсетях</h3>
-        <ul class="header-nav__socials-list list">
-          <li>
-            <a class="header-nav__socials-item header-nav__socials-facebook">
+        <ul class="page-header__socials-list page-header__socials-list--closed  list">
+          <li class="page-header__socials-item">
+            <a class="page-header__socials-link page-header__socials-facebook">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
-          <li>
-            <a class="header-nav__socials-item header-nav__socials-vkontakte">
+          <li class="page-header__socials-item">
+            <a class="page-header__socials-link page-header__socials-vkontakte">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
-          <li>
-            <a class="header-nav__socials-item header-nav__socials-instagram">
+          <li class="page-header__socials-item">
+            <a class="page-header__socials-link page-header__socials-instagram">
               <span class="visually-hidden">Instagram</span>
             </a>
           </li>
@@ -206,7 +175,7 @@
         <section class="add-plan__wrapper">
           <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="POST">
             <!-- ПЕРВЫЙ ШАГ -->
-            <div class="add-plan__step-one step-one">
+            <div class="add-plan__step add-plan__step--show add-plan__step-one step-one">
               <h3 class="add-plan__step-heading"><span>Шаг 1.</span><span>Даты пребывания</span></h3>
               <p class="add-plan__step-description">Укажите предпочтительное количество попутчиков, которых вы хотели бы
                 позвать в поездку, и ее предполагаемую длительность.</p>
@@ -215,25 +184,25 @@
                 <li class="step-one__general-info-item">
                   <span class="step-one__input-label">Ищу попутчиков:</span>
                   <span class="step-one__input-label-extra">Чел.</span>
-                  <div class="step-one__input-area step-one__companions-num-input">
-                    <button class="step-one__input-button step-one__button-substract" type="button"><span
-                        class="visually-hidden">Уменишить количество</span></button>
-                    <input class="step-one__input-field" type="text" name="num-of-companions" value="2">
-                    <button class="step-one__input-button step-one__button-add" type="button"><span
-                        class="visually-hidden">Увеличить количество</span></button>
-                  </div>
+                  <input class="step-one__input-field step-one__companions-num-input" type="text" name="num-of-companions" value="2">
+                  <button class="step-one__input-button step-one__button-substract" type="button">
+                    <span class="visually-hidden">Уменишить количество</span>
+                  </button>
+                  <button class="step-one__input-button step-one__button-add" type="button">
+                    <span class="visually-hidden">Увеличить количество</span>
+                  </button>
                 </li>
                 <!-- Длительность -->
                 <li class="step-one__general-info-item">
                   <span class="step-one__input-label">Длительность:</span>
                   <span class="step-one__input-label-extra">Дн.</span>
-                  <div class="step-one__input-area step-one__trip-length-input">
-                    <button class="step-one__input-button step-one__button-substract" type="button"><span
-                        class="visually-hidden">Уменишить количество</span></button>
-                    <input class="step-one__input-field" type="text" name="trip-length-days" value="3">
-                    <button class="step-one__input-button step-one__button-add" type="button"><span
-                        class="visually-hidden">Увеличить количество</span></button>
-                  </div>
+                  <input class="step-one__input-field step-one__trip-length-input" type="text" name="trip-length-days" value="3">
+                  <button class="step-one__input-button step-one__button-substract" type="button">
+                    <span class="visually-hidden">Уменишить количество</span>
+                  </button>
+                  <button class="step-one__input-button step-one__button-add" type="button">
+                    <span class="visually-hidden">Увеличить количество</span>
+                  </button>
                 </li>
                 <!-- Наличие детей -->
                 <li class="step-one__general-info-item children">
@@ -501,7 +470,7 @@
               </fieldset>
             </div>
             <!-- ВТОРОЙ ШАГ -->
-            <div class="add-plan__step-two step-two">
+            <div class="add-plan__step add-plan__step-two step-two">
               <h3 class="add-plan__step-heading"><span>Шаг 2.</span><span>Маршрут</span></h3>
               <p class="add-plan__step-description">Укажите страны, которые вы хотели бы посетить. <span>Это может быть
                   одна или сразу несколько.</span></p>
@@ -515,7 +484,7 @@
                       <label class="visually-hidden" for="first-country">Первое место назначения</label>
                       <span class="step-two__countries-select-one">Босния и Герцеговина</span>
                     </div>
-                    <div class="step-two__countries-flag">
+                    <div class="step-two__countries-flag step-two__countries-flag-first">
                       <img src="img/flag-bosnia-and-herzegovina.svg" width="35" height="24"
                         alt="Флаг Боснии и Герцеговины">
                     </div>
@@ -537,46 +506,48 @@
                       <span class="visually-hidden">Закрыть</span>
                     </button>
                   </li>
-                  <li class="step-two__countries-item step-two__countries-item--current">
-                    <div class="step-two__countries-select step-two__countries-select--current">
+                  <li class="step-two__countries-item step-two__countries-item-current">
+                    <div class="step-two__countries-select step-two__countries-select-current">
                       <input class="visually-hidden" id="third-country" type="text" name="third-country" value="">
                       <label class="visually-hidden" for="third-country">Третье место назначения</label>
                       <span class="step-two__countries-select-three">Выберите страну</span>
                     </div>
-                    <div class="step-two__countries-flag step-two__countries-flag--current">
+                    <div class="step-two__countries-flag step-two__countries-flag-current">
                     </div>
                     <button class="step-two__button-close" type="button">
                       <span class="visually-hidden">Закрыть</span>
                     </button>
                     <div class="step-two__countries-droplist">
-                      <ul class="step-two__countries-alphabet-list list">
-                        <li class="step-two__countries-alphabet-letter step-two__countries-alphabet-letter--active">А
-                        </li>
-                        <li class="step-two__countries-alphabet-letter">Б</li>
-                        <li class="step-two__countries-alphabet-letter">В</li>
-                        <li class="step-two__countries-alphabet-letter">Г</li>
-                        <li class="step-two__countries-alphabet-letter">Д</li>
-                        <li class="step-two__countries-alphabet-letter">Е</li>
-                        <li class="step-two__countries-alphabet-letter">З</li>
-                        <li class="step-two__countries-alphabet-letter">И</li>
-                        <li class="step-two__countries-alphabet-letter">К</li>
-                        <li class="step-two__countries-alphabet-letter">Л</li>
-                        <li class="step-two__countries-alphabet-letter">М</li>
-                        <li class="step-two__countries-alphabet-letter">Н</li>
-                        <li class="step-two__countries-alphabet-letter">О</li>
-                        <li class="step-two__countries-alphabet-letter">П</li>
-                        <li class="step-two__countries-alphabet-letter">Р</li>
-                        <li class="step-two__countries-alphabet-letter">С</li>
-                        <li class="step-two__countries-alphabet-letter">Т</li>
-                        <li class="step-two__countries-alphabet-letter">У</li>
-                        <li class="step-two__countries-alphabet-letter">Ф</li>
-                        <li class="step-two__countries-alphabet-letter">Х</li>
-                        <li class="step-two__countries-alphabet-letter">Ч</li>
-                        <li class="step-two__countries-alphabet-letter">Ш</li>
-                        <li class="step-two__countries-alphabet-letter">Э</li>
-                        <li class="step-two__countries-alphabet-letter">Ю</li>
-                        <li class="step-two__countries-alphabet-letter">Я</li>
-                      </ul>
+                      <div class="step-two__countries-alphabet-wrapper">
+                        <ul class="step-two__countries-alphabet-list list">
+                          <li class="step-two__countries-alphabet-letter step-two__countries-alphabet-letter--active">А
+                          </li>
+                          <li class="step-two__countries-alphabet-letter">Б</li>
+                          <li class="step-two__countries-alphabet-letter">В</li>
+                          <li class="step-two__countries-alphabet-letter">Г</li>
+                          <li class="step-two__countries-alphabet-letter">Д</li>
+                          <li class="step-two__countries-alphabet-letter">Е</li>
+                          <li class="step-two__countries-alphabet-letter">З</li>
+                          <li class="step-two__countries-alphabet-letter">И</li>
+                          <li class="step-two__countries-alphabet-letter">К</li>
+                          <li class="step-two__countries-alphabet-letter">Л</li>
+                          <li class="step-two__countries-alphabet-letter">М</li>
+                          <li class="step-two__countries-alphabet-letter">Н</li>
+                          <li class="step-two__countries-alphabet-letter">О</li>
+                          <li class="step-two__countries-alphabet-letter">П</li>
+                          <li class="step-two__countries-alphabet-letter">Р</li>
+                          <li class="step-two__countries-alphabet-letter">С</li>
+                          <li class="step-two__countries-alphabet-letter">Т</li>
+                          <li class="step-two__countries-alphabet-letter">У</li>
+                          <li class="step-two__countries-alphabet-letter">Ф</li>
+                          <li class="step-two__countries-alphabet-letter">Х</li>
+                          <li class="step-two__countries-alphabet-letter">Ч</li>
+                          <li class="step-two__countries-alphabet-letter">Ш</li>
+                          <li class="step-two__countries-alphabet-letter">Э</li>
+                          <li class="step-two__countries-alphabet-letter">Ю</li>
+                          <li class="step-two__countries-alphabet-letter">Я</li>
+                        </ul>
+                      </div>
                       <ul class="step-two__countries-selector-list list">
                         <li class="step-two__countries-selector-item">
                           Австралия
@@ -613,12 +584,14 @@
                   </li>
                   <li class="step-two__add-country">
                     <button class="step-two__button-add-country" type="button">Добавить страну</button>
+                    <div class="step-two__countries-flag step-two__countries-flag-add">
+                    </div>
                   </li>
                 </ul>
               </fieldset>
             </div>
             <!-- ТРЕТИЙ ШАГ -->
-            <div class="add-plan__step-three step-three">
+            <div class="add-plan__step add-plan__step-three step-three">
               <h3 class="add-plan__step-heading"><span>Шаг 3.</span><span>Развлечения</span></h3>
               <p class="add-plan__step-description">Наконец, расскажите о своих планах времяпровождения. <span>Можно
                   писать в свободной форме и ставить тэги.</span></p>
@@ -645,9 +618,11 @@
                 </ul>
               </fieldset>
             </div>
-            <a class="add-plan__button add-plan__button-next-step">Следующий шаг</a>
-            <button class="add-plan__button add-plan__button-submit" type="submit">Отправить</button>
-            <a class="add-plan__button add-plan__button-previous-step">На шаг назад</a>
+            <div class="add-plan__button-section">
+              <a class="add-plan__button add-plan__button--show add-plan__button-next-step add-plan__button-next-step--show">Следующий шаг</a>
+              <button class="add-plan__button add-plan__button-submit" type="submit">Отправить</button>
+              <a class="add-plan__button add-plan__button-previous-step">На шаг назад</a>
+            </div>
           </form>
         </section>
       </div>
@@ -655,44 +630,47 @@
   </main>
   <footer class="page-footer">
     <div class="container">
-      <a class="page-footer__logo">
-        <picture>
-          <source srcset="img/header-logo-desktop-blue.svg" media="(min-width: 1320px)">
-          <source srcset="img/header-logo-tablet-blue.svg" media="(min-width: 688px)">
-          <img src="img/header-logo-mobile-blue.svg" alt="Погнали?">
-        </picture>
-      </a>
-      <ul class="page-footer__socials list">
-        <li>
-          <a class="page-footer__socials-item page-footer__socials-facebook">
-            <span class="visually-hidden">Facebook</span>
-          </a>
-        </li>
-        <li>
-          <a class="page-footer__socials-item page-footer__socials-vkontakte">
-            <span class="visually-hidden">ВКонтакте</span>
-          </a>
-        </li>
-        <li>
-          <a class="page-footer__socials-item page-footer__socials-instagram">
-            <span class="visually-hidden">Instagram</span>
-          </a>
-        </li>
-      </ul>
-      <div class="page-footer__credentials">
-        <p class="page-footer__developed-by page-footer__developed-by--transparent">Разработано</p>
-        <a class="page-footer__credentials-logo page-footer__credentials-logo--transparent"
-          href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="page-footer__academy-logo" width="27" height="34" viewBox="0 0 27 34" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M13.6426 0.101368L13.5 0.0859375L0 1.46443V25.5657L13.5 33.3892L27 25.5657V1.46443L13.6426 0.101368ZM25.2344 24.5885L13.5 31.3883L1.76561 24.5885V14.7093L13.4507 21.4834L13.4701 22.711L5.45351 18.0646L5.44295 19.2648L13.4894 23.9747L13.5088 25.2348L5.46408 20.5747L5.45351 21.7749L13.5 26.4847L21.6239 21.7509V20.5507V16.6484L25.2432 14.543L25.2344 24.5885ZM25.2344 13.2622L22.0147 15.1036L20.5325 15.9609L13.4666 11.8597L13.456 13.0599L19.4957 16.5593L19.4429 16.5901L19.3126 16.6638L18.4536 17.1456L13.4666 14.2583L13.456 15.4585L17.3921 17.7389L16.4591 18.3355L16.438 18.3475L13.4666 16.6416L13.456 17.8417L15.4029 18.9528L13.4155 20.1152L1.7973 13.3839L13.4349 6.56862L25.2344 13.2622ZM25.2344 12.062L13.4401 5.28786L1.76561 12.0552V3.01438L13.5 1.8142L25.2344 3.01438V12.062Z"
-              fill="#192144" />
-          </svg>
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo">
+          <picture>
+            <source srcset="img/header-logo-desktop-blue.svg" media="(min-width: 1320px)">
+            <source srcset="img/header-logo-tablet-blue.svg" media="(min-width: 688px)">
+            <img src="img/header-logo-mobile-blue.svg" alt="Погнали?">
+          </picture>
         </a>
+        <ul class="page-footer__socials-list list">
+          <li>
+            <a class="page-footer__socials-item page-footer__socials-facebook">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a class="page-footer__socials-item page-footer__socials-vkontakte">
+              <span class="visually-hidden">ВКонтакте</span>
+            </a>
+          </li>
+          <li>
+            <a class="page-footer__socials-item page-footer__socials-instagram">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__credentials">
+          <p class="page-footer__developed-by page-footer__developed-by--transparent">Разработано</p>
+          <a class="page-footer__credentials-logo page-footer__credentials-logo--transparent"
+            href="https://htmlacademy.ru/intensive/adaptive">
+            <svg class="page-footer__academy-logo" width="27" height="34" viewBox="0 0 27 34" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.6426 0.101368L13.5 0.0859375L0 1.46443V25.5657L13.5 33.3892L27 25.5657V1.46443L13.6426 0.101368ZM25.2344 24.5885L13.5 31.3883L1.76561 24.5885V14.7093L13.4507 21.4834L13.4701 22.711L5.45351 18.0646L5.44295 19.2648L13.4894 23.9747L13.5088 25.2348L5.46408 20.5747L5.45351 21.7749L13.5 26.4847L21.6239 21.7509V20.5507V16.6484L25.2432 14.543L25.2344 24.5885ZM25.2344 13.2622L22.0147 15.1036L20.5325 15.9609L13.4666 11.8597L13.456 13.0599L19.4957 16.5593L19.4429 16.5901L19.3126 16.6638L18.4536 17.1456L13.4666 14.2583L13.456 15.4585L17.3921 17.7389L16.4591 18.3355L16.438 18.3475L13.4666 16.6416L13.456 17.8417L15.4029 18.9528L13.4155 20.1152L1.7973 13.3839L13.4349 6.56862L25.2344 13.2622ZM25.2344 12.062L13.4401 5.28786L1.76561 12.0552V3.01438L13.5 1.8142L25.2344 3.01438V12.062Z"
+                fill="#192144" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

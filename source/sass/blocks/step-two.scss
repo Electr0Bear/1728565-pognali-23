@@ -22,7 +22,7 @@
     display: block;
     position: absolute;
     bottom: -15px;
-    left: 163px;
+    right: 47px;
     width: 10px;
     height: 10px;
     background-image: url("../img/icon-arrow-down.svg");
@@ -31,38 +31,28 @@
   }
 
   @media (min-width: $tablet) {
-    &:not(:first-child)::after {
+    &::after {
       display: none;
     }
-
-    &:first-child::after {
-      bottom: -293px;
-      left: 397px;
-      width: 1px;
-      height: 407px;
-      z-index: 0;
-      background-image: linear-gradient($specialGrey4 80%, $white 95%);
-    }
   }
+}
 
-  @media (min-width: $desktop) {
-    &:first-child::after {
-      bottom: -424px;
-      left: 776px;
-      height: 540px;
-      background-image: none;
-      background-color: $specialGrey4;
-    }
-  }
+.step-two__add-country {
+  margin-bottom: 25px;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .step-two__countries-select {
   position: relative;
   padding: 11px;
+  flex-grow: 1;
   border: 1px solid $specialGrey4;
   border-radius: 4px;
   overflow: hidden;
   width: 168px;
+  height: 40px;
   font-family: inherit;
   font-weight: 500;
   font-size: 14px;
@@ -91,8 +81,10 @@
     width: 16px;
     height: 12px;
     background-image: url("../img/icon-arrow-back.svg");
-    background-position: 50% 46%;
+    background-position: 50% 48%;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.3;
     transform: rotate(-90deg);
   }
 
@@ -102,9 +94,16 @@
     padding-bottom: 23px;
     padding-left: 25px;
     width: 369px;
+    height: 70px;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
+
+    &::after {
+      right: 26px;
+      width: 20px;
+      height: 17px;
+    }
   }
 
   @media (min-width: $desktop) {
@@ -117,14 +116,62 @@
   white-space: nowrap;
 }
 
+.step-two__countries-select-current {
+  width: 220px;
+
+  @media (min-width: $tablet) {
+    width: 369px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 730px;
+  }
+}
+
+.step-two__countries-select-current--active {
+  border-radius: 4px 4px 0 0;
+  border: 1px solid $blueLight;
+  background-color: $blueLight;
+  color: $white;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    background-image: url("../img/icon-cross-close-white.svg");
+    opacity: 1;
+  }
+
+  @media (min-width: $tablet) {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+
+.step-two__countries-select-current--active + .step-two__countries-flag-current {
+  &::before {
+    display: none;
+  }
+}
+
+.step-two__countries-select-current--active ~ .step-two__button-close {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
 .step-two__countries-flag {
   position: relative;
-  padding-top: 9px;
+  padding-top: 8px;
+  padding-left: 8px;
   width: 52px;
   height: auto;
   border: 1px solid $specialGrey4;
   border-radius: 4px;
-  text-align: center;
 
   &::before {
     content: "";
@@ -142,7 +189,7 @@
   @media (min-width: $tablet) {
     padding-top: 11px;
     padding-left: 25px;
-    width: auto;
+    width: 140px;
     border: none;
 
     & img {
@@ -159,35 +206,85 @@
 
   @media (min-width: $desktop) {
     padding-left: 40px;
+    width: 220px;
   }
 }
 
-.step-two__countries-flag--current {
+.step-two__countries-flag-first {
+  @media (min-width: $tablet) {
+    &::after {
+      content: "";
+      position: absolute;
+      top: -42px;
+      left: 0;
+      width: 1px;
+      height: 407px;
+      z-index: 0;
+      background-image: linear-gradient($specialGrey4 80%, $white 95%);
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &::after {
+      top: -42px;
+      left: 0;
+      width: 2px;
+      height: 540px;
+      background-image: none;
+      background-color: $specialGrey4;
+    }
+  }
+}
+
+.step-two__countries-flag-current {
+  padding: 0;
   width: 0;
   border: none;
 
   &::before {
     left: -56px;
-    background-color: $white;
+    background-color: transparent;
     border: 1px solid $specialGrey4;
   }
 
   @media (min-width: $tablet) {
+    width: 140px;
+
     &::before {
+      background-color: $white;
       left: -5px;
     }
   }
+
+  @media (min-width: $desktop) {
+    width: 220px;
+  }
 }
 
-.step-two__countries-select--current {
-  width: 220px;
+.step-two__countries-flag-add {
+  padding: 0;
+  width: 0;
+  height: 40px;
+  border: none;
+
+  &::before {
+    left: -56px;
+    background-color: transparent;
+    border: 1px solid $specialGrey4;
+  }
 
   @media (min-width: $tablet) {
-    width: 369px;
+    width: 140px;
+    height: 70px;
+
+    &::before {
+      left: -5px;
+      background-color: $specialGrey6;
+    }
   }
 
   @media (min-width: $desktop) {
-    width: 730px;
+    width: 220px;
   }
 }
 
@@ -220,24 +317,66 @@
 .step-two__countries-droplist {
   display: none;
   position: absolute;
-  width: 220px;
-  bottom: -530px;
-  z-index: 1;
+  width: 100%;
+  top: 40px;
+  z-index: 2;
   background-color: $white;
   box-shadow: inset 1px 1px $specialGrey5, inset -1px -1px $specialGrey5;
+
+  @media (min-width: $tablet) {
+    top: 70px;
+  }
+}
+
+.step-two__countries-droplist--show {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    min-width: 575px;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop) {
+    width: 730px;
+  }
+}
+
+.step-two__countries-alphabet-wrapper {
+  @media (min-width: $tablet) {
+    padding: 35px 79px 33px 27px;
+    width: 368px;
+    flex-grow: 1;
+    border-right: 1px solid $specialGrey5;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 32px 102px 36px 26px;
+  }
 }
 
 .step-two__countries-alphabet-list {
   display: grid;
   grid-template-columns: repeat(5, 5fr);
-  grid-template-rows: repeat(5, 5fr);
+  grid-template-rows: repeat(5, 40px);
   border-top: 1px solid $specialGrey5;
   border-left: 1px solid $specialGrey5;
+
+  @media (min-width: $tablet) {
+    grid-template-rows: repeat(5, 70px);
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(5, 60px);
+    gap: 16px;
+    border: none;
+  }
 }
 
 .step-two__countries-alphabet-letter {
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 13px;
+  position: relative;
   border-bottom: 1px solid $specialGrey5;
   border-right: 1px solid $specialGrey5;
   font-weight: 500;
@@ -245,14 +384,61 @@
   line-height: 18px;
   text-align: center;
 
-  &--active {
-    background-color: $basicGrey;
+  @media (min-width: $tablet) {
+    padding-top: 26px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    border: 1px solid $specialGrey5;
+    border-radius: 4px;
+  }
+}
+
+.step-two__countries-alphabet-letter--active {
+  background-color: $basicGrey;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    display: block;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border: 1px solid $basicGrey;
+  }
+
+  @media (min-width: $tablet) {
+    color: $white;
+    background-color: $blueLight;
+
+    &::before {
+      border: 1px solid $blueLight;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    border: 1px solid $blueLight;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
 .step-two__countries-selector-list {
   padding: 20px;
   color: $specialGrey;
+
+  @media (min-width: $tablet) {
+    padding: 37px 23px 0 25px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 37px 57px 0 25px;
+  }
 }
 
 .step-two__countries-selector-item {
@@ -261,16 +447,26 @@
   &:not(:last-child) {
     padding-bottom: 4px;
   }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+
+    &:not(:last-child) {
+      padding-bottom: 11px;
+    }
+  }
 }
 
 .step-two__button-add-country {
   padding: 12px;
-  margin-bottom: 25px;
   position: relative;
+  flex-grow: 1;
   border: none;
   box-sizing: border-box;
   border-radius: 4px;
   width: 220px;
+  height: 40px;
   font-family: inherit;
   font-weight: 500;
   font-size: 14px;
@@ -280,49 +476,44 @@
   text-transform: uppercase;
   color: $blueLight;
   background-color: $specialGrey6;
-  background-image: url("../img/icon-plus.svg");
-  background-position: 90% 50%;
-  background-repeat: no-repeat;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
-    display: block;
     position: absolute;
-    top: calc(50% - 4px);
-    right: 49px;
-    width: 8px;
-    height: 8px;
-    border: 1px solid $specialGrey4;
-    border-radius: 50%;
+    top: 20px;
+    right: 15px;
+    display: block;
+    width: 14px;
+    height: 2px;
+    background-color: $specialGrey13;
+  }
+
+  &::after {
+    transform: rotate(90deg);
   }
 
   @media (min-width: $tablet) {
+    margin-right: 27px;
     padding-top: 27px;
     padding-bottom: 23px;
     padding-left: 25px;
     width: 369px;
+    height: 70px;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.09em;
 
-    &::before {
-      top: calc(50% - 7px);
-      right: -36px;
-      width: 14px;
-      height: 14px;
-      background-color: $basicGrey;
+    &::before,
+    &::after {
+      top: 36px;
+      right: 24px;
+      width: 21px;
     }
   }
 
   @media (min-width: $desktop) {
+    margin-right: 45px;
     width: 730px;
-
-    &::before {
-      top: calc(50% - 7px);
-      right: -53px;
-      width: 14px;
-      height: 14px;
-      background-color: $basicGrey;
-    }
   }
 }

@@ -54,11 +54,6 @@
 
 .add-plan__slider-buttons-item {
   margin-right: 16px;
-  opacity: 0.3;
-
-  &--active {
-    opacity: 1;
-  }
 
   @media (min-width: $tablet) {
     margin-right: 29px;
@@ -78,6 +73,7 @@
 }
 
 .add-plan__slider-button {
+  opacity: 0.3;
   position: relative;
   font-weight: 400;
   font-size: 20px;
@@ -87,6 +83,7 @@
   cursor: pointer;
 
   &--active {
+    opacity: 1;
     cursor: default;
   }
 
@@ -139,6 +136,14 @@
     padding: 101px 160px 106px 160px;
     border-radius: 60px;
   }
+}
+
+.add-plan__step {
+  display: none;
+}
+
+.add-plan__step--show {
+  display: block;
 }
 
 .add-plan__step-heading {
@@ -194,8 +199,21 @@
   }
 }
 
+.add-plan__button-section {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .add-plan__button {
-  display: block;
+  position: relative;
+  display: none;
   font-family: inherit;
   font-weight: 700;
   font-size: 17px;
@@ -203,6 +221,13 @@
   text-transform: uppercase;
   color: $blueLight;
   text-align: center;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+  }
 }
 
 .add-plan__button-next-step,
@@ -210,8 +235,71 @@
   margin: 0;
   padding: 5px 0;
   border: none;
-  box-sizing: content-box;
   border-radius: 20px;
   background-color: $yellow;
   width: 220px;
+  height: 40px;
+
+  &:hover,
+  &:focus {
+    background-color: $yellowDark;
+  }
+
+  &:active {
+    color: fade-out($color: $blueLight, $amount: 0.7);
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding-left: 33px;
+    width: 286px;
+    height: 80px;
+    text-align: left;
+
+    &::before {
+      content: url("../img/icon-button-arrow-right-blue.svg");
+      position: absolute;
+      top: 28px;
+      right: 37px;
+    }
+  }
+}
+
+.add-plan__button-next-step {
+  @media (min-width: $tablet) {
+    padding-top: 29px;
+  }
+}
+
+.add-plan__button-previous-step {
+  width: 120px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet) {
+    width: 185px;
+    text-align: right;
+
+    &::before {
+      content: url("../img/icon-button-arrow-right-blue.svg");
+      position: absolute;
+      top: 2px;
+      left: 0;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.add-plan__button--show {
+  display: block;
 }

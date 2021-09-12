@@ -10,10 +10,20 @@
   }
 }
 
+.page-main__header-wrapper--opened-menu {
+  @media (min-width: $desktop) {
+    background-color: $basicGrey;
+  }
+}
+
 .page-main__header {
   position: relative;
   background-color: $basicBlue;
   border-radius: 0 0 20px 20px;
+
+  @media (min-width: $tablet) {
+    border-radius: 0 0 60px 60px;
+  }
 }
 
 .page-main__page-title {
