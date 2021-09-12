@@ -208,6 +208,7 @@ if (window.location.href.indexOf('/catalog.html') !== -1) {
 
   // Выпадающий список со странами
   const btnTop = document.querySelector('.country-filter__button-top');
+  const btnTopText = document.querySelectorAll('.country-filter__button-top-text');
   const btnBottom = document.querySelector('.country-filter__close-btn-bottom')
   const countryFilterDroplist = document.querySelectorAll('.country-filter__continents-list, .country-filter__alphabet-list-wrapper');
 
@@ -215,12 +216,16 @@ if (window.location.href.indexOf('/catalog.html') !== -1) {
     evt.preventDefault();
     if (!btnTop.classList.contains('country-filter__button-top--opened')) {
       btnTop.classList.toggle('country-filter__button-top--opened');
+      btnTopText[0].classList.remove('country-filter__button-top-text--showed');
+      btnTopText[1].classList.toggle('country-filter__button-top-text--showed');
       countryFilterDroplist[0].classList.toggle('country-filter__continents-list--show');
       countryFilterDroplist[1].classList.toggle('country-filter__alphabet-list-wrapper--show');
       btnBottom.classList.toggle('country-filter__close-btn-bottom--show');
 
     } else {
       btnTop.classList.remove('country-filter__button-top--opened');
+      btnTopText[0].classList.toggle('country-filter__button-top-text--showed');
+      btnTopText[1].classList.remove('country-filter__button-top-text--showed');
       countryFilterDroplist[0].classList.remove('country-filter__continents-list--show');
       countryFilterDroplist[1].classList.remove('country-filter__alphabet-list-wrapper--show');
       btnBottom.classList.remove('country-filter__close-btn-bottom--show');
@@ -232,6 +237,8 @@ if (window.location.href.indexOf('/catalog.html') !== -1) {
 
     if (btnBottom.classList.contains('country-filter__close-btn-bottom--show')) {
       btnTop.classList.remove('country-filter__button-top--opened');
+      btnTopText[0].classList.toggle('country-filter__button-top-text--showed');
+      btnTopText[1].classList.remove('country-filter__button-top-text--showed');
       countryFilterDroplist[0].classList.remove('country-filter__continents-list--show');
       countryFilterDroplist[1].classList.remove('country-filter__alphabet-list-wrapper--show');
       btnBottom.classList.remove('country-filter__close-btn-bottom--show');
@@ -243,6 +250,8 @@ if (window.location.href.indexOf('/catalog.html') !== -1) {
       evt.preventDefault();
       if (btnTop.classList.contains('country-filter__button-top--opened')) {
         btnTop.classList.remove('country-filter__button-top--opened');
+        btnTopText[0].classList.toggle('country-filter__button-top-text--showed');
+        btnTopText[1].classList.remove('country-filter__button-top-text--showed');
         countryFilterDroplist[0].classList.remove('country-filter__continents-list--show');
         countryFilterDroplist[1].classList.remove('country-filter__alphabet-list-wrapper--show');
         btnBottom.classList.remove('country-filter__close-btn-bottom--show');
