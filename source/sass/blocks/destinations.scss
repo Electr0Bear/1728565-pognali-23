@@ -54,8 +54,8 @@
 }
 
 .destinations__about {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 24px;
+  padding-right: 47px;
 
   @media (min-width: $tablet) {
     padding: 0;
@@ -130,7 +130,7 @@
 }
 
 .destinations__item:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 
   @media (min-width: $tablet) {
     margin-bottom: 11px;
@@ -157,9 +157,9 @@
 
 .destinations__item-info {
   width: 100%;
-  height: 89px;
-  padding: 26px 110px 0 24px;
-  margin-top: -10px;
+  height: 88px;
+  padding: 21px 110px 0 24px;
+  margin-top: -9px;
   position: relative;
   background-color: $white;
   border-radius: 10px;
@@ -178,7 +178,7 @@
 
 .destinations__flag {
   position: absolute;
-  top: -11px;
+  top: -14px;
   left: 24px;
 
   @media (min-width: $tablet) {
@@ -193,8 +193,9 @@
 .destinations__country {
   margin: 0;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 24px;
+  letter-spacing: -0.04em;
 
   @media (min-width: $tablet) {
     font-size: 20px;
@@ -211,6 +212,7 @@
   font-size: 16px;
   font-weight: 500;
   color: $specialGrey;
+  letter-spacing: 0.02em;
   opacity: 0.3;
 
   @media (min-width: $tablet) {
@@ -222,14 +224,14 @@
 .destinations__popularity {
   line-height: 20px;
   position: absolute;
-  top: 28px;
-  right: 24px;
+  top: 26px;
+  left: 189px;
 
   &::before {
     content: "";
     position: relative;
     top: 2px;
-    left: -2px;
+    left: -5px;
     display: inline-block;
     width: 14px;
     height: 14px;
@@ -247,7 +249,7 @@
 
 .destinations__button {
   position: relative;
-  margin-top: 25px;
+  margin-top: 27px;
   padding-top: 22px;
   padding-left: 22px;
   display: block;
