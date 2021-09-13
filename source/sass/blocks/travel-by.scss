@@ -5,10 +5,17 @@
 }
 
 .travel-by__item {
+  display: block;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.travel-by__icon {
+  position: relative;
   width: 23px;
   height: 23px;
-  display: block;
-  background-repeat: no-repeat;
 
   &::before {
     content: "";
@@ -19,13 +26,9 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
 }
 
-.travel-by__item--faded::before {
+.travel-by__icon--faded {
   opacity: 0.3;
 }
 

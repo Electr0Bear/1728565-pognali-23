@@ -10,7 +10,7 @@
 
   @media (min-width: $tablet) {
     padding-top: 71px;
-    padding-bottom: 80px;
+    padding-bottom: 81px;
     border-radius: 0 0 60px 60px;
   }
 
@@ -68,7 +68,7 @@
   }
 }
 
-.destinations__about h2 {
+.destinations__heading {
   margin-top: 0;
   margin-bottom: 19px;
   font-size: 24px;
@@ -83,7 +83,7 @@
   }
 }
 
-.destinations__about p {
+.destinations__text {
   margin-top: 0;
   margin-bottom: 60px;
   font-weight: 300;
@@ -92,13 +92,20 @@
   color: $specialGrey;
 
   @media (min-width: $tablet) {
-    margin-bottom: 104px;
+    margin-bottom: 107px;
+    padding-right: 30px;
     font-size: 28px;
     line-height: 33px;
   }
 
   @media (min-width: $desktop) {
     margin-bottom: 98px;
+  }
+}
+
+.destinations__text span {
+  @media (min-width: $tablet) {
+    display: block;
   }
 }
 
@@ -158,7 +165,7 @@
 .destinations__item-info {
   width: 100%;
   height: 88px;
-  padding: 21px 110px 0 24px;
+  padding: 24px 110px 0 24px;
   margin-top: -9px;
   position: relative;
   background-color: $white;
@@ -166,7 +173,7 @@
 
   @media (min-width: $tablet) {
     height: auto;
-    padding: 30px 230px 20px 26px;
+    padding: 28px 110px 20px 28px;
     margin-top: 0;
     border-radius: 20px 0 0 20px;
   }
@@ -186,20 +193,21 @@
     height: 47px;
     top: 17px;
     left: auto;
-    right: -35px;
+    right: -36px;
   }
 }
 
 .destinations__country {
   margin: 0;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 24px;
-  letter-spacing: -0.04em;
+  font-size: 21px;
+  line-height: 21px;
+  color: $black;
 
   @media (min-width: $tablet) {
-    font-size: 20px;
-    line-height: 20px;
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 24px;
   }
 }
 
@@ -238,12 +246,13 @@
     background-image: url("../img/icon-lildude.svg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    opacity: 0.3;
   }
 
   @media (min-width: $tablet) {
     top: auto;
-    bottom: 20px;
-    left: 26px;
+    bottom: 23px;
+    left: 43px;
   }
 }
 
@@ -282,6 +291,7 @@
   }
 
   @media (min-width: $tablet) {
+    margin-top: 44px;
     padding-top: 30px;
     padding-left: 32px;
     height: 82px;

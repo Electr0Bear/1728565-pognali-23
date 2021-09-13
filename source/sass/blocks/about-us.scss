@@ -15,12 +15,13 @@
   }
 
   @media (min-width: $tablet) {
+    padding-top: 25px;
     background-color: $basicBlue2;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
     background-image: url("../img/traveller-illustration-tablet@1x.png"),
       url("../img/globe-back-tablet@1x.png");
-    background-position: calc(50% + 100px) 240px, 50% 218px;
+    background-position: calc(50% + 88px) 272px, 50% 218px;
     background-size: 372px 451px, 100% 612px;
   }
 
@@ -65,7 +66,7 @@
   text-align: center;
 
   @media (min-width: $tablet) {
-    margin-bottom: 86px;
+    margin-bottom: 88px;
     width: 399px;
     font-size: 60px;
     line-height: 70px;
@@ -231,7 +232,7 @@
   line-height: 22px;
 
   @media (min-width: $tablet) {
-    margin-top: 45px;
+    margin-top: 46px;
     font-size: 21px;
     line-height: 25px;
   }
@@ -250,6 +251,7 @@
   background-image: linear-gradient(to bottom, $basicBlue 23%, $blueDark2 23%);
 
   @media (min-width: $tablet) {
+    padding-top: 4px;
     background-image: none;
   }
 }
@@ -319,31 +321,32 @@
   }
 
   @media (min-width: $tablet) {
-    padding-top: 31px;
-    padding-left: 38px;
+    padding-top: 30px;
+    padding-left: 33px;
     height: 140px;
     font-size: 24px;
     line-height: 24px;
 
     &:nth-child(1) {
       margin-right: -15px;
-      border-radius: 15px 0 0 0;
+      border-radius: 20px 0 0 0;
     }
 
     &:nth-child(2) {
       margin-top: 0;
-      border-radius: 15px 15px 0 0;
+      border-radius: 20px 20px 0 0;
     }
 
     &:nth-child(3) {
       margin-top: 0;
       margin-right: -15px;
-      border-radius: 0 0 0 15px;
+      border-radius: 0 0 0 20px;
     }
 
     &:nth-child(4) {
       margin-top: 0;
-      border-radius: 0 0 15px 15px;
+      height: 140px;
+      border-radius: 0 0 20px 20px;
     }
 
     &::after {
@@ -399,7 +402,7 @@
 }
 
 .about-us__service-wrapper {
-  padding-top: 16px;
+  padding-top: 35px;
   padding-bottom: 62px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -461,6 +464,7 @@
 }
 
 .about-us__info-heading {
+  margin-top: 0;
   margin-bottom: 19px;
   font-size: 24px;
   font-weight: 700;
@@ -468,6 +472,7 @@
   color: $orange;
 
   @media (min-width: $tablet) {
+    margin-top: 0;
     margin-bottom: 40px;
     font-size: 45px;
     line-height: 45px;
@@ -485,14 +490,9 @@
   line-height: 22px;
   color: $white;
 
-  @media (min-width: 400px) {
-    & br {
-      display: none;
-    }
-  }
-
   @media (min-width: $tablet) {
     margin-bottom: 31px;
+    padding-right: 18px;
     font-size: 28px;
     line-height: 33px;
   }
@@ -500,6 +500,22 @@
   @media (min-width: $desktop) {
     margin-bottom: 38px;
     line-height: 34px;
+  }
+}
+
+.about-us__info-paragraph-one span:nth-child(1) {
+  display: block;
+
+  @media (min-width: 400px) {
+    display: inline;
+  }
+}
+
+.about-us__info-paragraph-one span:nth-child(2) {
+  display: inline;
+
+  @media (min-width: $tablet) {
+    display: block;
   }
 }
 
@@ -512,6 +528,7 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 52px;
+    padding-right: 30px;
     font-size: 21px;
     line-height: 25px;
   }
