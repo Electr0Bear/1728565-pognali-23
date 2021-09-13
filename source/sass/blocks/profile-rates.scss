@@ -17,7 +17,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 107px;
+    padding-top: 104px;
     padding-bottom: 187px;
   }
 }
@@ -96,20 +96,20 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 59px;
+    margin-bottom: 56px;
     padding-left: 161px;
-    padding-right: 335px;
+    padding-right: 344px;
 
     &::before {
-      top: -45px;
-      right: 170px;
+      top: -47px;
+      right: 184px;
       width: 446px;
       height: 300px;
     }
 
     &::after {
       top: 5px;
-      right: 70px;
+      right: 73px;
       width: 198px;
       height: 198px;
       background-image: url("../../img/icon-rates@2x.png");

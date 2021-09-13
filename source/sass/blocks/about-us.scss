@@ -32,10 +32,10 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 110px;
+    padding-top: 70px;
     background-image: url("../img/traveller-illustration-desktop@1x.png"),
       url("../img/globe-back-desktop@1x.png");
-    background-position: calc(50% + 100px) 30px, 50% -80px;
+    background-position: calc(50% + 100px) -22px, 50% -132px;
     background-size: 431px 640px, 100% 750px;
   }
 
@@ -214,7 +214,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding: 0;
+    padding: 15px 0 0 24px;
     line-height: 32px;
   }
 }
@@ -254,6 +254,10 @@
     padding-top: 4px;
     background-image: none;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 7px;
+  }
 }
 
 .about-us__promo-list {
@@ -285,6 +289,17 @@
   font-weight: 700;
   line-height: 18px;
 
+  &::after {
+    content: counter(myCounter);
+    counter-increment: myCounter;
+    position: absolute;
+    right: 21px;
+    top: 20px;
+    display: block;
+    font-weight: 700;
+    color: $white;
+  }
+
   &:nth-child(1) {
     background-color: $orange;
     border-radius: 10px 10px 0 0;
@@ -309,23 +324,19 @@
     border-radius: 10px;
   }
 
-  &::after {
-    content: counter(myCounter);
-    counter-increment: myCounter;
-    position: absolute;
-    right: 21px;
-    top: 20px;
-    display: block;
-    font-weight: 700;
-    color: $white;
-  }
-
   @media (min-width: $tablet) {
     padding-top: 30px;
     padding-left: 33px;
     height: 140px;
     font-size: 24px;
     line-height: 24px;
+
+    &::after {
+      right: auto;
+      top: 85px;
+      font-size: 30px;
+      line-height: 30px;
+    }
 
     &:nth-child(1) {
       margin-right: -15px;
@@ -348,44 +359,49 @@
       height: 140px;
       border-radius: 0 0 20px 20px;
     }
-
-    &::after {
-      right: auto;
-      top: 85px;
-      font-size: 30px;
-      line-height: 30px;
-    }
   }
 
   @media (min-width: $desktop) {
-    padding-top: 30px;
-    padding-left: 30px;
+    padding-top: 27px;
+    padding-left: 32px;
     height: 107px;
 
+    &::after {
+      right: 62px;
+      top: 28px;
+      font-size: 24px;
+      line-height: 24px;
+    }
+
     &:nth-child(1) {
-      margin-right: -15px;
+      margin-right: 0;
+      width: 345px;
       border-radius: 15px 0 0 15px;
     }
 
     &:nth-child(2) {
-      margin-right: -15px;
+      margin-right: 0;
+      margin-left: -30px;
+      width: 375px;
       border-radius: 15px 0 0 15px;
     }
 
     &:nth-child(3) {
-      margin-right: -15px;
+      margin-right: 0;
+      margin-left: -30px;
+      width: 375px;
       border-radius: 15px 0 0 15px;
     }
 
     &:nth-child(4) {
+      margin-left: -30px;
+      width: 315px;
+      height: 107px;
       border-radius: 15px 15px 15px 15px;
-    }
 
-    &::after {
-      right: 50px;
-      top: 30px;
-      font-size: 24px;
-      line-height: 24px;
+      &::after {
+        right: 32px;
+      }
     }
   }
 }
@@ -437,7 +453,7 @@
     padding-bottom: 163px;
     background-image: url("../img/about-desktop@1x.png"),
       url("../../img/icon-rectangle-blue-desktop.svg");
-    background-position: 96% 100%, 60px 70px;
+    background-position: 750px 100%, 60px 70px;
     background-size: 630px 665px, 212px 212px;
   }
 
@@ -499,6 +515,7 @@
 
   @media (min-width: $desktop) {
     margin-bottom: 38px;
+    padding-right: 0;
     line-height: 34px;
   }
 }
@@ -516,6 +533,10 @@
 
   @media (min-width: $tablet) {
     display: block;
+  }
+
+  @media (min-width: $desktop) {
+    display: inline;
   }
 }
 

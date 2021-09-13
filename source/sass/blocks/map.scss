@@ -4,6 +4,10 @@
   @media (min-width: $tablet) {
     padding-top: 277px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 79px;
+  }
 }
 
 .map__wrapper {
@@ -29,6 +33,18 @@
     &::before {
       top: 507px;
       left: 44.92%;
+      width: 56px;
+      height: 56px;
+      border: 14px solid $white;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    height: 584px;
+
+    &::before {
+      top: 317px;
+      left: 44.03%;
       width: 56px;
       height: 56px;
       border: 14px solid $white;

@@ -15,7 +15,8 @@
   }
 
   @media (min-width: $desktop) {
-    padding-top: 73px;
+    padding-top: 88px;
+    padding-bottom: 86px;
   }
 }
 
@@ -39,7 +40,7 @@
   @media (min-width: $desktop) {
     padding-left: 70px;
     padding-right: 140px;
-    padding-top: 71px;
+    padding-top: 74px;
     padding-bottom: 51px;
     display: grid;
     grid-template-columns: 560px 1fr 378px;
@@ -81,6 +82,10 @@
     font-size: 45px;
     line-height: 45px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 60px;
+  }
 }
 
 .destinations__text {
@@ -99,7 +104,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 98px;
+    margin-bottom: 99px;
   }
 }
 
@@ -179,7 +184,7 @@
   }
 
   @media (min-width: $desktop) {
-    padding-right: 100px;
+    padding: 22px 100px 0 30px;
   }
 }
 
@@ -195,6 +200,11 @@
     left: auto;
     right: -36px;
   }
+
+  @media (min-width: $desktop) {
+    top: 22px;
+    right: -34px;
+  }
 }
 
 .destinations__country {
@@ -208,6 +218,10 @@
     margin-bottom: 5px;
     font-size: 24px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 3px;
   }
 }
 
@@ -246,13 +260,26 @@
     background-image: url("../img/icon-lildude.svg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    background-size: contain;
     opacity: 0.3;
   }
 
   @media (min-width: $tablet) {
     top: auto;
     bottom: 23px;
-    left: 43px;
+    left: 32px;
+
+    &::before {
+      top: 4px;
+      left: -7px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    bottom: 24px;
+    left: 37px;
   }
 }
 
@@ -307,8 +334,15 @@
 
   @media (min-width: $desktop) {
     margin-top: 0;
+    padding-top: 28px;
+    padding-left: 32px;
     width: 275px;
     grid-column: 3 / 4;
     grid-row: 2 / 3;
+
+    &::after {
+      top: 26px;
+      right: 34px;
+    }
   }
 }
