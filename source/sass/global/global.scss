@@ -66,20 +66,20 @@ body {
   display: block;
 
   &:hover {
-    &::before {
-      display: block;
-      background-position: 0 0;
-      background-repeat: no-repeat;
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0;
-      border: 10px solid transparent;
-      border-bottom: 10px solid $blueDark3;
-      top: 15px;
-      opacity: initial;
-      z-index: 5;
-    }
+    // &::before {
+    //   display: block;
+    //   background-position: 0 0;
+    //   background-repeat: no-repeat;
+    //   content: "";
+    //   position: absolute;
+    //   width: 0;
+    //   height: 0;
+    //   border: 10px solid transparent;
+    //   border-bottom: 10px solid $blueDark3;
+    //   top: 15px;
+    //   opacity: initial;
+    //   z-index: 5;
+    // }
 
     &::after {
       display: block;

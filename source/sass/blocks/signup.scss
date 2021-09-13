@@ -4,7 +4,7 @@
 
 .signup__section {
   padding-top: 72px;
-  padding-bottom: 44px;
+  padding-bottom: 40px;
   background-color: $blueDark2;
   border-radius: 0 0 30px 30px;
 
@@ -259,6 +259,7 @@
   color: $yellow;
   font-weight: 700;
   line-height: 22px;
+  text-transform: uppercase;
 
   &::before,
   &::after {

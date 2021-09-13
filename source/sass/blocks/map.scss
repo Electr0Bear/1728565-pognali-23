@@ -1,10 +1,22 @@
 .map {
-  margin: 0  auto;
-  width: 100%;
+  padding-top: 154px;
 }
 
 .map__wrapper {
   height: 424px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 302px;
+    left: 49.37%;
+    display: block;
+    width: 41px;
+    height: 41px;
+    border: 10px solid $white;
+    background-color: $black;
+    border-radius: 50%;
+  }
 }
 
 .map__iframe {

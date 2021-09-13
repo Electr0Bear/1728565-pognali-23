@@ -248,8 +248,7 @@
                       <img src="img/flag-seychelles.svg" width="35" height="24" alt="Флаг Сейшел">
                     </li>
                   </ul>
-                  <a class="companions__profile-link companions__profile-link--offline link"
-                    href="profiles/1/firsova.html">Таня Фирсова</a>
+                  <a class="companions__profile-link link" href="profiles/1/firsova.html">Таня Фирсова</a>
                   <p class="companions__hashtags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                   <ul class="companions__travel-by travel-by list">
                     <li class="travel-by__item travel-by__plane tooltip" data-tooltip="Авиатранспорт">
@@ -394,21 +393,32 @@
     </section>
     <!-- Карта -->
     <section class="address-info">
-      <div class="container container--extra">
-        <div class="adress-info__wrapper">
-          <h2 class="visually-hidden">Как до нас добраться</h2>
-          <address class="address-info__address">ул. Большая Конюшенная, 19/8</address>
-          <a class="address-info__button link"
-            href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323228%2C59.938667&mode=search&sctx=ZAAAAAgAEAAaKAoSCVZOe0rO0kJAEWzkQ5jR3EtAEhIJAGVt%2BmF39j8RAC5gMh7h3T8oCjgAQNUBSAFVAACAv1j%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BYjFyZWxldl9yYW5raW5nX2hlYXZ5X3NlcnBfZm9ybXVsYT1sM19mbWwxMDgyNV9zZXJwYjFyZWxldl9yYW5raW5nX2hlYXZ5X21hcHNfZm9ybXVsYT1sM19mbWwxMDgyNF9tYXBzYidyZWxldl9yYW5raW5nX21zZV9mb3JtdWxhPW1zZV9mbWw3NzcyNDJiOnJlYXJyPXNjaGVtZV9Mb2NhbC9HZW8vUG9zdGZpbHRlci9BYnNGb3JtdWxhPWFic19mbWw3NzcyNDFqAnJ1cACdAc3MTD2gAQCoAQC9AabOq1bCAQIAAOoBAPIBAPgBAIICKdGD0LsuINCR0L7Qu9GM0YjQsNGPINCa0L7QvdGO0YjQtdC90L3QsNGPigIA&sll=30.323117%2C59.938635&sspn=0.013982%2C0.004133&text=%D1%83%D0%BB.%20%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F&z=17.54">Проложить
-            маршрут</a>
+      <div class="adress-info__wrapper">
+        <div class="container container--extra">
+          <div class="adress-info__flex-layout">
+            <h2 class="visually-hidden">Как до нас добраться</h2>
+            <address class="address-info__address">ул. Большая Конюшенная, 19/8</address>
+            <a class="address-info__button link"
+              href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323228%2C59.938667&mode=search&sctx=ZAAAAAgAEAAaKAoSCVZOe0rO0kJAEWzkQ5jR3EtAEhIJAGVt%2BmF39j8RAC5gMh7h3T8oCjgAQNUBSAFVAACAv1j%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BYjFyZWxldl9yYW5raW5nX2hlYXZ5X3NlcnBfZm9ybXVsYT1sM19mbWwxMDgyNV9zZXJwYjFyZWxldl9yYW5raW5nX2hlYXZ5X21hcHNfZm9ybXVsYT1sM19mbWwxMDgyNF9tYXBzYidyZWxldl9yYW5raW5nX21zZV9mb3JtdWxhPW1zZV9mbWw3NzcyNDJiOnJlYXJyPXNjaGVtZV9Mb2NhbC9HZW8vUG9zdGZpbHRlci9BYnNGb3JtdWxhPWFic19mbWw3NzcyNDFqAnJ1cACdAc3MTD2gAQCoAQC9AabOq1bCAQIAAOoBAPIBAPgBAIICKdGD0LsuINCR0L7Qu9GM0YjQsNGPINCa0L7QvdGO0YjQtdC90L3QsNGPigIA&sll=30.323117%2C59.938635&sspn=0.013982%2C0.004133&text=%D1%83%D0%BB.%20%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F&z=17.54">Проложить
+              маршрут</a>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <h2 class="visually-hidden">Интерактивная карта</h2>
+        <div class="map__wrapper">
+          <picture class="map__picture">
+            <source media="(min-width: 1440px)"
+              srcset="img/background-map-desktop@1x.jpg 1x, img/background-map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/background-map-tablet@1x.jpg 1x, img/background-map-tablet@2x.jpg 2x">
+            <img class="companions__photo" src="img/background-map-mobile@1x.jpg"
+              srcset="img/background-map-mobile@2x.jpg 2x" width="320" height="424" alt="Карта проезда к нашему офису">
+          </picture>
         </div>
       </div>
     </section>
-    <section class="map">
-      <h2 class="visually-hidden">Интерактивная карта</h2>
-      <div class="map__wrapper">
-      </div>
-    </section>
+
   </main>
   <footer class="page-footer">
     <div class="container">

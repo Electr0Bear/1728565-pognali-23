@@ -1,11 +1,11 @@
 .about-us {
-  padding-top: 18px;
+  padding-top: 17px;
   background-color: $basicBlue;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   background-image: url("../img/traveller-illustration-mobile@1x.png"),
     url("../img/globe-back-mobile@1x.png");
-  background-position: calc(50% + 15px) 150px, 50% -72px;
+  background-position: calc(50% + 16px) 149px, 50% -72px;
   background-repeat: no-repeat, no-repeat;
   background-size: 192px 255px, 100% 569px;
 
@@ -83,7 +83,7 @@
 .about-us__auth-list {
   position: absolute;
   top: 457px;
-  left: 25px;
+  left: 26px;
   display: flex;
   flex-wrap: nowrap;
 
@@ -246,6 +246,7 @@
 }
 
 .about-us__info {
+  padding-top: 3px;
   background-image: linear-gradient(to bottom, $basicBlue 23%, $blueDark2 23%);
 
   @media (min-width: $tablet) {
