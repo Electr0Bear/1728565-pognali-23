@@ -23,20 +23,28 @@
 
   @media (min-width: $tablet) {
     padding-top: 45px;
+    padding-bottom: 40px;
   }
 
   @media (min-width: $desktop) {
     padding-top: 46px;
+    padding-bottom: 6px;
     display: flex;
   }
 }
 
 .page-header__navigation--opened {
+  padding-top: 27px;
   background-color: $white;
 }
 
 .page-header__navigation--scrolled {
+  padding-top: 27px;
   background-color: $white;
+
+  @media (min-width: $desktop) {
+    padding-top: 19px;
+  }
 }
 
 .page-header__navigation-wrapper {
@@ -110,15 +118,16 @@
 }
 
 .page-header__nav-list {
-  margin-top: 40px;
-  margin-bottom: 60px;
+  margin-top: 68px;
+  margin-bottom: 55px;
   display: block;
 
   @media (min-width: $tablet) {
+    margin-top: 90px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 144px;
-    padding-left: 97px;
+    margin-bottom: 135px;
+    padding-left: 56px;
     width: 688px;
   }
 
@@ -184,12 +193,15 @@
   color: $blueDark2;
 
   @media (min-width: $tablet) {
+    font-weight: 700;
     font-size: 60px;
     line-height: 71px;
+    letter-spacing: -0.03em;
   }
 
   @media (min-width: $desktop) {
     color: $white;
+    font-weight: 500;
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.01em;
@@ -208,7 +220,7 @@
   width: 270px;
 
   @media (min-width: $tablet) {
-    padding-left: 97px;
+    padding-left: 57px;
     width: 688px;
   }
 
@@ -301,7 +313,7 @@
   height: 45px;
 
   @media (min-width: $tablet) {
-    padding-top: 20px;
+    padding-top: 18px;
     height: 68px;
   }
 
@@ -316,6 +328,7 @@
   font-weight: 700;
   line-height: 18px;
   color: $blueDark2;
+  text-transform: uppercase;
 
   @media (min-width: $tablet) {
     margin-left: 91px;
@@ -332,18 +345,7 @@
 .page-header__email {
   display: block;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: $blueDark;
-  }
-
+  &::before,
   &::after {
     content: "";
     position: absolute;
@@ -353,6 +355,13 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
+  }
+
+  &::before {
+    background-color: $blueDark;
+  }
+
+  &::after {
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
@@ -360,6 +369,7 @@
   @media (min-width: $tablet) {
     &::before,
     &::after {
+      top: -3px;
       width: 68px;
       height: 68px;
     }
@@ -392,7 +402,7 @@
 
   @media (min-width: $tablet) {
     &::after {
-      background-size: 18px;
+      background-size: 25px;
     }
   }
 
@@ -403,6 +413,7 @@
 
     &::after {
       background-image: url("../img/icon-call-darkblue.svg");
+      background-size: 18px;
     }
 
     &:hover::before {
@@ -431,7 +442,7 @@
 
   @media (min-width: $tablet) {
     &::after {
-      background-size: 27px;
+      background-size: 34px;
     }
   }
 
@@ -472,7 +483,7 @@
 
 .page-header__socials-list {
   margin-top: 41px;
-  margin-bottom: 41px;
+  margin-bottom: 10px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -482,11 +493,11 @@
   }
 
   @media (min-width: $tablet) {
-    margin-top: 129px;
-    margin-bottom: 91px;
+    margin-top: 125px;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 112px;
+    padding-left: 75px;
     width: 688px;
     justify-content: left;
   }

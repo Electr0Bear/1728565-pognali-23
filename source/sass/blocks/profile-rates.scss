@@ -249,6 +249,10 @@
   border-radius: 20px;
   box-shadow: 0 2px 8px $blueLightFaded014;
 
+  @media (min-width: $tablet) {
+    width: 89.58%;
+  }
+
   @media (min-width: $desktop) {
     width: 750px;
   }
@@ -257,32 +261,41 @@
 .profile-rates__business-popup--show {
   position: absolute;
   z-index: 2;
-  top: calc(50% - 232px);
+  top: calc(50% - 235px);
   left: 7.81%;
   display: block;
 
+  @media (min-width: $tablet) {
+    top: calc(50% - 277px);
+    left: 5.21%;
+  }
+
   @media (min-width: $desktop) {
-    top: calc(50% - 300px);
-    left: calc(50% - 375px);
+    top: calc(50% - 275px);
+    left: calc(50% - 358px);
   }
 }
 
 .profile-rates__business-heading {
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 29px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 34px;
+  padding-top: 32px;
   width: fit-content;
   font-size: 24px;
   line-height: 24px;
   color: $orange;
 
   @media (min-width: $tablet) {
-    margin-bottom: 47px;
-    padding-top: 54px;
+    margin-bottom: 50px;
+    padding-top: 48px;
     font-size: 45px;
     line-height: 45px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 50px;
   }
 }
 
@@ -293,7 +306,7 @@
 
   @media (min-width: $tablet) {
     padding-left: 90px;
-    padding-right: 90px;
+    padding-right: 94px;
     margin-bottom: 52px;
   }
 
@@ -305,7 +318,7 @@
 
 .profile-rates__business-item {
   padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 15px;
   color: $specialGrey;
   border-top: 1px solid $specialGrey8;
 
@@ -315,10 +328,14 @@
 
   @media (min-width: $tablet) {
     padding-top: 14px;
-    padding-bottom: 14px;
+    padding-bottom: 7px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 6px;
   }
 }
 
@@ -327,7 +344,7 @@
   line-height: 16px;
 
   &:first-child {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
 
   @media (min-width: $tablet) {
@@ -356,8 +373,14 @@
   }
 
   @media (min-width: $tablet) {
+    padding-bottom: 5px;
     height: 108px;
     font-size: 24px;
     text-transform: none;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 8px;
+    padding-bottom: 0;
   }
 }

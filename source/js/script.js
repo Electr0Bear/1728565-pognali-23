@@ -7,7 +7,7 @@ const navMenuElement = document.querySelectorAll('.page-header__nav-list, .page-
 const navLogo = document.querySelectorAll('.page-header__logo-regular, .page-header__logo-blue');
 
 document.addEventListener('scroll', () => {
-  if (window.pageYOffset > 40 && !navMenu.classList.contains('page-header__navigation--opened') && !navMenu.classList.contains('page-header__navigation--scrolled')) {
+  if (window.pageYOffset > 60 && !navMenu.classList.contains('page-header__navigation--opened') && !navMenu.classList.contains('page-header__navigation--scrolled')) {
     navMenu.classList.toggle('page-header__navigation--scrolled');
     navLogo[0].setAttribute('hidden', 'hidden');
     navLogo[1].removeAttribute('hidden', 'hidden');
