@@ -1,10 +1,11 @@
 .about-us {
+  padding-top: 18px;
   background-color: $basicBlue;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   background-image: url("../img/traveller-illustration-mobile@1x.png"),
     url("../img/globe-back-mobile@1x.png");
-  background-position: 50% 150px, 50% -50px;
+  background-position: calc(50% + 15px) 150px, 50% -72px;
   background-repeat: no-repeat, no-repeat;
   background-size: 192px 255px, 100% 569px;
 
@@ -81,7 +82,7 @@
 
 .about-us__auth-list {
   position: absolute;
-  top: 440px;
+  top: 457px;
   left: 25px;
   display: flex;
   flex-wrap: nowrap;
@@ -217,8 +218,13 @@
   }
 }
 
+.about-us__quote-text {
+  padding-right: 10px;
+  margin: 0;
+}
+
 .about-us__cite {
-  margin-top: 18px;
+  margin-top: 17px;
   display: block;
   font-weight: 700;
   font-style: normal;
@@ -248,7 +254,7 @@
 }
 
 .about-us__promo-list {
-  padding-bottom: 39px;
+  padding-bottom: 35px;
   counter-reset: myCounter;
 
   @media (min-width: $tablet) {
@@ -266,11 +272,11 @@
 }
 
 .about-us__promo-item {
-  padding-top: 30px;
+  padding-top: 20px;
   padding-left: 22px;
   position: relative;
   display: block;
-  height: 96px;
+  height: 90px;
   color: $basicBlue;
   font-size: 18px;
   font-weight: 700;
@@ -295,6 +301,7 @@
 
   &:nth-child(4) {
     margin-top: -10px;
+    height: 80px;
     background-color: $yellow;
     border-radius: 10px;
   }
@@ -304,7 +311,7 @@
     counter-increment: myCounter;
     position: absolute;
     right: 21px;
-    top: 30px;
+    top: 20px;
     display: block;
     font-weight: 700;
     color: $white;
@@ -391,7 +398,7 @@
 }
 
 .about-us__service-wrapper {
-  padding-top: 29px;
+  padding-top: 16px;
   padding-bottom: 62px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -438,7 +445,7 @@
 }
 
 .about-us__service-info {
-  margin-left: 29px;
+  margin-left: 25px;
   padding-right: 30px;
 
   @media (min-width: $tablet) {
@@ -453,7 +460,6 @@
 }
 
 .about-us__info-heading {
-  margin-top: 0;
   margin-bottom: 19px;
   font-size: 24px;
   font-weight: 700;
