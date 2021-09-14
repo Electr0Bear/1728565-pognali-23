@@ -1,10 +1,60 @@
 .map {
-  margin: 0  auto;
-  width: 100%;
+  padding-top: 154px;
+
+  @media (min-width: $tablet) {
+    padding-top: 277px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 79px;
+  }
 }
 
 .map__wrapper {
   height: 424px;
+  width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 302px;
+    left: 49.37%;
+    display: block;
+    width: 41px;
+    height: 41px;
+    border: 11px solid $white;
+    background-color: $black;
+    border-radius: 50%;
+  }
+
+  @media (min-width: $tablet) {
+    height: 581px;
+
+    &::before {
+      top: 507px;
+      left: 44.92%;
+      width: 56px;
+      height: 56px;
+      border: 14px solid $white;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    height: 584px;
+
+    &::before {
+      top: 317px;
+      left: 44.03%;
+      width: 56px;
+      height: 56px;
+      border: 14px solid $white;
+    }
+  }
+}
+
+.map__photo {
+  width: 100%;
+  height: auto;
 }
 
 .map__iframe {

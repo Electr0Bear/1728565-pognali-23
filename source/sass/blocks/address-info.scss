@@ -1,11 +1,17 @@
 .address-info {
-  padding-top: 47px;
+  position: relative;
+}
+
+.adress-info__wrapper {
+  padding-top: 31px;
   padding-bottom: 35px;
+  width: 100%;
+  position: absolute;
   background-color: $yellow;
   border-radius: 0 0 30px 30px;
 
   @media (min-width: $tablet) {
-    padding-top: 70px;
+    padding-top: 66px;
     padding-bottom: 84px;
     border-radius: 0 0 60px 60px;
   }
@@ -16,10 +22,10 @@
   }
 }
 
-.adress-info__wrapper {
+.adress-info__flex-layout {
   @media (min-width: $desktop) {
-    padding-left: 223px;
-    padding-right: 75px;
+    padding-left: 208px;
+    padding-right: 60px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -29,7 +35,8 @@
 
 .address-info__address {
   padding-left: 61px;
-  margin-bottom: 32px;
+  padding-right: 20px;
+  margin-bottom: 33px;
   display: block;
   position: relative;
   font-style: normal;
@@ -53,12 +60,12 @@
 
   @media (min-width: $tablet) {
     padding-left: 94px;
-    margin-bottom: 62px;
+    margin-bottom: 66px;
     font-size: 28px;
     line-height: 28px;
 
     &::before {
-      top: -20px;
+      top: -18px;
       width: 68px;
       height: 68px;
     }
@@ -78,7 +85,7 @@
 
 .address-info__button {
   padding-top: 18px;
-  padding-left: 22px;
+  padding-left: 20px;
   display: block;
   height: 62px;
   position: relative;
@@ -93,8 +100,8 @@
   &::after {
     content: url("../../img/icon-button-arrow-right-blue.svg");
     position: absolute;
-    top: 20px;
-    right: 22px;
+    top: 19px;
+    right: 19px;
   }
 
   &:hover,
@@ -116,8 +123,8 @@
   }
 
   @media (min-width: $tablet) {
-    padding-top: 25px;
-    padding-left: 37px;
+    padding-top: 24px;
+    padding-left: 35px;
     height: 80px;
     border-radius: 20px;
     font-size: 24px;
@@ -125,7 +132,7 @@
 
     &::after {
       top: 24px;
-      right: 35px;
+      right: 33px;
     }
   }
 

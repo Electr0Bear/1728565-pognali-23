@@ -13,13 +13,12 @@
   border-radius: 0 0 30px 30px;
 
   background-image: url("../../img/companions-background@1x.png");
-  background-position: calc(50% - 25px) 30px;
+  background-position: calc(50% - 12px) 34px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 297px 344px;
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../../img/companions-background@2x.png");
-    background-size: contain;
   }
 
   @media (min-width: $tablet) {
@@ -37,12 +36,13 @@
 
 .companions__wrapper {
   @media (min-width: $tablet) {
-    padding: 70px 34px 0 34px;
+    padding: 67px 34px 0 34px;
     background-image: url("../../img/icon-rectangle-blue-desktop.svg"),
       url("../img/background-photo-rogovaya@1x.png"),
       url("../../img/background-photo-smolov@1x.jpg");
-    background-position: 0 0, calc(100% - 34px) 10px, 0 350px;
+    background-position: 0 0, calc(100% - 34px) 9px, 0 355px;
     background-repeat: no-repeat;
+    background-size: 212px 212px, 285px 285px, 143px 143px;
   }
 
   @media (min-width: $tablet) and (min-resolution: 144dpi),
@@ -50,11 +50,10 @@
     background-image: url("../../img/icon-rectangle-blue-desktop.svg"),
       url("../img/background-photo-rogovaya@1x.png"),
       url("../../img/background-photo-smolov@1x.jpg");
-    background-size: 212px 212px, 285px 285px, 143px 143px;
   }
 
   @media (min-width: $desktop) {
-    padding: 60px 0 54px 70px;
+    padding: 56px 0 54px 70px;
     display: grid;
     grid-template-columns: 440px 1fr 630px;
     grid-template-rows: auto min-content;
@@ -63,7 +62,8 @@
 }
 
 .companions__about {
-  padding-left: 30px;
+  padding-top: 33px;
+  padding-left: 24px;
   padding-right: 30px;
   max-width: 430px;
 
@@ -79,8 +79,7 @@
 
 .companions__heading {
   margin: 0;
-  padding-top: 20px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   color: $orange;
   font-weight: 700;
   font-size: 24px;
@@ -103,16 +102,22 @@
 }
 
 .companions__description {
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   @media (min-width: $tablet) {
     margin-bottom: 39px;
     font-size: 28px;
-    line-height: 33px;
+    line-height: 34px;
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 42px;
+    margin-bottom: 40px;
+  }
+}
+
+.companions__description span {
+  @media (min-width: $tablet) {
+    display: block;
   }
 }
 
@@ -121,12 +126,19 @@
   font-weight: 700;
 
   @media (min-width: $tablet) {
+    margin-bottom: 62px;
     font-size: 21px;
     line-height: 24px;
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 85px;
+    margin-bottom: 87px;
+  }
+}
+
+.companions__slogan span {
+  @media (min-width: $tablet) {
+    display: block;
   }
 }
 
@@ -142,6 +154,7 @@
   }
 
   @media (min-width: $desktop) {
+    padding-top: 7px;
     grid-column: 3 / 4;
     grid-row: 1 / 3;
   }
@@ -174,6 +187,10 @@
   }
 }
 
+.companions__photo-link {
+  display: block;
+}
+
 .companions__photo,
 .companions__picture {
   display: block;
@@ -186,38 +203,41 @@
   }
 }
 
-.companions__photo-link {
-  display: block;
+.companions__person-info {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 21px;
+  background-color: $white;
+  border-radius: 0 0 10px 10px;
+
+  @media (min-width: $tablet) {
+    padding-top: 28px;
+    padding-bottom: 29px;
+    border-radius: 0 0 22px 22px;
+  }
 }
 
-.companions__profile-link {
+.companions__name-link {
   display: block;
   position: relative;
   margin: 0;
+  width: fit-content;
   font-size: 21px;
   font-weight: 700;
   line-height: 21px;
   text-align: center;
   color: $blueLight;
 
-  &--online::before {
+  &::before {
     content: "";
-    position: relative;
-    left: -12px;
-    top: -3px;
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: $specialGreen;
-  }
-
-  &--offline::before {
-    content: "";
-    position: relative;
-    left: -12px;
-    top: -3px;
-    display: inline-block;
+    position: absolute;
+    left: -16px;
+    top: 9px;
+    display: block;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -232,6 +252,23 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet) {
+    align-self: flex-start;
+    margin-left: 68px;
+    font-size: 24px;
+    line-height: 22px;
+
+    &::before {
+      left: -22px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+.companions__name-link--online::before {
+  background-color: $specialGreen;
 }
 
 .companions__level {
@@ -239,16 +276,10 @@
   left: 17px;
   position: absolute;
   z-index: 2;
-}
-
-.companions__person-info {
-  padding: 27px 36px 20px 46px;
-  background-color: $white;
-  border-radius: 0 0 10px 10px;
 
   @media (min-width: $tablet) {
-    padding: 31px 31px 27px 31px;
-    border-radius: 0 0 22px 22px;
+    top: 20px;
+    left: 22px;
   }
 }
 
@@ -256,8 +287,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  position: relative;
-  margin-top: -30px;
+  position: absolute;
   top: -10px;
 }
 
@@ -266,18 +296,24 @@
 }
 
 .companions__hashtags {
+  width: 188px;
   text-align: center;
+  font-size: 16px;
+  line-height: 18px;
   color: $specialGrey;
 
   @media (min-width: $tablet) {
     margin-top: 23px;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
+    width: 223px;
+    font-size: 20px;
+    line-height: 23px;
   }
 }
 
 .companions__button {
   position: relative;
-  margin-top: 25px;
+  margin-top: 11px;
   margin-left: auto;
   margin-right: auto;
   padding: 22px;
@@ -293,7 +329,7 @@
 
   &::after {
     content: "";
-    display: inline-block;
+    display: block;
     width: 13px;
     height: 13px;
     position: absolute;
@@ -321,7 +357,7 @@
     margin-top: 81px;
     margin-left: auto;
     margin-right: auto;
-    padding: 28px 32px;
+    padding: 26px 32px;
     max-width: 688px;
     height: 80px;
     font-size: 24px;

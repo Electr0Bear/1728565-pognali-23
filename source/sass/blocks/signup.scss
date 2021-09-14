@@ -4,26 +4,25 @@
 
 .signup__section {
   padding-top: 72px;
-  padding-bottom: 44px;
+  padding-bottom: 40px;
   background-color: $blueDark2;
   border-radius: 0 0 30px 30px;
 
   @media (min-width: $tablet) {
-    padding-top: 133px;
-    padding-bottom: 77px;
+    padding-bottom: 79px;
     border-radius: 0 0 60px 60px;
   }
 
   @media (min-width: $desktop) {
     padding-top: 109px;
-    padding-bottom: 131px;
+    padding-bottom: 135px;
   }
 }
 
 .signup__wrapper {
   @media (min-width: $desktop) {
-    padding-left: 73px;
-    padding-right: 73px;
+    padding-left: 58px;
+    padding-right: 58px;
   }
 }
 
@@ -41,6 +40,10 @@
     font-size: 45px;
     line-height: 45px;
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 57px;
+  }
 }
 
 .signup__paragraph-one,
@@ -57,11 +60,23 @@
   }
 }
 
-.signup__paragraph-one br,
-.signup__paragraph-two br,
-.signup__paragraph-three br {
+.signup__paragraph-one span,
+.signup__paragraph-two span,
+.signup__paragraph-three span {
+  display: block;
+
   @media (min-width: $tablet) {
-    display: none;
+    display: inline;
+  }
+}
+
+.signup__paragraph-one {
+  @media (min-width: $tablet) {
+    padding-right: 18px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 0;
   }
 }
 
@@ -69,11 +84,12 @@
   margin-bottom: 29px;
 
   @media (min-width: $tablet) {
-    margin-bottom: 65px;
+    margin-bottom: 69px;
   }
 
   @media (min-width: $desktop) {
     margin-bottom: 60px;
+    padding-left: 20px;
   }
 }
 
@@ -82,12 +98,13 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 64px;
+    padding-left: 3px;
     line-height: 30px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.01em;
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 77px;
+    margin-bottom: 73px;
   }
 }
 
@@ -109,7 +126,7 @@
   position: relative;
 
   @media (min-width: $tablet) {
-    margin-bottom: 60px;
+    margin-bottom: 58px;
   }
 
   @media (min-width: $desktop) {
@@ -259,6 +276,7 @@
   color: $yellow;
   font-weight: 700;
   line-height: 22px;
+  text-transform: uppercase;
 
   &::before,
   &::after {
@@ -288,7 +306,7 @@
 
     &::before,
     &::after {
-      top: -15px;
+      top: -18px;
       left: -90px;
       width: 68px;
       height: 68px;
@@ -373,7 +391,7 @@
 
   @media (min-width: $tablet) {
     &::after {
-      background-size: 32px;
+      background-size: 34px;
     }
   }
 

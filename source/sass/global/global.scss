@@ -67,34 +67,32 @@ body {
 
   &:hover {
     &::before {
-      display: block;
-      background-position: 0 0;
-      background-repeat: no-repeat;
       content: "";
       position: absolute;
+      top: 15px;
+      left: calc(50% - 10px);
+      display: block;
       width: 0;
       height: 0;
       border: 10px solid transparent;
       border-bottom: 10px solid $blueDark3;
-      top: 15px;
-      opacity: initial;
-      z-index: 5;
+      z-index: 3;
     }
 
     &::after {
-      display: block;
       content: attr(data-tooltip);
       position: absolute;
+      top: 30px;
+      display: block;
+      padding: 18px;
       color: $white;
       background-color: $blueDark3;
-      padding: 10px;
-      top: 30px;
-      left: -35px;
       white-space: nowrap;
       border-radius: 4px;
       font-size: 20px;
-      opacity: initial;
-      z-index: 5;
+      line-height: 20px;
+      transform: translateX(-35%);
+      z-index: 3;
     }
   }
 }
