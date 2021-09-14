@@ -72,15 +72,17 @@
   }
 
   @media (min-width: $desktop) {
-    margin-bottom: 52px;
+    padding-left: 0;
+    margin-bottom: 48px;
 
     &::before {
-      right: 104px;
+      top: 14px;
+      right: 101px;
     }
 
     &:first-child::after {
-      right: 97px;
-      height: 274px;
+      right: 94px;
+      height: 265px;
     }
   }
 }
@@ -88,6 +90,10 @@
 .extra-info__second-country-item {
   @media (min-width: $tablet) {
     margin-bottom: 47px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 55px;
   }
 }
 
@@ -117,8 +123,8 @@
   }
 
   @media (min-width: $desktop) {
-    margin-top: 34px;
-    padding: 26px 25px;
+    margin-top: 25px;
+    padding: 22px 10px 22px 25px;
     width: 730px;
     height: 142px;
   }
@@ -161,5 +167,9 @@
     &::before {
       display: none;
     }
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
   }
 }

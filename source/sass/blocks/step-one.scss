@@ -3,6 +3,7 @@
   flex-flow: column;
 
   @media (min-width: $desktop) {
+    padding-top: 30px;
     flex-flow: row;
     flex-wrap: wrap;
     justify-content: space-between;
