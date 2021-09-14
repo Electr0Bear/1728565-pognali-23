@@ -1,6 +1,6 @@
 .form-profile {
   position: relative;
-  padding-top: 20px;
+  padding-top: 24px;
   padding-bottom: 34px;
 
   @media (min-width: $tablet) {
@@ -9,7 +9,7 @@
 
   @media (min-width: $desktop) {
     z-index: 2;
-    margin-top: -252px;
+    margin-top: -254px;
   }
 }
 
@@ -20,7 +20,7 @@
 }
 
 .form-profile__level {
-  margin-left: 15px;
+  margin-left: 17px;
   width: 100px;
   height: 100px;
 
@@ -33,7 +33,7 @@
   @media (min-width: $desktop) {
     grid-column: 2 / 3;
     margin-top: 42px;
-    margin-left: 170px;
+    margin-left: 100px;
     width: 95px;
     height: 95px;
   }
@@ -55,7 +55,7 @@
 .form-profile__photo,
 .form-profile__picture {
   grid-column: 3 / 4;
-  margin-right: 15px;
+  margin-right: 17px;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -78,10 +78,11 @@
 .form-profile__change-photo-button {
   grid-column: 1 / 4;
   margin-top: 18px;
-  margin-bottom: 18px;
-  padding-top: 5px;
+  margin-bottom: 12px;
+  padding-top: 10px;
   padding-bottom: 5px;
   display: block;
+  height: 40px;
   background-color: $blueLight3;
   border-radius: 20px;
   text-align: center;
@@ -90,20 +91,26 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 18px;
+  letter-spacing: 0.02em;
 
   @media (min-width: $tablet) {
-    margin-top: 40px;
+    margin-top: 50px;
     margin-bottom: 52px;
     padding-top: 20px;
     padding-bottom: 20px;
+    height: 60px;
+    letter-spacing: 0.1em;
   }
 
   @media (min-width: $desktop) {
-    grid-column: 3 / 4;
     margin-top: 0;
-    margin-bottom: 27px;
+    margin-bottom: 25px;
     margin-right: 95px;
+    padding-top: 11px;
+    padding-bottom: 5px;
+    height: 47px;
     border-radius: 0 0 15px 15px;
+    grid-column: 3 / 4;
   }
 }
 
@@ -134,11 +141,13 @@
 
   @media (min-width: $desktop) {
     grid-column: 1 / 2;
+    margin-left: 63px;
     width: 732px;
   }
 }
 
 .form-profile__hashtags-input {
+  margin-bottom: 6px;
   padding: 25px;
   width: 100%;
   height: 89px;
@@ -147,6 +156,8 @@
   outline: none;
   border: 1px solid $specialGrey4;
   border-radius: 8px;
+  font-family: $bloggerSans;
+  font-size: 16px;
   line-height: 18px;
   opacity: 0.6;
 
@@ -164,7 +175,7 @@
   position: absolute;
   background-color: $basicGrey;
   top: 10px;
-  left: 100px;
+  left: calc(50% - 27px);
   z-index: 1;
   font-weight: 700;
   line-height: 18px;
@@ -173,11 +184,16 @@
   color: $blueLight;
 
   @media (min-width: $tablet) {
-    top: 85px;
-    left: 310px;
+    top: 84px;
+    left: calc(50% - 35px);
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop) {
+    left: 30px;
   }
 }
 
@@ -197,7 +213,6 @@
     grid-column: 2 / 4;
     grid-row: 3 / 4;
     margin-right: 0;
-    margin-left: 140px;
   }
 }
 
@@ -209,7 +224,7 @@
   position: absolute;
   background-color: $basicGrey;
   top: 10px;
-  left: 75px;
+  left: calc(50% - 51px);
   z-index: 1;
   font-weight: 700;
   line-height: 18px;
@@ -218,16 +233,22 @@
   color: $blueLight;
 
   @media (min-width: $tablet) {
-    top: 85px;
-    left: 130px;
+    top: 83px;
+    left: calc(50% - 67px);
     font-size: 20px;
     font-weight: 500;
     line-height: 20px;
+    letter-spacing: 0.09em;
+  }
+
+  @media (min-width: $desktop) {
+    left: calc(50% - 25px);
   }
 }
 
 .form-profile__transport-list {
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 14px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -236,6 +257,10 @@
 
   @media (min-width: $tablet) {
     padding: 24px 15px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: 80px;
   }
 }
 

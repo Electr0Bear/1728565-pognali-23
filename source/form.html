@@ -12,7 +12,7 @@
 <body class="page-body">
   <header class="page-header">
     <h2 class="visually-hidden">Навигация по странице</h2>
-    <nav class="page-header__navigation page-header__navigation--closed">
+    <nav class="page-header__navigation">
       <div class="page-header__navigation-wrapper container">
         <a class="page-header__logo">
           <picture class="page-header__logo-regular">
@@ -76,7 +76,6 @@
       <div class="page-main__header">
         <div class="container container--extra">
           <h2 class="page-main__page-title">Направления</h2>
-          <div class="page-main__orange-line"></div>
         </div>
       </div>
     </div>
@@ -133,7 +132,7 @@
             <h3 class="my-plans__destination">Франция, Италия</h3>
             <div class="my-plans__trip-info">
               <p class="my-plans__trip-companions">3 попутчика</p>
-              <p class="my-plans__trip-dates">26 мар - 29 мар</p>
+              <p class="my-plans__trip-dates">26 мар — 29 мар</p>
               <a class="my-plans__change-link link" href="">Изменить</a>
             </div>
           </li>
@@ -141,7 +140,7 @@
             <h3 class="my-plans__destination">Таиланд, Индонезия</h3>
             <div class="my-plans__trip-info">
               <p class="my-plans__trip-companions">1 попутчик</p>
-              <p class="my-plans__trip-dates">1 июл - 15 июл</p>
+              <p class="my-plans__trip-dates">1 июл — 15 июл</p>
               <a class="my-plans__change-link link" href="">Изменить</a>
             </div>
           </li>
@@ -177,14 +176,15 @@
             <!-- ПЕРВЫЙ ШАГ -->
             <div class="add-plan__step add-plan__step--show add-plan__step-one step-one">
               <h3 class="add-plan__step-heading"><span>Шаг 1.</span><span>Даты пребывания</span></h3>
-              <p class="add-plan__step-description">Укажите предпочтительное количество попутчиков, которых вы хотели бы
+              <p class="add-plan__step-description add-plan__step-one-description"><span>Укажите предпочтительное количество попутчиков, которых </span>вы хотели бы
                 позвать в поездку, и ее предполагаемую длительность.</p>
               <ul class="step-one__general-info-list list">
                 <!-- Количество попутчиков -->
                 <li class="step-one__general-info-item">
                   <span class="step-one__input-label">Ищу попутчиков:</span>
                   <span class="step-one__input-label-extra">Чел.</span>
-                  <input class="step-one__input-field step-one__companions-num-input" type="text" name="num-of-companions" value="2">
+                  <input class="step-one__input-field step-one__companions-num-input" type="text"
+                    name="num-of-companions" value="2">
                   <button class="step-one__input-button step-one__button-substract" type="button">
                     <span class="visually-hidden">Уменишить количество</span>
                   </button>
@@ -196,7 +196,8 @@
                 <li class="step-one__general-info-item">
                   <span class="step-one__input-label">Длительность:</span>
                   <span class="step-one__input-label-extra">Дн.</span>
-                  <input class="step-one__input-field step-one__trip-length-input" type="text" name="trip-length-days" value="3">
+                  <input class="step-one__input-field step-one__trip-length-input" type="text" name="trip-length-days"
+                    value="3">
                   <button class="step-one__input-button step-one__button-substract" type="button">
                     <span class="visually-hidden">Уменишить количество</span>
                   </button>
@@ -215,12 +216,12 @@
               <fieldset class="step-one__calendar calendar">
                 <legend class="visually-hidden">Выбор дат путешествия</legend>
                 <div class="calendar__short">
-                  <button class="calendar__button-back" type="button">
+                  <button class="calendar__button calendar__button-back" type="button">
                     <span class="visually-hidden">Назад</span>
                   </button>
                   <input class="calendar__short-input visually-hidden" type="text" name="year-month" value="2019-03">
                   <span class="calendar__short-month-year">Март 2019</span>
-                  <button class="calendar__button-next" type="button">
+                  <button class="calendar__button calendar__button-next" type="button">
                     <span class="visually-hidden">Вперёд</span>
                   </button>
                 </div>
@@ -472,7 +473,7 @@
             <!-- ВТОРОЙ ШАГ -->
             <div class="add-plan__step add-plan__step-two step-two">
               <h3 class="add-plan__step-heading"><span>Шаг 2.</span><span>Маршрут</span></h3>
-              <p class="add-plan__step-description">Укажите страны, которые вы хотели бы посетить. <span>Это может быть
+              <p class="add-plan__step-description add-plan__step-two-description">Укажите страны, которые вы хотели бы посетить.<span> Это может быть
                   одна или сразу несколько.</span></p>
               <!-- Выбор стран -->
               <fieldset class="step-two__countries">
@@ -568,6 +569,9 @@
                           Ангола
                         </li>
                         <li class="step-two__countries-selector-item">
+                          Андорра
+                        </li>
+                        <li class="step-two__countries-selector-item">
                           Антигуа и Барбуда
                         </li>
                         <li class="step-two__countries-selector-item">
@@ -593,7 +597,7 @@
             <!-- ТРЕТИЙ ШАГ -->
             <div class="add-plan__step add-plan__step-three step-three">
               <h3 class="add-plan__step-heading"><span>Шаг 3.</span><span>Развлечения</span></h3>
-              <p class="add-plan__step-description">Наконец, расскажите о своих планах времяпровождения. <span>Можно
+              <p class="add-plan__step-description add-plan__step-three-description">Наконец, расскажите о своих планах времяпровождения.<span> Можно
                   писать в свободной форме и ставить тэги.</span></p>
               <!-- Дополнительная информация о планах -->
               <fieldset class="step-three__extra-info extra-info">
@@ -619,7 +623,9 @@
               </fieldset>
             </div>
             <div class="add-plan__button-section">
-              <a class="add-plan__button add-plan__button--show add-plan__button-next-step add-plan__button-next-step--show">Следующий шаг</a>
+              <a
+                class="add-plan__button add-plan__button--show add-plan__button-next-step add-plan__button-next-step--show">Следующий
+                шаг</a>
               <button class="add-plan__button add-plan__button-submit" type="submit">Отправить</button>
               <a class="add-plan__button add-plan__button-previous-step">На шаг назад</a>
             </div>

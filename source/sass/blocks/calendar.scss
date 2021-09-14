@@ -2,11 +2,19 @@
   padding: 0;
   margin: 0;
   border: none;
+
+  @media (min-width: $tablet) {
+    padding-top: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 15px;
+  }
 }
 
 .calendar__short {
   position: relative;
-  padding: 10px 1px;
+  padding: 10px 0 12px 0;
   margin: 0 0 20px 0;
   display: flex;
   flex-wrap: nowrap;
@@ -16,8 +24,8 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 38px;
-    padding-top: 27px;
-    padding-bottom: 23px;
+    padding-top: 25px;
+    padding-bottom: 21px;
   }
 
   @media (min-width: $desktop) {
@@ -26,7 +34,7 @@
 }
 
 .calendar__short-month-year {
-  padding: 4px 3px 0 3px;
+  padding: 0 3px 0 3px;
   display: block;
   text-align: center;
   width: 100%;
@@ -43,17 +51,16 @@
   }
 }
 
-.calendar__button-back,
-.calendar__button-next {
+.calendar__button {
   padding: 0;
   border: none;
   background-color: transparent;
-  width: 25px;
-  height: 27px;
+  width: 17px;
+  height: 20px;
   background-image: url("../img/icon-arrow-back.svg");
-  background-position: 50% 50%;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   opacity: 0.3;
   cursor: pointer;
 
@@ -67,8 +74,14 @@
   }
 
   @media (min-width: $tablet) {
-    width: 29px;
-    height: 36px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 35px;
+    height: 38px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0;
   }
 }
 
@@ -77,10 +90,14 @@
 }
 
 .calendar__week {
-  margin: 0 0 10px 0;
+  margin: 0 0 8px 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(7, 7fr);
+
+  @media (min-width: $desktop) {
+    margin: 0 0 18px 0;
+  }
 }
 
 .calendar__week li {
@@ -120,7 +137,7 @@
 
 .calendar__weekday--hide,
 .calendar__weekend--hide {
-  @media (max-width: $tablet) {
+  @media (max-width: 767px) {
     display: none;
   }
 }
@@ -133,6 +150,14 @@
   grid-template-rows: repeat(6, 1fr);
   border-top: 1px solid $specialGrey5;
   border-left: 1px solid $specialGrey5;
+
+  @media (min-width: $tablet) {
+    margin: 0 0 47px 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 0 0 55px 0;
+  }
 }
 
 .calendar__full-date-item {
@@ -162,7 +187,7 @@
 .calendar__full-date {
   position: relative;
   padding-top: 7px;
-  padding-bottom: 7px;
+  padding-bottom: 5px;
   display: block;
   cursor: pointer;
   box-sizing: border-box;
@@ -174,7 +199,7 @@
 
   @media (min-width: $desktop) {
     padding-top: 15px;
-    padding-bottom: 35px;
+    padding-bottom: 37px;
     padding-left: 15px;
   }
 

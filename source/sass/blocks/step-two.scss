@@ -2,12 +2,20 @@
   margin: 0;
   padding: 0;
   border: none;
+
+  @media (min-width: $desktop) {
+    padding-top: 20px;
+  }
 }
 
 .step-two__countries-list {
   @media (min-width: $tablet) {
     padding-top: 42px;
     border-top: 1px solid $specialGrey4;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 64px;
   }
 }
 
@@ -31,33 +39,60 @@
   }
 
   @media (min-width: $tablet) {
+    margin-bottom: 16px;
+
     &::after {
       display: none;
     }
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 14px;
+  }
+}
+
+.step-two__countries-item-current {
+  @media (min-width: $tablet) {
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 14px;
+  }
 }
 
 .step-two__add-country {
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   position: relative;
   display: flex;
   flex-wrap: nowrap;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 60px;
+  }
 }
 
 .step-two__countries-select {
   position: relative;
-  padding: 11px;
+  padding-top: 11px;
+  padding-left: 9px;
+  padding-right: 11px;
+  padding-bottom: 12px;
   flex-grow: 1;
   border: 1px solid $specialGrey4;
   border-radius: 4px;
   overflow: hidden;
   width: 168px;
-  height: 40px;
+  height: 42px;
   font-family: inherit;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
   color: $blueLight;
 
@@ -90,14 +125,14 @@
 
   @media (min-width: $tablet) {
     margin-right: 27px;
-    padding-top: 27px;
+    padding-top: 24px;
     padding-bottom: 23px;
     padding-left: 25px;
     width: 369px;
     height: 70px;
     font-size: 20px;
     line-height: 20px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
 
     &::after {
       right: 26px;
@@ -154,6 +189,12 @@
   &::before {
     display: none;
   }
+
+  @media (min-width: $tablet) {
+    &::before {
+      display: block;
+    }
+  }
 }
 
 .step-two__countries-select-current--active ~ .step-two__button-close {
@@ -198,7 +239,8 @@
     }
 
     &::before {
-      top: calc(50% - 7px);
+      top: calc(50% - 9px);
+      left: -8px;
       width: 14px;
       height: 14px;
     }
@@ -206,7 +248,7 @@
 
   @media (min-width: $desktop) {
     padding-left: 40px;
-    width: 220px;
+    width: 230px;
   }
 }
 
@@ -226,8 +268,8 @@
 
   @media (min-width: $desktop) {
     &::after {
-      top: -42px;
-      left: 0;
+      top: -64px;
+      left: -1px;
       width: 2px;
       height: 540px;
       background-image: none;
@@ -252,12 +294,12 @@
 
     &::before {
       background-color: $white;
-      left: -5px;
+      left: -8px;
     }
   }
 
   @media (min-width: $desktop) {
-    width: 220px;
+    width: 230px;
   }
 }
 
@@ -278,13 +320,13 @@
     height: 70px;
 
     &::before {
-      left: -5px;
+      left: -8px;
       background-color: $specialGrey6;
     }
   }
 
   @media (min-width: $desktop) {
-    width: 220px;
+    width: 230px;
   }
 }
 
@@ -345,26 +387,26 @@
 
 .step-two__countries-alphabet-wrapper {
   @media (min-width: $tablet) {
-    padding: 35px 79px 33px 27px;
+    padding: 35px 79px 33px 30px;
     width: 368px;
     flex-grow: 1;
     border-right: 1px solid $specialGrey5;
   }
 
   @media (min-width: $desktop) {
-    padding: 32px 102px 36px 26px;
+    padding: 37px 102px 36px 25px;
   }
 }
 
 .step-two__countries-alphabet-list {
   display: grid;
   grid-template-columns: repeat(5, 5fr);
-  grid-template-rows: repeat(5, 40px);
+  grid-template-rows: repeat(5, 41px);
   border-top: 1px solid $specialGrey5;
   border-left: 1px solid $specialGrey5;
 
   @media (min-width: $tablet) {
-    grid-template-rows: repeat(5, 70px);
+    grid-template-rows: repeat(5, 69px);
   }
 
   @media (min-width: $desktop) {
@@ -385,7 +427,7 @@
   text-align: center;
 
   @media (min-width: $tablet) {
-    padding-top: 26px;
+    padding-top: 23px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -433,7 +475,7 @@
   color: $specialGrey;
 
   @media (min-width: $tablet) {
-    padding: 37px 23px 0 25px;
+    padding: 34px 23px 0 25px;
   }
 
   @media (min-width: $desktop) {
@@ -445,7 +487,7 @@
   line-height: 22px;
 
   &:not(:last-child) {
-    padding-bottom: 4px;
+    padding-bottom: 3.5px;
   }
 
   @media (min-width: $tablet) {
@@ -453,7 +495,7 @@
     line-height: 20px;
 
     &:not(:last-child) {
-      padding-bottom: 11px;
+      padding-bottom: 10px;
     }
   }
 }
@@ -495,14 +537,14 @@
 
   @media (min-width: $tablet) {
     margin-right: 27px;
-    padding-top: 27px;
+    padding-top: 23px;
     padding-bottom: 23px;
-    padding-left: 25px;
+    padding-left: 28px;
     width: 369px;
     height: 70px;
     font-size: 20px;
     line-height: 20px;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.12em;
 
     &::before,
     &::after {
