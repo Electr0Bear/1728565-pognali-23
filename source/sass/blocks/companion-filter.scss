@@ -1,6 +1,6 @@
 .companion-filter {
-  padding-top: 74px;
-  padding-bottom: 28px;
+  margin-bottom: 28px;
+  padding-top: 76px;
 
   @media (min-width: $tablet) {
     padding-top: 180px;
@@ -12,7 +12,7 @@
 }
 
 .companion-filter__wrapper {
-  padding: 20px;
+  padding: 24px 20px 22px 20px;
   background-color: $yellow;
   border-radius: 20px;
 
@@ -23,7 +23,7 @@
 
 .companion-filter__heading {
   margin-top: 0;
-  margin-bottom: 38px;
+  margin-bottom: 24px;
   padding-left: 5px;
   font-weight: 700;
   font-size: 22px;
@@ -38,7 +38,7 @@
 }
 
 .companion-filter__form-wrapper {
-  padding: 23px 5px 23px 5px;
+  padding: 0 5px 0 5px;
 
   @media (min-width: $tablet) and (max-width: 1439px) {
     margin-bottom: 36px;
@@ -49,7 +49,7 @@
 }
 
 .companion-filter__fieldset-wrapper {
-  padding: 12px 0;
+  padding: 10px 0 11px 0;
   border-top: 1px solid $yellowDark2;
 
   @media (min-width: $tablet) and (max-width: 1439px) {
@@ -74,7 +74,7 @@
 }
 
 .companion-filter__section-label {
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
   display: inline-block;
   font-weight: 700;
   line-height: 18px;
@@ -98,6 +98,7 @@
 }
 
 .companion-filter__filter-list {
+  margin-top: 15px;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -116,7 +117,11 @@
 }
 
 .companion-filter__filter-item {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 7px;
+  }
 
   @media (min-width: $tablet) and (max-width: 1439px) {
     margin-bottom: 0;
@@ -133,7 +138,7 @@
 
 .companion-filter__checkbox {
   position: relative;
-  left: 25px;
+  left: 26px;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
@@ -141,7 +146,7 @@
 
   &::before {
     position: absolute;
-    left: -25px;
+    left: -26px;
     display: inline-block;
     width: 18px;
     height: 18px;
@@ -179,6 +184,8 @@
 }
 
 .companion-filter__transport-list {
+  margin-top: 17px;
+  margin-bottom: 9px;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -194,8 +201,8 @@
 
 .companion-filter__transport-icon {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 31px;
+  height: 31px;
   border-radius: 50%;
   background-color: $white;
 
@@ -255,6 +262,7 @@
 }
 
 .companion-filter__level-input-section {
+  margin-top: 13px;
   margin-bottom: 25px;
   position: relative;
   display: flex;
@@ -283,7 +291,7 @@
 }
 
 .companion-filter__level-input {
-  padding: 10px;
+  padding: 8px;
   position: relative;
   outline: none;
   width: 100%;
@@ -330,8 +338,8 @@
 
 .companion-filter__level-scale-chosen {
   position: relative;
-  left: 80px;
-  width: 138px;
+  left: 67px;
+  width: 153px;
   height: 2px;
   background-color: $blueLight;
 }
@@ -351,7 +359,8 @@
 }
 
 .companion-filter__button-submit {
-  padding: 13px 0;
+  margin-top: 14px;
+  padding: 12px 0;
   width: 100%;
   border: none;
   border-radius: 25px;

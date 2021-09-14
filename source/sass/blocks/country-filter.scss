@@ -52,6 +52,7 @@
   &::before {
     content: "";
     position: absolute;
+    top: 5px;
     left: 0;
     display: block;
     width: 15px;
@@ -81,8 +82,10 @@
 }
 
 .country-filter__button-top {
+  margin-top: 1px;
+  margin-right: 4px;
   padding: 0;
-  display: inline-block;
+  display: block;
   width: 17px;
   height: 17px;
   border: none;
