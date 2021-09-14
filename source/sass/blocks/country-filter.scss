@@ -136,7 +136,7 @@
 
 .country-filter__close-btn-bottom {
   margin: 0 auto;
-  padding-left: 40px;
+  padding-left: 29px;
   position: relative;
   display: none;
   width: 270px;
@@ -146,6 +146,7 @@
   border-radius: 20px;
   font-family: $bloggerSans;
   font-weight: 700;
+  font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -155,7 +156,7 @@
     content: "";
     position: absolute;
     top: 12px;
-    left: 90px;
+    left: 83px;
     display: block;
     width: 16px;
     height: 16px;
@@ -196,8 +197,8 @@
   display: none;
   width: 100%;
   flex-direction: column;
-  margin-top: 35px;
-  margin-bottom: 25px;
+  margin-top: 33px;
+  margin-bottom: 14px;
   padding-left: 25px;
 
   @media (min-width: $tablet) {
@@ -218,6 +219,7 @@
 }
 
 .country-filter__continent-item {
+  margin-bottom: 9px;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -252,7 +254,7 @@
 .country-filter__alphabet-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 42px) auto;
+  grid-template-rows: repeat(5, 41px) auto;
   border-top: 1px solid $specialGrey4;
 
   @media (min-width: $tablet) {
@@ -269,7 +271,7 @@
 
 .country-filter__alphabet-letter {
   position: relative;
-  padding-top: 10px;
+  padding-top: 12px;
   box-sizing: border-box;
   font-size: 14px;
   line-height: 14px;
@@ -340,7 +342,7 @@
 
 .country-filter__alphabet-country-item {
   display: none;
-  padding-top: 14px;
+  padding-top: 12px;
   padding-bottom: 28px;
 
   @media (min-width: $tablet) {
