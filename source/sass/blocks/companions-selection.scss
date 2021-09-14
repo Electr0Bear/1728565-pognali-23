@@ -1,7 +1,11 @@
+.companions-selection {
+  padding-bottom: 98px;
+}
+
 .companions-selection__item {
   position: relative;
   padding-top: 13px;
-  padding-bottom: 22px;
+  padding-bottom: 23px;
   border-radius: 20px;
   background-color: $white;
   display: grid;
@@ -9,7 +13,7 @@
   grid-template-rows: 43px 30px auto auto auto 40px;
 
   &:not(:last-child) {
-    margin-bottom: 11px;
+    margin-bottom: 10px;
   }
 
   @media (min-width: $tablet) {
@@ -216,7 +220,7 @@
 
 .companions-selection__hashtags-list {
   margin: 11px 0 23px 25px;
-  padding-right: 50px;
+  padding-right: 65px;
   font-size: 15px;
   line-height: 18px;
   grid-column: 1 / 4;
@@ -307,6 +311,14 @@
   }
 }
 
+.companions-selection__countries-list--smaller {
+  padding-bottom: 18px;
+}
+
+.companions-selection__countries-list--larger {
+  padding-bottom: 25px;
+}
+
 .companions-selection__countries-item {
   display: flex;
   flex-wrap: nowrap;
@@ -373,6 +385,10 @@
   }
 }
 
+.companions-selection__profile-extra--smaller {
+  margin-bottom: 8px;
+}
+
 .companions-selection__transport-section {
   position: relative;
 }
@@ -383,7 +399,8 @@
 }
 
 .companions-selection__transport-list {
-  margin-left: 20px;
+  margin-left: 21px;
+  margin-bottom: 4px;
   display: flex;
   flex-wrap: nowrap;
 
@@ -398,6 +415,7 @@
 }
 
 .companions-selection__transport-item {
+  margin-right: 1px;
   display: block;
   width: 32px;
   height: 32px;
@@ -496,13 +514,14 @@
 }
 
 .companions-selection__button-more-wrapper {
-  margin-top: 20px;
+  margin-top: 16px;
   display: flex;
   justify-content: center;
 }
 
 .companions-selection__button-more {
-  padding-left: 20px;
+  padding-left: 27px;
+  position: relative;
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -515,11 +534,11 @@
   &::before {
     display: block;
     content: "";
-    position: relative;
-    left: -15px;
+    position: absolute;
+    left: -5px;
     width: 18px;
     height: 18px;
-    background-image: url("../../img/icon-plus-blue.svg");
+    background-image: url("../img/icon-plus-blue.svg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
   }
@@ -528,7 +547,7 @@
 .companions-selection__nav {
   display: flex;
   align-items: center;
-  margin: 18px 0;
+  margin: 19px 0;
 
   @media (min-width: $tablet) {
     padding-left: 28px;
