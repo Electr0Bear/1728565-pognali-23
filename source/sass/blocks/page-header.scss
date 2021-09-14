@@ -36,11 +36,19 @@
 .page-header__navigation--opened {
   padding-top: 27px;
   background-color: $white;
+
+  @media (min-width: $tablet) {
+    padding-top: 40px;
+  }
 }
 
 .page-header__navigation--scrolled {
   padding-top: 27px;
   background-color: $white;
+
+  @media (min-width: $tablet) {
+    padding-top: 40px;
+  }
 
   @media (min-width: $desktop) {
     padding-top: 19px;

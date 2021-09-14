@@ -2,6 +2,10 @@
   padding: 0;
   margin: 0;
   border: none;
+
+  @media (min-width: $tablet) {
+    padding-top: 25px;
+  }
 }
 
 .calendar__short {
@@ -16,8 +20,8 @@
 
   @media (min-width: $tablet) {
     margin-bottom: 38px;
-    padding-top: 27px;
-    padding-bottom: 23px;
+    padding-top: 25px;
+    padding-bottom: 21px;
   }
 
   @media (min-width: $desktop) {
@@ -66,8 +70,10 @@
   }
 
   @media (min-width: $tablet) {
-    width: 29px;
-    height: 36px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 35px;
+    height: 38px;
   }
 }
 
@@ -119,7 +125,7 @@
 
 .calendar__weekday--hide,
 .calendar__weekend--hide {
-  @media (max-width: $tablet) {
+  @media (max-width: 767px) {
     display: none;
   }
 }
@@ -132,6 +138,10 @@
   grid-template-rows: repeat(6, 1fr);
   border-top: 1px solid $specialGrey5;
   border-left: 1px solid $specialGrey5;
+
+  @media (min-width: $tablet) {
+    margin: 0 0 47px 0;
+  }
 }
 
 .calendar__full-date-item {

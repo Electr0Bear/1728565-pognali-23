@@ -2,11 +2,6 @@
   display: flex;
   flex-flow: column;
 
-  @media (min-width: $tablet) {
-    padding-top: 30px;
-    padding-bottom: 19px;
-  }
-
   @media (min-width: $desktop) {
     flex-flow: row;
     flex-wrap: wrap;
@@ -83,7 +78,7 @@
   @media (min-width: $tablet) {
     font-size: 20px;
     line-height: 18px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
   }
 
   @media (min-width: $desktop) {
@@ -118,6 +113,7 @@
 
   @media (min-width: $tablet) {
     margin-top: 24px;
+    padding: 0 30px 0 24px;
     height: 70px;
     font-size: 20px;
     line-height: 20px;

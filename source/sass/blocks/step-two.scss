@@ -31,9 +31,17 @@
   }
 
   @media (min-width: $tablet) {
+    margin-bottom: 16px;
+
     &::after {
       display: none;
     }
+  }
+}
+
+.step-two__countries-item-current {
+  @media (min-width: $tablet) {
+    margin-bottom: 12px;
   }
 }
 
@@ -42,6 +50,10 @@
   position: relative;
   display: flex;
   flex-wrap: nowrap;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 50px;
+  }
 }
 
 .step-two__countries-select {
@@ -93,14 +105,14 @@
 
   @media (min-width: $tablet) {
     margin-right: 27px;
-    padding-top: 27px;
+    padding-top: 24px;
     padding-bottom: 23px;
     padding-left: 25px;
     width: 369px;
     height: 70px;
     font-size: 20px;
     line-height: 20px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
 
     &::after {
       right: 26px;
@@ -201,7 +213,8 @@
     }
 
     &::before {
-      top: calc(50% - 7px);
+      top: calc(50% - 9px);
+      left: -8px;
       width: 14px;
       height: 14px;
     }
@@ -255,7 +268,7 @@
 
     &::before {
       background-color: $white;
-      left: -5px;
+      left: -8px;
     }
   }
 
@@ -281,7 +294,7 @@
     height: 70px;
 
     &::before {
-      left: -5px;
+      left: -8px;
       background-color: $specialGrey6;
     }
   }
@@ -348,7 +361,7 @@
 
 .step-two__countries-alphabet-wrapper {
   @media (min-width: $tablet) {
-    padding: 35px 79px 33px 27px;
+    padding: 35px 79px 33px 30px;
     width: 368px;
     flex-grow: 1;
     border-right: 1px solid $specialGrey5;
@@ -367,7 +380,7 @@
   border-left: 1px solid $specialGrey5;
 
   @media (min-width: $tablet) {
-    grid-template-rows: repeat(5, 70px);
+    grid-template-rows: repeat(5, 69px);
   }
 
   @media (min-width: $desktop) {
@@ -388,7 +401,7 @@
   text-align: center;
 
   @media (min-width: $tablet) {
-    padding-top: 26px;
+    padding-top: 23px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -436,7 +449,7 @@
   color: $specialGrey;
 
   @media (min-width: $tablet) {
-    padding: 37px 23px 0 25px;
+    padding: 34px 23px 0 25px;
   }
 
   @media (min-width: $desktop) {
@@ -456,7 +469,7 @@
     line-height: 20px;
 
     &:not(:last-child) {
-      padding-bottom: 11px;
+      padding-bottom: 10px;
     }
   }
 }
@@ -498,14 +511,14 @@
 
   @media (min-width: $tablet) {
     margin-right: 27px;
-    padding-top: 27px;
+    padding-top: 23px;
     padding-bottom: 23px;
-    padding-left: 25px;
+    padding-left: 28px;
     width: 369px;
     height: 70px;
     font-size: 20px;
     line-height: 20px;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.12em;
 
     &::before,
     &::after {

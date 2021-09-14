@@ -94,10 +94,12 @@
   letter-spacing: 0.02em;
 
   @media (min-width: $tablet) {
-    margin-top: 40px;
+    margin-top: 50px;
     margin-bottom: 52px;
     padding-top: 20px;
     padding-bottom: 20px;
+    height: 60px;
+    letter-spacing: 0.1em;
   }
 
   @media (min-width: $desktop) {
@@ -178,11 +180,12 @@
   color: $blueLight;
 
   @media (min-width: $tablet) {
-    top: 85px;
-    left: 310px;
+    top: 84px;
+    left: calc(50% - 35px);
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
+    letter-spacing: 0.1em;
   }
 }
 
@@ -223,11 +226,12 @@
   color: $blueLight;
 
   @media (min-width: $tablet) {
-    top: 85px;
-    left: 130px;
+    top: 83px;
+    left: calc(50% - 67px);
     font-size: 20px;
     font-weight: 500;
     line-height: 20px;
+    letter-spacing: 0.09em;
   }
 }
 
