@@ -283,11 +283,13 @@ if (window.location.href.indexOf('/catalog.html') !== -1) {
       if (!filterButton[i].classList.contains('companion-filter__button--closed') && !filterSection[i].classList.contains('companion-filter__filter-list--closed')) {
 
         filterButton[i].classList.toggle('companion-filter__button--closed');
+        filterButton[i].setAttribute('aria-label', 'Показать секцию фильтра');
         filterSection[i].classList.toggle('companion-filter__filter-list--closed');
 
       } else {
 
         filterButton[i].classList.remove('companion-filter__button--closed');
+        filterButton[i].setAttribute('aria-label', 'Скрыть секцию фильтра');
         filterSection[i].classList.remove('companion-filter__filter-list--closed');
 
       }
