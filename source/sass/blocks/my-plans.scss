@@ -17,7 +17,7 @@
 
 .my-plans__heading {
   margin: 0;
-  padding-bottom: 29px;
+  margin-bottom: 31px;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
@@ -66,9 +66,9 @@
 .my-plans__destination {
   position: relative;
   margin: 0;
-  padding-top: 25px;
+  padding-top: 22px;
   padding-left: 41px;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
@@ -112,7 +112,7 @@
 
 .my-plans__trip-info {
   padding-left: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 23px;
 
   @media (min-width: $tablet) {
     padding-top: 20px;
@@ -137,7 +137,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 
   @media (min-width: $tablet) {
@@ -148,6 +148,8 @@
 }
 
 .my-plans__trip-companions {
+  margin-bottom: 5px;
+
   @media (min-width: $desktop) {
     margin-right: 27px;
     width: 150px;
@@ -155,11 +157,11 @@
 }
 
 .my-plans__trip-dates {
-  padding-bottom: 15px;
+  margin-bottom: 20px;
 
   @media (min-width: $desktop) {
+    margin-bottom: 0;
     margin-right: 106px;
-    padding: 0;
     width: 200px;
   }
 }

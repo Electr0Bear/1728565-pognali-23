@@ -38,7 +38,7 @@
 }
 
 .step-two__add-country {
-  margin-bottom: 25px;
+  margin-bottom: 27px;
   position: relative;
   display: flex;
   flex-wrap: nowrap;
@@ -46,18 +46,21 @@
 
 .step-two__countries-select {
   position: relative;
-  padding: 11px;
+  padding-top: 11px;
+  padding-left: 9px;
+  padding-right: 11px;
+  padding-bottom: 12px;
   flex-grow: 1;
   border: 1px solid $specialGrey4;
   border-radius: 4px;
   overflow: hidden;
   width: 168px;
-  height: 40px;
+  height: 42px;
   font-family: inherit;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
   color: $blueLight;
 
@@ -359,7 +362,7 @@
 .step-two__countries-alphabet-list {
   display: grid;
   grid-template-columns: repeat(5, 5fr);
-  grid-template-rows: repeat(5, 40px);
+  grid-template-rows: repeat(5, 41px);
   border-top: 1px solid $specialGrey5;
   border-left: 1px solid $specialGrey5;
 
@@ -445,7 +448,7 @@
   line-height: 22px;
 
   &:not(:last-child) {
-    padding-bottom: 4px;
+    padding-bottom: 3.5px;
   }
 
   @media (min-width: $tablet) {
