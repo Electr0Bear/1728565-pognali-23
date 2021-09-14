@@ -77,7 +77,6 @@
         <div class="container container--extra">
           <h2 class="page-main__page-title">Попутчики</h2>
           <a class="page-main__catalog-link link" href="index.html">На главную</a>
-          <div class="page-main__orange-line"></div>
         </div>
       </div>
     </div>
@@ -421,11 +420,7 @@
                       <label class="companion-filter__checkbox" for="activity-couch-potato">Диван</label>
                     </li>
                   </ul>
-                  <button class="companion-filter__show-hide-button companion-filter__show-hide-button--show"
-                    type="button">
-                    <span class="companion-filter__show-button visually-hidden">Показать</span>
-                    <span class="companion-filter__hide-button" hidden>Скрыть</span>
-                  </button>
+                  <button class="companion-filter__button" type="button" aria-label="Показать секцию фильтра"></button>
                 </fieldset>
               </div>
               <div class="companion-filter__fieldset-wrapper">
@@ -448,11 +443,7 @@
                       <label class="companion-filter__checkbox" for="music-eurodance">Евроденс</label>
                     </li>
                   </ul>
-                  <button class="companion-filter__show-hide-button companion-filter__show-hide-button--hide"
-                    type="button">
-                    <span class="companion-filter__show-button" hidden>Показать</span>
-                    <span class="companion-filter__hide-button visually-hidden">Скрыть</span>
-                  </button>
+                  <button class="companion-filter__button" type="button" aria-label="Показать секцию фильтра"></button>
                 </fieldset>
               </div>
               <div class="companion-filter__fieldset-wrapper">
@@ -475,10 +466,7 @@
                       <label class="companion-filter__checkbox" for="food-vegan">Веган-сыроед</label>
                     </li>
                   </ul>
-                  <button class="companion-filter__show-hide-button" type="button">
-                    <span class="companion-filter__show-button visually-hidden">Показать</span>
-                    <span class="companion-filter__hide-button" hidden>Скрыть</span>
-                  </button>
+                  <button class="companion-filter__button" type="button" aria-label="Показать секцию фильтра"></button>
                 </fieldset>
               </div>
               <div class="companion-filter__fieldset-wrapper">
@@ -488,15 +476,15 @@
                     <li class="companion-filter__transport-item">
                       <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
                         name="transport" value="airplane" id="transport-airplane" checked>
-                      <label class="companion-filter__transport-icon" for="transport-airplane">
+                      <label class="companion-filter__transport-icon tooltip" for="transport-airplane" data-tooltip="Авиаперелет">
                         <span class="companion-filter__transport-icon-plane"></span>
-                        <span class="visually-hidden">Авиатранспорт</span>
+                        <span class="visually-hidden">Авиаперелет</span>
                       </label>
                     </li>
                     <li class="companion-filter__transport-item">
                       <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
                         name="transport" value="car-bus" id="transport-car-bus" checked>
-                      <label class="companion-filter__transport-icon" for="transport-car-bus">
+                      <label class="companion-filter__transport-icon tooltip" for="transport-car-bus" data-tooltip="Автотранспорт">
                         <span class="companion-filter__transport-icon-bus"></span>
                         <span class="visually-hidden">Автотранспорт</span>
                       </label>
@@ -504,7 +492,7 @@
                     <li class="companion-filter__transport-item">
                       <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
                         name="transport" value="bike" id="transport-bike">
-                      <label class="companion-filter__transport-icon" for="transport-bike">
+                      <label class="companion-filter__transport-icon tooltip" for="transport-bike" data-tooltip="Велосипед">
                         <span class="companion-filter__transport-icon-bike"></span>
                         <span class="visually-hidden">Велосипед</span>
                       </label>
@@ -512,17 +500,13 @@
                     <li class="companion-filter__transport-item">
                       <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
                         name="transport" value="onfoot" id="transport-onfoot" checked>
-                      <label class="companion-filter__transport-icon" for="transport-onfoot">
+                      <label class="companion-filter__transport-icon tooltip" for="transport-onfoot" data-tooltip="Пешком">
                         <span class="companion-filter__transport-icon-on-foot"></span>
                         <span class="visually-hidden">Пешком</span>
                       </label>
                     </li>
                   </ul>
-                  <button class="companion-filter__show-hide-button companion-filter__show-hide-button--hide"
-                    type="button">
-                    <span class="companion-filter__show-button" hidden>Показать</span>
-                    <span class="companion-filter__hide-button visually-hidden">Скрыть</span>
-                  </button>
+                  <button class="companion-filter__button" type="button" aria-label="Показать секцию фильтра"></button>
                 </fieldset>
               </div>
               <div class="companion-filter__fieldset-wrapper">
@@ -542,11 +526,7 @@
                       <div class="companion-filter__level-scale-max" tabindex="0"></div>
                     </div>
                   </div>
-                  <button class="companion-filter__show-hide-button companion-filter__show-hide-button--hide"
-                    type="button">
-                    <span class="companion-filter__show-button" hidden>Показать</span>
-                    <span class="companion-filter__hide-button visually-hidden">Скрыть</span>
-                  </button>
+                  <button class="companion-filter__button" type="button" aria-label="Показать секцию фильтра"></button>
                 </fieldset>
               </div>
             </div>

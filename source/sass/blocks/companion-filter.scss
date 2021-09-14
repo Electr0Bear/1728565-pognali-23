@@ -16,7 +16,7 @@
   background-color: $yellow;
   border-radius: 20px;
 
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) and (max-width: 1439px) {
     padding: 37px 35px;
   }
 }
@@ -40,7 +40,7 @@
 .companion-filter__form-wrapper {
   padding: 23px 5px 23px 5px;
 
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) and (max-width: 1439px) {
     margin-bottom: 36px;
     padding: 34px 0 37px 0;
     border-top: 1px solid $yellowDark2;
@@ -52,7 +52,7 @@
   padding: 12px 0;
   border-top: 1px solid $yellowDark2;
 
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) and (max-width: 1439px) {
     border: none;
   }
 }
@@ -66,7 +66,7 @@
   flex-wrap: nowrap;
   flex-direction: column;
 
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) and (max-width: 1439px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -102,28 +102,23 @@
   flex-wrap: nowrap;
   flex-direction: column;
 
-  &--hide {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip: rect(0 0 0 0);
-    clip-path: inset(100%);
-    overflow: hidden;
-  }
-
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) and (max-width: 1439px) {
     flex-direction: row;
+  }
+}
+
+.companion-filter__filter-list--closed {
+  display: none;
+
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    display: block;
   }
 }
 
 .companion-filter__filter-item {
   margin-bottom: 12px;
 
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) and (max-width: 1439px) {
     margin-bottom: 0;
 
     &:not(:last-child) {
@@ -236,7 +231,7 @@
   opacity: 1;
 }
 
-.companion-filter__show-hide-button {
+.companion-filter__button {
   display: block;
   padding: 0;
   position: absolute;
@@ -246,17 +241,17 @@
   width: 11px;
   height: 7px;
   background: transparent;
-  background-image: url("../../img/icon-triangle-down.svg");
+  background-image: url("../../img/icon-triangle-up.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
 
-  &--hide {
-    transform: rotate(180deg);
-  }
-
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) and (max-width: 1439px) {
     display: none;
   }
+}
+
+.companion-filter__button--closed {
+  transform: rotate(180deg);
 }
 
 .companion-filter__level-input-section {
@@ -328,7 +323,7 @@
   height: 2px;
   background-color: $blueLightFaded02;
 
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) and (max-width: 1439px) {
     order: 2;
   }
 }
@@ -368,7 +363,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) and (max-width: 1439px) {
     padding: 18px 0;
     font-size: 20px;
     line-height: 20px;
