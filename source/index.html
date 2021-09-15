@@ -31,9 +31,21 @@
           <span class="page-header__menu-button-close visually-hidden" hidden>Закрыть меню навигации</span>
         </a>
         <ul class="page-header__nav-list page-header__nav-list--closed list">
-          <li class="page-header__nav-item"><a class="page-header__nav-link link">О сервисе</a></li>
-          <li class="page-header__nav-item"><a class="page-header__nav-link link" href="form.html">Направления</a></li>
-          <li class="page-header__nav-item"><a class="page-header__nav-link link" href="catalog.html">Попутчики</a></li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link link">
+              <span data-hover="О сервисе">О сервисе</span>
+            </a>
+          </li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link link" href="form.html">
+              <span data-hover="Направления">Направления</span>
+            </a>
+          </li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link link" href="catalog.html">
+              <span data-hover="Попутчики">Попутчики</span>
+            </a>
+          </li>
         </ul>
         <ul class="page-header__auth-list list">
           <li class="page-header__auth-item page-header__auth-item--closed page-header__login-item">
@@ -119,14 +131,15 @@
           </ol>
         </div>
       </div>
-      </div>
       <!-- Информация о сервисе -->
       <div class="about-us__service">
         <div class="about-us__service-wrapper container">
           <div class="about-us__service-info">
             <h2 class="about-us__info-heading">О сервисе</h2>
-            <p class="about-us__info-paragraph-one"><span>Любое путешествие веселее </span>с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий<span> и черпайте вдохновение в чужих.</span></p>
-            <p class="about-us__info-paragraph-two">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+            <p class="about-us__info-paragraph-one"><span>Любое путешествие веселее </span>с попутчиками, которые на
+              одной волне с тобой! Делитесь своими идеями путешествий<span> и черпайте вдохновение в чужих.</span></p>
+            <p class="about-us__info-paragraph-two">А если найдете кого-то близкого по духу — скорее зовите в совместный
+              трип!</p>
             <a class="about-us__button link" href="catalog.html">Подробнее</a>
           </div>
         </div>
@@ -139,13 +152,18 @@
           <div class="destinations__wrapper">
             <div class="destinations__about">
               <h2 class="destinations__heading">Направления</h2>
-              <p class="destinations__text"><span>Мы не продаем туры </span>и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем
+              <p class="destinations__text"><span>Мы не продаем туры </span>и ничего не рекламируем. Люди сами пишут о
+                странах, куда хотели бы отправиться и чем
                 можно
                 там заняться.</p>
             </div>
             <ul class="destinations__list list">
               <li class="destinations__item">
                 <picture class="destinations__picture">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/photo-thailand-desktop@1x.webp 1x, img/photo-thailand-desktop@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/photo-thailand-mobile@1x.webp 1x, img/photo-thailand-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)"
                     srcset="img/photo-thailand-desktop@1x.jpg 1x, img/photo-thailand-desktop@2x.jpg 2x">
                   <img class="destinations__photo" src="img/photo-thailand-mobile@1x.jpg"
@@ -161,6 +179,10 @@
               </li>
               <li class="destinations__item">
                 <picture class="destinations__picture">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/photo-france-desktop@1x.webp 1x, img/photo-france-desktop@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/photo-france-mobile@1x.webp 1x, img/photo-france-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)"
                     srcset="img/photo-france-desktop@1x.jpg 1x, img/photo-france-desktop@2x.jpg 2x">
                   <img class="destinations__photo" src="img/photo-france-mobile@1x.jpg"
@@ -175,6 +197,10 @@
               </li>
               <li class="destinations__item">
                 <picture class="destinations__picture">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/photo-czech-desktop@1x.webp 1x, img/photo-czech-desktop@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/photo-czech-mobile@1x.webp 1x, img/photo-czech-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)"
                     srcset="img/photo-czech-desktop@1x.jpg 1x, img/photo-czech-desktop@2x.jpg 2x">
                   <img class="destinations__photo" src="img/photo-czech-mobile@1x.jpg"
@@ -201,7 +227,8 @@
           <div class="companions__wrapper">
             <div class="companions__about">
               <h2 class="companions__heading">Попутчики</h2>
-              <p class="companions__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,<span> а другому маршрут для хайкинга.</span></p>
+              <p class="companions__description">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному
+                нужен пляж и коктейль,<span> а другому маршрут для хайкинга.</span></p>
               <p class="companions__slogan">Теперь можно легко<span> найти единомышленников!</span></p>
             </div>
             <ul class="companions__list list">
@@ -222,10 +249,15 @@
                 </svg>
                 <a class="companions__photo-link link" href="profiles/1/firsova.html">
                   <picture class="companions__picture">
-                    <source media="(min-width: 768px)" srcset="img/profile-photos/companions-photo-firsova@1x.jpg 1x, img/profile-photos/companions-photo-firsova@2x.jpg 2x">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/profile-photos/companions-photo-firsova@1x.webp 1x, img/profile-photos/companions-photo-firsova@2x.webp 2x">
+                    <source type="image/webp"
+                      srcset="img/profile-photos/companions-photo-firsova-mobile-large@1x.webp 1x, img/profile-photos/companions-photo-firsova-mobile-large@1x.webp 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/profile-photos/companions-photo-firsova@1x.jpg 1x, img/profile-photos/companions-photo-firsova@2x.jpg 2x">
                     <img class="companions__photo" src="img/profile-photos/companions-photo-firsova-mobile-large@1x.jpg"
-                      srcset="img/profile-photos/companions-photo-firsova-mobile-large@2x.jpg 2x" width="270" height="270"
-                      alt="Татьяна Фирсова">
+                      srcset="img/profile-photos/companions-photo-firsova-mobile-large@2x.jpg 2x" width="270"
+                      height="270" alt="Татьяна Фирсова">
                   </picture>
                 </a>
                 <div class="companions__person-info">
@@ -275,9 +307,15 @@
                 </svg>
                 <a class="companions__photo-link link" href="profiles/2/demin.html">
                   <picture class="companions__picture">
-                    <source media="(min-width: 768px)" srcset="img/profile-photos/companions-photo-demin@1x.jpg 1x, img/profile-photos/companions-photo-demin@2x.jpg 2x">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/profile-photos/companions-photo-demin@1x.webp 1x, img/profile-photos/companions-photo-demin@2x.webp 2x">
+                    <source type="image/webp"
+                      srcset="img/profile-photos/companions-photo-demin-mobile-large@1x.webp 1x, img/profile-photos/companions-photo-demin-mobile-large@1x.webp 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="img/profile-photos/companions-photo-demin@1x.jpg 1x, img/profile-photos/companions-photo-demin@2x.jpg 2x">
                     <img class="companions__photo" src="img/profile-photos/companions-photo-demin-mobile-large@1x.jpg"
-                      srcset="img/profile-photos/companions-photo-demin-mobile-large@2x.jpg 2x" width="270" height="270" alt="Петр Демин">
+                      srcset="img/profile-photos/companions-photo-demin-mobile-large@2x.jpg 2x" width="270" height="270"
+                      alt="Петр Демин">
                   </picture>
                 </a>
                 <div class="companions__person-info">
@@ -289,8 +327,8 @@
                       <img src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чешкой Республики">
                     </li>
                   </ul>
-                  <a class="companions__name-link companions__name-link--online link"
-                    href="profiles/2/demin.html">Петя Демин</a>
+                  <a class="companions__name-link companions__name-link--online link" href="profiles/2/demin.html">Петя
+                    Демин</a>
                   <p class="companions__hashtags">#бургер #бар #футбол <br>#концерт #крафт</p>
                   <ul class="companions__travel-by travel-by list">
                     <li class="travel-by__item tooltip" data-tooltip="Авиатранспорт">
@@ -390,9 +428,9 @@
     </section>
     <!-- Карта -->
     <section class="address-info">
-      <div class="adress-info__wrapper">
+      <div class="address-info__wrapper">
         <div class="container container--extra">
-          <div class="adress-info__flex-layout">
+          <div class="address-info__flex-layout">
             <h2 class="visually-hidden">Как до нас добраться</h2>
             <address class="address-info__address">ул. Большая Конюшенная, 19/8</address>
             <a class="address-info__button link"
@@ -409,8 +447,8 @@
               srcset="img/background-map-desktop@1x.jpg 1x, img/background-map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)"
               srcset="img/background-map-tablet@1x.jpg 1x, img/background-map-tablet@2x.jpg 2x">
-            <img class="map__photo" src="img/background-map-mobile@1x.jpg"
-              srcset="img/background-map-mobile@2x.jpg 2x" width="320" height="424" alt="Карта проезда к нашему офису">
+            <img class="map__photo" src="img/background-map-mobile@1x.jpg" srcset="img/background-map-mobile@2x.jpg 2x"
+              width="320" height="424" alt="Карта проезда к нашему офису">
           </picture>
         </div>
       </div>

@@ -1,0 +1,89 @@
+.transport__item {
+  margin-right: 2px;
+
+  @media (min-width: $tablet) {
+    margin-right: 1px;
+  }
+}
+
+.transport__icon {
+  display: block;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background-color: $white;
+
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 2px 6px rgba(22, 28, 53, 0.17));
+
+    & span {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    background-color: $specialGrey12;
+
+    & span {
+      opacity: 0.1;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    width: 43px;
+    height: 43px;
+  }
+}
+
+.transport__icon span {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 17px;
+  filter: grayscale(1);
+  opacity: 0.3;
+
+  @media (min-width: $tablet) {
+    background-size: 22px;
+  }
+}
+
+.transport__icon-plane {
+  background-image: url("../img/icons/icon-plane.svg");
+}
+
+.transport__icon-bus {
+  background-image: url("../img/icons/icon-bus.svg");
+}
+
+.transport__icon-bike {
+  background-image: url("../img/icons/icon-bike.svg");
+}
+
+.transport__icon-on-foot {
+  background-image: url("../img/icons/icon-on-foot.svg");
+}
+
+.transport__checkbox:checked + .transport__icon span {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.transport__checkbox:checked + .transport__icon {
+  &:hover,
+  &:focus {
+    & span {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    & span {
+      opacity: 0.1;
+    }
+  }
+}

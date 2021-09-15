@@ -31,9 +31,21 @@
           <span class="page-header__menu-button-close visually-hidden" hidden>Закрыть меню навигации</span>
         </a>
         <ul class="page-header__nav-list page-header__nav-list--closed list">
-          <li class="page-header__nav-item"><a class="page-header__nav-link link">О сервисе</a></li>
-          <li class="page-header__nav-item"><a class="page-header__nav-link link" href="form.html">Направления</a></li>
-          <li class="page-header__nav-item"><a class="page-header__nav-link link" href="catalog.html">Попутчики</a></li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link link" href="index.html">
+              <span data-hover="О сервисе">О сервисе</span>
+            </a>
+          </li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link link" href="form.html">
+              <span data-hover="Направления">Направления</span>
+            </a>
+          </li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link link">
+              <span data-hover="Попутчики">Попутчики</span>
+            </a>
+          </li>
         </ul>
         <ul class="page-header__auth-list list">
           <li class="page-header__auth-item page-header__auth-item--closed page-header__login-item">
@@ -95,7 +107,7 @@
               <span class="country-filter__button-top-close country-filter__button-top-text">Свернуть</span>
             </button>
             <ul class="country-filter__continents-list list">
-              <li class="country-filter__continent-item">Европа</li>
+              <li class="country-filter__continent-item country-filter__continent-item--active">Европа</li>
               <li class="country-filter__continent-item">Азия</li>
               <li class="country-filter__continent-item">Америка</li>
               <li class="country-filter__continent-item">Острова</li>
@@ -411,17 +423,17 @@
                     <li class="companion-filter__filter-item">
                       <input class="companion-filter__checkbox-input visually-hidden" type="checkbox" name="activity"
                         value="gym" id="activity-gym" checked>
-                      <label class="companion-filter__checkbox" for="activity-gym">Спортзал</label>
+                      <label class="companion-filter__checkbox" for="activity-gym"><span>Спортзал</span></label>
                     </li>
                     <li class="companion-filter__filter-item">
                       <input class="companion-filter__checkbox-input visually-hidden" type="checkbox" name="activity"
                         value="hookah" id="activity-hookah">
-                      <label class="companion-filter__checkbox" for="activity-hookah">Кальян</label>
+                      <label class="companion-filter__checkbox" for="activity-hookah"><span>Кальян</span></label>
                     </li>
                     <li class="companion-filter__filter-item">
                       <input class="companion-filter__checkbox-input visually-hidden" type="checkbox" name="activity"
                         value="couch-potato" id="activity-couch-potato">
-                      <label class="companion-filter__checkbox" for="activity-couch-potato">Диван</label>
+                      <label class="companion-filter__checkbox" for="activity-couch-potato"><span>Диван</span></label>
                     </li>
                   </ul>
                   <button class="companion-filter__button companion-filter__button--closed" type="button"
@@ -435,17 +447,17 @@
                     <li class="companion-filter__filter-item">
                       <input class="companion-filter__checkbox-input visually-hidden" type="checkbox" name="music"
                         value="rock" id="music-rock" checked>
-                      <label class="companion-filter__checkbox" for="music-rock">Тяжелый рок</label>
+                      <label class="companion-filter__checkbox" for="music-rock"><span>Тяжелый рок</span></label>
                     </li>
                     <li class="companion-filter__filter-item">
                       <input class="companion-filter__checkbox-input visually-hidden" type="checkbox" name="music"
                         value="rap" id="music-rap">
-                      <label class="companion-filter__checkbox" for="music-rap">Русский рэп</label>
+                      <label class="companion-filter__checkbox" for="music-rap"><span>Русский рэп</span></label>
                     </li>
                     <li class="companion-filter__filter-item">
                       <input class="companion-filter__checkbox-input visually-hidden" type="checkbox" name="music"
                         value="eurodance" id="music-eurodance">
-                      <label class="companion-filter__checkbox" for="music-eurodance">Евроденс</label>
+                      <label class="companion-filter__checkbox" for="music-eurodance"><span>Евроденс</span></label>
                     </li>
                   </ul>
                   <button class="companion-filter__button" type="button" aria-label="Скрыть секцию фильтра"></button>
@@ -458,17 +470,17 @@
                     <li class="companion-filter__filter-item">
                       <input class="companion-filter__checkbox-input visually-hidden" type="checkbox" name="food"
                         value="meat" id="food-meat" checked>
-                      <label class="companion-filter__checkbox" for="food-meat">Мясоед</label>
+                      <label class="companion-filter__checkbox" for="food-meat"><span>Мясоед</span></label>
                     </li>
                     <li class="companion-filter__filter-item">
                       <input class="companion-filter__checkbox-input visually-hidden" type="checkbox" name="food"
                         value="healthy-eating" id="food-healthy-eating">
-                      <label class="companion-filter__checkbox" for="food-healthy-eating">Сидит на ПП</label>
+                      <label class="companion-filter__checkbox" for="food-healthy-eating"><span>Сидит на ПП</span></label>
                     </li>
                     <li class="companion-filter__filter-item">
                       <input class="companion-filter__checkbox-input visually-hidden" type="checkbox" name="food"
                         value="vegan" id="food-vegan">
-                      <label class="companion-filter__checkbox" for="food-vegan">Веган-сыроед</label>
+                      <label class="companion-filter__checkbox" for="food-vegan"><span>Веган-сыроед</span></label>
                     </li>
                   </ul>
                   <button class="companion-filter__button companion-filter__button--closed" type="button"
@@ -478,41 +490,37 @@
               <div class="companion-filter__fieldset-wrapper">
                 <fieldset class="companion-filter__section companion-filter__transport">
                   <span class="companion-filter__section-label">Транспорт<span>:</span></span>
-                  <ul class="companion-filter__filter-list companion-filter__transport-list list">
-                    <li class="companion-filter__transport-item">
-                      <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
+                  <ul class="companion-filter__filter-list companion-filter__transport-list  transport list">
+                    <li class="transport__item">
+                      <input class="transport__checkbox visually-hidden" type="checkbox"
                         name="transport" value="airplane" id="transport-airplane" checked>
-                      <label class="companion-filter__transport-icon tooltip" for="transport-airplane"
+                      <label class="transport__icon tooltip" for="transport-airplane"
                         data-tooltip="Авиаперелет">
-                        <span class="companion-filter__transport-icon-plane"></span>
-                        <span class="visually-hidden">Авиаперелет</span>
+                        <span class="transport__icon-plane"></span>
                       </label>
                     </li>
-                    <li class="companion-filter__transport-item">
-                      <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
+                    <li class="transport__item">
+                      <input class="transport__checkbox visually-hidden" type="checkbox"
                         name="transport" value="car-bus" id="transport-car-bus" checked>
-                      <label class="companion-filter__transport-icon tooltip" for="transport-car-bus"
+                      <label class="transport__icon tooltip" for="transport-car-bus"
                         data-tooltip="Автотранспорт">
-                        <span class="companion-filter__transport-icon-bus"></span>
-                        <span class="visually-hidden">Автотранспорт</span>
+                        <span class="transport__icon-bus"></span>
                       </label>
                     </li>
-                    <li class="companion-filter__transport-item">
-                      <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
+                    <li class="transport__item">
+                      <input class="transport__checkbox visually-hidden" type="checkbox"
                         name="transport" value="bike" id="transport-bike">
-                      <label class="companion-filter__transport-icon tooltip" for="transport-bike"
+                      <label class="transport__icon tooltip" for="transport-bike"
                         data-tooltip="Велосипед">
-                        <span class="companion-filter__transport-icon-bike"></span>
-                        <span class="visually-hidden">Велосипед</span>
+                        <span class="transport__icon-bike"></span>
                       </label>
                     </li>
-                    <li class="companion-filter__transport-item">
-                      <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
+                    <li class="transport__item">
+                      <input class="transport__checkbox visually-hidden" type="checkbox"
                         name="transport" value="onfoot" id="transport-onfoot" checked>
-                      <label class="companion-filter__transport-icon tooltip" for="transport-onfoot"
+                      <label class="transport__icon tooltip" for="transport-onfoot"
                         data-tooltip="Пешком">
-                        <span class="companion-filter__transport-icon-on-foot"></span>
-                        <span class="visually-hidden">Пешком</span>
+                        <span class="transport__icon-on-foot"></span>
                       </label>
                     </li>
                   </ul>
@@ -550,10 +558,15 @@
           <li class="companions-selection__item">
             <a class="companions-selection__photo-link" href="profiles/1/firsova.html">
               <picture class="companions-selection__picture">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/profile-photos/companions-photo-firsova@1x.webp 1x, img/profile-photos/companions-photo-firsova@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/profile-photos/companions-photo-firsova-mobile@1x.webp 1x, img/profile-photos/companions-photo-firsova-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/profile-photos/companions-photo-firsova@1x.jpg 1x, img/profile-photos/companions-photo-firsova@2x.jpg 2x">
                 <img class="companions-selection__photo" src="img/profile-photos/companions-photo-firsova-mobile@1x.jpg"
-                  srcset="img/profile-photos/companions-photo-firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Татьяна Фирсова">
+                  srcset="img/profile-photos/companions-photo-firsova-mobile@2x.jpg 2x" width="70" height="70"
+                  alt="Татьяна Фирсова">
               </picture>
             </a>
             <a class="companions-selection__name-link link" href="profiles/1/firsova.html">
@@ -635,10 +648,15 @@
           <li class="companions-selection__item">
             <a class="companions-selection__photo-link" href="profiles/2/demin.html">
               <picture class="companions-selection__picture">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/profile-photos/companions-photo-demin@1x.webp 1x, img/profile-photos/companions-photo-demin@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/profile-photos/companions-photo-demin-mobile@1x.webp 1x, img/profile-photos/companions-photo-demin-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/profile-photos/companions-photo-demin@1x.jpg 1x, img/profile-photos/companions-photo-demin@2x.jpg 2x">
                 <img class="companions-selection__photo" src="img/profile-photos/companions-photo-demin-mobile@1x.jpg"
-                  srcset="img/profile-photos/companions-photo-demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петр Демин">
+                  srcset="img/profile-photos/companions-photo-demin-mobile@2x.jpg 2x" width="70" height="70"
+                  alt="Петр Демин">
               </picture>
             </a>
             <a class="companions-selection__name-link link" href="profiles/2/demin.html">
@@ -711,14 +729,18 @@
             </div>
             <a class="companions-selection__button-invite link" href="profiles/3/smolov-invite.html">Позвать!</a>
           </li>
-
           <li class="companions-selection__item">
             <a class="companions-selection__photo-link" href="profiles/3/smolov.html">
               <picture class="companions-selection__picture">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/profile-photos/companions-photo-smolov@1x.webp 1x, img/profile-photos/companions-photo-smolov@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/profile-photos/companions-photo-smolov-mobile@1x.webp 1x, img/profile-photos/companions-photo-smolov-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/profile-photos/companions-photo-smolov@1x.jpg 1x, img/profile-photos/companions-photo-smolov@2x.jpg 2x">
                 <img class="companions-selection__photo" src="img/profile-photos/companions-photo-smolov-mobile@1x.jpg"
-                  srcset="img/profile-photos/companions-photo-smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
+                  srcset="img/profile-photos/companions-photo-smolov-mobile@2x.jpg 2x" width="70" height="70"
+                  alt="Марк Смолов">
               </picture>
             </a>
             <a class="companions-selection__name-link link" href="profiles/3/smolov.html">
@@ -799,10 +821,16 @@
           <li class="companions-selection__item">
             <a class="companions-selection__photo-link" href="profiles/4/rogovaya.html">
               <picture class="companions-selection__picture">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/profile-photos/companions-photo-rogovaya@1x.webp 1x, img/profile-photos/companions-photo-rogovaya@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="img/profile-photos/companions-photo-rogovaya-mobile@1x.webp 1x, img/profile-photos/companions-photo-rogovaya-mobile@2x.webp 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/profile-photos/companions-photo-rogovaya@1x.jpg 1x, img/profile-photos/companions-photo-rogovaya@2x.jpg 2x">
-                <img class="companions-selection__photo" src="img/profile-photos/companions-photo-rogovaya-mobile@1x.jpg"
-                  srcset="img/profile-photos/companions-photo-rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
+                <img class="companions-selection__photo"
+                  src="img/profile-photos/companions-photo-rogovaya-mobile@1x.jpg"
+                  srcset="img/profile-photos/companions-photo-rogovaya-mobile@2x.jpg 2x" width="70" height="70"
+                  alt="Лариса Роговая">
               </picture>
             </a>
             <a class="companions-selection__name-link link" href="profiles/4/rogovaya.html">
@@ -861,7 +889,8 @@
                     d="M22.3805 26.9652C22.3805 28.5332 21.9085 29.9012 20.9645 31.0692C20.0205 32.2212 18.6365 32.7972 16.8125 32.7972C16.4285 32.7972 15.9805 32.7652 15.4685 32.7012C14.9565 32.6532 14.3725 32.5572 13.7165 32.4132C13.0765 32.2532 12.5325 32.0132 12.0845 31.6932C11.6525 31.3572 11.4365 30.9572 11.4365 30.4932C11.4365 30.0932 11.5885 29.7492 11.8925 29.4612C12.2125 29.1572 12.5965 29.0052 13.0445 29.0052C13.3005 29.0052 13.7485 29.1572 14.3885 29.4612C15.0445 29.7492 15.6685 29.8932 16.2605 29.8932C17.2525 29.8932 17.9645 29.6292 18.3965 29.1012C18.8285 28.5572 19.0445 27.8772 19.0445 27.0612C19.0445 26.2132 18.8285 25.5732 18.3965 25.1412C17.9805 24.6932 17.4285 24.4692 16.7405 24.4692C16.2605 24.4692 15.8205 24.5732 15.4205 24.7812C14.7805 25.2772 14.2045 25.5252 13.6925 25.5252C13.2125 25.5252 12.8045 25.3732 12.4685 25.0692C12.1485 24.7652 11.9965 24.3732 12.0125 23.8932L12.2525 17.2692C12.2685 16.7892 12.4525 16.4052 12.8045 16.1172C13.1725 15.8132 13.5965 15.6612 14.0765 15.6612H19.8605C20.3565 15.6612 20.7805 15.7892 21.1325 16.0452C21.5005 16.2852 21.6845 16.6612 21.6845 17.1732C21.6845 17.6692 21.5005 18.0372 21.1325 18.2772C20.7805 18.5172 20.3565 18.6372 19.8605 18.6372H15.3725L15.2285 21.7572C15.6605 21.6292 16.1805 21.5652 16.7885 21.5652C18.4525 21.5652 19.7965 22.0532 20.8205 23.0292C21.8605 23.9892 22.3805 25.3012 22.3805 26.9652ZM32.0774 20.7972C32.0774 19.0532 31.3414 18.1812 29.8694 18.1812C28.3974 18.1812 27.6614 19.0532 27.6614 20.7972V27.5652C27.6614 28.2692 27.8534 28.8292 28.2374 29.2452C28.6214 29.6612 29.1654 29.8692 29.8694 29.8692C30.5734 29.8692 31.1174 29.6612 31.5014 29.2452C31.8854 28.8292 32.0774 28.2692 32.0774 27.5652V20.7972ZM25.7174 16.8612C26.6454 15.7892 28.0294 15.2532 29.8694 15.2532C31.7094 15.2532 33.0934 15.7892 34.0214 16.8612C34.9494 17.9172 35.4134 19.2852 35.4134 20.9652V27.5652C35.4134 29.0852 34.9174 30.3412 33.9254 31.3332C32.9494 32.3252 31.5974 32.8212 29.8694 32.8212C28.1414 32.8212 26.7814 32.3252 25.7894 31.3332C24.8134 30.3412 24.3254 29.0852 24.3254 27.5652V20.9652C24.3254 19.2852 24.7894 17.9172 25.7174 16.8612Z"
                     fill="#1D2E5B" />
                 </svg>
-                <svg class="companions-selection__level-large" width="62" height="64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="companions-selection__level-large" width="62" height="64" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path d="M30 62a30 30 0 1 0 0-60" stroke="#FF8D30" stroke-width="3" stroke-linecap="round" />
                   <path
                     d="M29.95 28.36c0 1.57-.47 2.94-1.41 4.1-.95 1.16-2.33 1.73-4.16 1.73a14.67 14.67 0 0 1-3.1-.38 4.77 4.77 0 0 1-1.62-.72c-.44-.34-.65-.74-.65-1.2 0-.4.15-.75.45-1.03.32-.3.7-.46 1.16-.46.25 0 .7.15 1.34.46.66.28 1.28.43 1.87.43 1 0 1.7-.27 2.14-.8.43-.54.65-1.22.65-2.03 0-.85-.22-1.5-.65-1.92a2.15 2.15 0 0 0-1.66-.68c-.48 0-.92.1-1.32.32-.64.5-1.21.74-1.73.74-.48 0-.88-.15-1.22-.46-.32-.3-.47-.7-.46-1.17l.24-6.63c.02-.48.2-.86.56-1.15.36-.3.79-.45 1.27-.45h5.78c.5 0 .92.12 1.27.38.37.24.56.62.56 1.13 0 .5-.19.86-.56 1.1a2.2 2.2 0 0 1-1.27.36h-4.49l-.14 3.12c.43-.13.95-.19 1.56-.19 1.66 0 3 .49 4.03 1.46a5.1 5.1 0 0 1 1.56 3.94Zm9.7-6.17c0-1.74-.74-2.61-2.2-2.61-1.48 0-2.22.87-2.22 2.61v6.77c0 .7.2 1.26.58 1.68.38.42.93.62 1.63.62.7 0 1.25-.2 1.63-.62.39-.42.58-.98.58-1.68v-6.77Zm-6.36-3.93c.93-1.08 2.31-1.61 4.15-1.61 1.84 0 3.23.53 4.15 1.6a5.99 5.99 0 0 1 1.4 4.11v6.6a5.1 5.1 0 0 1-1.5 3.77 5.43 5.43 0 0 1-4.05 1.49c-1.73 0-3.09-.5-4.08-1.5a5.15 5.15 0 0 1-1.46-3.76v-6.6c0-1.68.46-3.05 1.39-4.1Z"
@@ -875,7 +904,6 @@
             <a class="companions-selection__button-invite link" href="profiles/4/rogovaya-invite.html">Позвать!</a>
           </li>
         </ul>
-
         <div class="companions-selection__button-more-wrapper">
           <a class="companions-selection__button-more link">Показать ещё</a>
         </div>
