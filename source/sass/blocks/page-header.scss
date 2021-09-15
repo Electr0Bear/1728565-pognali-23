@@ -199,11 +199,15 @@
 }
 
 .page-header__nav-link {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
   font-weight: 500;
   font-size: 30px;
   line-height: 35px;
   text-transform: uppercase;
   color: $blueDark2;
+  cursor: pointer;
 
   @media (min-width: $tablet) {
     font-weight: 700;
@@ -218,6 +222,29 @@
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.01em;
+  }
+}
+
+.page-header__nav-link span {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s;
+
+  &::before {
+    position: absolute;
+    top: 100%;
+    content: attr(data-hover);
+    transform: translate3d(0, 0, 0);
+  }
+
+  &:hover,
+  &:focus {
+    color: $yellow;
+    transform: translateY(-100%);
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
