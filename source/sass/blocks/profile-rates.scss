@@ -62,14 +62,10 @@
     display: block;
     width: 100px;
     height: 100px;
-    background-image: url("../../img/icon-rates@1x.png");
+    background-image: url("../../img/icon-rates.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url("../../img/icon-rates@2x.png");
-    }
   }
 
   @media (min-width: $tablet) {
@@ -112,7 +108,6 @@
       right: 73px;
       width: 198px;
       height: 198px;
-      background-image: url("../../img/icon-rates@2x.png");
     }
   }
 }

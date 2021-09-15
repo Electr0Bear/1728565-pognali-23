@@ -5,6 +5,10 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const htmlmin = require("gulp-htmlmin");
+const csso = require("postcss-csso");
+const rename = require("gulp-rename");
+const terser = require("gulp-terser");
 
 // Styles
 
@@ -22,6 +26,41 @@ const styles = () => {
 }
 
 exports.styles = styles;
+
+// HTML
+
+const html = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
+    .pipe(gulp.dest('build'));
+};
+exports.html = html;
+
+// CSS
+
+const cssmin = () => {
+  return gulp.src('source/css/style.css')
+    .pipe(postcss([
+      csso()
+    ]))
+    .pipe(rename("/style.min.css"))
+    .pipe(gulp.dest("build/css"));
+}
+exports.cssmin = cssmin;
+
+// JS
+const scriptmin = () => {
+  return gulp.src('source/js/script.js')
+    .pipe(terser())
+    .pipe(rename("/script.min.js"))
+    .pipe(gulp.dest("build/js"));
+}
+exports.scriptmin = scriptmin;
+
+
+
 
 // Server
 
