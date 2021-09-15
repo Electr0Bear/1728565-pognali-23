@@ -193,7 +193,7 @@
   border-radius: 10px;
 
   &::before {
-    content: url("../img/icon-triangle-blue.svg");
+    content: url("../img/icons/icon-triangle-blue.svg");
     position: absolute;
     top: 24px;
     right: 22px;
@@ -330,7 +330,7 @@
   margin-bottom: 23px;
 
   &::after {
-    background-image: url("../../img/icon-call-yellow.svg");
+    background-image: url("../img/icons/icon-call-yellow.svg");
     background-size: 18px;
   }
 
@@ -339,7 +339,7 @@
     color: $yellowDark;
 
     &::after {
-      background-image: url("../../img/icon-call-orange.svg");
+      background-image: url("../img/icons/icon-call-orange.svg");
     }
   }
 
@@ -368,7 +368,7 @@
 
 .signup__contacts-email {
   &::after {
-    background-image: url("../../img/icon-mail-yellow.svg");
+    background-image: url("../img/icons/icon-mail-yellow.svg");
     background-size: 25px;
   }
 
@@ -377,7 +377,7 @@
     color: $yellowDark;
 
     &::after {
-      background-image: url("../../img/icon-mail-orange.svg");
+      background-image: url("../img/icons/icon-mail-orange.svg");
     }
   }
 

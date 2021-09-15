@@ -198,7 +198,7 @@
 }
 
 .companion-filter__checkbox-input:checked + .companion-filter__checkbox::before {
-  background-image: url("../img/icon-check-mark.svg");
+  background-image: url("../img/icons/icon-check-mark.svg");
 }
 
 .companion-filter__transport {
@@ -265,19 +265,19 @@
 }
 
 .companion-filter__transport-icon-plane {
-  background-image: url("../img/icon-plane.svg");
+  background-image: url("../img/icons/icon-plane.svg");
 }
 
 .companion-filter__transport-icon-bus {
-  background-image: url("../img/icon-bus.svg");
+  background-image: url("../img/icons/icon-bus.svg");
 }
 
 .companion-filter__transport-icon-bike {
-  background-image: url("../img/icon-bike.svg");
+  background-image: url("../img/icons/icon-bike.svg");
 }
 
 .companion-filter__transport-icon-on-foot {
-  background-image: url("../img/icon-on-foot.svg");
+  background-image: url("../img/icons/icon-on-foot.svg");
 }
 
 .companion-filter__transport-checkbox:checked + .companion-filter__transport-icon span:first-child {
@@ -294,7 +294,7 @@
   width: 11px;
   height: 7px;
   background: transparent;
-  background-image: url("../../img/icon-triangle-up.svg");
+  background-image: url("../../img/icons/icon-triangle-up.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
 

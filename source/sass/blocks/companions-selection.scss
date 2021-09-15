@@ -190,7 +190,7 @@
     display: block;
     width: 10px;
     height: 10px;
-    background-image: url("../img/icon-heart.svg");
+    background-image: url("../img/icons/icon-heart.svg");
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -200,7 +200,7 @@
     background-color: $specialPink;
 
     &::before {
-      background-image: url("../img/icon-heart-red.svg");
+      background-image: url("../img/icons/icon-heart-red.svg");
     }
   }
 
@@ -470,19 +470,19 @@
 }
 
 .companions-selection__transport-plane {
-  background-image: url("../img/icon-plane.svg");
+  background-image: url("../img/icons/icon-plane.svg");
 }
 
 .companions-selection__transport-bus {
-  background-image: url("../img/icon-bus.svg");
+  background-image: url("../img/icons/icon-bus.svg");
 }
 
 .companions-selection__transport-bike {
-  background-image: url("../img/icon-bike.svg");
+  background-image: url("../img/icons/icon-bike.svg");
 }
 
 .companions-selection__transport-on-foot {
-  background-image: url("../img/icon-on-foot.svg");
+  background-image: url("../img/icons/icon-on-foot.svg");
 }
 
 .companions-selection__transport-icon--transparent {
@@ -583,7 +583,7 @@
     left: -5px;
     width: 18px;
     height: 18px;
-    background-image: url("../img/icon-plus-blue.svg");
+    background-image: url("../img/icons/icon-plus-blue.svg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -689,10 +689,10 @@
 .companions-selection__nav-arrow-left {
   margin-right: 1px;
   border-radius: 20px 0 0 20px;
-  background-image: url("../img/icon-page-arrows-left.svg");
+  background-image: url("../img/icons/icon-page-arrows-left.svg");
 }
 
 .companions-selection__nav-arrow-right {
   border-radius: 0 20px 20px 0;
-  background-image: url("../img/icon-page-arrows-right.svg");
+  background-image: url("../img/icons/icon-page-arrows-right.svg");
 }

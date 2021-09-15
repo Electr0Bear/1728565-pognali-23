@@ -33,7 +33,7 @@
     right: 47px;
     width: 10px;
     height: 10px;
-    background-image: url("../img/icon-arrow-down.svg");
+    background-image: url("../img/icons/icon-arrow-down.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
@@ -115,7 +115,7 @@
     right: 15px;
     width: 16px;
     height: 12px;
-    background-image: url("../img/icon-arrow-back.svg");
+    background-image: url("../img/icons/icon-arrow-back.svg");
     background-position: 50% 48%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -174,7 +174,7 @@
   }
 
   &::after {
-    background-image: url("../img/icon-cross-close-white.svg");
+    background-image: url("../img/icons/icon-cross-close-white.svg");
     opacity: 1;
   }
 
@@ -340,7 +340,7 @@
   width: 21px;
   height: 21px;
   background-color: $specialGrey6;
-  background-image: url("../img/icon-cross.svg");
+  background-image: url("../img/icons/icon-cross.svg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
 
