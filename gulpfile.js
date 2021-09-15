@@ -11,6 +11,7 @@ const rename = require("gulp-rename");
 const terser = require("gulp-terser");
 const squoosh = require("gulp-libsquoosh");
 const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
 const del = require("del");
 
 // Styles
@@ -84,6 +85,16 @@ const imagesWebp = () => {
 }
 exports.imagesWebp = imagesWebp;
 
+// Sprites
+
+const sprites = () => {
+  return gulp.src('source/img/icons/*.svg')
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build"))
+}
+exports.sprites = sprites;
+
 //Copy
 
 const copy = done => {
@@ -143,6 +154,7 @@ const build = gulp.series(
     styles,
     html,
     scriptmin,
+    sprites,
     imagesWebp
   )
 );
@@ -156,6 +168,7 @@ exports.default = gulp.series(
     styles,
     html,
     scriptmin,
+    sprites,
     imagesWebp
   ),
   gulp.series(
