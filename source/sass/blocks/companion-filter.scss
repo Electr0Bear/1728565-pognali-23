@@ -3,7 +3,8 @@
   padding-top: 76px;
 
   @media (min-width: $tablet) {
-    padding-top: 180px;
+    margin-bottom: 40px;
+    padding-top: 182px;
   }
 
   @media (min-width: $desktop) {
@@ -17,7 +18,7 @@
   border-radius: 20px;
 
   @media (min-width: $tablet) and (max-width: 1439px) {
-    padding: 37px 35px;
+    padding: 34px 35px 37px 35px;
   }
 }
 
@@ -34,6 +35,7 @@
     padding-left: 0;
     font-size: 30px;
     line-height: 30px;
+    letter-spacing: -0.01em;
   }
 }
 
@@ -41,8 +43,8 @@
   padding: 0 5px 0 5px;
 
   @media (min-width: $tablet) and (max-width: 1439px) {
-    margin-bottom: 36px;
-    padding: 34px 0 37px 0;
+    margin-bottom: 23px;
+    padding: 31px 0 37px 0;
     border-top: 1px solid $yellowDark2;
     border-bottom: 1px solid $yellowDark2;
   }
@@ -53,6 +55,7 @@
   border-top: 1px solid $yellowDark2;
 
   @media (min-width: $tablet) and (max-width: 1439px) {
+    padding: 8px 0 0 0;
     border: none;
   }
 }
@@ -74,7 +77,6 @@
 }
 
 .companion-filter__section-label {
-  // margin-bottom: 10px;
   display: inline-block;
   font-weight: 700;
   line-height: 18px;
@@ -104,6 +106,7 @@
   flex-direction: column;
 
   @media (min-width: $tablet) and (max-width: 1439px) {
+    margin-top: 14px;
     flex-direction: row;
   }
 }
@@ -112,7 +115,7 @@
   display: none;
 
   @media (min-width: $tablet) and (max-width: 1439px) {
-    display: block;
+    display: flex;
   }
 }
 
@@ -127,7 +130,7 @@
     margin-bottom: 0;
 
     &:not(:last-child) {
-      width: 170px;
+      width: 171px;
     }
 
     &:last-child {
@@ -179,7 +182,8 @@
 
 .companion-filter__transport {
   @media (min-width: $tablet) and (max-width: $desktop) {
-    justify-content: flex-start;
+    margin-top: 7px;
+    justify-content: space-between;
   }
 }
 
@@ -190,13 +194,20 @@
   flex-wrap: nowrap;
   flex-direction: row;
 
-  @media (min-width: $tablet) and (max-width: $desktop) {
-    margin-left: 18px;
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 496px;
+    // margin-left: 20px;
   }
 }
 
 .companion-filter__transport-item {
   margin-right: 2px;
+
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    margin-right: 1px;
+  }
 }
 
 .companion-filter__transport-icon {
@@ -215,6 +226,15 @@
     background-position: 50% 50%;
     background-size: 17px;
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    width: 43px;
+    height: 43px;
+
+    & span:first-child {
+      background-size: 22px;
+    }
   }
 }
 
@@ -261,6 +281,12 @@
   transform: rotate(180deg);
 }
 
+.companion-filter__level {
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    margin-top: 10px;
+  }
+}
+
 .companion-filter__level-input-section {
   margin-top: 13px;
   margin-bottom: 25px;
@@ -268,7 +294,6 @@
   display: flex;
   flex-wrap: nowrap;
   background-color: $white;
-  // border: 1px solid $specialGrey4;
   border-radius: 4px;
 
   &::after {
@@ -285,8 +310,13 @@
   }
 
   @media (min-width: $tablet) and (max-width: 1439px) {
-    margin-bottom: 0;
+    margin: 0;
     order: 3;
+
+    &::after {
+      left: calc(50% - 10.5px);
+      width: 21px;
+    }
   }
 }
 
@@ -332,6 +362,7 @@
   background-color: $blueLightFaded02;
 
   @media (min-width: $tablet) and (max-width: 1439px) {
+    width: 281px;
     order: 2;
   }
 }
@@ -342,6 +373,12 @@
   width: 153px;
   height: 2px;
   background-color: $blueLight;
+
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    left: 103px;
+    width: 180px;
+    order: 2;
+  }
 }
 
 .companion-filter__level-scale-min,
@@ -352,6 +389,12 @@
   height: 10px;
   border-radius: 50%;
   background-color: $blueLight;
+
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    top: -6px;
+    width: 13px;
+    height: 13px;
+  }
 }
 
 .companion-filter__level-scale-max {
@@ -373,7 +416,7 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet) and (max-width: 1439px) {
-    padding: 18px 0;
+    padding: 15px 0;
     font-size: 20px;
     line-height: 20px;
   }
