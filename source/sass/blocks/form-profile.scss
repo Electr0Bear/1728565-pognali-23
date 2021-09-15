@@ -93,6 +93,16 @@
   line-height: 18px;
   letter-spacing: 0.02em;
 
+  &:hover,
+  &:focus {
+    background-color: $blueLight7;
+  }
+
+  &:active {
+    color: fade-out($color: $basicBlue, $amount: 0.5);
+    opacity: 0.7;
+  }
+
   @media (min-width: $tablet) {
     margin-top: 50px;
     margin-bottom: 52px;
@@ -155,11 +165,22 @@
   background-color: transparent;
   outline: none;
   border: 1px solid $specialGrey4;
+  color: $specialGrey;
   border-radius: 8px;
   font-family: $bloggerSans;
   font-size: 16px;
   line-height: 18px;
   opacity: 0.6;
+
+  &:hover {
+    border: 1px solid $specialGrey14;
+    opacity: 0.7;
+  }
+
+  &:focus {
+    border: 1px solid $specialGrey;
+    opacity: 1;
+  }
 
   @media (min-width: $tablet) {
     padding: 35px 40px;
@@ -225,7 +246,6 @@
   background-color: $basicGrey;
   top: 10px;
   left: calc(50% - 51px);
-  z-index: 1;
   font-weight: 700;
   line-height: 18px;
   text-align: center;
@@ -268,31 +288,9 @@
   display: block;
   width: 32px;
   height: 32px;
-  border-radius: 50%;
-  background-color: $white;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: 17px;
 
   @media (min-width: $tablet) {
     width: 44px;
     height: 44px;
-    background-size: 23px;
   }
-}
-
-.form-profile__transport-plane {
-  background-image: url("../img/icons/icon-plane.svg");
-}
-
-.form-profile__transport-bus {
-  background-image: url("../img/icons/icon-bus.svg");
-}
-
-.form-profile__transport-bike {
-  background-image: url("../img/icons/icon-bike.svg");
-}
-
-.form-profile__transport-on-foot {
-  background-image: url("../img/icons/icon-on-foot.svg");
 }

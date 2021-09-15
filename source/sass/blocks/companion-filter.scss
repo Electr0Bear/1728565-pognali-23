@@ -228,62 +228,6 @@
   }
 }
 
-.companion-filter__transport-item {
-  margin-right: 2px;
-
-  @media (min-width: $tablet) {
-    margin-right: 1px;
-  }
-}
-
-.companion-filter__transport-icon {
-  display: block;
-  width: 31px;
-  height: 31px;
-  border-radius: 50%;
-  background-color: $white;
-
-  & span:first-child {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 17px;
-    opacity: 0.3;
-  }
-
-  @media (min-width: $tablet) {
-    width: 43px;
-    height: 43px;
-
-    & span:first-child {
-      background-size: 22px;
-    }
-  }
-}
-
-.companion-filter__transport-icon-plane {
-  background-image: url("../img/icons/icon-plane.svg");
-}
-
-.companion-filter__transport-icon-bus {
-  background-image: url("../img/icons/icon-bus.svg");
-}
-
-.companion-filter__transport-icon-bike {
-  background-image: url("../img/icons/icon-bike.svg");
-}
-
-.companion-filter__transport-icon-on-foot {
-  background-image: url("../img/icons/icon-on-foot.svg");
-}
-
-.companion-filter__transport-checkbox:checked + .companion-filter__transport-icon span:first-child {
-  opacity: 1;
-}
-
 .companion-filter__button {
   display: block;
   padding: 0;

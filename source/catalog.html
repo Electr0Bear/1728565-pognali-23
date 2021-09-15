@@ -31,9 +31,21 @@
           <span class="page-header__menu-button-close visually-hidden" hidden>Закрыть меню навигации</span>
         </a>
         <ul class="page-header__nav-list page-header__nav-list--closed list">
-          <li class="page-header__nav-item"><a class="page-header__nav-link link">О сервисе</a></li>
-          <li class="page-header__nav-item"><a class="page-header__nav-link link" href="form.html">Направления</a></li>
-          <li class="page-header__nav-item"><a class="page-header__nav-link link" href="catalog.html">Попутчики</a></li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link link">
+              <span data-hover="О сервисе">О сервисе</span>
+            </a>
+          </li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link link" href="form.html">
+              <span data-hover="Направления">Направления</span>
+            </a>
+          </li>
+          <li class="page-header__nav-item">
+            <a class="page-header__nav-link link" href="catalog.html">
+              <span data-hover="Попутчики">Попутчики</span>
+            </a>
+          </li>
         </ul>
         <ul class="page-header__auth-list list">
           <li class="page-header__auth-item page-header__auth-item--closed page-header__login-item">
@@ -478,41 +490,37 @@
               <div class="companion-filter__fieldset-wrapper">
                 <fieldset class="companion-filter__section companion-filter__transport">
                   <span class="companion-filter__section-label">Транспорт<span>:</span></span>
-                  <ul class="companion-filter__filter-list companion-filter__transport-list list">
-                    <li class="companion-filter__transport-item">
-                      <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
+                  <ul class="companion-filter__filter-list companion-filter__transport-list  transport list">
+                    <li class="transport__item">
+                      <input class="transport__checkbox visually-hidden" type="checkbox"
                         name="transport" value="airplane" id="transport-airplane" checked>
-                      <label class="companion-filter__transport-icon tooltip" for="transport-airplane"
+                      <label class="transport__icon tooltip" for="transport-airplane"
                         data-tooltip="Авиаперелет">
-                        <span class="companion-filter__transport-icon-plane"></span>
-                        <span class="visually-hidden">Авиаперелет</span>
+                        <span class="transport__icon-plane"></span>
                       </label>
                     </li>
-                    <li class="companion-filter__transport-item">
-                      <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
+                    <li class="transport__item">
+                      <input class="transport__checkbox visually-hidden" type="checkbox"
                         name="transport" value="car-bus" id="transport-car-bus" checked>
-                      <label class="companion-filter__transport-icon tooltip" for="transport-car-bus"
+                      <label class="transport__icon tooltip" for="transport-car-bus"
                         data-tooltip="Автотранспорт">
-                        <span class="companion-filter__transport-icon-bus"></span>
-                        <span class="visually-hidden">Автотранспорт</span>
+                        <span class="transport__icon-bus"></span>
                       </label>
                     </li>
-                    <li class="companion-filter__transport-item">
-                      <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
+                    <li class="transport__item">
+                      <input class="transport__checkbox visually-hidden" type="checkbox"
                         name="transport" value="bike" id="transport-bike">
-                      <label class="companion-filter__transport-icon tooltip" for="transport-bike"
+                      <label class="transport__icon tooltip" for="transport-bike"
                         data-tooltip="Велосипед">
-                        <span class="companion-filter__transport-icon-bike"></span>
-                        <span class="visually-hidden">Велосипед</span>
+                        <span class="transport__icon-bike"></span>
                       </label>
                     </li>
-                    <li class="companion-filter__transport-item">
-                      <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
+                    <li class="transport__item">
+                      <input class="transport__checkbox visually-hidden" type="checkbox"
                         name="transport" value="onfoot" id="transport-onfoot" checked>
-                      <label class="companion-filter__transport-icon tooltip" for="transport-onfoot"
+                      <label class="transport__icon tooltip" for="transport-onfoot"
                         data-tooltip="Пешком">
-                        <span class="companion-filter__transport-icon-on-foot"></span>
-                        <span class="visually-hidden">Пешком</span>
+                        <span class="transport__icon-on-foot"></span>
                       </label>
                     </li>
                   </ul>
