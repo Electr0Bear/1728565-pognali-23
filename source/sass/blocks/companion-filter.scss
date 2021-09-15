@@ -17,8 +17,12 @@
   background-color: $yellow;
   border-radius: 20px;
 
-  @media (min-width: $tablet) and (max-width: 1439px) {
+  @media (min-width: $tablet) {
     padding: 34px 35px 37px 35px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 44px 42px 50px 42px;
   }
 }
 
@@ -37,6 +41,10 @@
     line-height: 30px;
     letter-spacing: -0.01em;
   }
+
+  @media (min-width: $desktop) {
+    padding-left: 5px;
+  }
 }
 
 .companion-filter__form-wrapper {
@@ -54,9 +62,13 @@
   padding: 10px 0 11px 0;
   border-top: 1px solid $yellowDark2;
 
-  @media (min-width: $tablet) and (max-width: 1439px) {
+  @media (min-width: $tablet) {
     padding: 8px 0 0 0;
     border: none;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 10px 0 11px 0;
   }
 }
 
@@ -109,6 +121,11 @@
     margin-top: 14px;
     flex-direction: row;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 28px;
+    margin-bottom: 6px;
+  }
 }
 
 .companion-filter__filter-list--closed {
@@ -137,6 +154,10 @@
       width: 150px;
     }
   }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 19px;
+  }
 }
 
 .companion-filter__checkbox {
@@ -162,7 +183,7 @@
     background-position: 50% 50%;
   }
 
-  @media (min-width: $tablet) and (max-width: $desktop) {
+  @media (min-width: $tablet) {
     left: 36px;
     font-size: 20px;
     line-height: 20px;
@@ -200,12 +221,17 @@
     width: 496px;
     // margin-left: 20px;
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 20px;
+    margin-bottom: 13px;
+  }
 }
 
 .companion-filter__transport-item {
   margin-right: 2px;
 
-  @media (min-width: $tablet) and (max-width: 1439px) {
+  @media (min-width: $tablet) {
     margin-right: 1px;
   }
 }
@@ -228,7 +254,7 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $tablet) and (max-width: 1439px) {
+  @media (min-width: $tablet) {
     width: 43px;
     height: 43px;
 
@@ -318,6 +344,11 @@
       width: 21px;
     }
   }
+
+  @media (min-width: $desktop) {
+    margin-top: 21px;
+    margin-bottom: 39px;
+  }
 }
 
 .companion-filter__level-input {
@@ -365,6 +396,10 @@
     width: 281px;
     order: 2;
   }
+
+  @media (min-width: $desktop) {
+    width: 192px;
+  }
 }
 
 .companion-filter__level-scale-chosen {
@@ -379,6 +414,11 @@
     width: 180px;
     order: 2;
   }
+
+  @media (min-width: $desktop) {
+    left: 60px;
+    width: 130px;
+  }
 }
 
 .companion-filter__level-scale-min,
@@ -390,7 +430,7 @@
   border-radius: 50%;
   background-color: $blueLight;
 
-  @media (min-width: $tablet) and (max-width: 1439px) {
+  @media (min-width: $tablet) {
     top: -6px;
     width: 13px;
     height: 13px;
@@ -415,9 +455,15 @@
   text-align: center;
   text-transform: uppercase;
 
-  @media (min-width: $tablet) and (max-width: 1439px) {
+  @media (min-width: $tablet) {
     padding: 15px 0;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 32px;
+    margin-left: 5px;
+    width: 191px;
   }
 }
