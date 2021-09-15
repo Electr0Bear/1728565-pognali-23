@@ -37,7 +37,7 @@
 .companions__wrapper {
   @media (min-width: $tablet) {
     padding: 67px 34px 0 34px;
-    background-image: url("../../img/icon-rectangle-blue-desktop.svg"),
+    background-image: url("../../img/icons/icon-rectangle-blue-desktop.svg"),
       url("../img/background-photo-rogovaya@1x.png"),
       url("../../img/background-photo-smolov@1x.jpg");
     background-position: 0 0, calc(100% - 34px) 9px, 0 355px;
@@ -47,7 +47,7 @@
 
   @media (min-width: $tablet) and (min-resolution: 144dpi),
     (min-width: $tablet) and (min-resolution: 1.5dppx) {
-    background-image: url("../../img/icon-rectangle-blue-desktop.svg"),
+    background-image: url("../../img/icons/icon-rectangle-blue-desktop.svg"),
       url("../img/background-photo-rogovaya@1x.png"),
       url("../../img/background-photo-smolov@1x.jpg");
   }
@@ -335,7 +335,7 @@
     position: absolute;
     top: calc(50% - 6px);
     right: 22px;
-    background-image: url("../img/icon-button-arrow-right-blue.svg");
+    background-image: url("../img/icons/icon-button-arrow-right-blue.svg");
     background-position: 50%;
     background-repeat: no-repeat;
   }

@@ -24,16 +24,16 @@
   @media (min-width: $tablet) {
     padding-left: 36px;
     padding-right: 36px;
-    background-image: url("../../img/icon-rectangle-grey-tablet.svg"),
-      url("../../img/flags-background-tablet@1x.png");
+    background-image: url("../img/icons/icon-rectangle-grey-tablet.svg"),
+      url("../img/flags-background-tablet@1x.png");
     background-position: 0 300px, 100% 0;
     background-repeat: no-repeat;
   }
 
   @media (min-width: $tablet) and (min-resolution: 144dpi),
     (min-width: $tablet) and (min-resolution: 1.5dppx) {
-    background-image: url("../../img/icon-rectangle-grey-tablet.svg"),
-      url("../../img/flags-background-tablet@2x.png");
+    background-image: url("../img/icons/icon-rectangle-grey-tablet.svg"),
+      url("../img/flags-background-tablet@2x.png");
     background-size: 141px 141px, 288px 574px;
   }
 
@@ -257,7 +257,7 @@
     display: inline-block;
     width: 14px;
     height: 14px;
-    background-image: url("../img/icon-lildude.svg");
+    background-image: url("../img/icons/icon-lildude.svg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -298,7 +298,7 @@
   color: $blueLight;
 
   &::after {
-    content: url("../img/icon-button-arrow-right-blue.svg");
+    content: url("../img/icons/icon-button-arrow-right-blue.svg");
     position: absolute;
     top: 21px;
     right: 22px;

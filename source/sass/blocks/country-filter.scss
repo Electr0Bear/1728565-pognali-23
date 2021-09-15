@@ -12,8 +12,8 @@
   border-radius: 0 0 20px 20px;
 
   @media (min-width: $tablet) {
-    padding-top: 59px;
-    padding-bottom: 56px;
+    padding-top: 60px;
+    padding-bottom: 51px;
     border-radius: 0 0 60px 60px;
   }
 
@@ -23,6 +23,8 @@
 }
 
 .country-filter__wrapper--opened {
+  padding-bottom: 28px;
+
   @media (min-width: $desktop) {
     background-color: transparent;
   }
@@ -52,11 +54,12 @@
   &::before {
     content: "";
     position: absolute;
+    top: 5px;
     left: 0;
     display: block;
     width: 15px;
     height: 10px;
-    background-image: url("../img/icon-filter.svg");
+    background-image: url("../img/icons/icon-filter.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -69,11 +72,14 @@
 
   @media (min-width: $desktop) {
     display: block;
-    padding-left: 45px;
+    margin-right: 30px;
+    padding-left: 64px;
     font-size: 20px;
     line-height: 20px;
 
     &::before {
+      top: 0;
+      left: 20px;
       width: 23px;
       height: 20px;
     }
@@ -81,17 +87,20 @@
 }
 
 .country-filter__button-top {
+  margin-top: 1px;
+  margin-right: 4px;
   padding: 0;
-  display: inline-block;
+  display: block;
   width: 17px;
   height: 17px;
   border: none;
-  background-image: url("../img/icon-filter-meatballs.svg");
+  background-image: url("../img/icons/icon-filter-meatballs.svg");
   background-color: transparent;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 
   @media (min-width: $tablet) {
+    margin: 0;
     width: 185px;
     height: 22px;
     text-align: left;
@@ -102,7 +111,7 @@
 }
 
 .country-filter__button-top--opened {
-  background-image: url("../img/icon-cross-darkblue.svg");
+  background-image: url("../img/icons/icon-cross-darkblue.svg");
 
   @media (min-width: $tablet) {
     background-size: 20px;
@@ -112,6 +121,12 @@
 .country-filter__button-top--hide {
   @media (min-width: $desktop) {
     display: none;
+  }
+}
+
+.country-filter__button-top span:last-child {
+  @media (min-width: $tablet) {
+    margin-left: 10px;
   }
 }
 
@@ -133,7 +148,7 @@
 
 .country-filter__close-btn-bottom {
   margin: 0 auto;
-  padding-left: 40px;
+  padding-left: 29px;
   position: relative;
   display: none;
   width: 270px;
@@ -143,6 +158,7 @@
   border-radius: 20px;
   font-family: $bloggerSans;
   font-weight: 700;
+  font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -152,24 +168,27 @@
     content: "";
     position: absolute;
     top: 12px;
-    left: 90px;
+    left: 83px;
     display: block;
     width: 16px;
     height: 16px;
-    background-image: url("../img/icon-cross-darkblue.svg");
+    background-image: url("../img/icons/icon-cross-darkblue.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
   @media (min-width: $tablet) {
+    margin-bottom: 50px;
+    padding-left: 45px;
     width: 615px;
     height: 100px;
     font-size: 20px;
     line-height: 20px;
+    letter-spacing: normal;
 
     &::before {
       top: 40px;
-      left: 230px;
+      left: 242px;
       width: 22px;
       height: 22px;
       background-size: 22px;
@@ -177,10 +196,11 @@
   }
 
   @media (min-width: $desktop) {
+    padding-left: 35px;
     width: 100%;
 
     &::before {
-      left: 580px;
+      left: 590px;
     }
   }
 }
@@ -193,12 +213,13 @@
   display: none;
   width: 100%;
   flex-direction: column;
-  margin-top: 35px;
-  margin-bottom: 25px;
+  margin-top: 33px;
+  margin-bottom: 14px;
   padding-left: 25px;
 
   @media (min-width: $tablet) {
     margin: 0;
+    padding-left: 0;
     display: flex;
     flex-direction: row;
     width: auto;
@@ -206,7 +227,7 @@
   }
 
   @media (min-width: $desktop) {
-    margin-right: 400px;
+    margin-right: 320px;
   }
 }
 
@@ -215,6 +236,7 @@
 }
 
 .country-filter__continent-item {
+  margin-bottom: 9px;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -230,6 +252,10 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: $desktop) {
+    margin-right: 32px;
+  }
 }
 
 .country-filter__alphabet-list-wrapper {
@@ -238,7 +264,17 @@
   padding-right: 25px;
 
   @media (min-width: $tablet) {
-    margin-top: 68px;
+    margin-top: 53px;
+    margin-bottom: 45px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 63px;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    padding-right: 65px;
   }
 }
 
@@ -249,24 +285,24 @@
 .country-filter__alphabet-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 42px) auto;
+  grid-template-rows: repeat(5, 41px) auto;
   border-top: 1px solid $specialGrey4;
 
   @media (min-width: $tablet) {
     border: none;
-    grid-template-columns: repeat(5, 80px) auto;
-    grid-template-rows: repeat(5, 90px);
+    grid-template-columns: repeat(5, 77px) auto;
+    grid-template-rows: repeat(5, 83px);
   }
 
   @media (min-width: $desktop) {
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(5, 250px);
     grid-template-rows: repeat(10, auto);
   }
 }
 
 .country-filter__alphabet-letter {
   position: relative;
-  padding-top: 10px;
+  padding-top: 12px;
   box-sizing: border-box;
   font-size: 14px;
   line-height: 14px;
@@ -337,12 +373,12 @@
 
 .country-filter__alphabet-country-item {
   display: none;
-  padding-top: 14px;
+  padding-top: 12px;
   padding-bottom: 28px;
 
   @media (min-width: $tablet) {
     padding-top: 0;
-    padding-left: 80px;
+    padding-left: 55px;
     padding-bottom: 0;
   }
 
@@ -389,6 +425,10 @@
     &:nth-child(48),
     &:nth-child(50) {
       grid-row: 10 / 11;
+    }
+
+    &:nth-child(22) {
+      min-height: 356px;
     }
   }
 }

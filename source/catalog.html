@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Погнали</title>
   <link rel="icon" href="./img/favicons/16.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body">
@@ -73,11 +73,12 @@
   <main class="page-main">
     <h1 class="visually-hidden">Погнали! - сервис по поиску попутчиков в Ваше путешествие</h1>
     <div class="page-main__header-wrapper page-main__header-wrapper--catalog">
-      <div class="page-main__header ">
+      <div class="page-main__header">
         <div class="container container--extra">
-          <h2 class="page-main__page-title">Попутчики</h2>
-          <a class="page-main__catalog-link link" href="index.html">На главную</a>
-          <div class="page-main__orange-line"></div>
+          <div class="page-main__flex-container">
+            <h2 class="page-main__page-title">Попутчики</h2>
+            <a class="page-main__catalog-link link" href="index.html">На главную</a>
+          </div>
         </div>
       </div>
     </div>
@@ -88,7 +89,9 @@
           <div class="country-filter__flex-container">
             <h2 class="country-filter__heading">Фильтрация по странам:</h2>
             <button class="country-filter__button-top" type="button">
-              <span class="country-filter__button-top-show country-filter__button-top-text country-filter__button-top-text--showed">Показать все</span>
+              <span
+                class="country-filter__button-top-show country-filter__button-top-text country-filter__button-top-text--showed">Показать
+                все</span>
               <span class="country-filter__button-top-close country-filter__button-top-text">Свернуть</span>
             </button>
             <ul class="country-filter__continents-list list">
@@ -404,7 +407,7 @@
               <div class="companion-filter__fieldset-wrapper">
                 <fieldset class="companion-filter__section companion-filter__hobby">
                   <span class="companion-filter__section-label">Хобби<span>:</span></span>
-                  <ul class="companion-filter__filter-list list">
+                  <ul class="companion-filter__filter-list companion-filter__filter-list--closed list">
                     <li class="companion-filter__filter-item">
                       <input class="companion-filter__checkbox-input visually-hidden" type="checkbox" name="activity"
                         value="gym" id="activity-gym" checked>
@@ -421,11 +424,8 @@
                       <label class="companion-filter__checkbox" for="activity-couch-potato">Диван</label>
                     </li>
                   </ul>
-                  <button class="companion-filter__show-hide-button companion-filter__show-hide-button--show"
-                    type="button">
-                    <span class="companion-filter__show-button visually-hidden">Показать</span>
-                    <span class="companion-filter__hide-button" hidden>Скрыть</span>
-                  </button>
+                  <button class="companion-filter__button companion-filter__button--closed" type="button"
+                    aria-label="Показать секцию фильтра"></button>
                 </fieldset>
               </div>
               <div class="companion-filter__fieldset-wrapper">
@@ -448,17 +448,13 @@
                       <label class="companion-filter__checkbox" for="music-eurodance">Евроденс</label>
                     </li>
                   </ul>
-                  <button class="companion-filter__show-hide-button companion-filter__show-hide-button--hide"
-                    type="button">
-                    <span class="companion-filter__show-button" hidden>Показать</span>
-                    <span class="companion-filter__hide-button visually-hidden">Скрыть</span>
-                  </button>
+                  <button class="companion-filter__button" type="button" aria-label="Скрыть секцию фильтра"></button>
                 </fieldset>
               </div>
               <div class="companion-filter__fieldset-wrapper">
                 <fieldset class="companion-filter__section companion-filter__food">
                   <span class="companion-filter__section-label">Eда<span>:</span></span>
-                  <ul class="companion-filter__filter-list list">
+                  <ul class="companion-filter__filter-list companion-filter__filter-list--closed list">
                     <li class="companion-filter__filter-item">
                       <input class="companion-filter__checkbox-input visually-hidden" type="checkbox" name="food"
                         value="meat" id="food-meat" checked>
@@ -475,10 +471,8 @@
                       <label class="companion-filter__checkbox" for="food-vegan">Веган-сыроед</label>
                     </li>
                   </ul>
-                  <button class="companion-filter__show-hide-button" type="button">
-                    <span class="companion-filter__show-button visually-hidden">Показать</span>
-                    <span class="companion-filter__hide-button" hidden>Скрыть</span>
-                  </button>
+                  <button class="companion-filter__button companion-filter__button--closed" type="button"
+                    aria-label="Показать секцию фильтра"></button>
                 </fieldset>
               </div>
               <div class="companion-filter__fieldset-wrapper">
@@ -488,15 +482,17 @@
                     <li class="companion-filter__transport-item">
                       <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
                         name="transport" value="airplane" id="transport-airplane" checked>
-                      <label class="companion-filter__transport-icon" for="transport-airplane">
+                      <label class="companion-filter__transport-icon tooltip" for="transport-airplane"
+                        data-tooltip="Авиаперелет">
                         <span class="companion-filter__transport-icon-plane"></span>
-                        <span class="visually-hidden">Авиатранспорт</span>
+                        <span class="visually-hidden">Авиаперелет</span>
                       </label>
                     </li>
                     <li class="companion-filter__transport-item">
                       <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
                         name="transport" value="car-bus" id="transport-car-bus" checked>
-                      <label class="companion-filter__transport-icon" for="transport-car-bus">
+                      <label class="companion-filter__transport-icon tooltip" for="transport-car-bus"
+                        data-tooltip="Автотранспорт">
                         <span class="companion-filter__transport-icon-bus"></span>
                         <span class="visually-hidden">Автотранспорт</span>
                       </label>
@@ -504,7 +500,8 @@
                     <li class="companion-filter__transport-item">
                       <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
                         name="transport" value="bike" id="transport-bike">
-                      <label class="companion-filter__transport-icon" for="transport-bike">
+                      <label class="companion-filter__transport-icon tooltip" for="transport-bike"
+                        data-tooltip="Велосипед">
                         <span class="companion-filter__transport-icon-bike"></span>
                         <span class="visually-hidden">Велосипед</span>
                       </label>
@@ -512,17 +509,14 @@
                     <li class="companion-filter__transport-item">
                       <input class="companion-filter__transport-checkbox visually-hidden" type="checkbox"
                         name="transport" value="onfoot" id="transport-onfoot" checked>
-                      <label class="companion-filter__transport-icon" for="transport-onfoot">
+                      <label class="companion-filter__transport-icon tooltip" for="transport-onfoot"
+                        data-tooltip="Пешком">
                         <span class="companion-filter__transport-icon-on-foot"></span>
                         <span class="visually-hidden">Пешком</span>
                       </label>
                     </li>
                   </ul>
-                  <button class="companion-filter__show-hide-button companion-filter__show-hide-button--hide"
-                    type="button">
-                    <span class="companion-filter__show-button" hidden>Показать</span>
-                    <span class="companion-filter__hide-button visually-hidden">Скрыть</span>
-                  </button>
+                  <button class="companion-filter__button" type="button" aria-label="Скрыть секцию фильтра"></button>
                 </fieldset>
               </div>
               <div class="companion-filter__fieldset-wrapper">
@@ -542,11 +536,7 @@
                       <div class="companion-filter__level-scale-max" tabindex="0"></div>
                     </div>
                   </div>
-                  <button class="companion-filter__show-hide-button companion-filter__show-hide-button--hide"
-                    type="button">
-                    <span class="companion-filter__show-button" hidden>Показать</span>
-                    <span class="companion-filter__hide-button visually-hidden">Скрыть</span>
-                  </button>
+                  <button class="companion-filter__button" type="button" aria-label="Скрыть секцию фильтра"></button>
                 </fieldset>
               </div>
             </div>
@@ -559,11 +549,15 @@
         <ul class="companions-selection__list list">
           <li class="companions-selection__item">
             <a class="companions-selection__photo-link" href="profiles/1/firsova.html">
-              <img class="companions-selection__photo" src="img/companions-photo-firsova.jpg" width="70" height="70"
-                alt="Татьяна Фирсова">
+              <picture class="companions-selection__picture">
+                <source media="(min-width: 768px)"
+                  srcset="img/profile-photos/companions-photo-firsova@1x.jpg 1x, img/profile-photos/companions-photo-firsova@2x.jpg 2x">
+                <img class="companions-selection__photo" src="img/profile-photos/companions-photo-firsova-mobile@1x.jpg"
+                  srcset="img/profile-photos/companions-photo-firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Татьяна Фирсова">
+              </picture>
             </a>
             <a class="companions-selection__name-link link" href="profiles/1/firsova.html">
-              <h3 class="companions-selection__name companions-selection__name--offline">Таня фирсова</h3>
+              <h3 class="companions-selection__name companions-selection__name--offline">Таня Фирсова</h3>
             </a>
             <div class="companions-selection__like-button-block">
               <button class="companions-selection__like-button companions-selection__like-button--checked">
@@ -573,7 +567,8 @@
             </div>
             <p class="companions-selection__hashtags-list">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
             <div class="companions-selection__countries">
-              <h4 class="companions-selection__card-section-title companions-selection__countries-title">Хочет посетить:</h4>
+              <h4 class="companions-selection__card-section-title companions-selection__countries-title">Хочет посетить:
+              </h4>
               <ul class="companions-selection__countries-list list">
                 <li class="companions-selection__countries-item">
                   <img src="img/flag-sri-lanka.svg" width="26" height="18" alt="Флаг Шри-Ланки">
@@ -591,7 +586,8 @@
             </div>
             <div class="companions-selection__profile-extra">
               <div class="companions-selection__transport-section">
-                <h4 class="companions-selection__card-section-title companions-selection__transport-title">Транспорт:</h4>
+                <h4 class="companions-selection__card-section-title companions-selection__transport-title">Транспорт:
+                </h4>
                 <ul class="companions-selection__transport-list list">
                   <li class="companions-selection__transport-item">
                     <span class="companions-selection__transport-plane"></span>
@@ -621,6 +617,16 @@
                     d="M14.9884 28.312C16.0284 28.328 16.7404 28.008 17.1244 27.352C17.5244 26.68 17.7724 25.68 17.8684 24.352C17.0684 24.832 16.2044 25.072 15.2764 25.072C13.7244 25.072 12.4284 24.6 11.3884 23.656C10.3484 22.696 9.82835 21.344 9.82835 19.6C9.82835 17.952 10.3244 16.584 11.3164 15.496C12.3084 14.408 13.7244 13.864 15.5644 13.864C16.6364 13.864 17.5564 14.064 18.3244 14.464C19.0924 14.864 19.6844 15.448 20.1004 16.216C20.5324 16.984 20.8364 17.848 21.0124 18.808C21.2044 19.768 21.3004 20.872 21.3004 22.12C21.3004 25.08 20.7964 27.336 19.7884 28.888C18.7964 30.44 17.2924 31.216 15.2764 31.216C14.9404 31.216 14.5724 31.192 14.1724 31.144C13.7884 31.112 13.3324 31.04 12.8044 30.928C12.2924 30.8 11.8524 30.6 11.4844 30.328C11.1324 30.056 10.9324 29.728 10.8844 29.344C10.8364 28.96 10.9484 28.616 11.2204 28.312C11.5084 28.008 11.8924 27.856 12.3724 27.856C12.6124 27.856 13.0044 27.928 13.5484 28.072C14.1084 28.216 14.5884 28.296 14.9884 28.312ZM17.9404 21.256V20.968C17.9404 18.264 17.1084 16.912 15.4444 16.912C14.6444 16.912 14.0604 17.168 13.6924 17.68C13.3404 18.176 13.1644 18.808 13.1644 19.576C13.1644 21.24 13.9484 22.072 15.5164 22.072C16.5404 22.072 17.3484 21.8 17.9404 21.256ZM27.9493 28.312C28.9893 28.328 29.7013 28.008 30.0853 27.352C30.4853 26.68 30.7333 25.68 30.8293 24.352C30.0293 24.832 29.1653 25.072 28.2373 25.072C26.6853 25.072 25.3893 24.6 24.3493 23.656C23.3093 22.696 22.7893 21.344 22.7893 19.6C22.7893 17.952 23.2853 16.584 24.2773 15.496C25.2693 14.408 26.6853 13.864 28.5253 13.864C29.5973 13.864 30.5173 14.064 31.2853 14.464C32.0533 14.864 32.6453 15.448 33.0613 16.216C33.4933 16.984 33.7973 17.848 33.9733 18.808C34.1653 19.768 34.2613 20.872 34.2613 22.12C34.2613 25.08 33.7573 27.336 32.7493 28.888C31.7573 30.44 30.2533 31.216 28.2373 31.216C27.9013 31.216 27.5333 31.192 27.1333 31.144C26.7493 31.112 26.2933 31.04 25.7653 30.928C25.2533 30.8 24.8133 30.6 24.4453 30.328C24.0933 30.056 23.8933 29.728 23.8453 29.344C23.7973 28.96 23.9093 28.616 24.1813 28.312C24.4693 28.008 24.8533 27.856 25.3333 27.856C25.5733 27.856 25.9653 27.928 26.5093 28.072C27.0693 28.216 27.5493 28.296 27.9493 28.312ZM30.9013 21.256V20.968C30.9013 18.264 30.0693 16.912 28.4053 16.912C27.6053 16.912 27.0213 17.168 26.6533 17.68C26.3013 18.176 26.1253 18.808 26.1253 19.576C26.1253 21.24 26.9093 22.072 28.4773 22.072C29.5013 22.072 30.3093 21.8 30.9013 21.256Z"
                     fill="#1D2E5B" />
                 </svg>
+                <svg class="companions-selection__level-large" width="64" height="64" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M27.44 2.35A30 30 0 1 0 32.52 2" stroke="#FF8D30" stroke-width="3" stroke-linecap="round" />
+                  <path
+                    d="M25.9 31.31c1.04.02 1.76-.3 2.14-.96.4-.67.65-1.67.74-3-.8.48-1.66.72-2.59.72a5.57 5.57 0 0 1-3.89-1.41c-1.04-.96-1.56-2.32-1.56-4.06 0-1.65.5-3.02 1.5-4.1.98-1.1 2.4-1.64 4.24-1.64 1.07 0 2 .2 2.76.6.77.4 1.36.99 1.78 1.76.43.76.73 1.63.9 2.59.2.96.3 2.06.3 3.31 0 2.96-.5 5.22-1.52 6.77a5 5 0 0 1-4.5 2.33c-.34 0-.71-.03-1.11-.08-.39-.03-.84-.1-1.37-.21a3.7 3.7 0 0 1-1.32-.6c-.35-.27-.55-.6-.6-.99-.05-.38.06-.72.34-1.03.28-.3.67-.45 1.15-.45.24 0 .63.07 1.17.21.56.15 1.04.23 1.44.24Zm2.96-7.05v-.3c0-2.7-.84-4.05-2.5-4.05-.8 0-1.38.26-1.75.77a3.2 3.2 0 0 0-.53 1.9c0 1.66.78 2.5 2.35 2.5 1.03 0 1.83-.28 2.43-.82Zm10 7.05c1.05.02 1.76-.3 2.14-.96.4-.67.65-1.67.75-3-.8.48-1.67.72-2.6.72a5.57 5.57 0 0 1-3.88-1.41c-1.04-.96-1.56-2.32-1.56-4.06 0-1.65.5-3.02 1.48-4.1 1-1.1 2.41-1.64 4.25-1.64 1.07 0 2 .2 2.76.6.77.4 1.36.99 1.78 1.76.43.76.73 1.63.9 2.59.2.96.3 2.06.3 3.31 0 2.96-.5 5.22-1.51 6.77a5 5 0 0 1-4.52 2.33c-.33 0-.7-.03-1.1-.08-.38-.03-.84-.1-1.37-.21a3.7 3.7 0 0 1-1.32-.6c-.35-.27-.55-.6-.6-.99-.05-.38.07-.72.34-1.03.29-.3.67-.45 1.15-.45.24 0 .63.07 1.18.21.56.15 1.04.23 1.44.24Zm2.96-7.05v-.3c0-2.7-.83-4.05-2.5-4.05-.8 0-1.38.26-1.75.77a3.2 3.2 0 0 0-.53 1.9c0 1.66.79 2.5 2.35 2.5 1.03 0 1.84-.28 2.43-.82Z"
+                    fill="#1D2E5B" />
+                  <path opacity=".1" stroke="#000" d="M17 38.5h31" />
+                  <path opacity=".4"
+                    d="M21.04 50.68V42.4c0-.15.05-.28.15-.38a.54.54 0 0 1 .4-.17.5.5 0 0 1 .38.17c.1.1.16.23.16.38v8.28c0 .31.06.53.2.66.06.09.1.17.1.27a.5.5 0 0 1-.16.36c-.1.1-.21.14-.35.14-.59 0-.88-.47-.88-1.43Zm5.4.47c.4 0 .88-.13 1.45-.4a.43.43 0 0 1 .2-.04c.14 0 .25.05.35.16.09.09.14.2.14.33 0 .31-.26.54-.76.69-.5.15-1 .22-1.51.22-.78 0-1.39-.21-1.84-.64-.43-.44-.65-1-.65-1.68v-2.62c0-.7.22-1.27.67-1.7a2.59 2.59 0 0 1 1.89-.67c.75 0 1.33.2 1.72.62.4.4.6.96.6 1.67 0 1.38-.79 2.07-2.36 2.07-.46 0-.94-.04-1.43-.13v.83c0 .4.13.72.39.95.26.22.64.34 1.13.34Zm1.18-4.06c0-.86-.42-1.3-1.27-1.3-.45 0-.8.12-1.06.36-.26.22-.38.53-.38.92v1.07c.48.06.97.1 1.47.1.48 0 .81-.1.98-.31.18-.22.26-.5.26-.84Zm7.3-1.56-1.9 5.92c-.15.44-.39.66-.71.66a.68.68 0 0 1-.45-.14c-.1-.1-.2-.27-.27-.5l-1.94-5.98a.4.4 0 0 1 .1-.43.56.56 0 0 1 .43-.21c.24 0 .4.12.49.36l1.64 5.28 1.6-5.28c.1-.24.26-.36.5-.36.17 0 .3.07.42.2.11.15.14.3.1.48Zm3.56 5.62c.4 0 .89-.13 1.45-.4a.43.43 0 0 1 .2-.04c.14 0 .26.05.35.16.1.09.14.2.14.33 0 .31-.25.54-.76.69-.5.15-1 .22-1.5.22-.78 0-1.4-.21-1.84-.64-.44-.44-.66-1-.66-1.68v-2.62c0-.7.22-1.27.67-1.7a2.59 2.59 0 0 1 1.9-.67c.75 0 1.32.2 1.71.62.4.4.6.96.6 1.67 0 1.38-.78 2.07-2.36 2.07-.46 0-.93-.04-1.43-.13v.83c0 .4.13.72.4.95.26.22.63.34 1.13.34Zm1.19-4.06c0-.86-.43-1.3-1.28-1.3-.44 0-.8.12-1.06.36-.25.22-.38.53-.38.92v1.07c.49.06.98.1 1.47.1s.81-.1.98-.31c.18-.22.27-.5.27-.84Zm2.49 3.6v-8.3c0-.14.05-.27.15-.37a.54.54 0 0 1 .4-.17.5.5 0 0 1 .39.17c.1.1.15.23.15.38v8.28c0 .31.07.53.2.66.06.09.1.17.1.27a.5.5 0 0 1-.16.36c-.1.1-.2.14-.35.14-.59 0-.88-.47-.88-1.43Z"
+                    fill="#000" /></svg>
               </div>
             </div>
             <a class="companions-selection__button-invite link" href="profiles/1/firsova-invite.html">Позвать!</a>
@@ -628,8 +634,12 @@
 
           <li class="companions-selection__item">
             <a class="companions-selection__photo-link" href="profiles/2/demin.html">
-              <img class="companions-selection__photo" src="img/companions-photo-demin.jpg" width="70" height="70"
-                alt="Пётр Дёмин">
+              <picture class="companions-selection__picture">
+                <source media="(min-width: 768px)"
+                  srcset="img/profile-photos/companions-photo-demin@1x.jpg 1x, img/profile-photos/companions-photo-demin@2x.jpg 2x">
+                <img class="companions-selection__photo" src="img/profile-photos/companions-photo-demin-mobile@1x.jpg"
+                  srcset="img/profile-photos/companions-photo-demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петр Демин">
+              </picture>
             </a>
             <a class="companions-selection__name-link link" href="profiles/2/demin.html">
               <h3 class="companions-selection__name companions-selection__name--offline">Петя Демин</h3>
@@ -642,8 +652,9 @@
             </div>
             <p class="companions-selection__hashtags-list">#бургер #бар #футбол #концерт #крафт</p>
             <div class="companions-selection__countries">
-              <h4 class="companions-selection__card-section-title companions-selection__countries-title">Хочет посетить:</h4>
-              <ul class="companions-selection__countries-list list">
+              <h4 class="companions-selection__card-section-title companions-selection__countries-title">Хочет посетить:
+              </h4>
+              <ul class="companions-selection__countries-list companions-selection__countries-list--smaller list">
                 <li class="companions-selection__countries-item">
                   <img src="img/flag-belgium.svg" width="26" height="18" alt="Флаг Бельгии">
                   <p>Бельгия</p>
@@ -654,9 +665,10 @@
                 </li>
               </ul>
             </div>
-            <div class="companions-selection__profile-extra">
+            <div class="companions-selection__profile-extra companions-selection__profile-extra--smaller">
               <div class="companions-selection__transport-section">
-                <h4 class="companions-selection__card-section-title companions-selection__transport-title">Транспорт:</h4>
+                <h4 class="companions-selection__card-section-title companions-selection__transport-title">Транспорт:
+                </h4>
                 <ul class="companions-selection__transport-list list">
                   <li class="companions-selection__transport-item">
                     <span class="companions-selection__transport-plane"></span>
@@ -684,6 +696,17 @@
                     d="M22.9325 25.7971C22.9325 27.3011 22.3645 28.5411 21.2285 29.5171C20.1085 30.4931 18.6685 30.9811 16.9085 30.9811C15.1645 30.9811 13.7165 30.5011 12.5645 29.5411C11.4285 28.5811 10.8605 27.3651 10.8605 25.8931C10.8605 24.2131 11.6525 22.8611 13.2365 21.8371C12.0525 20.9411 11.4605 19.7731 11.4605 18.3331C11.4605 16.9091 11.9805 15.7731 13.0205 14.9251C14.0605 14.0771 15.3485 13.6531 16.8845 13.6531C18.4205 13.6531 19.7085 14.0851 20.7485 14.9491C21.7885 15.7971 22.3085 16.8931 22.3085 18.2371C22.3085 19.6131 21.7165 20.7571 20.5325 21.6691C22.1325 22.7251 22.9325 24.1011 22.9325 25.7971ZM19.0205 18.3091C19.0205 17.7971 18.8125 17.3731 18.3965 17.0371C17.9965 16.7011 17.5005 16.5331 16.9085 16.5331C16.3005 16.5331 15.7885 16.7011 15.3725 17.0371C14.9725 17.3731 14.7725 17.7971 14.7725 18.3091C14.7725 18.8371 14.9805 19.2851 15.3965 19.6531C15.8125 20.0051 16.3325 20.2451 16.9565 20.3731C17.5645 20.2291 18.0605 19.9731 18.4445 19.6051C18.8285 19.2371 19.0205 18.8051 19.0205 18.3091ZM19.5965 25.7971C19.5965 25.1571 19.3325 24.6291 18.8045 24.2131C18.2925 23.7811 17.6365 23.4771 16.8365 23.3011C16.0525 23.4611 15.4125 23.7651 14.9165 24.2131C14.4365 24.6451 14.1965 25.1731 14.1965 25.7971C14.1965 26.4371 14.4525 26.9731 14.9645 27.4051C15.4925 27.8371 16.1405 28.0531 16.9085 28.0531C17.6765 28.0531 18.3165 27.8371 18.8285 27.4051C19.3405 26.9571 19.5965 26.4211 19.5965 25.7971ZM32.0774 18.9571C32.0774 17.2131 31.3414 16.3411 29.8694 16.3411C28.3974 16.3411 27.6614 17.2131 27.6614 18.9571V25.7251C27.6614 26.4291 27.8534 26.9891 28.2374 27.4051C28.6214 27.8211 29.1654 28.0291 29.8694 28.0291C30.5734 28.0291 31.1174 27.8211 31.5014 27.4051C31.8854 26.9891 32.0774 26.4291 32.0774 25.7251V18.9571ZM25.7174 15.0211C26.6454 13.9491 28.0294 13.4131 29.8694 13.4131C31.7094 13.4131 33.0934 13.9491 34.0214 15.0211C34.9494 16.0771 35.4134 17.4451 35.4134 19.1251V25.7251C35.4134 27.2451 34.9174 28.5011 33.9254 29.4931C32.9494 30.4851 31.5974 30.9811 29.8694 30.9811C28.1414 30.9811 26.7814 30.4851 25.7894 29.4931C24.8134 28.5011 24.3254 27.2451 24.3254 25.7251V19.1251C24.3254 17.4451 24.7894 16.0771 25.7174 15.0211Z"
                     fill="#1D2E5B" />
                 </svg>
+                <svg class="companions-selection__level-large" width="64" height="64" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.93 19.06A30 30 0 1 0 35.33 2.2" stroke="#FF8D30" stroke-width="3"
+                    stroke-linecap="round" />
+                  <path
+                    d="M32.5 29.03c0 1.5-.56 2.75-1.7 3.72a6.34 6.34 0 0 1-4.32 1.47c-1.74 0-3.2-.48-4.34-1.44a4.57 4.57 0 0 1-1.7-3.65c0-1.68.78-3.03 2.37-4.06a4.2 4.2 0 0 1-1.78-3.5c0-1.43.52-2.56 1.56-3.41a5.91 5.91 0 0 1 3.87-1.27c1.53 0 2.82.43 3.86 1.3a4.05 4.05 0 0 1 1.56 3.28c0 1.38-.6 2.52-1.78 3.43 1.6 1.06 2.4 2.44 2.4 4.13Zm-3.9-7.49c0-.5-.22-.93-.63-1.27-.4-.33-.9-.5-1.49-.5-.6 0-1.12.17-1.54.5-.4.34-.6.76-.6 1.27 0 .53.21.98.63 1.35.41.35.93.59 1.56.72.6-.15 1.1-.4 1.49-.77.38-.37.57-.8.57-1.3Zm.57 7.5c0-.65-.27-1.18-.8-1.6a4.5 4.5 0 0 0-1.96-.9c-.79.16-1.43.46-1.92.9-.48.44-.72.97-.72 1.6 0 .63.25 1.17.77 1.6.52.43 1.17.65 1.94.65s1.4-.22 1.92-.65c.51-.45.77-.98.77-1.6Zm12.48-6.85c0-1.74-.74-2.61-2.2-2.61-1.48 0-2.22.87-2.22 2.61v6.77c0 .7.2 1.26.58 1.68.38.42.93.62 1.63.62.7 0 1.25-.2 1.63-.62.39-.42.58-.98.58-1.68v-6.77Zm-6.36-3.93c.93-1.08 2.31-1.61 4.15-1.61 1.84 0 3.23.53 4.15 1.6a5.99 5.99 0 0 1 1.4 4.11v6.6a5.1 5.1 0 0 1-1.5 3.77 5.43 5.43 0 0 1-4.05 1.49c-1.73 0-3.09-.5-4.08-1.5a5.15 5.15 0 0 1-1.46-3.76v-6.6c0-1.68.46-3.05 1.39-4.1Z"
+                    fill="#1D2E5B" />
+                  <path opacity=".1" stroke="#000" d="M17 38.5h31" />
+                  <path opacity=".4"
+                    d="M21.04 50.68V42.4c0-.15.05-.28.15-.38a.54.54 0 0 1 .4-.17.5.5 0 0 1 .38.17c.1.1.16.23.16.38v8.28c0 .31.06.53.2.66.06.09.1.17.1.27a.5.5 0 0 1-.16.36c-.1.1-.21.14-.35.14-.59 0-.88-.47-.88-1.43Zm5.4.47c.4 0 .88-.13 1.45-.4a.43.43 0 0 1 .2-.04c.14 0 .25.05.35.16.09.09.14.2.14.33 0 .31-.26.54-.76.69-.5.15-1 .22-1.51.22-.78 0-1.39-.21-1.84-.64-.43-.44-.65-1-.65-1.68v-2.62c0-.7.22-1.27.67-1.7a2.59 2.59 0 0 1 1.89-.67c.75 0 1.33.2 1.72.62.4.4.6.96.6 1.67 0 1.38-.79 2.07-2.36 2.07-.46 0-.94-.04-1.43-.13v.83c0 .4.13.72.39.95.26.22.64.34 1.13.34Zm1.18-4.06c0-.86-.42-1.3-1.27-1.3-.45 0-.8.12-1.06.36-.26.22-.38.53-.38.92v1.07c.48.06.97.1 1.47.1.48 0 .81-.1.98-.31.18-.22.26-.5.26-.84Zm7.3-1.56-1.9 5.92c-.15.44-.39.66-.71.66a.68.68 0 0 1-.45-.14c-.1-.1-.2-.27-.27-.5l-1.94-5.98a.4.4 0 0 1 .1-.43.56.56 0 0 1 .43-.21c.24 0 .4.12.49.36l1.64 5.28 1.6-5.28c.1-.24.26-.36.5-.36.17 0 .3.07.42.2.11.15.14.3.1.48Zm3.56 5.62c.4 0 .89-.13 1.45-.4a.43.43 0 0 1 .2-.04c.14 0 .26.05.35.16.1.09.14.2.14.33 0 .31-.25.54-.76.69-.5.15-1 .22-1.5.22-.78 0-1.4-.21-1.84-.64-.44-.44-.66-1-.66-1.68v-2.62c0-.7.22-1.27.67-1.7a2.59 2.59 0 0 1 1.9-.67c.75 0 1.32.2 1.71.62.4.4.6.96.6 1.67 0 1.38-.78 2.07-2.36 2.07-.46 0-.93-.04-1.43-.13v.83c0 .4.13.72.4.95.26.22.63.34 1.13.34Zm1.19-4.06c0-.86-.43-1.3-1.28-1.3-.44 0-.8.12-1.06.36-.25.22-.38.53-.38.92v1.07c.49.06.98.1 1.47.1s.81-.1.98-.31c.18-.22.27-.5.27-.84Zm2.49 3.6v-8.3c0-.14.05-.27.15-.37a.54.54 0 0 1 .4-.17.5.5 0 0 1 .39.17c.1.1.15.23.15.38v8.28c0 .31.07.53.2.66.06.09.1.17.1.27a.5.5 0 0 1-.16.36c-.1.1-.2.14-.35.14-.59 0-.88-.47-.88-1.43Z"
+                    fill="#000" /></svg>
               </div>
             </div>
             <a class="companions-selection__button-invite link" href="profiles/3/smolov-invite.html">Позвать!</a>
@@ -691,8 +714,12 @@
 
           <li class="companions-selection__item">
             <a class="companions-selection__photo-link" href="profiles/3/smolov.html">
-              <img class="companions-selection__photo" src="img/companions-photo-smolov.jpg" width="70" height="70"
-                alt="Марк Смолов">
+              <picture class="companions-selection__picture">
+                <source media="(min-width: 768px)"
+                  srcset="img/profile-photos/companions-photo-smolov@1x.jpg 1x, img/profile-photos/companions-photo-smolov@2x.jpg 2x">
+                <img class="companions-selection__photo" src="img/profile-photos/companions-photo-smolov-mobile@1x.jpg"
+                  srcset="img/profile-photos/companions-photo-smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
+              </picture>
             </a>
             <a class="companions-selection__name-link link" href="profiles/3/smolov.html">
               <h3 class="companions-selection__name companions-selection__name--offline">Марк Смолов</h3>
@@ -705,8 +732,9 @@
             </div>
             <p class="companions-selection__hashtags-list">#рэп #тату #хайпбист #кроссовки #суприм</p>
             <div class="companions-selection__countries">
-              <h4 class="companions-selection__card-section-title companions-selection__countries-title">Хочет посетить:</h4>
-              <ul class="companions-selection__countries-list list">
+              <h4 class="companions-selection__card-section-title companions-selection__countries-title">Хочет посетить:
+              </h4>
+              <ul class="companions-selection__countries-list companions-selection__countries-list--larger list">
                 <li class="companions-selection__countries-item">
                   <img src="img/flag-usa.svg" width="26" height="18" alt="Флаг США">
                   <p>США</p>
@@ -721,9 +749,10 @@
                 </li>
               </ul>
             </div>
-            <div class="companions-selection__profile-extra">
+            <div class="companions-selection__profile-extra companions-selection__profile-extra--smaller">
               <div class="companions-selection__transport-section">
-                <h4 class="companions-selection__card-section-title companions-selection__transport-title">Транспорт:</h4>
+                <h4 class="companions-selection__card-section-title companions-selection__transport-title">Транспорт:
+                </h4>
                 <ul class="companions-selection__transport-list list">
                   <li class="companions-selection__transport-item">
                     <span class="companions-selection__transport-plane"></span>
@@ -752,14 +781,29 @@
                     d="M21.1804 29.488C21.1804 28.648 20.4604 28 19.5244 28H14.1724C15.4684 26.224 17.5804 24.736 19.1884 23.056C20.2924 21.904 21.0844 20.56 21.0844 18.52C21.0844 15.808 19.0444 13.648 15.5404 13.648C13.5964 13.648 10.1644 14.392 10.1644 16.144C10.1644 17.032 10.9804 17.608 11.7964 17.608C12.4924 17.608 12.9724 17.176 13.5004 16.96C14.0764 16.72 14.7004 16.576 15.5164 16.576C17.0044 16.576 17.7724 17.536 17.7724 18.76C17.7724 20.536 15.8524 21.904 14.5324 23.104C12.8284 24.64 11.0764 26.176 10.1164 28.288C9.94835 28.648 9.92435 29.08 9.92435 29.416C9.92435 30.304 10.6204 31 11.6284 31H19.5244C20.4604 31 21.1804 30.328 21.1804 29.488ZM33.9973 25.36C33.9973 21.976 31.6933 19.96 28.4053 19.96C27.8773 19.96 27.3253 20.008 26.8453 20.152L26.9893 17.032H31.4773C32.3413 17.032 33.3013 16.648 33.3013 15.568C33.3013 14.464 32.3413 14.056 31.4773 14.056H25.6933C24.8053 14.056 23.8933 14.656 23.8693 15.664L23.6293 22.288C23.6053 23.248 24.3493 23.92 25.3093 23.92C26.0773 23.92 27.0373 23.176 27.0373 23.176C27.4453 22.96 27.8293 22.864 28.3573 22.864C29.6533 22.864 30.6613 23.68 30.6613 25.456C30.6613 26.872 30.0133 28.288 27.8773 28.288C26.2693 28.288 25.5973 27.4 24.6613 27.4C23.7493 27.4 23.0533 28.096 23.0533 28.888C23.0533 30.88 27.3013 31.192 28.4293 31.192C32.3653 31.192 33.9973 28.144 33.9973 25.36Z"
                     fill="#1D2E5B" />
                 </svg>
+                <svg class="companions-selection__level-large" width="62" height="62" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M59.8 35.45A30 30 0 0 0 33.45 2.2" stroke="#FF8D30" stroke-width="3"
+                    stroke-linecap="round" />
+                  <path
+                    d="M29.62 31.43a1.44 1.44 0 0 1 0 2.14 1.7 1.7 0 0 1-1.18.43h-7.9c-.5 0-.9-.15-1.22-.46a1.5 1.5 0 0 1-.48-1.12c0-.48.06-.86.2-1.13.3-.66.72-1.32 1.26-2 .55-.68 1-1.2 1.37-1.55a84.51 84.51 0 0 1 2.6-2.33c.46-.42.77-.7.93-.87l.7-.79c.3-.35.5-.69.62-1 .11-.33.17-.65.17-.99 0-.64-.2-1.16-.6-1.56-.39-.42-.94-.62-1.66-.62a5.14 5.14 0 0 0-2.52.64c-.2.12-.4.21-.6.3a1.88 1.88 0 0 1-1.75-.32 1.32 1.32 0 0 1-.48-1.06c0-.78.6-1.39 1.78-1.82 1.2-.45 2.4-.67 3.6-.67 1.7 0 3.04.46 4.03 1.39 1 .91 1.51 2.07 1.51 3.48 0 1.71-.63 3.22-1.9 4.54-.32.33-1.1 1.07-2.37 2.2A19.42 19.42 0 0 0 23.09 31h5.35c.46 0 .86.14 1.18.43Zm13.3-3.07c0 1.57-.48 2.94-1.42 4.1-.95 1.16-2.33 1.73-4.15 1.73a14.67 14.67 0 0 1-3.1-.38 4.77 4.77 0 0 1-1.63-.72c-.43-.34-.65-.74-.65-1.2 0-.4.15-.75.46-1.03.32-.3.7-.46 1.15-.46.25 0 .7.15 1.34.46.66.28 1.28.43 1.87.43 1 0 1.7-.27 2.14-.8.43-.54.65-1.22.65-2.03 0-.85-.22-1.5-.65-1.92a2.15 2.15 0 0 0-1.66-.68c-.48 0-.92.1-1.32.32-.64.5-1.21.74-1.72.74-.48 0-.9-.15-1.23-.46-.32-.3-.47-.7-.45-1.17l.24-6.63c.01-.48.2-.86.55-1.15.37-.3.79-.45 1.27-.45h5.78c.5 0 .92.12 1.28.38.36.24.55.62.55 1.13 0 .5-.19.86-.55 1.1a2.2 2.2 0 0 1-1.28.36h-4.48l-.15 3.12c.43-.13.95-.19 1.56-.19 1.67 0 3 .49 4.03 1.46a5.1 5.1 0 0 1 1.56 3.94Z"
+                    fill="#1D2E5B" />
+                  <path opacity=".1" stroke="#000" d="M15 38.5h31" />
+                  <path opacity=".4"
+                    d="M19.04 50.68V42.4c0-.15.05-.28.15-.38a.54.54 0 0 1 .4-.17.5.5 0 0 1 .38.17c.1.1.16.23.16.38v8.28c0 .31.06.53.2.66.06.09.1.17.1.27a.5.5 0 0 1-.16.36c-.1.1-.21.14-.35.14-.59 0-.88-.47-.88-1.43Zm5.4.47c.4 0 .88-.13 1.45-.4a.43.43 0 0 1 .2-.04c.14 0 .25.05.35.16.09.09.14.2.14.33 0 .31-.26.54-.76.69-.5.15-1 .22-1.51.22-.78 0-1.39-.21-1.84-.64-.43-.44-.65-1-.65-1.68v-2.62c0-.7.22-1.27.67-1.7a2.59 2.59 0 0 1 1.89-.67c.75 0 1.33.2 1.72.62.4.4.6.96.6 1.67 0 1.38-.79 2.07-2.36 2.07-.46 0-.94-.04-1.43-.13v.83c0 .4.13.72.39.95.26.22.64.34 1.13.34Zm1.18-4.06c0-.86-.42-1.3-1.27-1.3-.45 0-.8.12-1.06.36-.26.22-.38.53-.38.92v1.07c.48.06.97.1 1.47.1.48 0 .81-.1.98-.31.18-.22.26-.5.26-.84Zm7.3-1.56-1.9 5.92c-.15.44-.39.66-.71.66a.68.68 0 0 1-.45-.14c-.1-.1-.2-.27-.27-.5l-1.94-5.98a.4.4 0 0 1 .1-.43.56.56 0 0 1 .43-.21c.24 0 .4.12.49.36l1.64 5.28 1.6-5.28c.1-.24.26-.36.5-.36.17 0 .3.07.42.2.11.15.14.3.1.48Zm3.56 5.62c.4 0 .89-.13 1.45-.4a.43.43 0 0 1 .2-.04c.14 0 .26.05.35.16.1.09.14.2.14.33 0 .31-.25.54-.76.69-.5.15-1 .22-1.5.22-.78 0-1.4-.21-1.84-.64-.44-.44-.66-1-.66-1.68v-2.62c0-.7.22-1.27.67-1.7a2.59 2.59 0 0 1 1.9-.67c.75 0 1.32.2 1.71.62.4.4.6.96.6 1.67 0 1.38-.78 2.07-2.36 2.07-.46 0-.93-.04-1.43-.13v.83c0 .4.13.72.4.95.26.22.63.34 1.13.34Zm1.19-4.06c0-.86-.43-1.3-1.28-1.3-.44 0-.8.12-1.06.36-.25.22-.38.53-.38.92v1.07c.49.06.98.1 1.47.1s.81-.1.98-.31c.18-.22.27-.5.27-.84Zm2.49 3.6v-8.3c0-.14.05-.27.15-.37a.54.54 0 0 1 .4-.17.5.5 0 0 1 .39.17c.1.1.15.23.15.38v8.28c0 .31.07.53.2.66.06.09.1.17.1.27a.5.5 0 0 1-.16.36c-.1.1-.2.14-.35.14-.59 0-.88-.47-.88-1.43Z"
+                    fill="#000" /></svg>
               </div>
             </div>
             <a class="companions-selection__button-invite link" href="profiles/3/smolov-invite.html">Позвать!</a>
           </li>
           <li class="companions-selection__item">
             <a class="companions-selection__photo-link" href="profiles/4/rogovaya.html">
-              <img class="companions-selection__photo" src="img/companions-photo-rogovaya.jpg" width="70" height="70"
-                alt="Лариса Роговая">
+              <picture class="companions-selection__picture">
+                <source media="(min-width: 768px)"
+                  srcset="img/profile-photos/companions-photo-rogovaya@1x.jpg 1x, img/profile-photos/companions-photo-rogovaya@2x.jpg 2x">
+                <img class="companions-selection__photo" src="img/profile-photos/companions-photo-rogovaya-mobile@1x.jpg"
+                  srcset="img/profile-photos/companions-photo-rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
+              </picture>
             </a>
             <a class="companions-selection__name-link link" href="profiles/4/rogovaya.html">
               <h3 class="companions-selection__name companions-selection__name--online">Лариса Роговая</h3>
@@ -772,8 +816,9 @@
             </div>
             <p class="companions-selection__hashtags-list">#образование #карьера #учеба #линкедин</p>
             <div class="companions-selection__countries">
-              <h4 class="companions-selection__card-section-title companions-selection__countries-title">Хочет посетить:</h4>
-              <ul class="companions-selection__countries-list list">
+              <h4 class="companions-selection__card-section-title companions-selection__countries-title">Хочет посетить:
+              </h4>
+              <ul class="companions-selection__countries-list companions-selection__countries-list--smaller list">
                 <li class="companions-selection__countries-item">
                   <img src="img/flag-uk.svg" width="26" height="18" alt="Флаг Великобритании">
                   <p>Великобритания</p>
@@ -786,7 +831,8 @@
             </div>
             <div class="companions-selection__profile-extra">
               <div class="companions-selection__transport-section">
-                <h4 class="companions-selection__card-section-title companions-selection__transport-title">Транспорт:</h4>
+                <h4 class="companions-selection__card-section-title companions-selection__transport-title">Транспорт:
+                </h4>
                 <ul class="companions-selection__transport-list list">
                   <li class="companions-selection__transport-item">
                     <span class="companions-selection__transport-plane"></span>
@@ -815,6 +861,15 @@
                     d="M22.3805 26.9652C22.3805 28.5332 21.9085 29.9012 20.9645 31.0692C20.0205 32.2212 18.6365 32.7972 16.8125 32.7972C16.4285 32.7972 15.9805 32.7652 15.4685 32.7012C14.9565 32.6532 14.3725 32.5572 13.7165 32.4132C13.0765 32.2532 12.5325 32.0132 12.0845 31.6932C11.6525 31.3572 11.4365 30.9572 11.4365 30.4932C11.4365 30.0932 11.5885 29.7492 11.8925 29.4612C12.2125 29.1572 12.5965 29.0052 13.0445 29.0052C13.3005 29.0052 13.7485 29.1572 14.3885 29.4612C15.0445 29.7492 15.6685 29.8932 16.2605 29.8932C17.2525 29.8932 17.9645 29.6292 18.3965 29.1012C18.8285 28.5572 19.0445 27.8772 19.0445 27.0612C19.0445 26.2132 18.8285 25.5732 18.3965 25.1412C17.9805 24.6932 17.4285 24.4692 16.7405 24.4692C16.2605 24.4692 15.8205 24.5732 15.4205 24.7812C14.7805 25.2772 14.2045 25.5252 13.6925 25.5252C13.2125 25.5252 12.8045 25.3732 12.4685 25.0692C12.1485 24.7652 11.9965 24.3732 12.0125 23.8932L12.2525 17.2692C12.2685 16.7892 12.4525 16.4052 12.8045 16.1172C13.1725 15.8132 13.5965 15.6612 14.0765 15.6612H19.8605C20.3565 15.6612 20.7805 15.7892 21.1325 16.0452C21.5005 16.2852 21.6845 16.6612 21.6845 17.1732C21.6845 17.6692 21.5005 18.0372 21.1325 18.2772C20.7805 18.5172 20.3565 18.6372 19.8605 18.6372H15.3725L15.2285 21.7572C15.6605 21.6292 16.1805 21.5652 16.7885 21.5652C18.4525 21.5652 19.7965 22.0532 20.8205 23.0292C21.8605 23.9892 22.3805 25.3012 22.3805 26.9652ZM32.0774 20.7972C32.0774 19.0532 31.3414 18.1812 29.8694 18.1812C28.3974 18.1812 27.6614 19.0532 27.6614 20.7972V27.5652C27.6614 28.2692 27.8534 28.8292 28.2374 29.2452C28.6214 29.6612 29.1654 29.8692 29.8694 29.8692C30.5734 29.8692 31.1174 29.6612 31.5014 29.2452C31.8854 28.8292 32.0774 28.2692 32.0774 27.5652V20.7972ZM25.7174 16.8612C26.6454 15.7892 28.0294 15.2532 29.8694 15.2532C31.7094 15.2532 33.0934 15.7892 34.0214 16.8612C34.9494 17.9172 35.4134 19.2852 35.4134 20.9652V27.5652C35.4134 29.0852 34.9174 30.3412 33.9254 31.3332C32.9494 32.3252 31.5974 32.8212 29.8694 32.8212C28.1414 32.8212 26.7814 32.3252 25.7894 31.3332C24.8134 30.3412 24.3254 29.0852 24.3254 27.5652V20.9652C24.3254 19.2852 24.7894 17.9172 25.7174 16.8612Z"
                     fill="#1D2E5B" />
                 </svg>
+                <svg class="companions-selection__level-large" width="62" height="64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M30 62a30 30 0 1 0 0-60" stroke="#FF8D30" stroke-width="3" stroke-linecap="round" />
+                  <path
+                    d="M29.95 28.36c0 1.57-.47 2.94-1.41 4.1-.95 1.16-2.33 1.73-4.16 1.73a14.67 14.67 0 0 1-3.1-.38 4.77 4.77 0 0 1-1.62-.72c-.44-.34-.65-.74-.65-1.2 0-.4.15-.75.45-1.03.32-.3.7-.46 1.16-.46.25 0 .7.15 1.34.46.66.28 1.28.43 1.87.43 1 0 1.7-.27 2.14-.8.43-.54.65-1.22.65-2.03 0-.85-.22-1.5-.65-1.92a2.15 2.15 0 0 0-1.66-.68c-.48 0-.92.1-1.32.32-.64.5-1.21.74-1.73.74-.48 0-.88-.15-1.22-.46-.32-.3-.47-.7-.46-1.17l.24-6.63c.02-.48.2-.86.56-1.15.36-.3.79-.45 1.27-.45h5.78c.5 0 .92.12 1.27.38.37.24.56.62.56 1.13 0 .5-.19.86-.56 1.1a2.2 2.2 0 0 1-1.27.36h-4.49l-.14 3.12c.43-.13.95-.19 1.56-.19 1.66 0 3 .49 4.03 1.46a5.1 5.1 0 0 1 1.56 3.94Zm9.7-6.17c0-1.74-.74-2.61-2.2-2.61-1.48 0-2.22.87-2.22 2.61v6.77c0 .7.2 1.26.58 1.68.38.42.93.62 1.63.62.7 0 1.25-.2 1.63-.62.39-.42.58-.98.58-1.68v-6.77Zm-6.36-3.93c.93-1.08 2.31-1.61 4.15-1.61 1.84 0 3.23.53 4.15 1.6a5.99 5.99 0 0 1 1.4 4.11v6.6a5.1 5.1 0 0 1-1.5 3.77 5.43 5.43 0 0 1-4.05 1.49c-1.73 0-3.09-.5-4.08-1.5a5.15 5.15 0 0 1-1.46-3.76v-6.6c0-1.68.46-3.05 1.39-4.1Z"
+                    fill="#1D2E5B" />
+                  <path opacity=".1" stroke="#000" d="M15 38.5h31" />
+                  <path opacity=".4"
+                    d="M19.04 50.68V42.4c0-.15.05-.28.15-.38a.54.54 0 0 1 .4-.17.5.5 0 0 1 .38.17c.1.1.16.23.16.38v8.28c0 .31.06.53.2.66.06.09.1.17.1.27a.5.5 0 0 1-.16.36c-.1.1-.21.14-.35.14-.59 0-.88-.47-.88-1.43Zm5.4.47c.4 0 .88-.13 1.45-.4a.43.43 0 0 1 .2-.04c.14 0 .25.05.35.16.09.09.14.2.14.33 0 .31-.26.54-.76.69-.5.15-1 .22-1.51.22-.78 0-1.39-.21-1.84-.64-.43-.44-.65-1-.65-1.68v-2.62c0-.7.22-1.27.67-1.7a2.59 2.59 0 0 1 1.89-.67c.75 0 1.33.2 1.72.62.4.4.6.96.6 1.67 0 1.38-.79 2.07-2.36 2.07-.46 0-.94-.04-1.43-.13v.83c0 .4.13.72.39.95.26.22.64.34 1.13.34Zm1.18-4.06c0-.86-.42-1.3-1.27-1.3-.45 0-.8.12-1.06.36-.26.22-.38.53-.38.92v1.07c.48.06.97.1 1.47.1.48 0 .81-.1.98-.31.18-.22.26-.5.26-.84Zm7.3-1.56-1.9 5.92c-.15.44-.39.66-.71.66a.68.68 0 0 1-.45-.14c-.1-.1-.2-.27-.27-.5l-1.94-5.98a.4.4 0 0 1 .1-.43.56.56 0 0 1 .43-.21c.24 0 .4.12.49.36l1.64 5.28 1.6-5.28c.1-.24.26-.36.5-.36.17 0 .3.07.42.2.11.15.14.3.1.48Zm3.56 5.62c.4 0 .89-.13 1.45-.4a.43.43 0 0 1 .2-.04c.14 0 .26.05.35.16.1.09.14.2.14.33 0 .31-.25.54-.76.69-.5.15-1 .22-1.5.22-.78 0-1.4-.21-1.84-.64-.44-.44-.66-1-.66-1.68v-2.62c0-.7.22-1.27.67-1.7a2.59 2.59 0 0 1 1.9-.67c.75 0 1.32.2 1.71.62.4.4.6.96.6 1.67 0 1.38-.78 2.07-2.36 2.07-.46 0-.93-.04-1.43-.13v.83c0 .4.13.72.4.95.26.22.63.34 1.13.34Zm1.19-4.06c0-.86-.43-1.3-1.28-1.3-.44 0-.8.12-1.06.36-.25.22-.38.53-.38.92v1.07c.49.06.98.1 1.47.1s.81-.1.98-.31c.18-.22.27-.5.27-.84Zm2.49 3.6v-8.3c0-.14.05-.27.15-.37a.54.54 0 0 1 .4-.17.5.5 0 0 1 .39.17c.1.1.15.23.15.38v8.28c0 .31.07.53.2.66.06.09.1.17.1.27a.5.5 0 0 1-.16.36c-.1.1-.2.14-.35.14-.59 0-.88-.47-.88-1.43Z"
+                    fill="#000" /></svg>
               </div>
             </div>
             <a class="companions-selection__button-invite link" href="profiles/4/rogovaya-invite.html">Позвать!</a>
@@ -894,7 +949,7 @@
       </div>
     </div>
   </footer>
-  <script src="./js/script.js"></script>
+  <script src="./js/script.min.js"></script>
 </body>
 
 </html>

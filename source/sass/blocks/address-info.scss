@@ -52,7 +52,7 @@
     display: block;
     width: 45px;
     height: 45px;
-    background-image: url("../../img/icon-map-mark.svg");
+    background-image: url("../../img/icons/icon-map-mark.svg");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -98,7 +98,7 @@
   line-height: 18px;
 
   &::after {
-    content: url("../../img/icon-button-arrow-right-blue.svg");
+    content: url("../../img/icons/icon-button-arrow-right-blue.svg");
     position: absolute;
     top: 19px;
     right: 19px;
@@ -110,7 +110,7 @@
     color: $white;
 
     &::after {
-      content: url("../../img/icon-button-arrow-right-white.svg");
+      content: url("../../img/icons/icon-button-arrow-right-white.svg");
     }
   }
 
