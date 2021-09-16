@@ -296,21 +296,20 @@ if (window.location.href.indexOf('/catalog.html') !== -1) {
 
   // Фильтр попутчиков - открытие-скрытие секций фильтра
   const filterSection = document.querySelectorAll('.companion-filter__filter-list');
-  const filterButton = document.querySelectorAll('.companion-filter__button');
+  const filterLabel = document.querySelectorAll('.companion-filter__section-label');
+
 
   for (let i = 0; i < filterSection.length; i++) {
-    filterButton[i].addEventListener('click', evt => {
+    filterLabel[i].addEventListener('click', evt => {
       evt.preventDefault();
-      if (!filterButton[i].classList.contains('companion-filter__button--closed') && !filterSection[i].classList.contains('companion-filter__filter-list--closed')) {
+      if (!filterLabel[i].classList.contains('companion-filter__section-label--closed') && !filterSection[i].classList.contains('companion-filter__filter-list--closed')) {
 
-        filterButton[i].classList.toggle('companion-filter__button--closed');
-        filterButton[i].setAttribute('aria-label', 'Показать секцию фильтра');
+        filterLabel[i].classList.toggle('companion-filter__section-label--closed');
         filterSection[i].classList.toggle('companion-filter__filter-list--closed');
 
       } else {
 
-        filterButton[i].classList.remove('companion-filter__button--closed');
-        filterButton[i].setAttribute('aria-label', 'Скрыть секцию фильтра');
+        filterLabel[i].classList.remove('companion-filter__section-label--closed');
         filterSection[i].classList.remove('companion-filter__filter-list--closed');
 
       }

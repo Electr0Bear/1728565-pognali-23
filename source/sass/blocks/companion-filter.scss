@@ -90,13 +90,28 @@
 
 .companion-filter__section-label {
   display: inline-block;
+  width: fit-content;
   font-weight: 700;
   line-height: 18px;
   text-transform: uppercase;
   color: $blueLight;
+  cursor: pointer;
 
   & span {
     display: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 5px;
+    display: block;
+    width: 11px;
+    height: 7px;
+    background-image: url("../../img/icons/icon-triangle-up.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
   }
 
   @media (min-width: $tablet) {
@@ -109,7 +124,28 @@
       display: inline-block;
     }
   }
+
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    &::before {
+      display: none;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
+
+
+.companion-filter__section-label--closed::before {
+  transform: rotate(180deg);
+}
+
 
 .companion-filter__filter-list {
   margin-top: 15px;
@@ -125,14 +161,6 @@
   @media (min-width: $desktop) {
     margin-top: 28px;
     margin-bottom: 6px;
-  }
-}
-
-.companion-filter__filter-list--closed {
-  display: none;
-
-  @media (min-width: $tablet) and (max-width: 1439px) {
-    display: flex;
   }
 }
 
@@ -239,29 +267,6 @@
   }
 }
 
-.companion-filter__button {
-  display: block;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  top: 5px;
-  border: none;
-  width: 11px;
-  height: 7px;
-  background: transparent;
-  background-image: url("../../img/icons/icon-triangle-up.svg");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-
-  @media (min-width: $tablet) and (max-width: 1439px) {
-    display: none;
-  }
-}
-
-.companion-filter__button--closed {
-  transform: rotate(180deg);
-}
-
 .companion-filter__level {
   @media (min-width: $tablet) and (max-width: 1439px) {
     margin-top: 10px;
@@ -303,6 +308,16 @@
   @media (min-width: $desktop) {
     margin-top: 21px;
     margin-bottom: 39px;
+  }
+}
+
+.companion-filter__filter-level {
+  margin: 0;
+
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    width: 490px;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -410,6 +425,14 @@
 
 .companion-filter__level-scale-max {
   right: 0;
+}
+
+.companion-filter__filter-list--closed {
+  display: none;
+
+  @media (min-width: $tablet) and (max-width: 1439px) {
+    display: flex;
+  }
 }
 
 .companion-filter__button-submit {
