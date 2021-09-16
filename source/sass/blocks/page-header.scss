@@ -60,6 +60,14 @@
   }
 }
 
+.page-header__navigation--preopened {
+  @media (max-width: 1439px) {
+    position: relative;
+    padding-top: 27px;
+    background-color: $white;
+  }
+}
+
 .page-header__navigation-wrapper {
   position: relative;
 

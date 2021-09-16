@@ -12,15 +12,15 @@
 <body class="page-body">
   <header class="page-header page-header--light">
     <h2 class="visually-hidden">Навигация по странице</h2>
-    <nav class="page-header__navigation">
+    <nav class="page-header__navigation page-header__navigation--preopened">
       <div class="page-header__navigation-wrapper container">
         <a class="page-header__logo">
-          <picture class="page-header__logo-regular">
+          <picture class="page-header__logo-regular" hidden>
             <source srcset="img/header-logo-desktop.svg" media="(min-width: 1440px)">
             <source srcset="img/header-logo-tablet.svg" media="(min-width: 768px)">
             <img src="img/header-logo-mobile.svg" alt="Погнали?">
           </picture>
-          <picture class="page-header__logo-blue" hidden>
+          <picture class="page-header__logo-blue">
             <source srcset="img/header-logo-desktop-blue.svg" media="(min-width: 1440px)">
             <source srcset="img/header-logo-tablet-blue.svg" media="(min-width: 768px)">
             <img src="img/header-logo-mobile-blue.svg" alt="Погнали?">
@@ -30,7 +30,7 @@
           <span class="page-header__menu-button-open visually-hidden">Открыть меню навигации</span>
           <span class="page-header__menu-button-close visually-hidden" hidden>Закрыть меню навигации</span>
         </a>
-        <ul class="page-header__nav-list page-header__nav-list--closed list">
+        <ul class="page-header__nav-list list">
           <li class="page-header__nav-item">
             <a class="page-header__nav-link link">
               <span data-hover="О сервисе">О сервисе</span>
@@ -48,21 +48,21 @@
           </li>
         </ul>
         <ul class="page-header__auth-list list">
-          <li class="page-header__auth-item page-header__auth-item--closed page-header__login-item">
+          <li class="page-header__auth-item page-header__login-item">
             <a class="page-header__login link" href="login.html">Авторизация</a>
           </li>
-          <li class="page-header__auth-item page-header__auth-item--closed page-header__contact-item">
+          <li class="page-header__auth-item page-header__contact-item">
             <a class="page-header__phone page-header__contact-link link" href="tel:+78005558628">
               <span class="page-header__auth-text">8 800 555-86-28</span>
             </a>
           </li>
-          <li class="page-header__auth-item page-header__auth-item--closed page-header__contact-item">
+          <li class="page-header__auth-item page-header__contact-item">
             <a class="page-header__email page-header__contact-link link" href="mailto:mail@htmlacademy.ru">
               <span class="page-header__auth-text">mail@htmlacademy.ru</span>
             </a>
           </li>
         </ul>
-        <ul class="page-header__socials-list page-header__socials-list--closed  list">
+        <ul class="page-header__socials-list list">
           <li class="page-header__socials-item">
             <a class="page-header__socials-link page-header__socials-facebook">
               <span class="visually-hidden">Facebook</span>
