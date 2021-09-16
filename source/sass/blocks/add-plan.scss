@@ -43,10 +43,15 @@
 
 .add-plan__slider-buttons-list {
   position: absolute;
-  top: 30px;
+  top: 10px;
   right: 18px;
   display: flex;
   flex-wrap: nowrap;
+
+  @media (min-width: $tablet) {
+    top: 15px;
+    right: 0;
+  }
 
   @media (min-width: $desktop) {
     flex-direction: column;
@@ -55,32 +60,17 @@
   }
 }
 
-.add-plan__slider-buttons-item:not(:last-child) {
-  margin-right: 20px;
-
-  @media (min-width: $tablet) {
-    margin-right: 29px;
-  }
-
-  @media (min-width: $desktop) {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-}
-
-.add-plan__slider-button {
+.add-plan__slider-buttons-item {
   opacity: 0.3;
   position: relative;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.11em;
   text-transform: uppercase;
-  cursor: pointer;
 
   &--active {
     opacity: 1;
-    cursor: default;
   }
 
   &::before {
@@ -100,6 +90,19 @@
       top: calc(50% - 3px);
       left: -40px;
     }
+  }
+}
+
+.add-plan__slider-buttons-item:not(:last-child) {
+  margin-right: 20px;
+
+  @media (min-width: $tablet) {
+    margin-right: 35px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
 
