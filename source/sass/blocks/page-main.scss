@@ -28,6 +28,10 @@
     padding-bottom: 71px;
     border-radius: 0 0 60px 60px;
   }
+
+  @media (min-width: $desktop) {
+    padding-top: 112px;
+  }
 }
 
 .page-main__flex-container {
