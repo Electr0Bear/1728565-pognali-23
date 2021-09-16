@@ -160,6 +160,8 @@ const build = gulp.series(
 );
 exports.build = build;
 
+// Default
+
 exports.default = gulp.series(
   clean,
   copy,
