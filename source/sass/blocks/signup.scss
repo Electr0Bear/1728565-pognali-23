@@ -188,7 +188,7 @@
   padding: 0;
   border: none;
   width: 60px;
-  height: 62px;
+  min-height: 62px;
   background-color: $yellow;
   border-radius: 10px;
 
@@ -211,7 +211,7 @@
 
   @media (min-width: $tablet) {
     width: 80px;
-    height: 80px;
+    min-height: 80px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 0;

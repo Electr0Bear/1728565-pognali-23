@@ -23,7 +23,7 @@
 .page-footer__wrapper {
   @media (min-width: $tablet) {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
@@ -31,7 +31,6 @@
 
 .page-footer__logo {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
 
   @media (min-width: $tablet) {
@@ -43,7 +42,7 @@
   margin-top: 36px;
   margin-bottom: 35px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
 
   @media (min-width: $tablet) {
