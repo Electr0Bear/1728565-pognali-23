@@ -235,7 +235,7 @@ if (window.location.href.indexOf('/form.html') !== -1) {
         element.classList.remove('extra-info__input-field--active');
         element.classList.toggle('extra-info__input-field--error');
         element.parentElement.classList.toggle('extra-info__input-field-wrapper--error');
-      } else if (element.value !=="") {
+      } else if (element.value !=="" && !element.classList.contains('extra-info__input-field--active')) {
         element.classList.remove('extra-info__input-field--error');
         element.classList.toggle('extra-info__input-field--active');
         element.parentElement.classList.remove('extra-info__input-field-wrapper--error');
