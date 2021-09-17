@@ -91,7 +91,7 @@
         </div>
       </div>
     </div>
-    <form action="https://echo.htmlacademy.ru" method="POST">
+    <form class="form" action="https://echo.htmlacademy.ru" method="POST">
       <!-- Данные профиля -->
       <section class="form-profile container container--extra">
         <h2 class="visually-hidden">Ваш профиль</h2>
@@ -646,15 +646,19 @@
                     <span class="extra-info__label">Босния и Герцеговина</span>
                     <img src="img/flag-bosnia-and-herzegovina.svg" width="35" height="24"
                       alt="Флаг Боснии и Герцеговины">
-                    <textarea class="extra-info__input-field" name="extra-info-bosnia-herzegovina"
-                      id="extra-info-bosnia-herzegovina" placeholder="План действий"></textarea>
+                    <div class="extra-info__input-field-wrapper">
+                      <textarea class="extra-info__input-field" name="extra-info-bosnia-herzegovina"
+                        id="extra-info-bosnia-herzegovina" placeholder="План действий" required></textarea>
+                    </div>
                   </li>
                   <li class="extra-info__country-item extra-info__second-country-item">
                     <label class="visually-hidden" for="extra-info-czech">Развернутое описание Ваших планов</label>
                     <span class="extra-info__label">Чехия</span>
                     <img src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
-                    <textarea class="extra-info__input-field" name="extra-info-czech" id="extra-info-czech"
-                      placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                    <div class="extra-info__input-field-wrapper">
+                      <textarea class="extra-info__input-field" name="extra-info-czech" id="extra-info-czech"
+                      placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                    </div>
                   </li>
                 </ul>
               </fieldset>
@@ -663,7 +667,7 @@
               <a
                 class="add-plan__button add-plan__button--show add-plan__button-next-step add-plan__button-next-step--show">Следующий
                 шаг</a>
-              <button class="add-plan__button add-plan__button-submit" type="submit">Отправить</button>
+              <button class="add-plan__button add-plan__button-submit" type="submit" formnovalidate>Отправить</button>
               <a class="add-plan__button add-plan__button-previous-step">На шаг назад</a>
             </div>
           </section>

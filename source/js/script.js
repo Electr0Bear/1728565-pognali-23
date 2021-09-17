@@ -146,19 +146,18 @@ if (window.location.href.indexOf('/form.html') !== -1) {
   const btnNext = document.querySelector('.add-plan__button-next-step');
   const btnPrev = document.querySelector('.add-plan__button-previous-step');
   const btnSubmit = document.querySelector('.add-plan__button-submit');
-  const sliderBtns = document.querySelectorAll('.add-plan__slider-button');
+  const sliderBtns = document.querySelectorAll('.add-plan__slider-buttons-item');
 
   btnNext.addEventListener('click', evt => {
     evt.preventDefault();
     for (let i = 0; i < planStep.length; i++) {
-      console.log(planStep[i]);
       if (planStep[i].classList.contains('add-plan__step--show')) {
         const j = i + 1;
         if (j < planStep.length) {
           planStep[i].classList.remove('add-plan__step--show');
-          sliderBtns[i].classList.remove('add-plan__slider-button--active');
+          sliderBtns[i].classList.remove('add-plan__slider-buttons-item--active');
           planStep[j].classList.toggle('add-plan__step--show');
-          sliderBtns[j].classList.toggle('add-plan__slider-button--active');
+          sliderBtns[j].classList.toggle('add-plan__slider-buttons-item--active');
           if (!btnPrev.classList.contains('add-plan__button--show') && j > 0) {
             btnPrev.classList.toggle('add-plan__button--show');
           }
@@ -175,14 +174,13 @@ if (window.location.href.indexOf('/form.html') !== -1) {
   btnPrev.addEventListener('click', evt => {
     evt.preventDefault();
     for (let i = (planStep.length - 1); i >= 0; i--) {
-      console.log(planStep[i]);
       if (planStep[i].classList.contains('add-plan__step--show')) {
         const j = i - 1;
         if (j >= 0) {
           planStep[i].classList.remove('add-plan__step--show');
-          sliderBtns[i].classList.remove('add-plan__slider-button--active');
+          sliderBtns[i].classList.remove('add-plan__slider-buttons-item--active');
           planStep[j].classList.toggle('add-plan__step--show');
-          sliderBtns[j].classList.toggle('add-plan__slider-button--active');
+          sliderBtns[j].classList.toggle('add-plan__slider-buttons-item--active');
           if (btnSubmit.classList.contains('add-plan__button--show') && j < planStep.length) {
             btnSubmit.classList.remove('add-plan__button--show');
             btnNext.classList.toggle('add-plan__button--show');
@@ -221,6 +219,83 @@ if (window.location.href.indexOf('/form.html') !== -1) {
       }
     }
   });
+
+
+  // Сообщение об ошибке в пустой форме
+
+  const textAreas = document.querySelectorAll('.extra-info__input-field');
+  const submitBtn = document.querySelector('.add-plan__button-submit');
+  const form = document.querySelector('.form');
+
+  textAreas.forEach(element => {
+    element.addEventListener('focusout', evt => {
+      evt.preventDefault();
+
+      if (element.value === "" && !element.classList.contains('extra-info__input-field--error')) {
+        element.classList.remove('extra-info__input-field--active');
+        element.classList.toggle('extra-info__input-field--error');
+        element.parentElement.classList.toggle('extra-info__input-field-wrapper--error');
+      } else if (element.value !=="") {
+        element.classList.remove('extra-info__input-field--error');
+        element.classList.toggle('extra-info__input-field--active');
+        element.parentElement.classList.remove('extra-info__input-field-wrapper--error');
+      }
+    })
+
+    element.addEventListener('input', evt => {
+      evt.preventDefault();
+      if (element.value !== "") {
+        element.classList.remove('extra-info__input-field--error');
+        element.parentElement.classList.remove('extra-info__input-field-wrapper--error');
+      }
+    })
+
+    if(element.value !== "") {
+      element.classList.toggle('extra-info__input-field--active');
+    }
+  })
+
+  submitBtn.addEventListener('click', evt => {
+    evt.preventDefault();
+
+    const textAreasArray = Array.from(textAreas);
+    const checkValidity = textAreasArray.every(element => {
+      return element.checkValidity()
+    });
+
+    if (!checkValidity) {
+      const invalidInputs = textAreasArray.filter(element => {
+        return !element.checkValidity();
+      });
+      const validInputs = textAreasArray.filter(element => {
+        return element.checkValidity();
+      });
+
+      invalidInputs.forEach(element => {
+        if (!element.classList.contains('extra-info__input-field--error')) {
+          element.classList.toggle('extra-info__input-field--error');
+          element.parentElement.classList.toggle('extra-info__input-field-wrapper--error');
+        }
+      })
+
+      validInputs.forEach(element => {
+        if (element.classList.contains('extra-info__input-field--error')) {
+          element.classList.remove('extra-info__input-field--error');
+          element.parentElement.classList.remove('extra-info__input-field-wrapper--error');
+        }
+      })
+
+    } else {
+      textAreas.forEach(element => {
+        if (element.classList.contains('extra-info__input-field--error')) {
+          element.classList.remove('extra-info__input-field--error');
+          element.parentElement.classList.remove('extra-info__input-field-wrapper--error');
+        }
+      })
+      form.submit();
+    }
+  })
+
 
 }
 

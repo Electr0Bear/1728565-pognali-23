@@ -97,36 +97,107 @@
   }
 }
 
-.extra-info__input-field {
+.extra-info__input-field-wrapper {
   margin: 14px 0 0 0;
+  position: relative;
+  border-radius: 4px;
+  width: 100%;
+  height: 220px;
+
+  &::before {
+    content: "Это поле должно быть заполнено";
+    position: absolute;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    padding-top: 19px;
+    padding-left: 21px;
+    padding-bottom: 15px;
+    background-color: $specialPink6;
+    color: $red;
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $tablet) {
+    margin: 30px 0 0 0;
+    height: 143px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: 25px;
+    width: 730px;
+    height: 142px;
+  }
+}
+
+.extra-info__input-field-wrapper--error {
+  &::before {
+    display: block;
+  }
+}
+
+.extra-info__input-field {
   padding-top: 6px;
   padding-left: 12px;
   padding-right: 12px;
   padding-bottom: 6px;
+  position: relative;
   box-sizing: border-box;
   outline: none;
+  border: 1px solid $specialGrey4;
+  border-radius: 4px;
   resize: none;
   width: 100%;
-  height: 220px;
+  height: 100%;
+  background-color: transparent;
   font-family: inherit;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   line-height: 22px;
-  color: $specialGrey;
+  color: fade-out($color: $specialGrey, $amount: 0.7);
+
+  &:hover {
+    border: 1px solid $specialGrey11;
+  }
+
+  &:focus {
+    color: $specialGrey;
+    border: 1px solid $basicBlue;
+  }
 
   @media (min-width: $tablet) {
-    margin: 30px 0 0 0;
     padding: 15px 18px;
-    height: 143px;
     font-size: 20px;
     line-height: 23px;
   }
 
   @media (min-width: $desktop) {
-    margin-top: 25px;
     padding: 22px 10px 22px 25px;
-    width: 730px;
-    height: 142px;
+  }
+}
+
+.extra-info__input-field--active {
+  color: $specialGrey;
+  border: 1px solid $basicBlue;
+
+  &:hover {
+    border: 1px solid $basicBlue;
+  }
+}
+
+.extra-info__input-field--error {
+  padding-bottom: 56px;
+  border: 1px solid $specialPink5;
+
+  &:hover {
+    border: 1px solid $specialPink5;
+  }
+
+  &:focus {
+    border: 1px solid $specialPink5;
   }
 }
 
