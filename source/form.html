@@ -174,7 +174,7 @@
               <div class="my-plans__trip-info">
                 <p class="my-plans__trip-companions">3 попутчика</p>
                 <p class="my-plans__trip-dates">26 мар — 29 мар</p>
-                <a class="my-plans__change-link link" href="">Изменить</a>
+                <a class="my-plans__change-link link" href="" tabindex="0">Изменить</a>
               </div>
             </li>
             <li class="my-plans__item">
@@ -182,7 +182,7 @@
               <div class="my-plans__trip-info">
                 <p class="my-plans__trip-companions">1 попутчик</p>
                 <p class="my-plans__trip-dates">1 июл — 15 июл</p>
-                <a class="my-plans__change-link link" href="">Изменить</a>
+                <a class="my-plans__change-link link" href="" tabindex="0">Изменить</a>
               </div>
             </li>
           </ol>
@@ -244,7 +244,7 @@
                 <li class="step-one__general-info-item children">
                   <input class="children__checkbox-input visually-hidden" type="checkbox" name="with-children"
                     id="add-plan-children" checked>
-                  <label class="children__checkbox" for="add-plan-children">Можно с детьми</label>
+                  <label class="children__checkbox" for="add-plan-children" tabindex="-1">Можно с детьми</label>
                 </li>
               </ul>
               <!-- Календарь -->
@@ -254,7 +254,7 @@
                   <button class="calendar__button calendar__button-back" type="button">
                     <span class="visually-hidden">Назад</span>
                   </button>
-                  <input class="calendar__short-input visually-hidden" type="text" name="year-month" value="2019-03">
+                  <input class="calendar__short-input visually-hidden" type="text" name="year-month" value="2019-03" tabindex="-1">
                   <span class="calendar__short-month-year">Март 2019</span>
                   <button class="calendar__button calendar__button-next" type="button">
                     <span class="visually-hidden">Вперёд</span>
@@ -544,7 +544,7 @@
                     </button>
                   </li>
                   <li class="step-two__countries-item step-two__countries-item-current">
-                    <div class="step-two__countries-select step-two__countries-select-current">
+                    <div class="step-two__countries-select step-two__countries-select-current" tabindex="0">
                       <input class="visually-hidden" id="third-country" type="text" name="third-country" value="">
                       <label class="visually-hidden" for="third-country">Третье место назначения</label>
                       <span class="step-two__countries-select-three">Выберите страну</span>
@@ -665,10 +665,10 @@
             </div>
             <div class="add-plan__button-section">
               <a
-                class="add-plan__button add-plan__button--show add-plan__button-next-step add-plan__button-next-step--show">Следующий
+                class="add-plan__button add-plan__button--show add-plan__button-next-step add-plan__button-next-step--show" tabindex="0">Следующий
                 шаг</a>
               <button class="add-plan__button add-plan__button-submit" type="submit" formnovalidate>Отправить</button>
-              <a class="add-plan__button add-plan__button-previous-step">На шаг назад</a>
+              <a class="add-plan__button add-plan__button-previous-step" tabindex="0">На шаг назад</a>
             </div>
           </section>
         </div>
@@ -687,17 +687,17 @@
         </a>
         <ul class="page-footer__socials-list list">
           <li>
-            <a class="page-footer__socials-item page-footer__socials-facebook">
+            <a class="page-footer__socials-item page-footer__socials-facebook" tabindex="0">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
           <li>
-            <a class="page-footer__socials-item page-footer__socials-vkontakte">
+            <a class="page-footer__socials-item page-footer__socials-vkontakte" tabindex="0">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li>
-            <a class="page-footer__socials-item page-footer__socials-instagram">
+            <a class="page-footer__socials-item page-footer__socials-instagram" tabindex="0">
               <span class="visually-hidden">Instagram</span>
             </a>
           </li>

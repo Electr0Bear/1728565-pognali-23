@@ -188,6 +188,21 @@
   }
 }
 
+.companion-filter__checkbox-input {
+  &:hover,
+  &:focus {
+    & + .companion-filter__checkbox span {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    & + .companion-filter__checkbox {
+      opacity: 0.3;
+    }
+  }
+}
+
 .companion-filter__checkbox {
   position: relative;
   left: 26px;
@@ -231,7 +246,7 @@
 
 .companion-filter__checkbox span {
   &:hover,
-  &:active {
+  &:focus {
     opacity: 0.6;
   }
 }

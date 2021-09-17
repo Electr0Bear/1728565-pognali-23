@@ -12,6 +12,24 @@
   }
 }
 
+.children__checkbox-input {
+  &:hover,
+  &:focus {
+    & + .children__checkbox::before {
+      border: 1px solid $specialGrey11;
+    }
+  }
+
+  &:active + .children__checkbox::before {
+    border: 1px solid $specialGrey12;
+    background-color: $specialGrey12;
+  }
+
+  &:active + .children__checkbox::after {
+    opacity: 0.3;
+  }
+}
+
 .children__checkbox {
   margin-left: 39px;
   position: relative;
