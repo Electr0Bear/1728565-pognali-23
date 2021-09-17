@@ -235,7 +235,7 @@ if (window.location.href.indexOf('/form.html') !== -1) {
         element.classList.remove('extra-info__input-field--active');
         element.classList.toggle('extra-info__input-field--error');
         element.parentElement.classList.toggle('extra-info__input-field-wrapper--error');
-      } else if (element.value !=="" && !element.classList.contains('extra-info__input-field--active')) {
+      } else if (element.value !== "" && !element.classList.contains('extra-info__input-field--active')) {
         element.classList.remove('extra-info__input-field--error');
         element.classList.toggle('extra-info__input-field--active');
         element.parentElement.classList.remove('extra-info__input-field-wrapper--error');
@@ -250,7 +250,7 @@ if (window.location.href.indexOf('/form.html') !== -1) {
       }
     })
 
-    if(element.value !== "") {
+    if (element.value !== "") {
       element.classList.toggle('extra-info__input-field--active');
     }
   })
@@ -373,6 +373,12 @@ if (window.location.href.indexOf('/catalog.html') !== -1) {
   const filterSection = document.querySelectorAll('.companion-filter__filter-list');
   const filterLabel = document.querySelectorAll('.companion-filter__section-label');
 
+  for (let i = 0; i < (filterSection.length - 1); i++) {
+    if (!filterSection[i].classList.contains('companion-filter__filter-list--closed') && !filterLabel[i].classList.contains('companion-filter__section-label--closed')) {
+      filterSection[i].classList.toggle('companion-filter__filter-list--closed');
+      filterLabel[i].classList.toggle('companion-filter__section-label--closed');
+    }
+  }
 
   for (let i = 0; i < filterSection.length; i++) {
     filterLabel[i].addEventListener('click', evt => {
