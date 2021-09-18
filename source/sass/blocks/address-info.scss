@@ -158,8 +158,8 @@
 }
 
 .address-info__map-wrapper {
-  height: 464px;
   width: 100%;
+  border: none;
 
   @media (min-width: $tablet) {
     height: 663px;
