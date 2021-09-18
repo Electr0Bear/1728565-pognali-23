@@ -3,7 +3,7 @@
 }
 
 .address-info__wrapper {
-  padding-top: 31px;
+  padding-top: 32px;
   padding-bottom: 35px;
   width: 100%;
   position: absolute;
@@ -11,7 +11,7 @@
   border-radius: 0 0 30px 30px;
 
   @media (min-width: $tablet) {
-    padding-top: 66px;
+    padding-top: 68px;
     padding-bottom: 84px;
     border-radius: 0 0 60px 60px;
   }
@@ -24,8 +24,8 @@
 
 .address-info__flex-layout {
   @media (min-width: $desktop) {
-    padding-left: 208px;
-    padding-right: 60px;
+    padding-left: 220px;
+    padding-right: 75px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -36,7 +36,7 @@
 .address-info__address {
   padding-left: 61px;
   padding-right: 20px;
-  margin-bottom: 33px;
+  margin-bottom: 34px;
   display: block;
   position: relative;
   font-style: normal;
@@ -142,5 +142,30 @@
     &::after {
       right: 34px;
     }
+  }
+}
+
+.address-info__map {
+  padding-top: 114px;
+
+  @media (min-width: $tablet) {
+    padding-top: 237px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-top: 105px;
+  }
+}
+
+.address-info__map-wrapper {
+  height: 464px;
+  width: 100%;
+
+  @media (min-width: $tablet) {
+    height: 663px;
+  }
+
+  @media (min-width: $desktop) {
+    height: 605px;
   }
 }

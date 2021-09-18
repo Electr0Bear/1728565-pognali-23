@@ -8,12 +8,13 @@
 
   @media (min-width: $tablet) {
     padding-top: 95px;
-    padding-bottom: 131px;
+    padding-bottom: 170px;
   }
 
   @media (min-width: $desktop) {
     margin-top: -65px;
     padding-top: 60px;
+    padding-bottom: 185px;
     border-radius: 60px 60px 0 0;
   }
 }
@@ -231,6 +232,10 @@
   @media (min-width: $tablet) {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 24px;
   }
 }
 
